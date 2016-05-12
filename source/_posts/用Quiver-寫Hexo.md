@@ -18,3 +18,19 @@ Quiver 這是一個朋友推薦我用的Markdown Editor
 
 現在找到一個叫 [Quihex](http://www.pincer.io/node/libraries/quihex) 的插件可以同步
 
+
+
+```sh
+# Install
+$ npm install -g quihex
+
+# Setup
+$ quihex init
+
+# Sync(Quiver notes => Hexo posts)
+$ quihex sync
+
+# Hexo deploy
+$ cd ~/hexo-root
+$ hexo deploy
+```
