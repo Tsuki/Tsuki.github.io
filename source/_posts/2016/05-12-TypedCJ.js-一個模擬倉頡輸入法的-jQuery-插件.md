@@ -4,14 +4,12 @@ date: 2016-05-12 23:36:38
 tags:
 - NodeJs
 ----
-## TypedCJ.js 是對Typed.js 作出條改 加入倉頡輸入法的效果。
+**TypedCJ.js 是對Typed.js 作出條改 加入倉頡輸入法的效果。**
 
----
 [View the live demo](http://blog.sukitsuki.com/TypedCJ.js/)
 
 
-Installation
-------------
+## Installation
 This is really all you need to get going.
 
 ```html

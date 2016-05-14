@@ -5,6 +5,10 @@ tags:
 -  WPF
 - C ++++
 ----
+記錄一下在公司寫下來的小玩意
+
+在 Windows.Loadded 方法上加上 async await 食用更佳
+
 ### ProgressBar.xaml
 
 ```xml
