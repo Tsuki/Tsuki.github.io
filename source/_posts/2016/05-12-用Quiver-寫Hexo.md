@@ -18,7 +18,8 @@ Quiver 這是一個朋友推薦我用的Markdown Editor
 
 現在找到一個叫 [Quihex](http://www.pincer.io/node/libraries/quihex) 的插件可以同步
 
-
+{% asset_img F14A076DE42ABFB6D4717609C8A0EDEA.png [Quiver 2016-05-17 03-11-53.png] %}
+{% asset_img CD754F06C9135D973EEB409E683184A3.png [Quiver 2016-05-17 03-17-41.png] %}
 
 ```sh
 # Install
