@@ -35,21 +35,20 @@ Node 3 has a degree of 1
 
 ```kotlin
 fun main(args: Array<String>) {
-    val edge = readLine()!!.toInt();
-    val buffer = IntArray(edge);
-    var input = readLine()
+    val buffer = IntArray(readLine()!!.toInt());
+    var input = readLine();
     do {
         val intpus = input!!.split(' ');
-        if (intpus[0].toInt() > 0 || intpus[0].toInt() <= edge) {
+        if (intpus[0].toInt() > 0 || intpus[0].toInt() <= buffer.size) {
             buffer[intpus[0].toInt() - 1]++;
         }
-        if (intpus[1].toInt() > 0 || intpus[1].toInt() <= edge) {
+        if (intpus[1].toInt() > 0 || intpus[1].toInt() <= buffer.size) {
             buffer[intpus[1].toInt() - 1]++;
         }
         input = readLine();
     } while (input != "")
     for ((index, value) in buffer.withIndex()) {
-        println("Node ${index+1} has a degree of $value");
+        println("Node ${index + 1} has a degree of $value");
     }
 }
 ```
