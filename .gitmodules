@@ -1,3 +1,6 @@
 [submodule "themes/landscape"]
 	path = themes/landscape
 	url = https://github.com/Tsuki/hexo-theme-landscape.git
+[submodule "themes/yelee"]
+	path = themes/yelee
+	url = https://github.com/MOxFIVE/hexo-theme-yelee.git
