@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Tsuki.github.io/"/>
-  <updated>2016-06-12T03:35:51.000Z</updated>
+  <updated>2016-06-12T04:34:42.000Z</updated>
   <id>http://Tsuki.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OS X Rebuild brew link</title>
+    <link href="http://Tsuki.github.io/2016/06/12/OS-X-Rebuild-brew-link/"/>
+    <id>http://Tsuki.github.io/2016/06/12/OS-X-Rebuild-brew-link/</id>
+    <published>2016-06-12T04:32:20.000Z</published>
+    <updated>2016-06-12T04:34:42.000Z</updated>
+    
+    <content type="html">&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew list -1 | &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;read&lt;/span&gt; line; &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; brew unlink &lt;span class=&quot;variable&quot;&gt;$line&lt;/span&gt;; brew link --force &lt;span class=&quot;variable&quot;&gt;$line&lt;/span&gt;; &lt;span class=&quot;keyword&quot;&gt;done&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=
+    
+    </summary>
+    
+    
+      <category term="OS X" scheme="http://Tsuki.github.io/tags/OS-X/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo PJAX 化</title>

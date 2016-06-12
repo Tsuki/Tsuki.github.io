@@ -85,6 +85,60 @@
         
           <section id="main">
   
+    <article id="post-Atlassian-Jira-Bitbucket-Nginx reverse-proxy" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" class="article-date">
+  <time datetime="2016-05-26T16:51:47.000Z" itemprop="datePublished">2016-05-27</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/">Atlassian Jira Bitbucket Nginx reverse proxy</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" data-id="cip9yfbj7000ljdk1jjn7vw07" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bitbucket/">Bitbucket</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jira/">Jira</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li></ul>
+
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <h2 id="Bitbucket-tomcat-Connector-config"><a href="#Bitbucket-tomcat-Connector-config" class="headerlink" title="Bitbucket tomcat Connector config"></a>Bitbucket tomcat Connector config</h2><p>add secure scheme proxyName and proxyPort</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /var/atlassian/application-data/bitbucket/shared/server.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"7990"</span> </span><br><span class="line">           <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span><br><span class="line">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span><br><span class="line">           <span class="attr">useBodyEncodingForURI</span>=<span class="string">"true"</span></span><br><span class="line">           <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span><br><span class="line">           <span class="attr">compression</span>=<span class="string">"on"</span></span><br><span class="line">           <span class="attr">compressableMimeType</span>=<span class="string">"text/html,text/xml,text/plain,text/css,application/json,application/javascript,application/x-javascript"</span></span><br><span class="line">           <span class="attr">secure</span>=<span class="string">"true"</span></span><br><span class="line">           <span class="attr">scheme</span>=<span class="string">"https"</span></span><br><span class="line">           <span class="attr">proxyName</span>=<span class="string">"domain.com"</span></span><br><span class="line">           <span class="attr">proxyPort</span>=<span class="string">"443"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Nginx-site-config"><a href="#Nginx-site-config" class="headerlink" title="Nginx site config"></a>Nginx site config</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/sites-enabled/default</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen [::]:80;</span><br><span class="line">        server_name domain.com;</span><br><span class="line">        <span class="built_in">return</span> 301 https://domain.com<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name domain.com;</span><br><span class="line">        ssl_certificate /etc/nginx/ssl/domain.com.crt;</span><br><span class="line">        ssl_certificate_key /etc/nginx/ssl/domain.com.key;</span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://192.168.1.000:7990/;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        Host <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-Host <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-Server <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">                proxy_redirect          off;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
+    
+</article>
+
+
+  
     <article id="post-DZone Java-Code-Challenge-Node-Degrees" class="article article-type-post" itemscope
          itemprop="blogPost">
     <div class="article-meta">
@@ -603,6 +657,14 @@
       <!--<ul>-->
         
           <li>
+            <a class="text" href="/2016/06/12/OS-X-Rebuild-brew-link/">
+              
+                <i class="icon-file-o"></i>
+              
+            OS X Rebuild brew link</a>
+          </li>
+        
+          <li>
             <a class="text" href="/2016/06/11/Hexo-PJAX-化/">
               
                 <i class="icon-file-o"></i>
@@ -672,14 +734,6 @@
                 <i class="icon-file-o"></i>
               
             Mac下 推送public key 到遠端服務器</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/">
-              
-                <i class="icon-file-o"></i>
-              
-            Atlassian Jira Bitbucket Nginx reverse proxy</a>
           </li>
         
       <!--</ul>-->
