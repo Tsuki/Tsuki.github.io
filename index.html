@@ -85,6 +85,108 @@
         
           <section id="main">
   
+    <article id="post-Hexo-PJAX-化" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/06/11/Hexo-PJAX-化/" class="article-date">
+  <time datetime="2016-06-10T19:43:38.000Z" itemprop="datePublished">2016-06-11</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/11/Hexo-PJAX-化/">Hexo PJAX 化</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/06/11/Hexo-PJAX-化/" data-id="cipc1hmvr00016ik1anpf1psd" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/06/11/Hexo-PJAX-化/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <p>經過一番努力後</p>
+<p>成功用PJAX把Hexo改成pushState 的效果</p>
+<p>這樣就可以自動播放音樂了</p>
+
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
+    
+</article>
+
+
+  
+    <article id="post-Mac-分屏工具-Spectacle" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/06/10/Mac-分屏工具-Spectacle/" class="article-date">
+  <time datetime="2016-06-10T08:44:09.000Z" itemprop="datePublished">2016-06-10</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/10/Mac-分屏工具-Spectacle/">Mac 分屏工具 Spectacle</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/06/10/Mac-分屏工具-Spectacle/" data-id="cipc1hmvg00006ik1z8zp6xsy" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/06/10/Mac-分屏工具-Spectacle/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS-X/">OS X</a></li></ul>
+
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>brew cask install spectacle</p>
+<img src="/2016/06/10/Mac-分屏工具-Spectacle/A910DF0D16E29CFB9BE40905903F0D11.png" alt="[Spectacle 1.0.6 2016-06-10 16-43-28.png]" title="[Spectacle 1.0.6 2016-06-10 16-43-28.png]">
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
+    
+</article>
+
+
+  
     <article id="post-Fix-Sublime-Text-Home-and-End-key-usage-on-Mac-OSX" class="article article-type-post" itemscope
          itemprop="blogPost">
     <div class="article-meta">
@@ -933,6 +1035,8 @@
             
             <div class="toggle-content">
                 <h2 id="建立-Git-Submodule"><a href="#建立-Git-Submodule" class="headerlink" title="建立 Git Submodule"></a>建立 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add &lt;repository&gt; [&lt;path&gt;]</span><br></pre></td></tr></table></figure>
+<h2 id="Clon-git-repo"><a href="#Clon-git-repo" class="headerlink" title="Clon git repo"></a>Clon git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --recursive &lt;repository&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Update-git-repo"><a href="#Update-git-repo" class="headerlink" title="Update git repo"></a>Update git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule foreach --recursive git pull origin master</span><br></pre></td></tr></table></figure>
 <h2 id="刪除-Git-Submodule"><a href="#刪除-Git-Submodule" class="headerlink" title="刪除 Git Submodule"></a>刪除 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;repository&gt;</span><br><span class="line">git rm  &lt;repository&gt;</span><br><span class="line">vi .gitmodules</span><br><span class="line">vi .git/config</span><br><span class="line">git submodule sync</span><br></pre></td></tr></table></figure>
             </div>
             <div class="toggle-input article-more-link"><a>Read More +</a></div>
@@ -1104,116 +1208,6 @@
 
 
   
-    <article id="post-DZone Java-Code-Challenge-Node-Degrees" class="article article-type-post" itemscope
-         itemprop="blogPost">
-    <div class="article-meta">
-        <a href="/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" class="article-date">
-  <time datetime="2016-05-17T18:44:49.000Z" itemprop="datePublished">2016-05-18</time>
-</a>
-        
-    </div>
-    <div class="article-inner ">
-        
-        
-        <header class="article-header">
-            
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/">DZone Java Code Challenge Node Degrees</a>
-    </h1>
-  
-
-        </header>
-        
-        <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" data-id="cip9yfbj6000jjdk1ftv60u8z" class="article-share-link">Share</a>
-            
-            <a href="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/#disqus_thread" class="article-comment-link">Comments</a>
-            
-            <div class="tagcloud">
-                
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kotlin/">Kotlin</a></li></ul>
-
-            </div>
-        </footer>
-        <div class="article-entry article-index" itemprop="articleBody">
-            
-            
-            
-            <div class="toggle-content">
-                <p><a href="https://dzone.com/articles/java-code-challenge-node-degrees" target="_blank" rel="external">Java Code Challenge: Node Degreesa</a></p>
-<h2 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h2><p>In graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculating the degree of every node.</p>
-<h2 id="Input-Description"><a href="#Input-Description" class="headerlink" title="Input Description"></a>Input Description</h2><p>First, you’ll be given an integer, N, on one line showing you how many nodes to account for. Next, you’ll be given an undirected graph as a series of number pairs, a and b, showing that those two nodes are connected - an edge. Example:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 </span><br><span class="line">1 2</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
-<p>Output Description<br>Your program should emit the degree for each node. Example:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Node 1 has a degree of 2</span><br><span class="line">Node 2 has a degree of 1</span><br><span class="line">Node 3 has a degree of 1</span><br></pre></td></tr></table></figure>
-<p>先用Kotlin試寫一下<br>下面用Kotlin寫了一個簡單的代碼<br>有空再補充一下注解</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> buffer = IntArray(readLine()!!.toInt());</span><br><span class="line">    <span class="keyword">var</span> input = readLine();</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> intpus = input!!.split(<span class="string">' '</span>);</span><br><span class="line">        <span class="keyword">if</span> (intpus[<span class="number">0</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">0</span>].toInt() &lt;= buffer.size) &#123;</span><br><span class="line">            buffer[intpus[<span class="number">0</span>].toInt() - <span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (intpus[<span class="number">1</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">1</span>].toInt() &lt;= buffer.size) &#123;</span><br><span class="line">            buffer[intpus[<span class="number">1</span>].toInt() - <span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        input = readLine();</span><br><span class="line">    &#125; <span class="keyword">while</span> (input != <span class="string">""</span>)</span><br><span class="line">    <span class="keyword">for</span> ((index, value) <span class="keyword">in</span> buffer.withIndex()) &#123;</span><br><span class="line">        println(<span class="string">"Node <span class="subst">$&#123;index + <span class="number">1</span>&#125;</span> has a degree of <span class="subst">$value</span>"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-            </div>
-            <div class="toggle-input article-more-link"><a>Read More +</a></div>
-            
-            
-        </div>
-
-    </div>
-    
-</article>
-
-
-  
-    <article id="post-MonoSnap-截圖軟件" class="article article-type-post" itemscope
-         itemprop="blogPost">
-    <div class="article-meta">
-        <a href="/2016/05/17/MonoSnap-截圖軟件/" class="article-date">
-  <time datetime="2016-05-16T19:06:53.000Z" itemprop="datePublished">2016-05-17</time>
-</a>
-        
-    </div>
-    <div class="article-inner ">
-        
-        
-        <header class="article-header">
-            
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/17/MonoSnap-截圖軟件/">MonoSnap 截圖軟件</a>
-    </h1>
-  
-
-        </header>
-        
-        <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/17/MonoSnap-截圖軟件/" data-id="cip9yfbj1000ejdk1lfx06tvy" class="article-share-link">Share</a>
-            
-            <a href="http://Tsuki.github.io/2016/05/17/MonoSnap-截圖軟件/#disqus_thread" class="article-comment-link">Comments</a>
-            
-            <div class="tagcloud">
-                
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS-X/">OS X</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li></ul>
-
-            </div>
-        </footer>
-        <div class="article-entry article-index" itemprop="articleBody">
-            
-            
-            
-            <div class="toggle-content">
-                <p>一個不錯的免費截圖軟件<br>自帶比較簡單的編輯器 而且Windows下也能用<br>雖然沒自帶那麼多快捷鍵 不過基本上不過不失<br>最重要是可以定格截圖</p>
-<p>不知道是不是Bug了還是怎了 OS X 10.10更新之後就不能凍結 截圖的畫面<br>這方便的修改 完全沒有考慮用家啊 而且改了也沒有通知</p>
-<p>這個截圖上 看到一些簡單的功能<br>比如加上箭頭 方格 手寫 打嗎!!(很重要)<br>此名還有文字和截剪等很常用的功能</p>
-<img src="/2016/05/17/MonoSnap-截圖軟件/A8909BAD19AFDC1C83F8BCAF1237436A.png" alt="[Monosnap 2016-05-17 03-19-27.png]" title="[Monosnap 2016-05-17 03-19-27.png]">
-            </div>
-            <div class="toggle-input article-more-link"><a>Read More +</a></div>
-            
-            
-        </div>
-
-    </div>
-    
-</article>
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1231,6 +1225,22 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <!--<ul>-->
+        
+          <li>
+            <a class="text" href="/2016/06/11/Hexo-PJAX-化/">
+              
+                <i class="icon-file-o"></i>
+              
+            Hexo PJAX 化</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2016/06/10/Mac-分屏工具-Spectacle/">
+              
+                <i class="icon-file-o"></i>
+              
+            Mac 分屏工具 Spectacle</a>
+          </li>
         
           <li>
             <a class="text" href="/2016/06/10/Fix-Sublime-Text-Home-and-End-key-usage-on-Mac-OSX/">
@@ -1294,22 +1304,6 @@
                 <i class="icon-file-o"></i>
               
             Atlassian Jira Bitbucket Nginx reverse proxy</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/">
-              
-                <i class="icon-file-o"></i>
-              
-            DZone Java Code Challenge Node Degrees</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/17/MonoSnap-截圖軟件/">
-              
-                <i class="icon-file-o"></i>
-              
-            MonoSnap 截圖軟件</a>
           </li>
         
       <!--</ul>-->

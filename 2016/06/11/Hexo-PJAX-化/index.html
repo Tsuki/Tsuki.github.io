@@ -3,48 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>用Quiver 寫Hexo | Tsuki Blog</title>
+  <title>Hexo PJAX 化 | Tsuki Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Quiver 這是一個朋友推薦我用的Markdown Editor
-用後發現真的不錯 之後打算看看能不能用來寫Blog
-一開始是打算用Ruby 的 Jekyll
-但發現 配置起來實在太麻煩了
-而且主題也很久沒更新
-之後就想起姐太之前推介的Hexo
-現在找到一個叫 Quihex 的插件可以同步
-
-
-123456789101112# Install$ npm install -g quihex# Se">
+  <meta name="description" content="經過一番努力後
+成功用PJAX把Hexo改成pushState 的效果
+這樣就可以自動播放音樂了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用Quiver 寫Hexo">
-<meta property="og:url" content="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/index.html">
+<meta property="og:title" content="Hexo PJAX 化">
+<meta property="og:url" content="http://Tsuki.github.io/2016/06/11/Hexo-PJAX-化/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
-<meta property="og:description" content="Quiver 這是一個朋友推薦我用的Markdown Editor
-用後發現真的不錯 之後打算看看能不能用來寫Blog
-一開始是打算用Ruby 的 Jekyll
-但發現 配置起來實在太麻煩了
-而且主題也很久沒更新
-之後就想起姐太之前推介的Hexo
-現在找到一個叫 Quihex 的插件可以同步
-
-
-123456789101112# Install$ npm install -g quihex# Se">
-<meta property="og:image" content="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/F14A076DE42ABFB6D4717609C8A0EDEA.png">
-<meta property="og:image" content="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/CD754F06C9135D973EEB409E683184A3.png">
-<meta property="og:updated_time" content="2016-06-10T16:29:09.000Z">
+<meta property="og:description" content="經過一番努力後
+成功用PJAX把Hexo改成pushState 的效果
+這樣就可以自動播放音樂了">
+<meta property="og:updated_time" content="2016-06-12T03:35:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用Quiver 寫Hexo">
-<meta name="twitter:description" content="Quiver 這是一個朋友推薦我用的Markdown Editor
-用後發現真的不錯 之後打算看看能不能用來寫Blog
-一開始是打算用Ruby 的 Jekyll
-但發現 配置起來實在太麻煩了
-而且主題也很久沒更新
-之後就想起姐太之前推介的Hexo
-現在找到一個叫 Quihex 的插件可以同步
-
-
-123456789101112# Install$ npm install -g quihex# Se">
-<meta name="twitter:image" content="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/F14A076DE42ABFB6D4717609C8A0EDEA.png">
+<meta name="twitter:title" content="Hexo PJAX 化">
+<meta name="twitter:description" content="經過一番努力後
+成功用PJAX把Hexo改成pushState 的效果
+這樣就可以自動播放音樂了">
   
     <link rel="alternative" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml">
   
@@ -114,11 +90,11 @@
 </header>
       <div class="outer">
         
-          <section id="main"><article id="post-用Quiver-寫Hexo" class="article article-type-post" itemscope
+          <section id="main"><article id="post-Hexo-PJAX-化" class="article article-type-post" itemscope
          itemprop="blogPost">
     <div class="article-meta">
-        <a href="/2016/05/12/用Quiver-寫Hexo/" class="article-date">
-  <time datetime="2016-05-11T17:14:39.000Z" itemprop="datePublished">2016-05-12</time>
+        <a href="/2016/06/11/Hexo-PJAX-化/" class="article-date">
+  <time datetime="2016-06-10T19:43:38.000Z" itemprop="datePublished">2016-06-11</time>
 </a>
         
     </div>
@@ -129,21 +105,19 @@
             
   
     <h1 class="article-title" itemprop="name">
-      用Quiver 寫Hexo
+      Hexo PJAX 化
     </h1>
   
 
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/" data-id="cip9yfbio0008jdk184kng8cv" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/06/11/Hexo-PJAX-化/" data-id="cipc1hmvr00016ik1anpf1psd" class="article-share-link">Share</a>
             
-            <a href="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/#disqus_thread" class="article-comment-link">Comments</a>
+            <a href="http://Tsuki.github.io/2016/06/11/Hexo-PJAX-化/#disqus_thread" class="article-comment-link">Comments</a>
             
             <div class="tagcloud">
                 
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-
             </div>
         </footer>
         <div class="article-entry " itemprop="articleBody">
@@ -157,16 +131,10 @@
             </div>
             
             
-            <p>Quiver 這是一個朋友推薦我用的Markdown Editor</p>
-<p>用後發現真的不錯 之後打算看看能不能用來寫Blog</p>
-<p>一開始是打算用Ruby 的 Jekyll</p>
-<p>但發現 配置起來實在太麻煩了</p>
-<p>而且主題也很久沒更新</p>
-<p>之後就想起姐太之前推介的Hexo</p>
-<p>現在找到一個叫 <a href="http://www.pincer.io/node/libraries/quihex" target="_blank" rel="external">Quihex</a> 的插件可以同步</p>
-<img src="/2016/05/12/用Quiver-寫Hexo/F14A076DE42ABFB6D4717609C8A0EDEA.png" alt="[Quiver 2016-05-17 03-11-53.png]" title="[Quiver 2016-05-17 03-11-53.png]">
-<img src="/2016/05/12/用Quiver-寫Hexo/CD754F06C9135D973EEB409E683184A3.png" alt="[Quiver 2016-05-17 03-17-41.png]" title="[Quiver 2016-05-17 03-17-41.png]">
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Install</span></span><br><span class="line">$ npm install -g quihex</span><br><span class="line"></span><br><span class="line"><span class="comment"># Setup</span></span><br><span class="line">$ quihex init</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sync(Quiver notes =&gt; Hexo posts)</span></span><br><span class="line">$ quihex sync</span><br><span class="line"></span><br><span class="line"><span class="comment"># Hexo deploy</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/hexo-root</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+            <p>經過一番努力後</p>
+<p>成功用PJAX把Hexo改成pushState 的效果</p>
+<p>這樣就可以自動播放音樂了</p>
+
             
             
         </div>
@@ -176,15 +144,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/12/在WPF自定-ProgressBar-動畫/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          在WPF自定 ProgressBar 動畫
-        
-      </div>
-    </a>
   
+    <a href="/2016/06/10/Mac-分屏工具-Spectacle/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Mac 分屏工具 Spectacle</div>
+    </a>
   
 </nav>
 
@@ -362,7 +326,7 @@
     <script>
         var disqus_shortname = 'TsukiBlog';
         
-        var disqus_url = 'http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/';
+        var disqus_url = 'http://Tsuki.github.io/2016/06/11/Hexo-PJAX-化/';
         
         (function () {
             var dsq = document.createElement('script');

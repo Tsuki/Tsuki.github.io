@@ -6,18 +6,24 @@
   <title>Git Submodule | Tsuki Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="建立 Git Submodule1git submodule add &amp;lt;repository&amp;gt; [&amp;lt;path&amp;gt;]
-刪除 Git Submodule12345git rm --cached &amp;lt;repository&amp;gt;git rm  &amp;lt;repository&amp;gt;vi .gitmodulesvi .git/configgit submodule sync">
+Clon git repo1git clone --recursive &amp;lt;repository&amp;gt;
+Update git repo1git submodule foreach --recursive git pull origin master
+刪除">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Submodule">
 <meta property="og:url" content="http://Tsuki.github.io/2016/05/29/Git-Submodule/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
 <meta property="og:description" content="建立 Git Submodule1git submodule add &amp;lt;repository&amp;gt; [&amp;lt;path&amp;gt;]
-刪除 Git Submodule12345git rm --cached &amp;lt;repository&amp;gt;git rm  &amp;lt;repository&amp;gt;vi .gitmodulesvi .git/configgit submodule sync">
-<meta property="og:updated_time" content="2016-06-10T16:29:09.000Z">
+Clon git repo1git clone --recursive &amp;lt;repository&amp;gt;
+Update git repo1git submodule foreach --recursive git pull origin master
+刪除">
+<meta property="og:updated_time" content="2016-06-12T03:35:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git Submodule">
 <meta name="twitter:description" content="建立 Git Submodule1git submodule add &amp;lt;repository&amp;gt; [&amp;lt;path&amp;gt;]
-刪除 Git Submodule12345git rm --cached &amp;lt;repository&amp;gt;git rm  &amp;lt;repository&amp;gt;vi .gitmodulesvi .git/configgit submodule sync">
+Clon git repo1git clone --recursive &amp;lt;repository&amp;gt;
+Update git repo1git submodule foreach --recursive git pull origin master
+刪除">
   
     <link rel="alternative" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml">
   
@@ -125,12 +131,14 @@
             <div id="toc" class="toc-article">
                 <h2 class="toc-title"><span>contents</span></h2>
                 
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#建立-Git-Submodule"><span class="toc-number">1.</span> <span class="toc-text">建立 Git Submodule</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#刪除-Git-Submodule"><span class="toc-number">2.</span> <span class="toc-text">刪除 Git Submodule</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#建立-Git-Submodule"><span class="toc-number">1.</span> <span class="toc-text">建立 Git Submodule</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Clon-git-repo"><span class="toc-number">2.</span> <span class="toc-text">Clon git repo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Update-git-repo"><span class="toc-number">3.</span> <span class="toc-text">Update git repo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#刪除-Git-Submodule"><span class="toc-number">4.</span> <span class="toc-text">刪除 Git Submodule</span></a></li></ol>
                 
             </div>
             
             
             <h2 id="建立-Git-Submodule"><a href="#建立-Git-Submodule" class="headerlink" title="建立 Git Submodule"></a>建立 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add &lt;repository&gt; [&lt;path&gt;]</span><br></pre></td></tr></table></figure>
+<h2 id="Clon-git-repo"><a href="#Clon-git-repo" class="headerlink" title="Clon git repo"></a>Clon git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> --recursive &lt;repository&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Update-git-repo"><a href="#Update-git-repo" class="headerlink" title="Update git repo"></a>Update git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule foreach --recursive git pull origin master</span><br></pre></td></tr></table></figure>
 <h2 id="刪除-Git-Submodule"><a href="#刪除-Git-Submodule" class="headerlink" title="刪除 Git Submodule"></a>刪除 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &lt;repository&gt;</span><br><span class="line">git rm  &lt;repository&gt;</span><br><span class="line">vi .gitmodules</span><br><span class="line">vi .git/config</span><br><span class="line">git submodule sync</span><br></pre></td></tr></table></figure>
             
             
@@ -180,6 +188,22 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <!--<ul>-->
+        
+          <li>
+            <a class="text" href="/2016/06/11/Hexo-PJAX-化/">
+              
+                <i class="icon-file-o"></i>
+              
+            Hexo PJAX 化</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2016/06/10/Mac-分屏工具-Spectacle/">
+              
+                <i class="icon-file-o"></i>
+              
+            Mac 分屏工具 Spectacle</a>
+          </li>
         
           <li>
             <a class="text" href="/2016/06/10/Fix-Sublime-Text-Home-and-End-key-usage-on-Mac-OSX/">
@@ -243,22 +267,6 @@
                 <i class="icon-file-o"></i>
               
             Atlassian Jira Bitbucket Nginx reverse proxy</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/">
-              
-                <i class="icon-file-o"></i>
-              
-            DZone Java Code Challenge Node Degrees</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/17/MonoSnap-截圖軟件/">
-              
-                <i class="icon-file-o"></i>
-              
-            MonoSnap 截圖軟件</a>
           </li>
         
       <!--</ul>-->

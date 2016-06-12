@@ -18,7 +18,6 @@
     $.getScript('/js/script.js')
   });
   var pjax = new Pjax({
-    debug: true,
     elements: ['a'],
     selectors: [
       'title',
@@ -26,6 +25,4 @@
       '.js-Pjax'
     ]
   });
-  // console.log('pjax inited', pjax)
-
 })(jQuery);
