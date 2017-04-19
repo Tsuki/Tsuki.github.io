@@ -7,3 +7,6 @@
 [submodule ".deploy_git"]
 	path = .deploy_git
 	url = https://github.com/Tsuki/Tsuki.github.io.git
+[submodule "/home/alex/Code/BLOG/Tsuki.github.io/.deploy_git"]
+	path = /home/alex/Code/BLOG/Tsuki.github.io/.deploy_git
+	url = https://github.com/Tsuki/Tsuki.github.io.git
