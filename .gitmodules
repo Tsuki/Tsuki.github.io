@@ -4,3 +4,6 @@
 [submodule "themes/yelee"]
 	path = themes/yelee
 	url = https://github.com/Tsuki/hexo-theme-yelee.git 
+[submodule ".deploy_git"]
+	path = .deploy_git
+	url = https://github.com/Tsuki/Tsuki.github.io.git

@@ -1,9 +1,9 @@
-----
 title: Git 修改用戶名和Email
-date: 2016-05-27 01:33:07
 tags:
-- Git
-----
+  - Git
+categories: []
+date: 2016-05-27 01:33:00
+---
 ## Github版本
 
 ```sh
