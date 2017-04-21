@@ -5,15 +5,12 @@
   
   <title>Tsuki Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Tsuki Blog">
 <meta property="og:url" content="http://Tsuki.github.io/page/2/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
-<meta property="og:description">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tsuki Blog">
-<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml">
   
@@ -76,7 +73,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
       </div>
     </div>
   </div>
@@ -84,6 +81,163 @@
       <div class="outer">
         
           <section id="main">
+  
+    <article id="post-Git-Submodule" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/05/29/Git-Submodule/" class="article-date">
+  <time datetime="2016-05-29T08:08:53.000Z" itemprop="datePublished">2016-05-29</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/29/Git-Submodule/">Git Submodule</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/05/29/Git-Submodule/" data-id="cj1r0f98e000l12cm2jj0ly94" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/05/29/Git-Submodule/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <h2 id="建立-Git-Submodule"><a href="#建立-Git-Submodule" class="headerlink" title="建立 Git Submodule"></a>建立 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add &lt;repository&gt; [&lt;path&gt;]</div></pre></td></tr></table></figure>
+<h2 id="Clon-git-repo"><a href="#Clon-git-repo" class="headerlink" title="Clon git repo"></a>Clon git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> --recursive &lt;repository&gt;</div></pre></td></tr></table></figure>
+<h2 id="Update-git-repo"><a href="#Update-git-repo" class="headerlink" title="Update git repo"></a>Update git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule foreach --recursive git pull origin master</div></pre></td></tr></table></figure>
+<h2 id="刪除-Git-Submodule"><a href="#刪除-Git-Submodule" class="headerlink" title="刪除 Git Submodule"></a>刪除 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git rm --cached &lt;repository&gt;</div><div class="line">git rm  &lt;repository&gt;</div><div class="line">vi .gitmodules</div><div class="line">vi .git/config</div><div class="line">git submodule sync</div></pre></td></tr></table></figure>
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
+    
+</article>
+
+
+  
+    <article id="post-Git-修改用戶名和Email" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/05/27/Git-修改用戶名和Email/" class="article-date">
+  <time datetime="2016-05-26T17:33:07.000Z" itemprop="datePublished">2016-05-27</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/27/Git-修改用戶名和Email/">Git 修改用戶名和Email</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/05/27/Git-修改用戶名和Email/" data-id="cj1r0f988000g12cmb10phzo6" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/05/27/Git-修改用戶名和Email/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
+
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <h2 id="Github版本"><a href="#Github版本" class="headerlink" title="Github版本"></a>Github版本</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line">git filter-branch --env-filter <span class="string">'</span></div><div class="line">OLD_EMAIL="your-old-email@example.com"</div><div class="line">CORRECT_NAME="Your Correct Name"</div><div class="line">CORRECT_EMAIL="your-correct-email@example.com"</div><div class="line"></div><div class="line">if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]</div><div class="line">then</div><div class="line">    export GIT_COMMITTER_NAME="$CORRECT_NAME"</div><div class="line">    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"</div><div class="line">fi</div><div class="line">if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]</div><div class="line">then</div><div class="line">    export GIT_AUTHOR_NAME="$CORRECT_NAME"</div><div class="line">    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"</div><div class="line">fi</div><div class="line">' --tag-name-filter cat -- --branches --tags</div></pre></td></tr></table></figure>
+<h2 id="個人版本"><a href="#個人版本" class="headerlink" title="個人版本"></a>個人版本</h2><p>Ps. 會全部改掉</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git filter-branch <span class="_">-f</span> --env-filter <span class="string">"</span></div><div class="line">    GIT_AUTHOR_NAME='Username'</div><div class="line">    GIT_AUTHOR_EMAIL='Email'</div><div class="line">    GIT_COMMITTER_NAME='Username'</div><div class="line">    GIT_COMMITTER_EMAIL='Email'</div><div class="line">  " HEAD</div></pre></td></tr></table></figure>
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
+    
+</article>
+
+
+  
+    <article id="post-Mac下-推送public-key-到遠端服務器" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/05/27/Mac下-推送public-key-到遠端服務器/" class="article-date">
+  <time datetime="2016-05-26T17:20:42.000Z" itemprop="datePublished">2016-05-27</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/27/Mac下-推送public-key-到遠端服務器/">Mac下 推送public key 到遠端服務器</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/05/27/Mac下-推送public-key-到遠端服務器/" data-id="cj1r0f98b000j12cmj8wh7v3w" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/05/27/Mac下-推送public-key-到遠端服務器/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS-X/">OS X</a></li></ul>
+
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <h2 id="先生成public-key"><a href="#先生成public-key" class="headerlink" title="先生成public key"></a>先生成public key</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t ecdsa</div></pre></td></tr></table></figure>
+<h2 id="下載-ssh-copy-id"><a href="#下載-ssh-copy-id" class="headerlink" title="下載 ssh-copy-id"></a>下載 ssh-copy-id</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install ssh-copy-id</div></pre></td></tr></table></figure>
+<h2 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-copy-id -i ./.ssh/id_ecdsa.pub user@host</div></pre></td></tr></table></figure>
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
+    
+</article>
+
+
   
     <article id="post-Atlassian-Jira-Bitbucket-Nginx reverse-proxy" class="article article-type-post" itemscope
          itemprop="blogPost">
@@ -107,7 +261,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" data-id="cip9yfbj7000ljdk1jjn7vw07" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" data-id="cj1r0f985000e12cm6kug5rla" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -123,9 +277,9 @@
             
             <div class="toggle-content">
                 <h2 id="Bitbucket-tomcat-Connector-config"><a href="#Bitbucket-tomcat-Connector-config" class="headerlink" title="Bitbucket tomcat Connector config"></a>Bitbucket tomcat Connector config</h2><p>add secure scheme proxyName and proxyPort</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /var/atlassian/application-data/bitbucket/shared/server.xml</span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"7990"</span> </span><br><span class="line">           <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span><br><span class="line">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span><br><span class="line">           <span class="attr">useBodyEncodingForURI</span>=<span class="string">"true"</span></span><br><span class="line">           <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span><br><span class="line">           <span class="attr">compression</span>=<span class="string">"on"</span></span><br><span class="line">           <span class="attr">compressableMimeType</span>=<span class="string">"text/html,text/xml,text/plain,text/css,application/json,application/javascript,application/x-javascript"</span></span><br><span class="line">           <span class="attr">secure</span>=<span class="string">"true"</span></span><br><span class="line">           <span class="attr">scheme</span>=<span class="string">"https"</span></span><br><span class="line">           <span class="attr">proxyName</span>=<span class="string">"domain.com"</span></span><br><span class="line">           <span class="attr">proxyPort</span>=<span class="string">"443"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Nginx-site-config"><a href="#Nginx-site-config" class="headerlink" title="Nginx site config"></a>Nginx site config</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/sites-enabled/default</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen [::]:80;</span><br><span class="line">        server_name domain.com;</span><br><span class="line">        <span class="built_in">return</span> 301 https://domain.com<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name domain.com;</span><br><span class="line">        ssl_certificate /etc/nginx/ssl/domain.com.crt;</span><br><span class="line">        ssl_certificate_key /etc/nginx/ssl/domain.com.key;</span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://192.168.1.000:7990/;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        Host <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-Host <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-Server <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">                proxy_redirect          off;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /var/atlassian/application-data/bitbucket/shared/server.xml</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"7990"</span> </span></div><div class="line">           <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></div><div class="line">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></div><div class="line">           <span class="attr">useBodyEncodingForURI</span>=<span class="string">"true"</span></div><div class="line">           <span class="attr">redirectPort</span>=<span class="string">"8443"</span></div><div class="line">           <span class="attr">compression</span>=<span class="string">"on"</span></div><div class="line">           <span class="attr">compressableMimeType</span>=<span class="string">"text/html,text/xml,text/plain,text/css,application/json,application/javascript,application/x-javascript"</span></div><div class="line">           <span class="attr">secure</span>=<span class="string">"true"</span></div><div class="line">           <span class="attr">scheme</span>=<span class="string">"https"</span></div><div class="line">           <span class="attr">proxyName</span>=<span class="string">"domain.com"</span></div><div class="line">           <span class="attr">proxyPort</span>=<span class="string">"443"</span>/&gt;</div></pre></td></tr></table></figure>
+<h2 id="Nginx-site-config"><a href="#Nginx-site-config" class="headerlink" title="Nginx site config"></a>Nginx site config</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">vim /etc/nginx/sites-enabled/default</div><div class="line"></div><div class="line">server &#123;</div><div class="line">        listen 80;</div><div class="line">        listen [::]:80;</div><div class="line">        server_name domain.com;</div><div class="line">        <span class="built_in">return</span> 301 https://domain.com<span class="variable">$request_uri</span>;</div><div class="line">&#125;</div><div class="line">server &#123;</div><div class="line">        listen 443 ssl;</div><div class="line">        server_name domain.com;</div><div class="line">        ssl_certificate /etc/nginx/ssl/domain.com.crt;</div><div class="line">        ssl_certificate_key /etc/nginx/ssl/domain.com.key;</div><div class="line">        location / &#123;</div><div class="line">                proxy_pass http://192.168.1.000:7990/;</div><div class="line">                proxy_set_header        Host <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-Host <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-Server <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">                proxy_set_header        X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">                proxy_redirect          off;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
             </div>
             <div class="toggle-input article-more-link"><a>Read More +</a></div>
@@ -161,7 +315,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" data-id="cip9yfbj6000jjdk1ftv60u8z" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" data-id="cj1r0f983000c12cmayvtbpc3" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -179,11 +333,11 @@
                 <p><a href="https://dzone.com/articles/java-code-challenge-node-degrees" target="_blank" rel="external">Java Code Challenge: Node Degreesa</a></p>
 <h2 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h2><p>In graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculating the degree of every node.</p>
 <h2 id="Input-Description"><a href="#Input-Description" class="headerlink" title="Input Description"></a>Input Description</h2><p>First, you’ll be given an integer, N, on one line showing you how many nodes to account for. Next, you’ll be given an undirected graph as a series of number pairs, a and b, showing that those two nodes are connected - an edge. Example:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 </span><br><span class="line">1 2</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">3 </div><div class="line">1 2</div><div class="line">1 3</div></pre></td></tr></table></figure>
 <p>Output Description<br>Your program should emit the degree for each node. Example:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Node 1 has a degree of 2</span><br><span class="line">Node 2 has a degree of 1</span><br><span class="line">Node 3 has a degree of 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Node 1 has a degree of 2</div><div class="line">Node 2 has a degree of 1</div><div class="line">Node 3 has a degree of 1</div></pre></td></tr></table></figure>
 <p>先用Kotlin試寫一下<br>下面用Kotlin寫了一個簡單的代碼<br>有空再補充一下注解</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> buffer = IntArray(readLine()!!.toInt());</span><br><span class="line">    <span class="keyword">var</span> input = readLine();</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> intpus = input!!.split(<span class="string">' '</span>);</span><br><span class="line">        <span class="keyword">if</span> (intpus[<span class="number">0</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">0</span>].toInt() &lt;= buffer.size) &#123;</span><br><span class="line">            buffer[intpus[<span class="number">0</span>].toInt() - <span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (intpus[<span class="number">1</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">1</span>].toInt() &lt;= buffer.size) &#123;</span><br><span class="line">            buffer[intpus[<span class="number">1</span>].toInt() - <span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        input = readLine();</span><br><span class="line">    &#125; <span class="keyword">while</span> (input != <span class="string">""</span>)</span><br><span class="line">    <span class="keyword">for</span> ((index, value) <span class="keyword">in</span> buffer.withIndex()) &#123;</span><br><span class="line">        println(<span class="string">"Node <span class="subst">$&#123;index + <span class="number">1</span>&#125;</span> has a degree of <span class="subst">$value</span>"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> buffer = IntArray(readLine()!!.toInt());</div><div class="line">    <span class="keyword">var</span> input = readLine();</div><div class="line">    <span class="keyword">do</span> &#123;</div><div class="line">        <span class="keyword">val</span> intpus = input!!.split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">if</span> (intpus[<span class="number">0</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">0</span>].toInt() &lt;= buffer.size) &#123;</div><div class="line">            buffer[intpus[<span class="number">0</span>].toInt() - <span class="number">1</span>]++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (intpus[<span class="number">1</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">1</span>].toInt() &lt;= buffer.size) &#123;</div><div class="line">            buffer[intpus[<span class="number">1</span>].toInt() - <span class="number">1</span>]++;</div><div class="line">        &#125;</div><div class="line">        input = readLine();</div><div class="line">    &#125; <span class="keyword">while</span> (input != <span class="string">""</span>)</div><div class="line">    <span class="keyword">for</span> ((index, value) <span class="keyword">in</span> buffer.withIndex()) &#123;</div><div class="line">        println(<span class="string">"Node <span class="subst">$&#123;index + <span class="number">1</span>&#125;</span> has a degree of <span class="subst">$value</span>"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
             </div>
             <div class="toggle-input article-more-link"><a>Read More +</a></div>
             
@@ -218,7 +372,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/17/MonoSnap-截圖軟件/" data-id="cip9yfbj1000ejdk1lfx06tvy" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/17/MonoSnap-截圖軟件/" data-id="cj1r0f97z000b12cmcuw3lahb" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/17/MonoSnap-截圖軟件/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -271,7 +425,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/17/QuiHex-更新了圖片同步啦/" data-id="cip9yfbj3000gjdk1xr81pn4p" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/17/QuiHex-更新了圖片同步啦/" data-id="cj1r0f97t000912cmu2wmiqbs" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/17/QuiHex-更新了圖片同步啦/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -288,8 +442,8 @@
             <div class="toggle-content">
                 <p>在抄(參)考了Quiver官方的導出腳本後 再配合 Hexo的文檔<br>只需要把Note下的Resource文檔抄到Hexo文章當前的同名文件夾下<br>別外把MD的圖片格式修改成Hexo的格式</p>
 <p>由於Quiver的Note不是以文件名作為記錄 而是以UUID作記錄<br>所以NoteObject加上了UUID屬性<br>之後有還時間 就可以補上 標題追縱</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cell.data.replace(<span class="regexp">/quiver-image-url\//gi</span>, <span class="string">''</span>).replace(<span class="regexp">/!\[(.*?)]\((.+?)(\))/gi</span>, <span class="string">'&#123;% asset_img $2 [$1] %&#125;'</span>)</span><br></pre></td></tr></table></figure>
-<p>別外text cell也支持導出不過應該還有點問題<br>雖然 用raw包起來就可以 但可能把本來的md格式東西掉失(圖片連結)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">....</span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cell.data.replace(<span class="regexp">/quiver-image-url\//gi</span>, <span class="string">''</span>).replace(<span class="regexp">/!\[(.*?)]\((.+?)(\))/gi</span>, <span class="string">'&#123;% asset_img $2 [$1] %&#125;'</span>)</div></pre></td></tr></table></figure>
+<p>別外text cell也支持導出不過應該還有點問題<br>雖然 用raw包起來就可以 但可能把本來的md格式東西掉失(圖片連結)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">....</div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure></p>
 <p>總結一下 </p>
 <ul>
 <li>[x] 圖片在Markdown Cell下導出</li>
@@ -333,7 +487,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/16/OS-X-關閉視窗截圖陰影/" data-id="cip9yfbiy000cjdk1sd20yg0o" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/16/OS-X-關閉視窗截圖陰影/" data-id="cj1r0f97n000512cm4samvxzz" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/16/OS-X-關閉視窗截圖陰影/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -349,8 +503,8 @@
             
             <div class="toggle-content">
                 <p>截圖時才發現被坑了啊。。。。<br>為什麼會這樣的（被打</p>
-<h2 id="關閉陰影"><a href="#關閉陰影" class="headerlink" title="關閉陰影"></a>關閉陰影</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.screencapture disable-shadow -bool true;killall SystemUIServer</span><br></pre></td></tr></table></figure>
-<h2 id="還原陰影"><a href="#還原陰影" class="headerlink" title="還原陰影"></a>還原陰影</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.screencapture disable-shadow -bool false;killall SystemUIServer</span><br></pre></td></tr></table></figure>
+<h2 id="關閉陰影"><a href="#關閉陰影" class="headerlink" title="關閉陰影"></a>關閉陰影</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.screencapture disable-shadow -bool true;killall SystemUIServer</div></pre></td></tr></table></figure>
+<h2 id="還原陰影"><a href="#還原陰影" class="headerlink" title="還原陰影"></a>還原陰影</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.screencapture disable-shadow -bool false;killall SystemUIServer</div></pre></td></tr></table></figure>
             </div>
             <div class="toggle-input article-more-link"><a>Read More +</a></div>
             
@@ -385,7 +539,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/15/蒼之彼方的四重奏/" data-id="cip9yfbir000bjdk1d2093kmg" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/15/蒼之彼方的四重奏/" data-id="cj1r0f97q000812cm0zf9qfnl" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/15/蒼之彼方的四重奏/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -439,7 +593,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/14/Quihex-一點小更新/" data-id="cip9yfbip0009jdk1imzvxm97" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/14/Quihex-一點小更新/" data-id="cj1r0f97e000412cmxfr3codf" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/14/Quihex-一點小更新/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -455,177 +609,13 @@
             
             <div class="toggle-content">
                 <p>在便用quihex 更新和推送的時候 發現了一些小問題<br>於是手痒去改一下和開PR<br>首前是只支持Markdown cell的同步<br>由於個人 比較懶 和希望之後打理cell比較方便<br>所以所有code都會放進code cell 裹.<br>但使用quihex同步後發現 code cell 的內容沒有導<br>因此大吃一精(惊)<br>之後抄(參)考抄(參)考了一下 <a href="https://github.com/bradley-curran/quiver2jekyll" target="_blank" rel="external">quiver2jekyll</a> 這個導出腳本 發現 原來也不是太難嘛 就開始了改造大計</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (cell.type === <span class="string">'markdown'</span>) &#123;</span><br><span class="line">  logt.info(cell.type);</span><br><span class="line">  <span class="keyword">return</span> cell.data;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cell.type === <span class="string">'code'</span>) &#123;</span><br><span class="line">  logt.info(cell.language);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`\`\`\`<span class="subst">$&#123;cell.language&#125;</span>\n<span class="subst">$&#123;cell.data&#125;</span>\n\`\`\``</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (cell.type === <span class="string">'markdown'</span>) &#123;</div><div class="line">  logt.info(cell.type);</div><div class="line">  <span class="keyword">return</span> cell.data;</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cell.type === <span class="string">'code'</span>) &#123;</div><div class="line">  logt.info(cell.language);</div><div class="line">  <span class="keyword">return</span> <span class="string">`\`\`\`<span class="subst">$&#123;cell.language&#125;</span>\n<span class="subst">$&#123;cell.data&#125;</span>\n\`\`\``</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>第二個問題就是 看到一個老開發了一個issue<br>就是想生成的文件名 是帶日期的<br>這一點其實滿重要的 因為文章多起來時 日後要整理就太麻煩了</p>
 <p>這處理這個問題是 碰到的問題是<br>怎樣解決日期的格式呢<br>總不能Hardcode進去吧<br>於是又抄(參)考抄(參)考一下Hexo new 指令的源代碼<br>但是發現有夠覆雜<br>大約了解了一下思路 就開始動筆(逼)了</p>
 <p>先從_config.yml中找出new_post_name的格式</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#default</span></span><br><span class="line"><span class="attr">new_post_name:</span> :title.md</span><br><span class="line"><span class="comment">#with date foramt</span></span><br><span class="line"><span class="attr">new_post_name:</span> :year-:month-:day-:title.md</span><br><span class="line"><span class="comment">#date format sub folder</span></span><br><span class="line"><span class="attr">new_post_name:</span> :year/:month/:day/:title.md</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#default</span></div><div class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span></div><div class="line"><span class="comment">#with date foramt</span></div><div class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span></div><div class="line"><span class="comment">#date format sub folder</span></div><div class="line"><span class="attr">new_post_name:</span> <span class="string">:year/:month/:day/:title.md</span></div></pre></td></tr></table></figure>
 <p>之後重寫一個parseFileName方法.<br>先把預留的key word 都塞進會用到的參數.<br>最後把參數中的key 一個一個用正規取代.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">parseFileName</span>(<span class="params">rule, hexoPostObj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> date = moment(hexoPostObj.cdate);</span><br><span class="line">  <span class="keyword">var</span> filenameData = &#123;</span><br><span class="line">    year: date.format(<span class="string">'YYYY'</span>),</span><br><span class="line">    month: date.format(<span class="string">'MM'</span>),</span><br><span class="line">    i_month: date.format(<span class="string">'M'</span>),</span><br><span class="line">    day: date.format(<span class="string">'DD'</span>),</span><br><span class="line">    i_day: date.format(<span class="string">'D'</span>),</span><br><span class="line">    title: hexoPostObj.filename</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> filenameData) &#123;</span><br><span class="line">    rule = rule.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">":"</span> + key), filenameData[key])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> rule;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-            </div>
-            <div class="toggle-input article-more-link"><a>Read More +</a></div>
-            
-            
-        </div>
-
-    </div>
-    
-</article>
-
-
-  
-    <article id="post-TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件" class="article article-type-post" itemscope
-         itemprop="blogPost">
-    <div class="article-meta">
-        <a href="/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/" class="article-date">
-  <time datetime="2016-05-12T15:36:38.000Z" itemprop="datePublished">2016-05-12</time>
-</a>
-        
-    </div>
-    <div class="article-inner ">
-        
-        
-        <header class="article-header">
-            
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/">TypedCJ.js 一個模擬倉頡輸入法的 jQuery 插件</a>
-    </h1>
-  
-
-        </header>
-        
-        <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/" data-id="cip9yfbil0006jdk1epheg6c6" class="article-share-link">Share</a>
-            
-            <a href="http://Tsuki.github.io/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/#disqus_thread" class="article-comment-link">Comments</a>
-            
-            <div class="tagcloud">
-                
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJs/">NodeJs</a></li></ul>
-
-            </div>
-        </footer>
-        <div class="article-entry article-index" itemprop="articleBody">
-            
-            
-            
-            <div class="toggle-content">
-                <p><strong>TypedCJ.js 是對Typed.js 作出條改 加入倉頡輸入法的效果。</strong></p>
-<p><a href="http://blog.sukitsuki.com/TypedCJ.js/" target="_blank" rel="external">View the live demo</a></p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>This is really all you need to get going.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"typedCJ.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span><br><span class="line">	$(function()&#123;</span><br><span class="line">		$(".element").typed(&#123;</span><br><span class="line">			strings: ["First sentence.", "Second sentence."],</span><br><span class="line">			typeSpeed: 0</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"element"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-            </div>
-            <div class="toggle-input article-more-link"><a>Read More +</a></div>
-            
-            
-        </div>
-
-    </div>
-    
-</article>
-
-
-  
-    <article id="post-在WPF自定-ProgressBar-動畫" class="article article-type-post" itemscope
-         itemprop="blogPost">
-    <div class="article-meta">
-        <a href="/2016/05/12/在WPF自定-ProgressBar-動畫/" class="article-date">
-  <time datetime="2016-05-11T18:39:09.000Z" itemprop="datePublished">2016-05-12</time>
-</a>
-        
-    </div>
-    <div class="article-inner ">
-        
-        
-        <header class="article-header">
-            
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/12/在WPF自定-ProgressBar-動畫/">在WPF自定 ProgressBar 動畫</a>
-    </h1>
-  
-
-        </header>
-        
-        <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/12/在WPF自定-ProgressBar-動畫/" data-id="cip9yfbij0004jdk1dg6trqxu" class="article-share-link">Share</a>
-            
-            <a href="http://Tsuki.github.io/2016/05/12/在WPF自定-ProgressBar-動畫/#disqus_thread" class="article-comment-link">Comments</a>
-            
-            <div class="tagcloud">
-                
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C ++++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WPF/">WPF</a></li></ul>
-
-            </div>
-        </footer>
-        <div class="article-entry article-index" itemprop="articleBody">
-            
-            
-            
-            <div class="toggle-content">
-                <p>記錄一下在公司寫下來的小玩意</p>
-<p>在 Windows.Loadded 方法上加上 async await 食用更佳</p>
-<h3 id="ProgressBar-xaml"><a href="#ProgressBar-xaml" class="headerlink" title="ProgressBar.xaml"></a>ProgressBar.xaml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Canvas</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!--RenderTransformOrigin= 正中心旋轉 Fill 顏色--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ed:Arc</span> <span class="attr">ArcThickness</span>=<span class="string">"10"</span> <span class="attr">ArcThicknessUnit</span>=<span class="string">"Pixel"</span> <span class="attr">EndAngle</span>=<span class="string">"90"</span> <span class="attr">Fill</span>=<span class="string">"ForestGreen"</span> <span class="attr">Stretch</span>=<span class="string">"None"</span> <span class="attr">StartAngle</span>=<span class="string">"0"</span> <span class="attr">Height</span>=<span class="string">"50"</span> <span class="attr">Canvas.Left</span>=<span class="string">"0"</span> <span class="attr">Canvas.Top</span>=<span class="string">"0"</span> <span class="attr">Width</span>=<span class="string">"50"</span> <span class="attr">RenderTransformOrigin</span>=<span class="string">"0.5,0.5"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ed:Arc.RenderTransform</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">RotateTransform</span>&gt;</span><span class="tag">&lt;/<span class="name">RotateTransform</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ed:Arc.RenderTransform</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ed:Arc.Triggers</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!--定義觸發事件--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">EventTrigger</span> <span class="attr">RoutedEvent</span>=<span class="string">"Window.Loaded"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">BeginStoryboard</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">Storyboard</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--定義速度 和方向 360／－360--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">DoubleAnimation</span> <span class="attr">Storyboard.TargetProperty</span>=<span class="string">"(Rectangle.RenderTransform).(RotateTransform.Angle)"</span> <span class="attr">To</span>=<span class="string">"360"</span> <span class="attr">Duration</span>=<span class="string">"0:0:1"</span> <span class="attr">RepeatBehavior</span>=<span class="string">"Forever"</span>/&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">Storyboard</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">BeginStoryboard</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">EventTrigger</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ed:Arc.Triggers</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ed:Arc</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
-            </div>
-            <div class="toggle-input article-more-link"><a>Read More +</a></div>
-            
-            
-        </div>
-
-    </div>
-    
-</article>
-
-
-  
-    <article id="post-用Quiver-寫Hexo" class="article article-type-post" itemscope
-         itemprop="blogPost">
-    <div class="article-meta">
-        <a href="/2016/05/12/用Quiver-寫Hexo/" class="article-date">
-  <time datetime="2016-05-11T17:14:39.000Z" itemprop="datePublished">2016-05-12</time>
-</a>
-        
-    </div>
-    <div class="article-inner ">
-        
-        
-        <header class="article-header">
-            
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/12/用Quiver-寫Hexo/">用Quiver 寫Hexo</a>
-    </h1>
-  
-
-        </header>
-        
-        <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/" data-id="cip9yfbio0008jdk184kng8cv" class="article-share-link">Share</a>
-            
-            <a href="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/#disqus_thread" class="article-comment-link">Comments</a>
-            
-            <div class="tagcloud">
-                
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-
-            </div>
-        </footer>
-        <div class="article-entry article-index" itemprop="articleBody">
-            
-            
-            
-            <div class="toggle-content">
-                <p>Quiver 這是一個朋友推薦我用的Markdown Editor</p>
-<p>用後發現真的不錯 之後打算看看能不能用來寫Blog</p>
-<p>一開始是打算用Ruby 的 Jekyll</p>
-<p>但發現 配置起來實在太麻煩了</p>
-<p>而且主題也很久沒更新</p>
-<p>之後就想起姐太之前推介的Hexo</p>
-<p>現在找到一個叫 <a href="http://www.pincer.io/node/libraries/quihex" target="_blank" rel="external">Quihex</a> 的插件可以同步</p>
-<img src="/2016/05/12/用Quiver-寫Hexo/F14A076DE42ABFB6D4717609C8A0EDEA.png" alt="[Quiver 2016-05-17 03-11-53.png]" title="[Quiver 2016-05-17 03-11-53.png]">
-<img src="/2016/05/12/用Quiver-寫Hexo/CD754F06C9135D973EEB409E683184A3.png" alt="[Quiver 2016-05-17 03-17-41.png]" title="[Quiver 2016-05-17 03-17-41.png]">
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Install</span></span><br><span class="line">$ npm install -g quihex</span><br><span class="line"></span><br><span class="line"><span class="comment"># Setup</span></span><br><span class="line">$ quihex init</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sync(Quiver notes =&gt; Hexo posts)</span></span><br><span class="line">$ quihex sync</span><br><span class="line"></span><br><span class="line"><span class="comment"># Hexo deploy</span></span><br><span class="line">$ <span class="built_in">cd</span> ~/hexo-root</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">parseFileName</span>(<span class="params">rule, hexoPostObj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> date = moment(hexoPostObj.cdate);</div><div class="line">  <span class="keyword">var</span> filenameData = &#123;</div><div class="line">    <span class="attr">year</span>: date.format(<span class="string">'YYYY'</span>),</div><div class="line">    <span class="attr">month</span>: date.format(<span class="string">'MM'</span>),</div><div class="line">    <span class="attr">i_month</span>: date.format(<span class="string">'M'</span>),</div><div class="line">    <span class="attr">day</span>: date.format(<span class="string">'DD'</span>),</div><div class="line">    <span class="attr">i_day</span>: date.format(<span class="string">'D'</span>),</div><div class="line">    <span class="attr">title</span>: hexoPostObj.filename</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> filenameData) &#123;</div><div class="line">    rule = rule.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">":"</span> + key), filenameData[key])</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> rule;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
             </div>
             <div class="toggle-input article-more-link"><a>Read More +</a></div>
             
@@ -640,7 +630,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 </section>
@@ -655,6 +645,30 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <!--<ul>-->
+        
+          <li>
+            <a class="text" href="/2017/04/21/testing/">
+              
+                <i class="icon-file-o"></i>
+              
+            TODO hexo admin</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/Sublime-設定保存/">
+              
+                <i class="icon-file-o"></i>
+              
+            Sublime 設定保存</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/生在証明/">
+              
+                <i class="icon-file-o"></i>
+              
+            生在証明</a>
+          </li>
         
           <li>
             <a class="text" href="/2016/06/12/OS-X-Rebuild-brew-link/">
@@ -712,30 +726,6 @@
             Oh My Zsh Cheatsheet</a>
           </li>
         
-          <li>
-            <a class="text" href="/2016/05/29/Git-Submodule/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git Submodule</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Git-修改用戶名和Email/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git 修改用戶名和Email</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Mac下-推送public-key-到遠端服務器/">
-              
-                <i class="icon-file-o"></i>
-              
-            Mac下 推送public key 到遠端服務器</a>
-          </li>
-        
       <!--</ul>-->
     </div>
   </div>
@@ -787,7 +777,7 @@
       
     </div>
     <div id="footer-info" class="inner">
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2016 Tsuki 
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2017 Tsuki 
     </div>  
 
   </div>

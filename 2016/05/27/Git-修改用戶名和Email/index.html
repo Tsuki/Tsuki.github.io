@@ -6,12 +6,13 @@
   <title>Git 修改用戶名和Email | Tsuki Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Github版本123456789101112131415161718#!/bin/shgit filter-branch --env-filter &apos;OLD_EMAIL=&quot;your-old-email@example.com&quot;CORRECT_NAME=&quot;Your Correct Name&quot;CORRECT_EMAIL=&quot;your-correct-email@example.com&quot;if [ &quot;$G">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 修改用戶名和Email">
 <meta property="og:url" content="http://Tsuki.github.io/2016/05/27/Git-修改用戶名和Email/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
 <meta property="og:description" content="Github版本123456789101112131415161718#!/bin/shgit filter-branch --env-filter &apos;OLD_EMAIL=&quot;your-old-email@example.com&quot;CORRECT_NAME=&quot;Your Correct Name&quot;CORRECT_EMAIL=&quot;your-correct-email@example.com&quot;if [ &quot;$G">
-<meta property="og:updated_time" content="2016-06-10T16:29:09.000Z">
+<meta property="og:updated_time" content="2017-04-20T22:37:32.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git 修改用戶名和Email">
 <meta name="twitter:description" content="Github版本123456789101112131415161718#!/bin/shgit filter-branch --env-filter &apos;OLD_EMAIL=&quot;your-old-email@example.com&quot;CORRECT_NAME=&quot;Your Correct Name&quot;CORRECT_EMAIL=&quot;your-correct-email@example.com&quot;if [ &quot;$G">
@@ -77,7 +78,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
       </div>
     </div>
   </div>
@@ -106,7 +107,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/27/Git-修改用戶名和Email/" data-id="cip9yfbj8000ojdk1yw5fooeu" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/27/Git-修改用戶名和Email/" data-id="cj1r0f988000g12cmb10phzo6" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/27/Git-修改用戶名和Email/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -127,9 +128,9 @@
             </div>
             
             
-            <h2 id="Github版本"><a href="#Github版本" class="headerlink" title="Github版本"></a>Github版本</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span><br><span class="line"></span></span><br><span class="line">git filter-branch --env-filter <span class="string">'</span><br><span class="line">OLD_EMAIL="your-old-email@example.com"</span><br><span class="line">CORRECT_NAME="Your Correct Name"</span><br><span class="line">CORRECT_EMAIL="your-correct-email@example.com"</span><br><span class="line"></span><br><span class="line">if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]</span><br><span class="line">then</span><br><span class="line">    export GIT_COMMITTER_NAME="$CORRECT_NAME"</span><br><span class="line">    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"</span><br><span class="line">fi</span><br><span class="line">if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]</span><br><span class="line">then</span><br><span class="line">    export GIT_AUTHOR_NAME="$CORRECT_NAME"</span><br><span class="line">    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"</span><br><span class="line">fi</span><br><span class="line">'</span> --tag-name-filter cat -- --branches --tags</span><br></pre></td></tr></table></figure>
+            <h2 id="Github版本"><a href="#Github版本" class="headerlink" title="Github版本"></a>Github版本</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line">git filter-branch --env-filter <span class="string">'</span></div><div class="line">OLD_EMAIL="your-old-email@example.com"</div><div class="line">CORRECT_NAME="Your Correct Name"</div><div class="line">CORRECT_EMAIL="your-correct-email@example.com"</div><div class="line"></div><div class="line">if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]</div><div class="line">then</div><div class="line">    export GIT_COMMITTER_NAME="$CORRECT_NAME"</div><div class="line">    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"</div><div class="line">fi</div><div class="line">if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]</div><div class="line">then</div><div class="line">    export GIT_AUTHOR_NAME="$CORRECT_NAME"</div><div class="line">    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"</div><div class="line">fi</div><div class="line">' --tag-name-filter cat -- --branches --tags</div></pre></td></tr></table></figure>
 <h2 id="個人版本"><a href="#個人版本" class="headerlink" title="個人版本"></a>個人版本</h2><p>Ps. 會全部改掉</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch <span class="_">-f</span> --env-filter <span class="string">"</span><br><span class="line">    GIT_AUTHOR_NAME='Username'</span><br><span class="line">    GIT_AUTHOR_EMAIL='Email'</span><br><span class="line">    GIT_COMMITTER_NAME='Username'</span><br><span class="line">    GIT_COMMITTER_EMAIL='Email'</span><br><span class="line">  "</span> HEAD</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git filter-branch <span class="_">-f</span> --env-filter <span class="string">"</span></div><div class="line">    GIT_AUTHOR_NAME='Username'</div><div class="line">    GIT_AUTHOR_EMAIL='Email'</div><div class="line">    GIT_COMMITTER_NAME='Username'</div><div class="line">    GIT_COMMITTER_EMAIL='Email'</div><div class="line">  " HEAD</div></pre></td></tr></table></figure>
             
             
         </div>
@@ -139,19 +140,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/29/Git-Submodule/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/05/27/Mac下-推送public-key-到遠端服務器/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Git Submodule
+          Mac下 推送public key 到遠端服務器
         
       </div>
     </a>
   
   
-    <a href="/2016/05/27/Mac下-推送public-key-到遠端服務器/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/29/Git-Submodule/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Mac下 推送public key 到遠端服務器</div>
+      <div class="article-nav-title">Git Submodule</div>
     </a>
   
 </nav>
@@ -178,6 +179,30 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <!--<ul>-->
+        
+          <li>
+            <a class="text" href="/2017/04/21/testing/">
+              
+                <i class="icon-file-o"></i>
+              
+            TODO hexo admin</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/Sublime-設定保存/">
+              
+                <i class="icon-file-o"></i>
+              
+            Sublime 設定保存</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/生在証明/">
+              
+                <i class="icon-file-o"></i>
+              
+            生在証明</a>
+          </li>
         
           <li>
             <a class="text" href="/2016/06/12/OS-X-Rebuild-brew-link/">
@@ -235,30 +260,6 @@
             Oh My Zsh Cheatsheet</a>
           </li>
         
-          <li>
-            <a class="text" href="/2016/05/29/Git-Submodule/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git Submodule</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Git-修改用戶名和Email/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git 修改用戶名和Email</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Mac下-推送public-key-到遠端服務器/">
-              
-                <i class="icon-file-o"></i>
-              
-            Mac下 推送public key 到遠端服務器</a>
-          </li>
-        
       <!--</ul>-->
     </div>
   </div>
@@ -310,7 +311,7 @@
       
     </div>
     <div id="footer-info" class="inner">
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2016 Tsuki 
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2017 Tsuki 
     </div>  
 
   </div>

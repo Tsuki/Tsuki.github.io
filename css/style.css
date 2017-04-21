@@ -221,7 +221,6 @@ body {
   -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
   box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
   border: 1px solid #696969;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .article-entry h1,
@@ -506,7 +505,6 @@ body {
   right: 0;
   background: #fff;
   padding: 5px 15px;
-  -webkit-border-radius: 15px;
   border-radius: 15px;
   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -683,7 +681,6 @@ body {
   display: inline-block;
   line-height: 1em;
   padding: 6px 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #502829;
   color: #a4a4a4;
@@ -718,7 +715,6 @@ body {
 .article-entry table {
   color: #f0f0f0 !important;
   margin-bottom: 16px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   border-collapse: initial;
 }
@@ -735,7 +731,6 @@ body {
   -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
   box-shadow: 1px 1px 1px rgba(0,0,0,0.9);
   border: 1px solid #696969;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .article-entry blockquote {
@@ -830,7 +825,6 @@ body {
   display: inline-block;
   line-height: 1em;
   padding: 6px 10px;
-  -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #502829;
   color: #a4a4a4;
@@ -911,7 +905,6 @@ body {
     margin-top: -4px;
     margin-left: -4px;
     content: "";
-    -webkit-border-radius: 50%;
     border-radius: 50%;
     background: #696969;
     -webkit-box-shadow: 0 1px 2px #fff;
@@ -972,7 +965,6 @@ body {
   background: #fff;
   -webkit-box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
   box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   margin-left: -145px;
   overflow: hidden;
@@ -992,7 +984,6 @@ body {
   color: #c4c4c4;
   outline: none;
   border: 1px solid #696969;
-  -webkit-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
   height: 36px;
   line-height: 36px;
@@ -1439,7 +1430,6 @@ body {
   font-size: 18px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   position: relative;
   top: -5px;
@@ -1507,7 +1497,6 @@ body {
   padding: 15px 20px;
   border-style: solid;
   border-color: #696969;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   border-width: 1px 1px;
   overflow: auto;
@@ -1529,7 +1518,6 @@ body {
   color: #c0c0c0;
   background-color: #2d2d2d;
   border: 1px solid #696969;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   font-family: Monaco, Consolas;
   margin: 0 2px;
@@ -1708,7 +1696,6 @@ pre .javascript .function {
   margin: 1.6em 0 1.6em 2em;
   line-height: 1.5em;
   font-size: 0.9em;
-  -webkit-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
   min-height: 20px;
@@ -1929,7 +1916,6 @@ pre .javascript .function {
 #playblock {
   background: none repeat scroll 0% 0% #333534;
   border: 1px solid #696969;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
   box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
@@ -2141,7 +2127,6 @@ pre .javascript .function {
 }
 .slider {
   background: rgba(0,0,0,0.3);
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5) inset;
   box-shadow: 0 1px 2px rgba(0,0,0,0.5) inset;
@@ -2159,7 +2144,6 @@ pre .javascript .function {
 }
 .slider a {
   background: #fff;
-  -webkit-border-radius: 50%;
   border-radius: 50%;
   height: 5px;
   khtml-border-radius: 50%;
@@ -2194,7 +2178,6 @@ pre .javascript .function {
 }
 .slider .loaded,
 .slider .pace {
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   height: 100%;
   khtml-border-radius: 5px;
@@ -2254,7 +2237,6 @@ pre .javascript .function {
   -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
   box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
   border: 1px solid #696969;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   width: 70%;
   margin: 20px auto;
@@ -2264,7 +2246,6 @@ pre .javascript .function {
   margin: 2px;
   color: #777;
   padding: 15px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .tagbox li {
@@ -2278,7 +2259,6 @@ pre .javascript .function {
 }
 .tagbox a {
   border: 1px dashed #bbb;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
   padding: 2px 6px;
   margin: 3px;
@@ -2350,7 +2330,6 @@ pre .javascript .function {
   line-height: 1.125rem;
   padding: 0 5px 0 10px;
   position: relative;
-  -webkit-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
   margin: 5px 9px 5px 8px;
   opacity: 0.9;
@@ -2430,7 +2409,6 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   background-color: #fff;
-  -webkit-border-radius: 4px;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
   box-shadow: 0 0 0 1px rgba(0,0,0,0.3);
@@ -2458,7 +2436,6 @@ pre .javascript .function {
 .widget {
   color: #777;
   padding: 15px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 .widget a {

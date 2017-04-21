@@ -3,19 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>在WPF自定 ProgressBar 動畫 | Tsuki Blog</title>
+  <title>Tsuki Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="記錄一下在公司寫下來的小玩意 在 Windows.Loadded 方法上加上 async await 食用更佳 ProgressBar.xaml12345678910111213141516171819&amp;lt;Canvas&amp;gt;  &amp;lt;!--RenderTransformOrigin= 正中心旋轉 Fill 顏色--&amp;gt;  &amp;lt;ed:Arc ArcThickness=&quot;10&quot; Arc">
-<meta name="keywords" content="WPF,C ++++">
-<meta property="og:type" content="article">
-<meta property="og:title" content="在WPF自定 ProgressBar 動畫">
-<meta property="og:url" content="http://Tsuki.github.io/2016/05/12/在WPF自定-ProgressBar-動畫/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Tsuki Blog">
+<meta property="og:url" content="http://Tsuki.github.io/page/3/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
-<meta property="og:description" content="記錄一下在公司寫下來的小玩意 在 Windows.Loadded 方法上加上 async await 食用更佳 ProgressBar.xaml12345678910111213141516171819&amp;lt;Canvas&amp;gt;  &amp;lt;!--RenderTransformOrigin= 正中心旋轉 Fill 顏色--&amp;gt;  &amp;lt;ed:Arc ArcThickness=&quot;10&quot; Arc">
-<meta property="og:updated_time" content="2017-04-20T22:37:32.714Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在WPF自定 ProgressBar 動畫">
-<meta name="twitter:description" content="記錄一下在公司寫下來的小玩意 在 Windows.Loadded 方法上加上 async await 食用更佳 ProgressBar.xaml12345678910111213141516171819&amp;lt;Canvas&amp;gt;  &amp;lt;!--RenderTransformOrigin= 正中心旋轉 Fill 顏色--&amp;gt;  &amp;lt;ed:Arc ArcThickness=&quot;10&quot; Arc">
+<meta name="twitter:title" content="Tsuki Blog">
   
     <link rel="alternative" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml">
   
@@ -85,7 +80,62 @@
 </header>
       <div class="outer">
         
-          <section id="main"><article id="post-在WPF自定-ProgressBar-動畫" class="article article-type-post" itemscope
+          <section id="main">
+  
+    <article id="post-TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/" class="article-date">
+  <time datetime="2016-05-12T15:36:38.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/">TypedCJ.js 一個模擬倉頡輸入法的 jQuery 插件</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/" data-id="cj1r0f96w000012cmelerur80" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJs/">NodeJs</a></li></ul>
+
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <p><strong>TypedCJ.js 是對Typed.js 作出條改 加入倉頡輸入法的效果。</strong></p>
+<p><a href="http://blog.sukitsuki.com/TypedCJ.js/" target="_blank" rel="external">View the live demo</a></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>This is really all you need to get going.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"typedCJ.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">	$(function()&#123;</div><div class="line">		$(".element").typed(&#123;</div><div class="line">			strings: ["First sentence.", "Second sentence."],</div><div class="line">			typeSpeed: 0</div><div class="line">		&#125;);</div><div class="line">	&#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"element"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
+    
+</article>
+
+
+  
+    <article id="post-在WPF自定-ProgressBar-動畫" class="article article-type-post" itemscope
          itemprop="blogPost">
     <div class="article-meta">
         <a href="/2016/05/12/在WPF自定-ProgressBar-動畫/" class="article-date">
@@ -99,8 +149,8 @@
         <header class="article-header">
             
   
-    <h1 class="article-title" itemprop="name">
-      在WPF自定 ProgressBar 動畫
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/12/在WPF自定-ProgressBar-動畫/">在WPF自定 ProgressBar 動畫</a>
     </h1>
   
 
@@ -117,56 +167,90 @@
 
             </div>
         </footer>
-        <div class="article-entry " itemprop="articleBody">
+        <div class="article-entry article-index" itemprop="articleBody">
             
             
-            <div id="toc" class="toc-article">
-                <h2 class="toc-title"><span>contents</span></h2>
-                
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ProgressBar-xaml"><span class="toc-number">1.</span> <span class="toc-text">ProgressBar.xaml</span></a></li></ol>
-                
-            </div>
             
-            
-            <p>記錄一下在公司寫下來的小玩意</p>
+            <div class="toggle-content">
+                <p>記錄一下在公司寫下來的小玩意</p>
 <p>在 Windows.Loadded 方法上加上 async await 食用更佳</p>
 <h3 id="ProgressBar-xaml"><a href="#ProgressBar-xaml" class="headerlink" title="ProgressBar.xaml"></a>ProgressBar.xaml</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Canvas</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--RenderTransformOrigin= 正中心旋轉 Fill 顏色--&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ed:Arc</span> <span class="attr">ArcThickness</span>=<span class="string">"10"</span> <span class="attr">ArcThicknessUnit</span>=<span class="string">"Pixel"</span> <span class="attr">EndAngle</span>=<span class="string">"90"</span> <span class="attr">Fill</span>=<span class="string">"ForestGreen"</span> <span class="attr">Stretch</span>=<span class="string">"None"</span> <span class="attr">StartAngle</span>=<span class="string">"0"</span> <span class="attr">Height</span>=<span class="string">"50"</span> <span class="attr">Canvas.Left</span>=<span class="string">"0"</span> <span class="attr">Canvas.Top</span>=<span class="string">"0"</span> <span class="attr">Width</span>=<span class="string">"50"</span> <span class="attr">RenderTransformOrigin</span>=<span class="string">"0.5,0.5"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ed:Arc.RenderTransform</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">RotateTransform</span>&gt;</span><span class="tag">&lt;/<span class="name">RotateTransform</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ed:Arc.RenderTransform</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ed:Arc.Triggers</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!--定義觸發事件--&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">EventTrigger</span> <span class="attr">RoutedEvent</span>=<span class="string">"Window.Loaded"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">BeginStoryboard</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">Storyboard</span>&gt;</span></div><div class="line">            <span class="comment">&lt;!--定義速度 和方向 360／－360--&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">DoubleAnimation</span> <span class="attr">Storyboard.TargetProperty</span>=<span class="string">"(Rectangle.RenderTransform).(RotateTransform.Angle)"</span> <span class="attr">To</span>=<span class="string">"360"</span> <span class="attr">Duration</span>=<span class="string">"0:0:1"</span> <span class="attr">RepeatBehavior</span>=<span class="string">"Forever"</span>/&gt;</span></div><div class="line">          <span class="tag">&lt;/<span class="name">Storyboard</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">BeginStoryboard</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">EventTrigger</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">ed:Arc.Triggers</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ed:Arc</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">Canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
             
             
         </div>
 
     </div>
     
-    
-<nav id="article-nav">
-  
-    <a href="/2016/05/12/用Quiver-寫Hexo/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          用Quiver 寫Hexo
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">TypedCJ.js 一個模擬倉頡輸入法的 jQuery 插件</div>
-    </a>
-  
-</nav>
+</article>
 
+
+  
+    <article id="post-用Quiver-寫Hexo" class="article article-type-post" itemscope
+         itemprop="blogPost">
+    <div class="article-meta">
+        <a href="/2016/05/12/用Quiver-寫Hexo/" class="article-date">
+  <time datetime="2016-05-11T17:14:39.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+        
+    </div>
+    <div class="article-inner ">
+        
+        
+        <header class="article-header">
+            
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/12/用Quiver-寫Hexo/">用Quiver 寫Hexo</a>
+    </h1>
+  
+
+        </header>
+        
+        <footer class="article-footer">
+            <a data-url="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/" data-id="cj1r0f97c000312cmcdx5tt19" class="article-share-link">Share</a>
+            
+            <a href="http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/#disqus_thread" class="article-comment-link">Comments</a>
+            
+            <div class="tagcloud">
+                
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+
+            </div>
+        </footer>
+        <div class="article-entry article-index" itemprop="articleBody">
+            
+            
+            
+            <div class="toggle-content">
+                <p>Quiver 這是一個朋友推薦我用的Markdown Editor</p>
+<p>用後發現真的不錯 之後打算看看能不能用來寫Blog</p>
+<p>一開始是打算用Ruby 的 Jekyll</p>
+<p>但發現 配置起來實在太麻煩了</p>
+<p>而且主題也很久沒更新</p>
+<p>之後就想起姐太之前推介的Hexo</p>
+<p>現在找到一個叫 <a href="http://www.pincer.io/node/libraries/quihex" target="_blank" rel="external">Quihex</a> 的插件可以同步</p>
+<img src="/2016/05/12/用Quiver-寫Hexo/F14A076DE42ABFB6D4717609C8A0EDEA.png" alt="[Quiver 2016-05-17 03-11-53.png]" title="[Quiver 2016-05-17 03-11-53.png]">
+<img src="/2016/05/12/用Quiver-寫Hexo/CD754F06C9135D973EEB409E683184A3.png" alt="[Quiver 2016-05-17 03-17-41.png]" title="[Quiver 2016-05-17 03-17-41.png]">
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Install</span></div><div class="line">$ npm install -g quihex</div><div class="line"></div><div class="line"><span class="comment"># Setup</span></div><div class="line">$ quihex init</div><div class="line"></div><div class="line"><span class="comment"># Sync(Quiver notes =&gt; Hexo posts)</span></div><div class="line">$ quihex sync</div><div class="line"></div><div class="line"><span class="comment"># Hexo deploy</span></div><div class="line">$ <span class="built_in">cd</span> ~/hexo-root</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+            </div>
+            <div class="toggle-input article-more-link"><a>Read More +</a></div>
+            
+            
+        </div>
+
+    </div>
     
 </article>
 
 
-<section id="comments">
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by
-                Disqus.</a></noscript>
-    </div>
-</section>
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
+  
 </section>
           
             <aside id="sidebar">
@@ -331,13 +415,11 @@
     <script>
         var disqus_shortname = 'TsukiBlog';
         
-        var disqus_url = 'http://Tsuki.github.io/2016/05/12/在WPF自定-ProgressBar-動畫/';
-        
         (function () {
             var dsq = document.createElement('script');
             dsq.type = 'text/javascript';
             dsq.async = true;
-            dsq.src = '//go.disqus.com/embed.js';
+            dsq.src = '//go.disqus.com/count.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Tsuki.github.io/"/>
-  <updated>2016-06-12T04:34:42.000Z</updated>
+  <updated>2017-04-21T00:04:52.277Z</updated>
   <id>http://Tsuki.github.io/</id>
   
   <author>
@@ -16,17 +16,83 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>TODO hexo admin</title>
+    <link href="http://Tsuki.github.io/2017/04/21/testing/"/>
+    <id>http://Tsuki.github.io/2017/04/21/testing/</id>
+    <published>2017-04-20T23:59:11.000Z</published>
+    <updated>2017-04-21T00:04:52.277Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>[] Update api.js to read new_post_name in config</li>
+<li>[] photo like deploy</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;[] Update api.js to read new_post_name in config&lt;/li&gt;
+&lt;li&gt;[] photo like deploy&lt;/li&gt;
+&lt;/ul&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sublime 設定保存</title>
+    <link href="http://Tsuki.github.io/2017/04/21/Sublime-%E8%A8%AD%E5%AE%9A%E4%BF%9D%E5%AD%98/"/>
+    <id>http://Tsuki.github.io/2017/04/21/Sublime-設定保存/</id>
+    <published>2017-04-20T23:50:00.000Z</published>
+    <updated>2017-04-20T23:55:07.234Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Setting"><a href="#Setting" class="headerlink" title="Setting"></a>Setting</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"color_scheme"</span>: <span class="string">"Packages/Colorcoder/Monokai (Colorcoded).tmTheme"</span>,</div><div class="line">	<span class="attr">"font_size"</span>: <span class="number">12</span>,</div><div class="line">	<span class="attr">"ignored_packages"</span>:</div><div class="line">	[</div><div class="line">		<span class="string">"Vintage"</span></div><div class="line">	],</div><div class="line">	<span class="attr">"original_color_scheme"</span>: <span class="string">"Packages/Color Scheme - Default/Monokai.tmTheme"</span>,</div><div class="line">	<span class="attr">"show_encoding"</span>: <span class="literal">true</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Key-binding"><a href="#Key-binding" class="headerlink" title="Key binding"></a>Key binding</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">[</div><div class="line">	&#123; <span class="attr">"keys"</span>: [<span class="string">"home"</span>], <span class="attr">"command"</span>: <span class="string">"move_to"</span>, <span class="attr">"args"</span>: &#123;<span class="attr">"to"</span>: <span class="string">"bol"</span>&#125; &#125;,</div><div class="line">	&#123; <span class="attr">"keys"</span>: [<span class="string">"end"</span>], <span class="attr">"command"</span>: <span class="string">"move_to"</span>, <span class="attr">"args"</span>: &#123;<span class="attr">"to"</span>: <span class="string">"eol"</span>&#125; &#125;,</div><div class="line">	&#123; <span class="attr">"keys"</span>: [<span class="string">"shift+end"</span>], <span class="attr">"command"</span>: <span class="string">"move_to"</span>, <span class="attr">"args"</span>: &#123;<span class="attr">"to"</span>: <span class="string">"eol"</span>, <span class="attr">"extend"</span>: <span class="literal">true</span>&#125; &#125;,</div><div class="line">	&#123; <span class="attr">"keys"</span>: [<span class="string">"shift+home"</span>], <span class="attr">"command"</span>: <span class="string">"move_to"</span>, <span class="attr">"args"</span>: &#123;<span class="attr">"to"</span>: <span class="string">"bol"</span>, <span class="attr">"extend"</span>: <span class="literal">true</span> &#125; &#125;,</div><div class="line">	&#123; <span class="attr">"keys"</span>: [<span class="string">"option+up"</span>], <span class="attr">"command"</span>: <span class="string">"expand_region"</span> &#125;,</div><div class="line">	&#123; <span class="attr">"keys"</span>: [<span class="string">"option+down"</span>], <span class="attr">"command"</span>: <span class="string">"expand_region"</span>,  <span class="attr">"args"</span>: &#123;<span class="attr">"undo"</span>: <span class="literal">true</span>&#125;, <span class="attr">"context"</span>: [&#123; <span class="attr">"key"</span>: <span class="string">"expand_region_soft_undo"</span> &#125;]&#125;,</div><div class="line">	&#123; <span class="attr">"keys"</span>: [<span class="string">"super+ctrl+f"</span>], <span class="attr">"command"</span>: <span class="string">"show_panel"</span>, <span class="attr">"args"</span>: &#123;<span class="attr">"panel"</span>: <span class="string">"replace"</span>, <span class="attr">"reverse"</span>: <span class="literal">false</span>&#125; &#125;,</div><div class="line">]</div></pre></td></tr></table></figure>
+<h2 id="Installed-Packages"><a href="#Installed-Packages" class="headerlink" title="Installed Packages"></a>Installed Packages</h2><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"bootstrapped"</span>: <span class="literal">true</span>,</div><div class="line">	<span class="attr">"in_process_packages"</span>:</div><div class="line">	[</div><div class="line">	],</div><div class="line">	<span class="attr">"installed_packages"</span>:</div><div class="line">	[</div><div class="line">		<span class="string">"Autoprefixer"</span>,</div><div class="line">		<span class="string">"BracketHighlighter"</span>,</div><div class="line">		<span class="string">"Codecs33"</span>,</div><div class="line">		<span class="string">"Colorcoder"</span>,</div><div class="line">		<span class="string">"Compressor"</span>,</div><div class="line">		<span class="string">"ConvertToUTF8"</span>,</div><div class="line">		<span class="string">"CSScomb"</span>,</div><div class="line">		<span class="string">"Dockerfile Syntax Highlighting"</span>,</div><div class="line">		<span class="string">"Emmet"</span>,</div><div class="line">		<span class="string">"ExpandRegion"</span>,</div><div class="line">		<span class="string">"Extend Selection"</span>,</div><div class="line">		<span class="string">"Filter Lines"</span>,</div><div class="line">		<span class="string">"GitGutter"</span>,</div><div class="line">		<span class="string">"Indent XML"</span>,</div><div class="line">		<span class="string">"JavaPropertiesEditor"</span>,</div><div class="line">		<span class="string">"JsFormat"</span>,</div><div class="line">		<span class="string">"Markdown Preview"</span>,</div><div class="line">		<span class="string">"MarkdownEditing"</span>,</div><div class="line">		<span class="string">"Package Control"</span>,</div><div class="line">		<span class="string">"Sass"</span>,</div><div class="line">		<span class="string">"SFTP"</span>,</div><div class="line">		<span class="string">"SideBarEnhancements"</span>,</div><div class="line">		<span class="string">"SortBy"</span>,</div><div class="line">		<span class="string">"Tag"</span>,</div><div class="line">		<span class="string">"Vuejs Complete Package"</span></div><div class="line">	]</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Setting&quot;&gt;&lt;a href=&quot;#Setting&quot; class=&quot;headerlink&quot; title=&quot;Setting&quot;&gt;&lt;/a&gt;Setting&lt;/h2&gt;&lt;figure class=&quot;highlight json&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>生在証明</title>
+    <link href="http://Tsuki.github.io/2017/04/21/%E7%94%9F%E5%9C%A8%E8%A8%BC%E6%98%8E/"/>
+    <id>http://Tsuki.github.io/2017/04/21/生在証明/</id>
+    <published>2017-04-20T23:49:51.000Z</published>
+    <updated>2017-04-20T23:49:57.744Z</updated>
+    
+    <content type="html"><![CDATA[<p>還沒死！！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;還沒死！！&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>OS X Rebuild brew link</title>
     <link href="http://Tsuki.github.io/2016/06/12/OS-X-Rebuild-brew-link/"/>
     <id>http://Tsuki.github.io/2016/06/12/OS-X-Rebuild-brew-link/</id>
     <published>2016-06-12T04:32:20.000Z</published>
-    <updated>2016-06-12T04:34:42.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew list -1 | &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;read&lt;/span&gt; line; &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; brew unlink &lt;span class=&quot;variable&quot;&gt;$line&lt;/span&gt;; brew link --force &lt;span class=&quot;variable&quot;&gt;$line&lt;/span&gt;; &lt;span class=&quot;keyword&quot;&gt;done&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew list -1 | <span class="keyword">while</span> <span class="built_in">read</span> line; <span class="keyword">do</span> brew unlink <span class="variable">$line</span>; brew link --force <span class="variable">$line</span>; <span class="keyword">done</span></div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=
+      &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;
     
     </summary>
     
@@ -40,12 +106,12 @@
     <link href="http://Tsuki.github.io/2016/06/11/Hexo-PJAX-%E5%8C%96/"/>
     <id>http://Tsuki.github.io/2016/06/11/Hexo-PJAX-化/</id>
     <published>2016-06-10T19:43:38.000Z</published>
-    <updated>2016-06-12T03:35:51.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;p&gt;經過一番努力後&lt;/p&gt;
-&lt;p&gt;成功用PJAX把Hexo改成pushState 的效果&lt;/p&gt;
-&lt;p&gt;這樣就可以自動播放音樂了&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<p>經過一番努力後</p>
+<p>成功用PJAX把Hexo改成pushState 的效果</p>
+<p>這樣就可以自動播放音樂了</p>
+]]></content>
     
     <summary type="html">
     
@@ -64,10 +130,10 @@
     <link href="http://Tsuki.github.io/2016/06/10/Mac-%E5%88%86%E5%B1%8F%E5%B7%A5%E5%85%B7-Spectacle/"/>
     <id>http://Tsuki.github.io/2016/06/10/Mac-分屏工具-Spectacle/</id>
     <published>2016-06-10T08:44:09.000Z</published>
-    <updated>2016-06-12T03:35:51.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;Installation&quot;&gt;&lt;a href=&quot;#Installation&quot; class=&quot;headerlink&quot; title=&quot;Installation&quot;&gt;&lt;/a&gt;Installation&lt;/h2&gt;&lt;p&gt;brew cask install spectacle&lt;/p&gt;
-&lt;img src=&quot;/2016/06/10/Mac-分屏工具-Spectacle/A910DF0D16E29CFB9BE40905903F0D11.png&quot; alt=&quot;[Spectacle 1.0.6 2016-06-10 16-43-28.png]&quot; title=&quot;[Spectacle 1.0.6 2016-06-10 16-43-28.png]&quot;&gt;</content>
+    <content type="html"><![CDATA[<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>brew cask install spectacle</p>
+<img src="/2016/06/10/Mac-分屏工具-Spectacle/A910DF0D16E29CFB9BE40905903F0D11.png" alt="[Spectacle 1.0.6 2016-06-10 16-43-28.png]" title="[Spectacle 1.0.6 2016-06-10 16-43-28.png]">]]></content>
     
     <summary type="html">
     
@@ -85,11 +151,11 @@
     <link href="http://Tsuki.github.io/2016/06/10/Fix-Sublime-Text-Home-and-End-key-usage-on-Mac-OSX/"/>
     <id>http://Tsuki.github.io/2016/06/10/Fix-Sublime-Text-Home-and-End-key-usage-on-Mac-OSX/</id>
     <published>2016-06-10T05:32:33.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;p&gt;Preferences &amp;gt; Key Bindings - User&lt;/p&gt;
-&lt;p&gt;Adding the following to the array;&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &quot;keys&quot;: [&quot;home&quot;], &quot;command&quot;: &quot;move_to&quot;, &quot;args&quot;: &amp;#123;&quot;to&quot;: &quot;bol&quot;&amp;#125; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &quot;keys&quot;: [&quot;end&quot;], &quot;command&quot;: &quot;move_to&quot;, &quot;args&quot;: &amp;#123;&quot;to&quot;: &quot;eol&quot;&amp;#125; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &quot;keys&quot;: [&quot;shift+end&quot;], &quot;command&quot;: &quot;move_to&quot;, &quot;args&quot;: &amp;#123;&quot;to&quot;: &quot;eol&quot;, &quot;extend&quot;: true&amp;#125; &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123; &quot;keys&quot;: [&quot;shift+home&quot;], &quot;command&quot;: &quot;move_to&quot;, &quot;args&quot;: &amp;#123;&quot;to&quot;: &quot;bol&quot;, &quot;extend&quot;: true &amp;#125; &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<p>Preferences &gt; Key Bindings - User</p>
+<p>Adding the following to the array;</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&#123; "keys": ["home"], "command": "move_to", "args": &#123;"to": "bol"&#125; &#125;,</div><div class="line">&#123; "keys": ["end"], "command": "move_to", "args": &#123;"to": "eol"&#125; &#125;,</div><div class="line">&#123; "keys": ["shift+end"], "command": "move_to", "args": &#123;"to": "eol", "extend": true&#125; &#125;,</div><div class="line">&#123; "keys": ["shift+home"], "command": "move_to", "args": &#123;"to": "bol", "extend": true &#125; &#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -111,20 +177,20 @@
     <link href="http://Tsuki.github.io/2016/06/03/Windows-Open-in-SublimeText-bat/"/>
     <id>http://Tsuki.github.io/2016/06/03/Windows-Open-in-SublimeText-bat/</id>
     <published>2016-06-03T02:57:28.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;OpenWithSublimeText3.bat&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@echo off&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;SET st3Path=C:\Program Files\Sublime Text 3\sublime_text.exe&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;::add it for all file types&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@reg add &amp;quot;HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3&amp;quot;         /t REG_SZ /v &amp;quot;&amp;quot; /d &amp;quot;Open with Sublime Text 3&amp;quot;   /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@reg add &amp;quot;HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3&amp;quot;         /t REG_EXPAND_SZ /v &amp;quot;Icon&amp;quot; /d &amp;quot;%st3Path%,0&amp;quot; /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@reg add &amp;quot;HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3\command&amp;quot; /t REG_SZ /v &amp;quot;&amp;quot; /d &amp;quot;%st3Path% \&amp;quot;%%1\&amp;quot;&amp;quot; /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;::add it for folders&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@reg add &amp;quot;HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 3&amp;quot;         /t REG_SZ /v &amp;quot;&amp;quot; /d &amp;quot;Open with Sublime Text 3&amp;quot;   /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@reg add &amp;quot;HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 3&amp;quot;         /t REG_EXPAND_SZ /v &amp;quot;Icon&amp;quot; /d &amp;quot;%st3Path%,0&amp;quot; /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@reg add &amp;quot;HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 3\command&amp;quot; /t REG_SZ /v &amp;quot;&amp;quot; /d &amp;quot;%st3Path% \&amp;quot;%%1\&amp;quot;&amp;quot; /f&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;pause&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">OpenWithSublimeText3.bat</div><div class="line"></div><div class="line">@echo off</div><div class="line">SET st3Path=C:\Program Files\Sublime Text 3\sublime_text.exe</div><div class="line"> </div><div class="line">::add it for all file types</div><div class="line">@reg add &quot;HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3&quot;         /t REG_SZ /v &quot;&quot; /d &quot;Open with Sublime Text 3&quot;   /f</div><div class="line">@reg add &quot;HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3&quot;         /t REG_EXPAND_SZ /v &quot;Icon&quot; /d &quot;%st3Path%,0&quot; /f</div><div class="line">@reg add &quot;HKEY_CLASSES_ROOT\*\shell\Open with Sublime Text 3\command&quot; /t REG_SZ /v &quot;&quot; /d &quot;%st3Path% \&quot;%%1\&quot;&quot; /f</div><div class="line"> </div><div class="line">::add it for folders</div><div class="line">@reg add &quot;HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 3&quot;         /t REG_SZ /v &quot;&quot; /d &quot;Open with Sublime Text 3&quot;   /f</div><div class="line">@reg add &quot;HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 3&quot;         /t REG_EXPAND_SZ /v &quot;Icon&quot; /d &quot;%st3Path%,0&quot; /f</div><div class="line">@reg add &quot;HKEY_CLASSES_ROOT\Folder\shell\Open with Sublime Text 3\command&quot; /t REG_SZ /v &quot;&quot; /d &quot;%st3Path% \&quot;%%1\&quot;&quot; /f</div><div class="line">pause</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
     
     </summary>
     
     
-      <category term="Sublime" scheme="http://Tsuki.github.io/tags/Sublime/"/>
-    
       <category term="Windows" scheme="http://Tsuki.github.io/tags/Windows/"/>
+    
+      <category term="Sublime" scheme="http://Tsuki.github.io/tags/Sublime/"/>
     
   </entry>
   
@@ -133,12 +199,12 @@
     <link href="http://Tsuki.github.io/2016/06/02/OS-X-Use-mouse-like-Windows/"/>
     <id>http://Tsuki.github.io/2016/06/02/OS-X-Use-mouse-like-Windows/</id>
     <published>2016-06-02T02:37:52.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;SmoothMouse-for-OS-X&quot;&gt;&lt;a href=&quot;#SmoothMouse-for-OS-X&quot; class=&quot;headerlink&quot; title=&quot;SmoothMouse for OS X&quot;&gt;&lt;/a&gt;SmoothMouse for OS X&lt;/h2&gt;&lt;p&gt;Experimental project to improve mouse &amp;amp; trackpad usability in OS X.&lt;/p&gt;
-&lt;p&gt;使用mac os x，移動鼠標時總有一種移動慢的時候很慢，快的時候飛快的感覺，十分飄。&lt;/p&gt;
-&lt;img src=&quot;/2016/06/02/OS-X-Use-mouse-like-Windows/0E3D126E95ED2A956F5673754797C069.png&quot; alt=&quot;[SmoothMouse]&quot; title=&quot;[SmoothMouse]&quot;&gt;
-</content>
+    <content type="html"><![CDATA[<h2 id="SmoothMouse-for-OS-X"><a href="#SmoothMouse-for-OS-X" class="headerlink" title="SmoothMouse for OS X"></a>SmoothMouse for OS X</h2><p>Experimental project to improve mouse &amp; trackpad usability in OS X.</p>
+<p>使用mac os x，移動鼠標時總有一種移動慢的時候很慢，快的時候飛快的感覺，十分飄。</p>
+<img src="/2016/06/02/OS-X-Use-mouse-like-Windows/0E3D126E95ED2A956F5673754797C069.png" alt="[SmoothMouse]" title="[SmoothMouse]">
+]]></content>
     
     <summary type="html">
     
@@ -156,620 +222,620 @@
     <link href="http://Tsuki.github.io/2016/05/30/Oh-My-Zsh-Cheatsheet/"/>
     <id>http://Tsuki.github.io/2016/05/30/Oh-My-Zsh-Cheatsheet/</id>
     <published>2016-05-29T17:02:14.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;p&gt;Zsh 的alias&lt;/p&gt;
-&lt;p&gt;對我來說 比較常用的是&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;gaa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gss&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gcam &amp;apos;comment&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gca!&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;source ~/.oh-my-zsh/templates/zshrc.zsh-template&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;Commands&quot;&gt;&lt;a href=&quot;#Commands&quot; class=&quot;headerlink&quot; title=&quot;Commands&quot;&gt;&lt;/a&gt;Commands&lt;/h2&gt;&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Command&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;tabs&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Create a new tab in the current directory (OS X - req enabling access for assistive devices under sys prefs).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;take&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Create a new directory and change to it, will create intermediate directories as required.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;x&lt;/em&gt; / &lt;em&gt;extract&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Extract an archive (supported types: tar.{bz2,gz,xz,lzma}, bz2, rar, gz, tar, tbz2, tgz, zip, Z, 7z).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;zsh_stats&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Get a list of the top 20 commands and how many times they have been run.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;uninstall_oh_my_zsh&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Uninstall Oh-my-zsh.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;upgrade_oh_my_zsh&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;Upgrade Oh-my-zsh.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Alias&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Command&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;alias&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;list all aliases&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;..&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd ..&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;…&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd ../..&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;….&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd ../../..&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;…..&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd ../../../..&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;/&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd /&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;cd +n&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;switch to directory number &lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;1&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd -&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;2&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;3&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;4&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +4&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;5&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;6&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +6&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;7&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +7&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;8&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +8&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;9&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd +9&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;md&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;mkdir -p&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;rd&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;rmdir&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;d&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;dirs -v (lists last used directories)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;p&gt;See &lt;code&gt;~/.oh-my-zsh/lib/directories.zsh&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Tab-completion&quot;&gt;&lt;a href=&quot;#Tab-completion&quot; class=&quot;headerlink&quot; title=&quot;Tab-completion&quot;&gt;&lt;/a&gt;Tab-completion&lt;/h2&gt;&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;For options and helpful text of what they do&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;em&gt;ls -(tab)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;em&gt;cap (tab)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;em&gt;rake (tab)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;em&gt;ssh (tab)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;em&gt;sudo umount (tab)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;em&gt;kill (tab)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;&lt;em&gt;unrar (tab)&lt;/em&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;Git&quot;&gt;&lt;a href=&quot;#Git&quot; class=&quot;headerlink&quot; title=&quot;Git&quot;&gt;&lt;/a&gt;Git&lt;/h2&gt;&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Dynamic access to current branch name with the current_branch function&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;git pull origin $(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;grb publish $(current_branch) origin&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Alias&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Command&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;g&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ga&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git add&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gaa&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git add —all&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gapa&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git add —patch&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gb&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git branch&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gba&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git branch -a&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gbr&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git branch —remote&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gc&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git commit -v&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gc!&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git commit -v —amend&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gca&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git commit -v -a&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gca!&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git commit -v -a —amend&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gcl&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git config —list&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gclean&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git clean -fd&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gpristine&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git reset —hard &amp;amp;&amp;amp; git clean -dfx&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gcm&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git checkout master&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gcmsg&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git commit -m&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gco&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git checkout&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gcount&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git shortlog -sn&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gcp&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git cherry-pick&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gcs&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git commit -S&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gd&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git diff&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gdca&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git diff —cached&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gdt&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git diff-tree —no-commit-id —name-only -r&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gdt&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git difftool&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gfa&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git fetch —all —prune&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gg&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git gui citool&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gga&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git gui citool —amend&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ggpnp&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git pull origin $(current_branch) &amp;amp;&amp;amp; git push origin $(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ggpull&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git pull origin $(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ggl&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git pull origin $(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ggpur&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git pull —rebase origin $(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;glum&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git pull upstream master&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ggpush&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git push origin $(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ggp&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git push origin $(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;ggsup&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git branch —set-upstream-to=origin/$(current_branch)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gignore&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git update-index —assume-unchanged&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gignored&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git ls-files -v &amp;#124; grep “^[[:lower:]]”&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;git-svn-dcommit-push&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git svn dcommit &amp;amp;&amp;amp; git push github master:svntrunk&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gk&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;gitk —all —branches&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gl&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git pull&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;glg&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git log —stat —max-count = 10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;glgg&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git log —graph —max-count = 10&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;glgga&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git log —graph —decorate —all&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;glo&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git log —oneline —decorate —color&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;glog&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git log —oneline —decorate —color —graph&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;glp&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;_git_log_prettily (git log —pretty=$1)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gm&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git merge&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gmt&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git mergetool —no-prompt&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gp&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git push&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gpoat&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git push origin —all &amp;amp;&amp;amp; git push origin —tags&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gr&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git remote&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grba&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git rebase —abort&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grbc&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git rebase —continue&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grbi&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git rebase -i&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grh&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git reset HEAD&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grhh&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git reset HEAD —hard&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grmv&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git remote rename&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grrm&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git remote remove&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grset&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git remote set-url&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grt&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;cd $(git rev-parse —show-toplevel &amp;#124;&amp;#124; echo “.”)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grup&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git remote update&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;grv&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git remote -v&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gsd&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git svn dcommit&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gsps&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git show —pretty = short —show-signature&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gsr&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git svn rebase&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gss&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git status -s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gst&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git status&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gsta&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git stash&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gstd&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git stash drop&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gstp&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git stash pop&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gsts&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git stash show —text&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gts&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git tag -s&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gunignore&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git update-index —no-assume-unchanged&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gunwip&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git log -n 1 &amp;#124; grep -q -c “--wip--“ &amp;amp;&amp;amp; git reset HEAD~1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gup&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git pull —rebase&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gvt&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git verify-tag&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gwch&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git whatchanged -p —abbrev-commit —pretty = medium&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;gwip&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;git add -A; git ls-files —deleted -z &amp;#124; xargs -r0 git rm; git commit -m “—wip—“&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;p&gt;You also find these commands in Dash as a Cheat-sheet.&lt;/p&gt;
-&lt;h2 id=&quot;Editors&quot;&gt;&lt;a href=&quot;#Editors&quot; class=&quot;headerlink&quot; title=&quot;Editors&quot;&gt;&lt;/a&gt;Editors&lt;/h2&gt;&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Alias&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Command&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;stt&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;(When using &lt;code&gt;sublime&lt;/code&gt; plugin) Open current directory in Sublime Text 2/3&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;v&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;(When using &lt;code&gt;vi-mode&lt;/code&gt; plugin) Edit current command line in Vim&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;Symfony2&quot;&gt;&lt;a href=&quot;#Symfony2&quot; class=&quot;headerlink&quot; title=&quot;Symfony2&quot;&gt;&lt;/a&gt;Symfony2&lt;/h2&gt;&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Alias&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Command&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sf&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;php ./app/console&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sfcl&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;php app/console cache:clear&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;_sfcontainer&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;sf container:debug&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sfcw&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;sf cache:warmup&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sfgb&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;sf generate:bundle&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sfroute&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;sf router:debug&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;_sfsr&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;sf server:run -vvv&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;Systemd&quot;&gt;&lt;a href=&quot;#Systemd&quot; class=&quot;headerlink&quot; title=&quot;Systemd&quot;&gt;&lt;/a&gt;Systemd&lt;/h2&gt;&lt;h3 id=&quot;systemctl&quot;&gt;&lt;a href=&quot;#systemctl&quot; class=&quot;headerlink&quot; title=&quot;systemctl&quot;&gt;&lt;/a&gt;systemctl&lt;/h3&gt;&lt;div class=&quot;table-container&quot;&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Command&lt;/th&gt;
-&lt;th style=&quot;text-align:left&quot;&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sc-status NAME&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;show the status of the NAME process&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sc-show NAME&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;show the NAME systemd .service file&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sc-start NAME&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;start the NAME process&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sc-stop NAME&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;stop the NAME process&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sc-restart NAME&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;restart the NAME process&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sc-enable NAME&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;enable the NAME process to start at boot&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;&lt;em&gt;sc-disable NAME&lt;/em&gt;&lt;/td&gt;
-&lt;td style=&quot;text-align:left&quot;&gt;disable the NAME process at boot&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-</content>
+    <content type="html"><![CDATA[<p>Zsh 的alias</p>
+<p>對我來說 比較常用的是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">gaa</div><div class="line">gss</div><div class="line">gcam &apos;comment&apos;</div><div class="line">gp</div><div class="line">gca!</div></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.oh-my-zsh/templates/zshrc.zsh-template</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="Commands"><a href="#Commands" class="headerlink" title="Commands"></a>Commands</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Command</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>tabs</em></td>
+<td style="text-align:left">Create a new tab in the current directory (OS X - req enabling access for assistive devices under sys prefs).</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>take</em></td>
+<td style="text-align:left">Create a new directory and change to it, will create intermediate directories as required.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>x</em> / <em>extract</em></td>
+<td style="text-align:left">Extract an archive (supported types: tar.{bz2,gz,xz,lzma}, bz2, rar, gz, tar, tbz2, tgz, zip, Z, 7z).</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>zsh_stats</em></td>
+<td style="text-align:left">Get a list of the top 20 commands and how many times they have been run.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>uninstall_oh_my_zsh</em></td>
+<td style="text-align:left">Uninstall Oh-my-zsh.</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>upgrade_oh_my_zsh</em></td>
+<td style="text-align:left">Upgrade Oh-my-zsh.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Alias</th>
+<th style="text-align:left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>alias</em></td>
+<td style="text-align:left">list all aliases</td>
+</tr>
+<tr>
+<td style="text-align:left">..</td>
+<td style="text-align:left">cd ..</td>
+</tr>
+<tr>
+<td style="text-align:left">…</td>
+<td style="text-align:left">cd ../..</td>
+</tr>
+<tr>
+<td style="text-align:left">….</td>
+<td style="text-align:left">cd ../../..</td>
+</tr>
+<tr>
+<td style="text-align:left">…..</td>
+<td style="text-align:left">cd ../../../..</td>
+</tr>
+<tr>
+<td style="text-align:left">/</td>
+<td style="text-align:left">cd /</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>cd +n</em></td>
+<td style="text-align:left">switch to directory number <code>n</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><em>1</em></td>
+<td style="text-align:left">cd -</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>2</em></td>
+<td style="text-align:left">cd +2</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>3</em></td>
+<td style="text-align:left">cd +3</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>4</em></td>
+<td style="text-align:left">cd +4</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>5</em></td>
+<td style="text-align:left">cd +5</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>6</em></td>
+<td style="text-align:left">cd +6</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>7</em></td>
+<td style="text-align:left">cd +7</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>8</em></td>
+<td style="text-align:left">cd +8</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>9</em></td>
+<td style="text-align:left">cd +9</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>md</em></td>
+<td style="text-align:left">mkdir -p</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>rd</em></td>
+<td style="text-align:left">rmdir</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>d</em></td>
+<td style="text-align:left">dirs -v (lists last used directories)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>See <code>~/.oh-my-zsh/lib/directories.zsh</code></p>
+<h2 id="Tab-completion"><a href="#Tab-completion" class="headerlink" title="Tab-completion"></a>Tab-completion</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">For options and helpful text of what they do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>ls -(tab)</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>cap (tab)</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>rake (tab)</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>ssh (tab)</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>sudo umount (tab)</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>kill (tab)</em></td>
+</tr>
+<tr>
+<td style="text-align:center"><em>unrar (tab)</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Dynamic access to current branch name with the current_branch function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">git pull origin $(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:center">grb publish $(current_branch) origin</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Alias</th>
+<th style="text-align:left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>g</em></td>
+<td style="text-align:left">git</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ga</em></td>
+<td style="text-align:left">git add</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gaa</em></td>
+<td style="text-align:left">git add —all</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gapa</em></td>
+<td style="text-align:left">git add —patch</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gb</em></td>
+<td style="text-align:left">git branch</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gba</em></td>
+<td style="text-align:left">git branch -a</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gbr</em></td>
+<td style="text-align:left">git branch —remote</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gc</em></td>
+<td style="text-align:left">git commit -v</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gc!</em></td>
+<td style="text-align:left">git commit -v —amend</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gca</em></td>
+<td style="text-align:left">git commit -v -a</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gca!</em></td>
+<td style="text-align:left">git commit -v -a —amend</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gcl</em></td>
+<td style="text-align:left">git config —list</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gclean</em></td>
+<td style="text-align:left">git clean -fd</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gpristine</em></td>
+<td style="text-align:left">git reset —hard &amp;&amp; git clean -dfx</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gcm</em></td>
+<td style="text-align:left">git checkout master</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gcmsg</em></td>
+<td style="text-align:left">git commit -m</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gco</em></td>
+<td style="text-align:left">git checkout</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gcount</em></td>
+<td style="text-align:left">git shortlog -sn</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gcp</em></td>
+<td style="text-align:left">git cherry-pick</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gcs</em></td>
+<td style="text-align:left">git commit -S</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gd</em></td>
+<td style="text-align:left">git diff</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gdca</em></td>
+<td style="text-align:left">git diff —cached</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gdt</em></td>
+<td style="text-align:left">git diff-tree —no-commit-id —name-only -r</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gdt</em></td>
+<td style="text-align:left">git difftool</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gfa</em></td>
+<td style="text-align:left">git fetch —all —prune</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gg</em></td>
+<td style="text-align:left">git gui citool</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gga</em></td>
+<td style="text-align:left">git gui citool —amend</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ggpnp</em></td>
+<td style="text-align:left">git pull origin $(current_branch) &amp;&amp; git push origin $(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ggpull</em></td>
+<td style="text-align:left">git pull origin $(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ggl</em></td>
+<td style="text-align:left">git pull origin $(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ggpur</em></td>
+<td style="text-align:left">git pull —rebase origin $(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>glum</em></td>
+<td style="text-align:left">git pull upstream master</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ggpush</em></td>
+<td style="text-align:left">git push origin $(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ggp</em></td>
+<td style="text-align:left">git push origin $(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>ggsup</em></td>
+<td style="text-align:left">git branch —set-upstream-to=origin/$(current_branch)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gignore</em></td>
+<td style="text-align:left">git update-index —assume-unchanged</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gignored</em></td>
+<td style="text-align:left">git ls-files -v &#124; grep “^[[:lower:]]”</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>git-svn-dcommit-push</em></td>
+<td style="text-align:left">git svn dcommit &amp;&amp; git push github master:svntrunk</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gk</em></td>
+<td style="text-align:left">gitk —all —branches</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gl</em></td>
+<td style="text-align:left">git pull</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>glg</em></td>
+<td style="text-align:left">git log —stat —max-count = 10</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>glgg</em></td>
+<td style="text-align:left">git log —graph —max-count = 10</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>glgga</em></td>
+<td style="text-align:left">git log —graph —decorate —all</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>glo</em></td>
+<td style="text-align:left">git log —oneline —decorate —color</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>glog</em></td>
+<td style="text-align:left">git log —oneline —decorate —color —graph</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>glp</em></td>
+<td style="text-align:left">_git_log_prettily (git log —pretty=$1)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gm</em></td>
+<td style="text-align:left">git merge</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gmt</em></td>
+<td style="text-align:left">git mergetool —no-prompt</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gp</em></td>
+<td style="text-align:left">git push</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gpoat</em></td>
+<td style="text-align:left">git push origin —all &amp;&amp; git push origin —tags</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gr</em></td>
+<td style="text-align:left">git remote</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grba</em></td>
+<td style="text-align:left">git rebase —abort</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grbc</em></td>
+<td style="text-align:left">git rebase —continue</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grbi</em></td>
+<td style="text-align:left">git rebase -i</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grh</em></td>
+<td style="text-align:left">git reset HEAD</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grhh</em></td>
+<td style="text-align:left">git reset HEAD —hard</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grmv</em></td>
+<td style="text-align:left">git remote rename</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grrm</em></td>
+<td style="text-align:left">git remote remove</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grset</em></td>
+<td style="text-align:left">git remote set-url</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grt</em></td>
+<td style="text-align:left">cd $(git rev-parse —show-toplevel &#124;&#124; echo “.”)</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grup</em></td>
+<td style="text-align:left">git remote update</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>grv</em></td>
+<td style="text-align:left">git remote -v</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gsd</em></td>
+<td style="text-align:left">git svn dcommit</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gsps</em></td>
+<td style="text-align:left">git show —pretty = short —show-signature</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gsr</em></td>
+<td style="text-align:left">git svn rebase</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gss</em></td>
+<td style="text-align:left">git status -s</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gst</em></td>
+<td style="text-align:left">git status</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gsta</em></td>
+<td style="text-align:left">git stash</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gstd</em></td>
+<td style="text-align:left">git stash drop</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gstp</em></td>
+<td style="text-align:left">git stash pop</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gsts</em></td>
+<td style="text-align:left">git stash show —text</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gts</em></td>
+<td style="text-align:left">git tag -s</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gunignore</em></td>
+<td style="text-align:left">git update-index —no-assume-unchanged</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gunwip</em></td>
+<td style="text-align:left">git log -n 1 &#124; grep -q -c “--wip--“ &amp;&amp; git reset HEAD~1</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gup</em></td>
+<td style="text-align:left">git pull —rebase</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gvt</em></td>
+<td style="text-align:left">git verify-tag</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gwch</em></td>
+<td style="text-align:left">git whatchanged -p —abbrev-commit —pretty = medium</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>gwip</em></td>
+<td style="text-align:left">git add -A; git ls-files —deleted -z &#124; xargs -r0 git rm; git commit -m “—wip—“</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>You also find these commands in Dash as a Cheat-sheet.</p>
+<h2 id="Editors"><a href="#Editors" class="headerlink" title="Editors"></a>Editors</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Alias</th>
+<th style="text-align:left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>stt</em></td>
+<td style="text-align:left">(When using <code>sublime</code> plugin) Open current directory in Sublime Text 2/3</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>v</em></td>
+<td style="text-align:left">(When using <code>vi-mode</code> plugin) Edit current command line in Vim</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Symfony2"><a href="#Symfony2" class="headerlink" title="Symfony2"></a>Symfony2</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Alias</th>
+<th style="text-align:left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>sf</em></td>
+<td style="text-align:left">php ./app/console</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sfcl</em></td>
+<td style="text-align:left">php app/console cache:clear</td>
+</tr>
+<tr>
+<td style="text-align:left">_sfcontainer</td>
+<td style="text-align:left">sf container:debug</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sfcw</em></td>
+<td style="text-align:left">sf cache:warmup</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sfgb</em></td>
+<td style="text-align:left">sf generate:bundle</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sfroute</em></td>
+<td style="text-align:left">sf router:debug</td>
+</tr>
+<tr>
+<td style="text-align:left">_sfsr</td>
+<td style="text-align:left">sf server:run -vvv</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Systemd"><a href="#Systemd" class="headerlink" title="Systemd"></a>Systemd</h2><h3 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Command</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><em>sc-status NAME</em></td>
+<td style="text-align:left">show the status of the NAME process</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sc-show NAME</em></td>
+<td style="text-align:left">show the NAME systemd .service file</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sc-start NAME</em></td>
+<td style="text-align:left">start the NAME process</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sc-stop NAME</em></td>
+<td style="text-align:left">stop the NAME process</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sc-restart NAME</em></td>
+<td style="text-align:left">restart the NAME process</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sc-enable NAME</em></td>
+<td style="text-align:left">enable the NAME process to start at boot</td>
+</tr>
+<tr>
+<td style="text-align:left"><em>sc-disable NAME</em></td>
+<td style="text-align:left">disable the NAME process at boot</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
     
     <summary type="html">
     
       &lt;p&gt;Zsh 的alias&lt;/p&gt;
 &lt;p&gt;對我來說 比較常用的是&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=
     
     </summary>
     
@@ -787,12 +853,12 @@
     <link href="http://Tsuki.github.io/2016/05/29/Git-Submodule/"/>
     <id>http://Tsuki.github.io/2016/05/29/Git-Submodule/</id>
     <published>2016-05-29T08:08:53.000Z</published>
-    <updated>2016-06-12T03:35:51.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;建立-Git-Submodule&quot;&gt;&lt;a href=&quot;#建立-Git-Submodule&quot; class=&quot;headerlink&quot; title=&quot;建立 Git Submodule&quot;&gt;&lt;/a&gt;建立 Git Submodule&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git submodule add &amp;lt;repository&amp;gt; [&amp;lt;path&amp;gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Clon-git-repo&quot;&gt;&lt;a href=&quot;#Clon-git-repo&quot; class=&quot;headerlink&quot; title=&quot;Clon git repo&quot;&gt;&lt;/a&gt;Clon git repo&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; --recursive &amp;lt;repository&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Update-git-repo&quot;&gt;&lt;a href=&quot;#Update-git-repo&quot; class=&quot;headerlink&quot; title=&quot;Update git repo&quot;&gt;&lt;/a&gt;Update git repo&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git submodule foreach --recursive git pull origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;刪除-Git-Submodule&quot;&gt;&lt;a href=&quot;#刪除-Git-Submodule&quot; class=&quot;headerlink&quot; title=&quot;刪除 Git Submodule&quot;&gt;&lt;/a&gt;刪除 Git Submodule&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git rm --cached &amp;lt;repository&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git rm  &amp;lt;repository&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vi .gitmodules&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;vi .git/config&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git submodule sync&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<h2 id="建立-Git-Submodule"><a href="#建立-Git-Submodule" class="headerlink" title="建立 Git Submodule"></a>建立 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule add &lt;repository&gt; [&lt;path&gt;]</div></pre></td></tr></table></figure>
+<h2 id="Clon-git-repo"><a href="#Clon-git-repo" class="headerlink" title="Clon git repo"></a>Clon git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git <span class="built_in">clone</span> --recursive &lt;repository&gt;</div></pre></td></tr></table></figure>
+<h2 id="Update-git-repo"><a href="#Update-git-repo" class="headerlink" title="Update git repo"></a>Update git repo</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git submodule foreach --recursive git pull origin master</div></pre></td></tr></table></figure>
+<h2 id="刪除-Git-Submodule"><a href="#刪除-Git-Submodule" class="headerlink" title="刪除 Git Submodule"></a>刪除 Git Submodule</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">git rm --cached &lt;repository&gt;</div><div class="line">git rm  &lt;repository&gt;</div><div class="line">vi .gitmodules</div><div class="line">vi .git/config</div><div class="line">git submodule sync</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -810,11 +876,11 @@
     <link href="http://Tsuki.github.io/2016/05/27/Git-%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B6%E5%90%8D%E5%92%8CEmail/"/>
     <id>http://Tsuki.github.io/2016/05/27/Git-修改用戶名和Email/</id>
     <published>2016-05-26T17:33:07.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;Github版本&quot;&gt;&lt;a href=&quot;#Github版本&quot; class=&quot;headerlink&quot; title=&quot;Github版本&quot;&gt;&lt;/a&gt;Github版本&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#!/bin/sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git filter-branch --env-filter &lt;span class=&quot;string&quot;&gt;&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;OLD_EMAIL=&quot;your-old-email@example.com&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CORRECT_NAME=&quot;Your Correct Name&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;CORRECT_EMAIL=&quot;your-correct-email@example.com&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    export GIT_COMMITTER_NAME=&quot;$CORRECT_NAME&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    export GIT_COMMITTER_EMAIL=&quot;$CORRECT_EMAIL&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;$OLD_EMAIL&quot; ]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;then&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    export GIT_AUTHOR_NAME=&quot;$CORRECT_NAME&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    export GIT_AUTHOR_EMAIL=&quot;$CORRECT_EMAIL&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fi&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&#39;&lt;/span&gt; --tag-name-filter cat -- --branches --tags&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;個人版本&quot;&gt;&lt;a href=&quot;#個人版本&quot; class=&quot;headerlink&quot; title=&quot;個人版本&quot;&gt;&lt;/a&gt;個人版本&lt;/h2&gt;&lt;p&gt;Ps. 會全部改掉&lt;/p&gt;
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git filter-branch &lt;span class=&quot;_&quot;&gt;-f&lt;/span&gt; --env-filter &lt;span class=&quot;string&quot;&gt;&quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    GIT_AUTHOR_NAME=&#39;Username&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    GIT_AUTHOR_EMAIL=&#39;Email&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    GIT_COMMITTER_NAME=&#39;Username&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    GIT_COMMITTER_EMAIL=&#39;Email&#39;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &quot;&lt;/span&gt; HEAD&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<h2 id="Github版本"><a href="#Github版本" class="headerlink" title="Github版本"></a>Github版本</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"></div><div class="line">git filter-branch --env-filter <span class="string">'</span></div><div class="line">OLD_EMAIL="your-old-email@example.com"</div><div class="line">CORRECT_NAME="Your Correct Name"</div><div class="line">CORRECT_EMAIL="your-correct-email@example.com"</div><div class="line"></div><div class="line">if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]</div><div class="line">then</div><div class="line">    export GIT_COMMITTER_NAME="$CORRECT_NAME"</div><div class="line">    export GIT_COMMITTER_EMAIL="$CORRECT_EMAIL"</div><div class="line">fi</div><div class="line">if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]</div><div class="line">then</div><div class="line">    export GIT_AUTHOR_NAME="$CORRECT_NAME"</div><div class="line">    export GIT_AUTHOR_EMAIL="$CORRECT_EMAIL"</div><div class="line">fi</div><div class="line">' --tag-name-filter cat -- --branches --tags</div></pre></td></tr></table></figure>
+<h2 id="個人版本"><a href="#個人版本" class="headerlink" title="個人版本"></a>個人版本</h2><p>Ps. 會全部改掉</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git filter-branch <span class="_">-f</span> --env-filter <span class="string">"</span></div><div class="line">    GIT_AUTHOR_NAME='Username'</div><div class="line">    GIT_AUTHOR_EMAIL='Email'</div><div class="line">    GIT_COMMITTER_NAME='Username'</div><div class="line">    GIT_COMMITTER_EMAIL='Email'</div><div class="line">  " HEAD</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -832,11 +898,11 @@
     <link href="http://Tsuki.github.io/2016/05/27/Mac%E4%B8%8B-%E6%8E%A8%E9%80%81public-key-%E5%88%B0%E9%81%A0%E7%AB%AF%E6%9C%8D%E5%8B%99%E5%99%A8/"/>
     <id>http://Tsuki.github.io/2016/05/27/Mac下-推送public-key-到遠端服務器/</id>
     <published>2016-05-26T17:20:42.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;先生成public-key&quot;&gt;&lt;a href=&quot;#先生成public-key&quot; class=&quot;headerlink&quot; title=&quot;先生成public key&quot;&gt;&lt;/a&gt;先生成public key&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-keygen -t ecdsa&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;下載-ssh-copy-id&quot;&gt;&lt;a href=&quot;#下載-ssh-copy-id&quot; class=&quot;headerlink&quot; title=&quot;下載 ssh-copy-id&quot;&gt;&lt;/a&gt;下載 ssh-copy-id&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;brew install ssh-copy-id&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;推送&quot;&gt;&lt;a href=&quot;#推送&quot; class=&quot;headerlink&quot; title=&quot;推送&quot;&gt;&lt;/a&gt;推送&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ssh-copy-id -i ./.ssh/id_ecdsa.pub user@host&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<h2 id="先生成public-key"><a href="#先生成public-key" class="headerlink" title="先生成public key"></a>先生成public key</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t ecdsa</div></pre></td></tr></table></figure>
+<h2 id="下載-ssh-copy-id"><a href="#下載-ssh-copy-id" class="headerlink" title="下載 ssh-copy-id"></a>下載 ssh-copy-id</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install ssh-copy-id</div></pre></td></tr></table></figure>
+<h2 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-copy-id -i ./.ssh/id_ecdsa.pub user@host</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -856,13 +922,13 @@
     <link href="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx%C2%A0reverse-proxy/"/>
     <id>http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/</id>
     <published>2016-05-26T16:51:47.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;h2 id=&quot;Bitbucket-tomcat-Connector-config&quot;&gt;&lt;a href=&quot;#Bitbucket-tomcat-Connector-config&quot; class=&quot;headerlink&quot; title=&quot;Bitbucket tomcat Connector config&quot;&gt;&lt;/a&gt;Bitbucket tomcat Connector config&lt;/h2&gt;&lt;p&gt;add secure scheme proxyName and proxyPort&lt;/p&gt;
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim /var/atlassian/application-data/bitbucket/shared/server.xml&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Connector&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;port&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;7990&quot;&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;protocol&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;HTTP/1.1&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;connectionTimeout&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;20000&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;useBodyEncodingForURI&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;redirectPort&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;8443&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;compression&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;on&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;compressableMimeType&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;text/html,text/xml,text/plain,text/css,application/json,application/javascript,application/x-javascript&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;secure&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;true&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;scheme&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;https&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;proxyName&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;domain.com&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;           &lt;span class=&quot;attr&quot;&gt;proxyPort&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;443&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;Nginx-site-config&quot;&gt;&lt;a href=&quot;#Nginx-site-config&quot; class=&quot;headerlink&quot; title=&quot;Nginx site config&quot;&gt;&lt;/a&gt;Nginx site config&lt;/h2&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;vim /etc/nginx/sites-enabled/default&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        listen 80;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        listen [::]:80;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        server_name domain.com;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;return&lt;/span&gt; 301 https://domain.com&lt;span class=&quot;variable&quot;&gt;$request_uri&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        listen 443 ssl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        server_name domain.com;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ssl_certificate /etc/nginx/ssl/domain.com.crt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        ssl_certificate_key /etc/nginx/ssl/domain.com.key;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        location / &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_pass http://192.168.1.000:7990/;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;_header        Host &lt;span class=&quot;variable&quot;&gt;$host&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;_header        X-Forwarded-Host &lt;span class=&quot;variable&quot;&gt;$host&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;_header        X-Forwarded-Server &lt;span class=&quot;variable&quot;&gt;$host&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;_header        X-Forwarded-For &lt;span class=&quot;variable&quot;&gt;$proxy_add_x_forwarded_for&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_&lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;_header        X-Real-IP &lt;span class=&quot;variable&quot;&gt;$remote_addr&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                proxy_redirect          off;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
+    <content type="html"><![CDATA[<h2 id="Bitbucket-tomcat-Connector-config"><a href="#Bitbucket-tomcat-Connector-config" class="headerlink" title="Bitbucket tomcat Connector config"></a>Bitbucket tomcat Connector config</h2><p>add secure scheme proxyName and proxyPort</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /var/atlassian/application-data/bitbucket/shared/server.xml</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"7990"</span> </span></div><div class="line">           <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></div><div class="line">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></div><div class="line">           <span class="attr">useBodyEncodingForURI</span>=<span class="string">"true"</span></div><div class="line">           <span class="attr">redirectPort</span>=<span class="string">"8443"</span></div><div class="line">           <span class="attr">compression</span>=<span class="string">"on"</span></div><div class="line">           <span class="attr">compressableMimeType</span>=<span class="string">"text/html,text/xml,text/plain,text/css,application/json,application/javascript,application/x-javascript"</span></div><div class="line">           <span class="attr">secure</span>=<span class="string">"true"</span></div><div class="line">           <span class="attr">scheme</span>=<span class="string">"https"</span></div><div class="line">           <span class="attr">proxyName</span>=<span class="string">"domain.com"</span></div><div class="line">           <span class="attr">proxyPort</span>=<span class="string">"443"</span>/&gt;</div></pre></td></tr></table></figure>
+<h2 id="Nginx-site-config"><a href="#Nginx-site-config" class="headerlink" title="Nginx site config"></a>Nginx site config</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">vim /etc/nginx/sites-enabled/default</div><div class="line"></div><div class="line">server &#123;</div><div class="line">        listen 80;</div><div class="line">        listen [::]:80;</div><div class="line">        server_name domain.com;</div><div class="line">        <span class="built_in">return</span> 301 https://domain.com<span class="variable">$request_uri</span>;</div><div class="line">&#125;</div><div class="line">server &#123;</div><div class="line">        listen 443 ssl;</div><div class="line">        server_name domain.com;</div><div class="line">        ssl_certificate /etc/nginx/ssl/domain.com.crt;</div><div class="line">        ssl_certificate_key /etc/nginx/ssl/domain.com.key;</div><div class="line">        location / &#123;</div><div class="line">                proxy_pass http://192.168.1.000:7990/;</div><div class="line">                proxy_set_header        Host <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-Host <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-Server <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">                proxy_set_header        X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">                proxy_redirect          off;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
@@ -884,16 +950,16 @@
     <link href="http://Tsuki.github.io/2016/05/18/DZone%C2%A0Java-Code-Challenge-Node-Degrees/"/>
     <id>http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/</id>
     <published>2016-05-17T18:44:49.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;a href=&quot;https://dzone.com/articles/java-code-challenge-node-degrees&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java Code Challenge: Node Degreesa&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Challenge&quot;&gt;&lt;a href=&quot;#Challenge&quot; class=&quot;headerlink&quot; title=&quot;Challenge&quot;&gt;&lt;/a&gt;Challenge&lt;/h2&gt;&lt;p&gt;In graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculating the degree of every node.&lt;/p&gt;
-&lt;h2 id=&quot;Input-Description&quot;&gt;&lt;a href=&quot;#Input-Description&quot; class=&quot;headerlink&quot; title=&quot;Input Description&quot;&gt;&lt;/a&gt;Input Description&lt;/h2&gt;&lt;p&gt;First, you’ll be given an integer, N, on one line showing you how many nodes to account for. Next, you’ll be given an undirected graph as a series of number pairs, a and b, showing that those two nodes are connected - an edge. Example:&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;3 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;1 3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;Output Description&lt;br&gt;Your program should emit the degree for each node. Example:&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Node 1 has a degree of 2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Node 2 has a degree of 1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Node 3 has a degree of 1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;先用Kotlin試寫一下&lt;br&gt;下面用Kotlin寫了一個簡單的代碼&lt;br&gt;有空再補充一下注解&lt;/p&gt;
-&lt;figure class=&quot;highlight kotlin&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(args: &lt;span class=&quot;type&quot;&gt;Array&lt;/span&gt;&amp;lt;&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;&amp;gt;)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;val&lt;/span&gt; buffer = IntArray(readLine()!!.toInt());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; input = readLine();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;do&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;val&lt;/span&gt; intpus = input!!.split(&lt;span class=&quot;string&quot;&gt;&#39; &#39;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (intpus[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].toInt() &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; || intpus[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].toInt() &amp;lt;= buffer.size) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            buffer[intpus[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;].toInt() - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (intpus[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;].toInt() &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; || intpus[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;].toInt() &amp;lt;= buffer.size) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            buffer[intpus[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;].toInt() - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]++;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        input = readLine();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125; &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (input != &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; ((index, value) &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; buffer.withIndex()) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        println(&lt;span class=&quot;string&quot;&gt;&quot;Node &lt;span class=&quot;subst&quot;&gt;$&amp;#123;index + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt; has a degree of &lt;span class=&quot;subst&quot;&gt;$value&lt;/span&gt;&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<p><a href="https://dzone.com/articles/java-code-challenge-node-degrees" target="_blank" rel="external">Java Code Challenge: Node Degreesa</a></p>
+<h2 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h2><p>In graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculating the degree of every node.</p>
+<h2 id="Input-Description"><a href="#Input-Description" class="headerlink" title="Input Description"></a>Input Description</h2><p>First, you’ll be given an integer, N, on one line showing you how many nodes to account for. Next, you’ll be given an undirected graph as a series of number pairs, a and b, showing that those two nodes are connected - an edge. Example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">3 </div><div class="line">1 2</div><div class="line">1 3</div></pre></td></tr></table></figure>
+<p>Output Description<br>Your program should emit the degree for each node. Example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Node 1 has a degree of 2</div><div class="line">Node 2 has a degree of 1</div><div class="line">Node 3 has a degree of 1</div></pre></td></tr></table></figure>
+<p>先用Kotlin試寫一下<br>下面用Kotlin寫了一個簡單的代碼<br>有空再補充一下注解</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> buffer = IntArray(readLine()!!.toInt());</div><div class="line">    <span class="keyword">var</span> input = readLine();</div><div class="line">    <span class="keyword">do</span> &#123;</div><div class="line">        <span class="keyword">val</span> intpus = input!!.split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">if</span> (intpus[<span class="number">0</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">0</span>].toInt() &lt;= buffer.size) &#123;</div><div class="line">            buffer[intpus[<span class="number">0</span>].toInt() - <span class="number">1</span>]++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (intpus[<span class="number">1</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">1</span>].toInt() &lt;= buffer.size) &#123;</div><div class="line">            buffer[intpus[<span class="number">1</span>].toInt() - <span class="number">1</span>]++;</div><div class="line">        &#125;</div><div class="line">        input = readLine();</div><div class="line">    &#125; <span class="keyword">while</span> (input != <span class="string">""</span>)</div><div class="line">    <span class="keyword">for</span> ((index, value) <span class="keyword">in</span> buffer.withIndex()) &#123;</div><div class="line">        println(<span class="string">"Node <span class="subst">$&#123;index + <span class="number">1</span>&#125;</span> has a degree of <span class="subst">$value</span>"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -913,12 +979,12 @@
     <link href="http://Tsuki.github.io/2016/05/17/MonoSnap-%E6%88%AA%E5%9C%96%E8%BB%9F%E4%BB%B6/"/>
     <id>http://Tsuki.github.io/2016/05/17/MonoSnap-截圖軟件/</id>
     <published>2016-05-16T19:06:53.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;p&gt;一個不錯的免費截圖軟件&lt;br&gt;自帶比較簡單的編輯器 而且Windows下也能用&lt;br&gt;雖然沒自帶那麼多快捷鍵 不過基本上不過不失&lt;br&gt;最重要是可以定格截圖&lt;/p&gt;
-&lt;p&gt;不知道是不是Bug了還是怎了 OS X 10.10更新之後就不能凍結 截圖的畫面&lt;br&gt;這方便的修改 完全沒有考慮用家啊 而且改了也沒有通知&lt;/p&gt;
-&lt;p&gt;這個截圖上 看到一些簡單的功能&lt;br&gt;比如加上箭頭 方格 手寫 打嗎!!(很重要)&lt;br&gt;此名還有文字和截剪等很常用的功能&lt;/p&gt;
-&lt;img src=&quot;/2016/05/17/MonoSnap-截圖軟件/A8909BAD19AFDC1C83F8BCAF1237436A.png&quot; alt=&quot;[Monosnap 2016-05-17 03-19-27.png]&quot; title=&quot;[Monosnap 2016-05-17 03-19-27.png]&quot;&gt;</content>
+    <content type="html"><![CDATA[<p>一個不錯的免費截圖軟件<br>自帶比較簡單的編輯器 而且Windows下也能用<br>雖然沒自帶那麼多快捷鍵 不過基本上不過不失<br>最重要是可以定格截圖</p>
+<p>不知道是不是Bug了還是怎了 OS X 10.10更新之後就不能凍結 截圖的畫面<br>這方便的修改 完全沒有考慮用家啊 而且改了也沒有通知</p>
+<p>這個截圖上 看到一些簡單的功能<br>比如加上箭頭 方格 手寫 打嗎!!(很重要)<br>此名還有文字和截剪等很常用的功能</p>
+<img src="/2016/05/17/MonoSnap-截圖軟件/A8909BAD19AFDC1C83F8BCAF1237436A.png" alt="[Monosnap 2016-05-17 03-19-27.png]" title="[Monosnap 2016-05-17 03-19-27.png]">]]></content>
     
     <summary type="html">
     
@@ -939,21 +1005,21 @@
     <link href="http://Tsuki.github.io/2016/05/17/QuiHex-%E6%9B%B4%E6%96%B0%E4%BA%86%E5%9C%96%E7%89%87%E5%90%8C%E6%AD%A5%E5%95%A6/"/>
     <id>http://Tsuki.github.io/2016/05/17/QuiHex-更新了圖片同步啦/</id>
     <published>2016-05-16T18:50:06.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;p&gt;在抄(參)考了Quiver官方的導出腳本後 再配合 Hexo的文檔&lt;br&gt;只需要把Note下的Resource文檔抄到Hexo文章當前的同名文件夾下&lt;br&gt;別外把MD的圖片格式修改成Hexo的格式&lt;/p&gt;
-&lt;p&gt;由於Quiver的Note不是以文件名作為記錄 而是以UUID作記錄&lt;br&gt;所以NoteObject加上了UUID屬性&lt;br&gt;之後有還時間 就可以補上 標題追縱&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cell.data.replace(&lt;span class=&quot;regexp&quot;&gt;/quiver-image-url\//gi&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;&#39;&lt;/span&gt;).replace(&lt;span class=&quot;regexp&quot;&gt;/!\[(.*?)]\((.+?)(\))/gi&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;&amp;#123;% asset_img $2 [$1] %&amp;#125;&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;別外text cell也支持導出不過應該還有點問題&lt;br&gt;雖然 用raw包起來就可以 但可能把本來的md格式東西掉失(圖片連結)&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% raw %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;....&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endraw %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;總結一下 &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[x] 圖片在Markdown Cell下導出&lt;/li&gt;
-&lt;li&gt;[ ] 修正圖片是非本地(http)開始的&lt;/li&gt;
-&lt;li&gt;[ ] text cell 下的圖片同步&lt;/li&gt;
-&lt;li&gt;[ ] 標題tracking&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;總而言之 盡可能使用MarkdownCell 吧&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<p>在抄(參)考了Quiver官方的導出腳本後 再配合 Hexo的文檔<br>只需要把Note下的Resource文檔抄到Hexo文章當前的同名文件夾下<br>別外把MD的圖片格式修改成Hexo的格式</p>
+<p>由於Quiver的Note不是以文件名作為記錄 而是以UUID作記錄<br>所以NoteObject加上了UUID屬性<br>之後有還時間 就可以補上 標題追縱</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cell.data.replace(<span class="regexp">/quiver-image-url\//gi</span>, <span class="string">''</span>).replace(<span class="regexp">/!\[(.*?)]\((.+?)(\))/gi</span>, <span class="string">'&#123;% asset_img $2 [$1] %&#125;'</span>)</div></pre></td></tr></table></figure>
+<p>別外text cell也支持導出不過應該還有點問題<br>雖然 用raw包起來就可以 但可能把本來的md格式東西掉失(圖片連結)<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% raw %&#125;</div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">....</div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div><div class="line">&#123;% endraw %&#125;</div></pre></td></tr></table></figure></p>
+<p>總結一下 </p>
+<ul>
+<li>[x] 圖片在Markdown Cell下導出</li>
+<li>[ ] 修正圖片是非本地(http)開始的</li>
+<li>[ ] text cell 下的圖片同步</li>
+<li>[ ] 標題tracking</li>
+</ul>
+<p>總而言之 盡可能使用MarkdownCell 吧</p>
+]]></content>
     
     <summary type="html">
     
@@ -974,11 +1040,11 @@
     <link href="http://Tsuki.github.io/2016/05/16/OS-X-%E9%97%9C%E9%96%89%E8%A6%96%E7%AA%97%E6%88%AA%E5%9C%96%E9%99%B0%E5%BD%B1/"/>
     <id>http://Tsuki.github.io/2016/05/16/OS-X-關閉視窗截圖陰影/</id>
     <published>2016-05-15T17:02:53.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.734Z</updated>
     
-    <content type="html">&lt;p&gt;截圖時才發現被坑了啊。。。。&lt;br&gt;為什麼會這樣的（被打&lt;/p&gt;
-&lt;h2 id=&quot;關閉陰影&quot;&gt;&lt;a href=&quot;#關閉陰影&quot; class=&quot;headerlink&quot; title=&quot;關閉陰影&quot;&gt;&lt;/a&gt;關閉陰影&lt;/h2&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;defaults write com.apple.screencapture disable-shadow -bool true;killall SystemUIServer&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;還原陰影&quot;&gt;&lt;a href=&quot;#還原陰影&quot; class=&quot;headerlink&quot; title=&quot;還原陰影&quot;&gt;&lt;/a&gt;還原陰影&lt;/h2&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;defaults write com.apple.screencapture disable-shadow -bool false;killall SystemUIServer&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<p>截圖時才發現被坑了啊。。。。<br>為什麼會這樣的（被打</p>
+<h2 id="關閉陰影"><a href="#關閉陰影" class="headerlink" title="關閉陰影"></a>關閉陰影</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.screencapture disable-shadow -bool true;killall SystemUIServer</div></pre></td></tr></table></figure>
+<h2 id="還原陰影"><a href="#還原陰影" class="headerlink" title="還原陰影"></a>還原陰影</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">defaults write com.apple.screencapture disable-shadow -bool false;killall SystemUIServer</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -988,9 +1054,9 @@
     </summary>
     
     
-      <category term="OS X" scheme="http://Tsuki.github.io/tags/OS-X/"/>
-    
       <category term="Mac" scheme="http://Tsuki.github.io/tags/Mac/"/>
+    
+      <category term="OS X" scheme="http://Tsuki.github.io/tags/OS-X/"/>
     
   </entry>
   
@@ -999,13 +1065,13 @@
     <link href="http://Tsuki.github.io/2016/05/15/%E8%92%BC%E4%B9%8B%E5%BD%BC%E6%96%B9%E7%9A%84%E5%9B%9B%E9%87%8D%E5%A5%8F/"/>
     <id>http://Tsuki.github.io/2016/05/15/蒼之彼方的四重奏/</id>
     <published>2016-05-15T11:04:38.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.718Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;蒼の彼方のフォーリズム&quot;&gt;&lt;a href=&quot;#蒼の彼方のフォーリズム&quot; class=&quot;headerlink&quot; title=&quot;蒼の彼方のフォーリズム&quot;&gt;&lt;/a&gt;蒼の彼方のフォーリズム&lt;/h1&gt;&lt;p&gt;一部2016年4月的新番 由sprite公司的同名遊戲改篇而成&lt;br&gt;故事的主舞台。位於日本南洋，由福留島&lt;em&gt;（福留島（ふくるじま））、久奈島（久奈島（くなしま））、笠松島（笠松島（かさまつじま））、上通島（上通島（かみどおりじま））&lt;/em&gt;等四個大島與周圍三十多個小島所組成。島上的反重力相關設施非常齊全，有專門為飛行中途休息所設置的停留所、為夜間飛行時提供照明的路燈設施，以及禁止飛行區域等設定。&lt;em&gt;FlyingCircus&lt;/em&gt;相當盛行，暑假時常有前來遊玩或觀戰的觀光客。&lt;/p&gt;
-&lt;img src=&quot;/2016/05/15/蒼之彼方的四重奏/24ABA34A49AC2AB5E82CD4DF63A19CCC.png&quot; alt=&quot;[其實上學真的很開心]&quot; title=&quot;[其實上學真的很開心]&quot;&gt;
-&lt;p&gt;動畫主要是圍繞圍繞著反重力鞋比賽的天空鞋技。 在眾多動畫中來說，算是耳目一新。不過作為一部 Galgame改篇動畫來說，男主的存在感也是低得何憐(其實男主只是解說吧)。&lt;br&gt;&lt;img src=&quot;/2016/05/15/蒼之彼方的四重奏/CFA84DE85023CC36632E8642D0013FA6.png&quot; alt=&quot;[只會解說的男主]&quot; title=&quot;[只會解說的男主]&quot;&gt;&lt;br&gt;一部好好的後宫動畫硬是被改成百合動畫，而且四個女主中，有三個乳量都不能少看。就算是下面這個基佬紫也比男主角有特色，這令男主角情可以堪啊。(胡說八段!!)&lt;br&gt;&lt;img src=&quot;/2016/05/15/蒼之彼方的四重奏/E45BBEBB63205FDF7E397F8147B40583.png&quot; alt=&quot;[基佬紫]&quot; title=&quot;[基佬紫]&quot;&gt;&lt;/p&gt;
-&lt;p&gt;不過總體來說也是一部值得一看的新番(對比起各種不知所謂的輕改)。&lt;/p&gt;
-</content>
+    <content type="html"><![CDATA[<h1 id="蒼の彼方のフォーリズム"><a href="#蒼の彼方のフォーリズム" class="headerlink" title="蒼の彼方のフォーリズム"></a>蒼の彼方のフォーリズム</h1><p>一部2016年4月的新番 由sprite公司的同名遊戲改篇而成<br>故事的主舞台。位於日本南洋，由福留島<em>（福留島（ふくるじま））、久奈島（久奈島（くなしま））、笠松島（笠松島（かさまつじま））、上通島（上通島（かみどおりじま））</em>等四個大島與周圍三十多個小島所組成。島上的反重力相關設施非常齊全，有專門為飛行中途休息所設置的停留所、為夜間飛行時提供照明的路燈設施，以及禁止飛行區域等設定。<em>FlyingCircus</em>相當盛行，暑假時常有前來遊玩或觀戰的觀光客。</p>
+<img src="/2016/05/15/蒼之彼方的四重奏/24ABA34A49AC2AB5E82CD4DF63A19CCC.png" alt="[其實上學真的很開心]" title="[其實上學真的很開心]">
+<p>動畫主要是圍繞圍繞著反重力鞋比賽的天空鞋技。 在眾多動畫中來說，算是耳目一新。不過作為一部 Galgame改篇動畫來說，男主的存在感也是低得何憐(其實男主只是解說吧)。<br><img src="/2016/05/15/蒼之彼方的四重奏/CFA84DE85023CC36632E8642D0013FA6.png" alt="[只會解說的男主]" title="[只會解說的男主]"><br>一部好好的後宫動畫硬是被改成百合動畫，而且四個女主中，有三個乳量都不能少看。就算是下面這個基佬紫也比男主角有特色，這令男主角情可以堪啊。(胡說八段!!)<br><img src="/2016/05/15/蒼之彼方的四重奏/E45BBEBB63205FDF7E397F8147B40583.png" alt="[基佬紫]" title="[基佬紫]"></p>
+<p>不過總體來說也是一部值得一看的新番(對比起各種不知所謂的輕改)。</p>
+]]></content>
     
     <summary type="html">
     
@@ -1025,16 +1091,16 @@
     <link href="http://Tsuki.github.io/2016/05/14/Quihex-%E4%B8%80%E9%BB%9E%E5%B0%8F%E6%9B%B4%E6%96%B0/"/>
     <id>http://Tsuki.github.io/2016/05/14/Quihex-一點小更新/</id>
     <published>2016-05-13T17:39:59.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
+    <updated>2017-04-20T22:37:32.718Z</updated>
     
-    <content type="html">&lt;p&gt;在便用quihex 更新和推送的時候 發現了一些小問題&lt;br&gt;於是手痒去改一下和開PR&lt;br&gt;首前是只支持Markdown cell的同步&lt;br&gt;由於個人 比較懶 和希望之後打理cell比較方便&lt;br&gt;所以所有code都會放進code cell 裹.&lt;br&gt;但使用quihex同步後發現 code cell 的內容沒有導&lt;br&gt;因此大吃一精(惊)&lt;br&gt;之後抄(參)考抄(參)考了一下 &lt;a href=&quot;https://github.com/bradley-curran/quiver2jekyll&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;quiver2jekyll&lt;/a&gt; 這個導出腳本 發現 原來也不是太難嘛 就開始了改造大計&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (cell.type === &lt;span class=&quot;string&quot;&gt;&#39;markdown&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  logt.info(cell.type);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; cell.data;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (cell.type === &lt;span class=&quot;string&quot;&gt;&#39;code&#39;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  logt.info(cell.language);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;`\`\`\`&lt;span class=&quot;subst&quot;&gt;$&amp;#123;cell.language&amp;#125;&lt;/span&gt;\n&lt;span class=&quot;subst&quot;&gt;$&amp;#123;cell.data&amp;#125;&lt;/span&gt;\n\`\`\``&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;第二個問題就是 看到一個老開發了一個issue&lt;br&gt;就是想生成的文件名 是帶日期的&lt;br&gt;這一點其實滿重要的 因為文章多起來時 日後要整理就太麻煩了&lt;/p&gt;
-&lt;p&gt;這處理這個問題是 碰到的問題是&lt;br&gt;怎樣解決日期的格式呢&lt;br&gt;總不能Hardcode進去吧&lt;br&gt;於是又抄(參)考抄(參)考一下Hexo new 指令的源代碼&lt;br&gt;但是發現有夠覆雜&lt;br&gt;大約了解了一下思路 就開始動筆(逼)了&lt;/p&gt;
-&lt;p&gt;先從_config.yml中找出new_post_name的格式&lt;/p&gt;
-&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#default&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;new_post_name:&lt;/span&gt; :title.md&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#with date foramt&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;new_post_name:&lt;/span&gt; :year-:month-:day-:title.md&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#date format sub folder&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;attr&quot;&gt;new_post_name:&lt;/span&gt; :year/:month/:day/:title.md&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;之後重寫一個parseFileName方法.&lt;br&gt;先把預留的key word 都塞進會用到的參數.&lt;br&gt;最後把參數中的key 一個一個用正規取代.&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;parseFileName&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;rule, hexoPostObj&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; date = moment(hexoPostObj.cdate);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; filenameData = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    year: date.format(&lt;span class=&quot;string&quot;&gt;&#39;YYYY&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    month: date.format(&lt;span class=&quot;string&quot;&gt;&#39;MM&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    i_month: date.format(&lt;span class=&quot;string&quot;&gt;&#39;M&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    day: date.format(&lt;span class=&quot;string&quot;&gt;&#39;DD&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    i_day: date.format(&lt;span class=&quot;string&quot;&gt;&#39;D&#39;&lt;/span&gt;),&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    title: hexoPostObj.filename&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; key &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; filenameData) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    rule = rule.replace(&lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;RegExp&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;:&quot;&lt;/span&gt; + key), filenameData[key])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; rule;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    <content type="html"><![CDATA[<p>在便用quihex 更新和推送的時候 發現了一些小問題<br>於是手痒去改一下和開PR<br>首前是只支持Markdown cell的同步<br>由於個人 比較懶 和希望之後打理cell比較方便<br>所以所有code都會放進code cell 裹.<br>但使用quihex同步後發現 code cell 的內容沒有導<br>因此大吃一精(惊)<br>之後抄(參)考抄(參)考了一下 <a href="https://github.com/bradley-curran/quiver2jekyll" target="_blank" rel="external">quiver2jekyll</a> 這個導出腳本 發現 原來也不是太難嘛 就開始了改造大計</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (cell.type === <span class="string">'markdown'</span>) &#123;</div><div class="line">  logt.info(cell.type);</div><div class="line">  <span class="keyword">return</span> cell.data;</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (cell.type === <span class="string">'code'</span>) &#123;</div><div class="line">  logt.info(cell.language);</div><div class="line">  <span class="keyword">return</span> <span class="string">`\`\`\`<span class="subst">$&#123;cell.language&#125;</span>\n<span class="subst">$&#123;cell.data&#125;</span>\n\`\`\``</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>第二個問題就是 看到一個老開發了一個issue<br>就是想生成的文件名 是帶日期的<br>這一點其實滿重要的 因為文章多起來時 日後要整理就太麻煩了</p>
+<p>這處理這個問題是 碰到的問題是<br>怎樣解決日期的格式呢<br>總不能Hardcode進去吧<br>於是又抄(參)考抄(參)考一下Hexo new 指令的源代碼<br>但是發現有夠覆雜<br>大約了解了一下思路 就開始動筆(逼)了</p>
+<p>先從_config.yml中找出new_post_name的格式</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#default</span></div><div class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span></div><div class="line"><span class="comment">#with date foramt</span></div><div class="line"><span class="attr">new_post_name:</span> <span class="string">:year-:month-:day-:title.md</span></div><div class="line"><span class="comment">#date format sub folder</span></div><div class="line"><span class="attr">new_post_name:</span> <span class="string">:year/:month/:day/:title.md</span></div></pre></td></tr></table></figure>
+<p>之後重寫一個parseFileName方法.<br>先把預留的key word 都塞進會用到的參數.<br>最後把參數中的key 一個一個用正規取代.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">parseFileName</span>(<span class="params">rule, hexoPostObj</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> date = moment(hexoPostObj.cdate);</div><div class="line">  <span class="keyword">var</span> filenameData = &#123;</div><div class="line">    <span class="attr">year</span>: date.format(<span class="string">'YYYY'</span>),</div><div class="line">    <span class="attr">month</span>: date.format(<span class="string">'MM'</span>),</div><div class="line">    <span class="attr">i_month</span>: date.format(<span class="string">'M'</span>),</div><div class="line">    <span class="attr">day</span>: date.format(<span class="string">'DD'</span>),</div><div class="line">    <span class="attr">i_day</span>: date.format(<span class="string">'D'</span>),</div><div class="line">    <span class="attr">title</span>: hexoPostObj.filename</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> filenameData) &#123;</div><div class="line">    rule = rule.replace(<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">":"</span> + key), filenameData[key])</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> rule;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -1044,89 +1110,6 @@
     
     
       <category term="NodeJs" scheme="http://Tsuki.github.io/tags/NodeJs/"/>
-    
-      <category term="Hexo" scheme="http://Tsuki.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TypedCJ.js 一個模擬倉頡輸入法的 jQuery 插件</title>
-    <link href="http://Tsuki.github.io/2016/05/12/TypedCJ.js-%E4%B8%80%E5%80%8B%E6%A8%A1%E6%93%AC%E5%80%89%E9%A0%A1%E8%BC%B8%E5%85%A5%E6%B3%95%E7%9A%84-jQuery-%E6%8F%92%E4%BB%B6/"/>
-    <id>http://Tsuki.github.io/2016/05/12/TypedCJ.js-一個模擬倉頡輸入法的-jQuery-插件/</id>
-    <published>2016-05-12T15:36:38.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;strong&gt;TypedCJ.js 是對Typed.js 作出條改 加入倉頡輸入法的效果。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.sukitsuki.com/TypedCJ.js/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;View the live demo&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Installation&quot;&gt;&lt;a href=&quot;#Installation&quot; class=&quot;headerlink&quot; title=&quot;Installation&quot;&gt;&lt;/a&gt;Installation&lt;/h2&gt;&lt;p&gt;This is really all you need to get going.&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;jquery.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;src&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;typedCJ.js&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;undefined&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	$(function()&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		$(&quot;.element&quot;).typed(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			strings: [&quot;First sentence.&quot;, &quot;Second sentence.&quot;],&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;			typeSpeed: 0&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;		&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;script&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;element&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;span&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;TypedCJ.js 是對Typed.js 作出條改 加入倉頡輸入法的效果。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.sukitsuki.com/TypedCJ.js/&quot; target=&quot;_blank&quot; rel=&quot;exter
-    
-    </summary>
-    
-    
-      <category term="NodeJs" scheme="http://Tsuki.github.io/tags/NodeJs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在WPF自定 ProgressBar 動畫</title>
-    <link href="http://Tsuki.github.io/2016/05/12/%E5%9C%A8WPF%E8%87%AA%E5%AE%9A-ProgressBar-%E5%8B%95%E7%95%AB/"/>
-    <id>http://Tsuki.github.io/2016/05/12/在WPF自定-ProgressBar-動畫/</id>
-    <published>2016-05-11T18:39:09.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
-    
-    <content type="html">&lt;p&gt;記錄一下在公司寫下來的小玩意&lt;/p&gt;
-&lt;p&gt;在 Windows.Loadded 方法上加上 async await 食用更佳&lt;/p&gt;
-&lt;h3 id=&quot;ProgressBar-xaml&quot;&gt;&lt;a href=&quot;#ProgressBar-xaml&quot; class=&quot;headerlink&quot; title=&quot;ProgressBar.xaml&quot;&gt;&lt;/a&gt;ProgressBar.xaml&lt;/h3&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Canvas&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--RenderTransformOrigin= 正中心旋轉 Fill 顏色--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ed:Arc&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;ArcThickness&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;10&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;ArcThicknessUnit&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;Pixel&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;EndAngle&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;90&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Fill&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;ForestGreen&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Stretch&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;None&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;StartAngle&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Height&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Canvas.Left&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Canvas.Top&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Width&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;RenderTransformOrigin&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0.5,0.5&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ed:Arc.RenderTransform&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;RotateTransform&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;RotateTransform&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ed:Arc.RenderTransform&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;ed:Arc.Triggers&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--定義觸發事件--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;EventTrigger&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;RoutedEvent&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;Window.Loaded&quot;&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;BeginStoryboard&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;Storyboard&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;comment&quot;&gt;&amp;lt;!--定義速度 和方向 360／－360--&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;name&quot;&gt;DoubleAnimation&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Storyboard.TargetProperty&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;(Rectangle.RenderTransform).(RotateTransform.Angle)&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;To&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;360&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;Duration&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;0:0:1&quot;&lt;/span&gt; &lt;span class=&quot;attr&quot;&gt;RepeatBehavior&lt;/span&gt;=&lt;span class=&quot;string&quot;&gt;&quot;Forever&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Storyboard&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;BeginStoryboard&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;EventTrigger&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ed:Arc.Triggers&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;ed:Arc&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;name&quot;&gt;Canvas&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;記錄一下在公司寫下來的小玩意&lt;/p&gt;
-&lt;p&gt;在 Windows.Loadded 方法上加上 async await 食用更佳&lt;/p&gt;
-&lt;h3 id=&quot;ProgressBar-xaml&quot;&gt;&lt;a href=&quot;#ProgressBar-xaml&quot; class=&quot;headerlin
-    
-    </summary>
-    
-    
-      <category term="WPF" scheme="http://Tsuki.github.io/tags/WPF/"/>
-    
-      <category term="C ++++" scheme="http://Tsuki.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用Quiver 寫Hexo</title>
-    <link href="http://Tsuki.github.io/2016/05/12/%E7%94%A8Quiver-%E5%AF%ABHexo/"/>
-    <id>http://Tsuki.github.io/2016/05/12/用Quiver-寫Hexo/</id>
-    <published>2016-05-11T17:14:39.000Z</published>
-    <updated>2016-06-10T16:29:09.000Z</updated>
-    
-    <content type="html">&lt;p&gt;Quiver 這是一個朋友推薦我用的Markdown Editor&lt;/p&gt;
-&lt;p&gt;用後發現真的不錯 之後打算看看能不能用來寫Blog&lt;/p&gt;
-&lt;p&gt;一開始是打算用Ruby 的 Jekyll&lt;/p&gt;
-&lt;p&gt;但發現 配置起來實在太麻煩了&lt;/p&gt;
-&lt;p&gt;而且主題也很久沒更新&lt;/p&gt;
-&lt;p&gt;之後就想起姐太之前推介的Hexo&lt;/p&gt;
-&lt;p&gt;現在找到一個叫 &lt;a href=&quot;http://www.pincer.io/node/libraries/quihex&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Quihex&lt;/a&gt; 的插件可以同步&lt;/p&gt;
-&lt;img src=&quot;/2016/05/12/用Quiver-寫Hexo/F14A076DE42ABFB6D4717609C8A0EDEA.png&quot; alt=&quot;[Quiver 2016-05-17 03-11-53.png]&quot; title=&quot;[Quiver 2016-05-17 03-11-53.png]&quot;&gt;
-&lt;img src=&quot;/2016/05/12/用Quiver-寫Hexo/CD754F06C9135D973EEB409E683184A3.png&quot; alt=&quot;[Quiver 2016-05-17 03-17-41.png]&quot; title=&quot;[Quiver 2016-05-17 03-17-41.png]&quot;&gt;
-&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install -g quihex&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Setup&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ quihex init&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Sync(Quiver notes =&amp;gt; Hexo posts)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ quihex sync&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Hexo deploy&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; ~/hexo-root&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Quiver 這是一個朋友推薦我用的Markdown Editor&lt;/p&gt;
-&lt;p&gt;用後發現真的不錯 之後打算看看能不能用來寫Blog&lt;/p&gt;
-&lt;p&gt;一開始是打算用Ruby 的 Jekyll&lt;/p&gt;
-&lt;p&gt;但發現 配置起來實在太麻煩了&lt;/p&gt;
-&lt;p&gt;而且主題也很久沒更新&lt;/p
-    
-    </summary>
-    
     
       <category term="Hexo" scheme="http://Tsuki.github.io/tags/Hexo/"/>
     

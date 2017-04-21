@@ -5,19 +5,17 @@
   
   <title>DZone Java Code Challenge Node Degrees | Tsuki Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java Code Challenge: Node Degreesa
-ChallengeIn graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculat">
+  <meta name="description" content="Java Code Challenge: Node Degreesa ChallengeIn graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculat">
+<meta name="keywords" content="Java,Kotlin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DZone Java Code Challenge Node Degrees">
 <meta property="og:url" content="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
-<meta property="og:description" content="Java Code Challenge: Node Degreesa
-ChallengeIn graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculat">
-<meta property="og:updated_time" content="2016-06-10T16:29:09.000Z">
+<meta property="og:description" content="Java Code Challenge: Node Degreesa ChallengeIn graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculat">
+<meta property="og:updated_time" content="2017-04-20T22:37:32.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DZone Java Code Challenge Node Degrees">
-<meta name="twitter:description" content="Java Code Challenge: Node Degreesa
-ChallengeIn graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculat">
+<meta name="twitter:description" content="Java Code Challenge: Node Degreesa ChallengeIn graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculat">
   
     <link rel="alternative" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml">
   
@@ -80,7 +78,7 @@ ChallengeIn graph theory, the degree of a node is the number of edges coming int
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
       </div>
     </div>
   </div>
@@ -109,7 +107,7 @@ ChallengeIn graph theory, the degree of a node is the number of edges coming int
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" data-id="cip9yfbj6000jjdk1ftv60u8z" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" data-id="cj1r0f983000c12cmayvtbpc3" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -133,11 +131,11 @@ ChallengeIn graph theory, the degree of a node is the number of edges coming int
             <p><a href="https://dzone.com/articles/java-code-challenge-node-degrees" target="_blank" rel="external">Java Code Challenge: Node Degreesa</a></p>
 <h2 id="Challenge"><a href="#Challenge" class="headerlink" title="Challenge"></a>Challenge</h2><p>In graph theory, the degree of a node is the number of edges coming into it or going out of it - how connected it is. For this challenge, you’ll be calculating the degree of every node.</p>
 <h2 id="Input-Description"><a href="#Input-Description" class="headerlink" title="Input Description"></a>Input Description</h2><p>First, you’ll be given an integer, N, on one line showing you how many nodes to account for. Next, you’ll be given an undirected graph as a series of number pairs, a and b, showing that those two nodes are connected - an edge. Example:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3 </span><br><span class="line">1 2</span><br><span class="line">1 3</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">3 </div><div class="line">1 2</div><div class="line">1 3</div></pre></td></tr></table></figure>
 <p>Output Description<br>Your program should emit the degree for each node. Example:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Node 1 has a degree of 2</span><br><span class="line">Node 2 has a degree of 1</span><br><span class="line">Node 3 has a degree of 1</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Node 1 has a degree of 2</div><div class="line">Node 2 has a degree of 1</div><div class="line">Node 3 has a degree of 1</div></pre></td></tr></table></figure>
 <p>先用Kotlin試寫一下<br>下面用Kotlin寫了一個簡單的代碼<br>有空再補充一下注解</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">val</span> buffer = IntArray(readLine()!!.toInt());</span><br><span class="line">    <span class="keyword">var</span> input = readLine();</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        <span class="keyword">val</span> intpus = input!!.split(<span class="string">' '</span>);</span><br><span class="line">        <span class="keyword">if</span> (intpus[<span class="number">0</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">0</span>].toInt() &lt;= buffer.size) &#123;</span><br><span class="line">            buffer[intpus[<span class="number">0</span>].toInt() - <span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (intpus[<span class="number">1</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">1</span>].toInt() &lt;= buffer.size) &#123;</span><br><span class="line">            buffer[intpus[<span class="number">1</span>].toInt() - <span class="number">1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        input = readLine();</span><br><span class="line">    &#125; <span class="keyword">while</span> (input != <span class="string">""</span>)</span><br><span class="line">    <span class="keyword">for</span> ((index, value) <span class="keyword">in</span> buffer.withIndex()) &#123;</span><br><span class="line">        println(<span class="string">"Node <span class="subst">$&#123;index + <span class="number">1</span>&#125;</span> has a degree of <span class="subst">$value</span>"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">fun</span> <span class="title">main</span><span class="params">(args: <span class="type">Array</span>&lt;<span class="type">String</span>&gt;)</span></span> &#123;</div><div class="line">    <span class="keyword">val</span> buffer = IntArray(readLine()!!.toInt());</div><div class="line">    <span class="keyword">var</span> input = readLine();</div><div class="line">    <span class="keyword">do</span> &#123;</div><div class="line">        <span class="keyword">val</span> intpus = input!!.split(<span class="string">' '</span>);</div><div class="line">        <span class="keyword">if</span> (intpus[<span class="number">0</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">0</span>].toInt() &lt;= buffer.size) &#123;</div><div class="line">            buffer[intpus[<span class="number">0</span>].toInt() - <span class="number">1</span>]++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (intpus[<span class="number">1</span>].toInt() &gt; <span class="number">0</span> || intpus[<span class="number">1</span>].toInt() &lt;= buffer.size) &#123;</div><div class="line">            buffer[intpus[<span class="number">1</span>].toInt() - <span class="number">1</span>]++;</div><div class="line">        &#125;</div><div class="line">        input = readLine();</div><div class="line">    &#125; <span class="keyword">while</span> (input != <span class="string">""</span>)</div><div class="line">    <span class="keyword">for</span> ((index, value) <span class="keyword">in</span> buffer.withIndex()) &#123;</div><div class="line">        println(<span class="string">"Node <span class="subst">$&#123;index + <span class="number">1</span>&#125;</span> has a degree of <span class="subst">$value</span>"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
             
             
         </div>
@@ -147,19 +145,19 @@ ChallengeIn graph theory, the degree of a node is the number of edges coming int
     
 <nav id="article-nav">
   
-    <a href="/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/05/17/MonoSnap-截圖軟件/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Atlassian Jira Bitbucket Nginx reverse proxy
+          MonoSnap 截圖軟件
         
       </div>
     </a>
   
   
-    <a href="/2016/05/17/MonoSnap-截圖軟件/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MonoSnap 截圖軟件</div>
+      <div class="article-nav-title">Atlassian Jira Bitbucket Nginx reverse proxy</div>
     </a>
   
 </nav>
@@ -186,6 +184,30 @@ ChallengeIn graph theory, the degree of a node is the number of edges coming int
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <!--<ul>-->
+        
+          <li>
+            <a class="text" href="/2017/04/21/testing/">
+              
+                <i class="icon-file-o"></i>
+              
+            TODO hexo admin</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/Sublime-設定保存/">
+              
+                <i class="icon-file-o"></i>
+              
+            Sublime 設定保存</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/生在証明/">
+              
+                <i class="icon-file-o"></i>
+              
+            生在証明</a>
+          </li>
         
           <li>
             <a class="text" href="/2016/06/12/OS-X-Rebuild-brew-link/">
@@ -243,30 +265,6 @@ ChallengeIn graph theory, the degree of a node is the number of edges coming int
             Oh My Zsh Cheatsheet</a>
           </li>
         
-          <li>
-            <a class="text" href="/2016/05/29/Git-Submodule/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git Submodule</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Git-修改用戶名和Email/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git 修改用戶名和Email</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Mac下-推送public-key-到遠端服務器/">
-              
-                <i class="icon-file-o"></i>
-              
-            Mac下 推送public key 到遠端服務器</a>
-          </li>
-        
       <!--</ul>-->
     </div>
   </div>
@@ -318,7 +316,7 @@ ChallengeIn graph theory, the degree of a node is the number of edges coming int
       
     </div>
     <div id="footer-info" class="inner">
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2016 Tsuki 
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2017 Tsuki 
     </div>  
 
   </div>

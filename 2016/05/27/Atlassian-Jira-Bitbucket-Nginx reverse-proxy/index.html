@@ -5,22 +5,17 @@
   
   <title>Atlassian Jira Bitbucket Nginx reverse proxy | Tsuki Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Bitbucket tomcat Connector configadd secure scheme proxyName and proxyPort
-1vim /var/atlassian/application-data/bitbucket/shared/server.xml
-1234567891011&amp;lt;Connector port=&quot;7990&quot;            protocol=&quot;">
+  <meta name="description" content="Bitbucket tomcat Connector configadd secure scheme proxyName and proxyPort 1vim /var/atlassian/application-data/bitbucket/shared/server.xml 1234567891011&amp;lt;Connector port=&quot;7990&quot;            protocol=&quot;">
+<meta name="keywords" content="Bitbucket,Jira,Nginx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Atlassian Jira Bitbucket Nginx reverse proxy">
 <meta property="og:url" content="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
-<meta property="og:description" content="Bitbucket tomcat Connector configadd secure scheme proxyName and proxyPort
-1vim /var/atlassian/application-data/bitbucket/shared/server.xml
-1234567891011&amp;lt;Connector port=&quot;7990&quot;            protocol=&quot;">
-<meta property="og:updated_time" content="2016-06-10T16:29:09.000Z">
+<meta property="og:description" content="Bitbucket tomcat Connector configadd secure scheme proxyName and proxyPort 1vim /var/atlassian/application-data/bitbucket/shared/server.xml 1234567891011&amp;lt;Connector port=&quot;7990&quot;            protocol=&quot;">
+<meta property="og:updated_time" content="2017-04-20T22:37:32.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Atlassian Jira Bitbucket Nginx reverse proxy">
-<meta name="twitter:description" content="Bitbucket tomcat Connector configadd secure scheme proxyName and proxyPort
-1vim /var/atlassian/application-data/bitbucket/shared/server.xml
-1234567891011&amp;lt;Connector port=&quot;7990&quot;            protocol=&quot;">
+<meta name="twitter:description" content="Bitbucket tomcat Connector configadd secure scheme proxyName and proxyPort 1vim /var/atlassian/application-data/bitbucket/shared/server.xml 1234567891011&amp;lt;Connector port=&quot;7990&quot;            protocol=&quot;">
   
     <link rel="alternative" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml">
   
@@ -83,7 +78,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://Tsuki.github.io"></form>
       </div>
     </div>
   </div>
@@ -112,7 +107,7 @@
         </header>
         
         <footer class="article-footer">
-            <a data-url="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" data-id="cip9yfbj7000ljdk1jjn7vw07" class="article-share-link">Share</a>
+            <a data-url="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/" data-id="cj1r0f985000e12cm6kug5rla" class="article-share-link">Share</a>
             
             <a href="http://Tsuki.github.io/2016/05/27/Atlassian-Jira-Bitbucket-Nginx reverse-proxy/#disqus_thread" class="article-comment-link">Comments</a>
             
@@ -134,9 +129,9 @@
             
             
             <h2 id="Bitbucket-tomcat-Connector-config"><a href="#Bitbucket-tomcat-Connector-config" class="headerlink" title="Bitbucket tomcat Connector config"></a>Bitbucket tomcat Connector config</h2><p>add secure scheme proxyName and proxyPort</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /var/atlassian/application-data/bitbucket/shared/server.xml</span><br></pre></td></tr></table></figure>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"7990"</span> </span><br><span class="line">           <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span><br><span class="line">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span><br><span class="line">           <span class="attr">useBodyEncodingForURI</span>=<span class="string">"true"</span></span><br><span class="line">           <span class="attr">redirectPort</span>=<span class="string">"8443"</span></span><br><span class="line">           <span class="attr">compression</span>=<span class="string">"on"</span></span><br><span class="line">           <span class="attr">compressableMimeType</span>=<span class="string">"text/html,text/xml,text/plain,text/css,application/json,application/javascript,application/x-javascript"</span></span><br><span class="line">           <span class="attr">secure</span>=<span class="string">"true"</span></span><br><span class="line">           <span class="attr">scheme</span>=<span class="string">"https"</span></span><br><span class="line">           <span class="attr">proxyName</span>=<span class="string">"domain.com"</span></span><br><span class="line">           <span class="attr">proxyPort</span>=<span class="string">"443"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="Nginx-site-config"><a href="#Nginx-site-config" class="headerlink" title="Nginx site config"></a>Nginx site config</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/sites-enabled/default</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        listen [::]:80;</span><br><span class="line">        server_name domain.com;</span><br><span class="line">        <span class="built_in">return</span> 301 https://domain.com<span class="variable">$request_uri</span>;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443 ssl;</span><br><span class="line">        server_name domain.com;</span><br><span class="line">        ssl_certificate /etc/nginx/ssl/domain.com.crt;</span><br><span class="line">        ssl_certificate_key /etc/nginx/ssl/domain.com.key;</span><br><span class="line">        location / &#123;</span><br><span class="line">                proxy_pass http://192.168.1.000:7990/;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        Host <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-Host <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-Server <span class="variable">$host</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">                proxy_<span class="built_in">set</span>_header        X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">                proxy_redirect          off;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /var/atlassian/application-data/bitbucket/shared/server.xml</div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"7990"</span> </span></div><div class="line">           <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></div><div class="line">           <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></div><div class="line">           <span class="attr">useBodyEncodingForURI</span>=<span class="string">"true"</span></div><div class="line">           <span class="attr">redirectPort</span>=<span class="string">"8443"</span></div><div class="line">           <span class="attr">compression</span>=<span class="string">"on"</span></div><div class="line">           <span class="attr">compressableMimeType</span>=<span class="string">"text/html,text/xml,text/plain,text/css,application/json,application/javascript,application/x-javascript"</span></div><div class="line">           <span class="attr">secure</span>=<span class="string">"true"</span></div><div class="line">           <span class="attr">scheme</span>=<span class="string">"https"</span></div><div class="line">           <span class="attr">proxyName</span>=<span class="string">"domain.com"</span></div><div class="line">           <span class="attr">proxyPort</span>=<span class="string">"443"</span>/&gt;</div></pre></td></tr></table></figure>
+<h2 id="Nginx-site-config"><a href="#Nginx-site-config" class="headerlink" title="Nginx site config"></a>Nginx site config</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">vim /etc/nginx/sites-enabled/default</div><div class="line"></div><div class="line">server &#123;</div><div class="line">        listen 80;</div><div class="line">        listen [::]:80;</div><div class="line">        server_name domain.com;</div><div class="line">        <span class="built_in">return</span> 301 https://domain.com<span class="variable">$request_uri</span>;</div><div class="line">&#125;</div><div class="line">server &#123;</div><div class="line">        listen 443 ssl;</div><div class="line">        server_name domain.com;</div><div class="line">        ssl_certificate /etc/nginx/ssl/domain.com.crt;</div><div class="line">        ssl_certificate_key /etc/nginx/ssl/domain.com.key;</div><div class="line">        location / &#123;</div><div class="line">                proxy_pass http://192.168.1.000:7990/;</div><div class="line">                proxy_set_header        Host <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-Host <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-Server <span class="variable">$host</span>;</div><div class="line">                proxy_set_header        X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</div><div class="line">                proxy_set_header        X-Real-IP <span class="variable">$remote_addr</span>;</div><div class="line">                proxy_redirect          off;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
             
             
@@ -147,19 +142,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/27/Mac下-推送public-key-到遠端服務器/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Mac下 推送public key 到遠端服務器
+          DZone Java Code Challenge Node Degrees
         
       </div>
     </a>
   
   
-    <a href="/2016/05/18/DZone Java-Code-Challenge-Node-Degrees/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/05/27/Mac下-推送public-key-到遠端服務器/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">DZone Java Code Challenge Node Degrees</div>
+      <div class="article-nav-title">Mac下 推送public key 到遠端服務器</div>
     </a>
   
 </nav>
@@ -186,6 +181,30 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <!--<ul>-->
+        
+          <li>
+            <a class="text" href="/2017/04/21/testing/">
+              
+                <i class="icon-file-o"></i>
+              
+            TODO hexo admin</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/Sublime-設定保存/">
+              
+                <i class="icon-file-o"></i>
+              
+            Sublime 設定保存</a>
+          </li>
+        
+          <li>
+            <a class="text" href="/2017/04/21/生在証明/">
+              
+                <i class="icon-file-o"></i>
+              
+            生在証明</a>
+          </li>
         
           <li>
             <a class="text" href="/2016/06/12/OS-X-Rebuild-brew-link/">
@@ -243,30 +262,6 @@
             Oh My Zsh Cheatsheet</a>
           </li>
         
-          <li>
-            <a class="text" href="/2016/05/29/Git-Submodule/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git Submodule</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Git-修改用戶名和Email/">
-              
-                <i class="icon-file-o"></i>
-              
-            Git 修改用戶名和Email</a>
-          </li>
-        
-          <li>
-            <a class="text" href="/2016/05/27/Mac下-推送public-key-到遠端服務器/">
-              
-                <i class="icon-file-o"></i>
-              
-            Mac下 推送public key 到遠端服務器</a>
-          </li>
-        
       <!--</ul>-->
     </div>
   </div>
@@ -318,7 +313,7 @@
       
     </div>
     <div id="footer-info" class="inner">
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2016 Tsuki 
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/morris821028/hexo-theme-landscape" target="_blank" title="landscape">landscape</a> &copy; 2017 Tsuki 
     </div>  
 
   </div>
