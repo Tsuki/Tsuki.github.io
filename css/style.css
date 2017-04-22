@@ -321,6 +321,10 @@ body {
 .widget dt {
   font-weight: bold;
 }
+.article-entry input[type="checkbox"],
+.widget input[type="checkbox"] {
+  pointer-events: none;
+}
 #header {
   height: 300px;
   position: relative;
