@@ -105,6 +105,10 @@ $(document).ready(function () {
         .on('sidebar.isHiding', function () {
         });
     },
+    reload: function () {
+      this.sidebarEl = $('.sidebar');
+      this.isSidebarVisible ? this.showSidebar() : null;
+    },
     clickHandler: function () {
       this.isSidebarVisible ? this.hideSidebar() : this.showSidebar();
       this.isSidebarVisible = !this.isSidebarVisible;
@@ -136,7 +140,6 @@ $(document).ready(function () {
       var self = this;
 
       sidebarToggleLines.close();
-
       this.sidebarEl.velocity('stop').velocity({
           width: SIDEBAR_WIDTH
         }, {
@@ -183,8 +186,7 @@ $(document).ready(function () {
       }
     }
   };
-  sidebarToggleMotion.init();
-
+  // sidebarToggleMotion.init();
   NexT.motion.integrator = {
     queue: [],
     cursor: -1,
@@ -199,10 +201,22 @@ $(document).ready(function () {
     },
     bootstrap: function () {
       this.next();
+    },
+    reset: function (value) {
+      this.cursor = value === undefined ? -1 : value;
     }
   };
 
   NexT.motion.middleWares =  {
+    sidebarToggle: function (integrator) {
+      sidebarToggleMotion.init();
+      integrator.next();
+    },
+    reload: function (integrator) {
+      sidebarToggleMotion.reload();
+      integrator.next();
+    },
+
     logo: function (integrator) {
       var sequence = [];
       var $brand = $('.brand');
