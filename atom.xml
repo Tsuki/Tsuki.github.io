@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Tsuki.github.io/"/>
-  <updated>2017-11-05T18:53:33.322Z</updated>
+  <updated>2017-11-05T19:20:34.070Z</updated>
   <id>http://Tsuki.github.io/</id>
   
   <author>
@@ -17,11 +17,72 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Pjax 優化</title>
+    <title>2017年的目標清單</title>
+    <link href="http://Tsuki.github.io/2017/11/06/personal-todo/"/>
+    <id>http://Tsuki.github.io/2017/11/06/personal-todo/</id>
+    <published>2017-11-05T19:09:17.000Z</published>
+    <updated>2017-11-05T19:20:34.070Z</updated>
+    
+    <content type="html"><![CDATA[<p>雖然己經2017年11月了，但2017年還沒有完的還有55天。</p><p>有心唔怕遲，(好似係</p><h1 id="想做的東西"><a href="#想做的東西" class="headerlink" title="想做的東西"></a>想做的東西</h1><ul><li style="list-style: none"><input type="checkbox" checked> 重新建立Blog</li><li style="list-style: none"><input type="checkbox"> 定立2018年的目標</li><li style="list-style: none"><input type="checkbox"> OCR bot (無限期延遲)</li><li style="list-style: none"><input type="checkbox"> 更新Tplayer bot</li><li style="list-style: none"><input type="checkbox"> 退壓制坑？</li></ul><h1 id="想學的東西"><a href="#想學的東西" class="headerlink" title="想學的東西"></a>想學的東西</h1><ul><li style="list-style: none"><input type="checkbox"> 學吉他</li><li style="list-style: none"><input type="checkbox"> 學日文</li></ul><h1 id="想買的東西"><a href="#想買的東西" class="headerlink" title="想買的東西"></a>想買的東西</h1><ul><li style="list-style: none"><input type="checkbox"> to be cont.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;雖然己經2017年11月了，但2017年還沒有完的還有55天。&lt;/p&gt;
+&lt;p&gt;有心唔怕遲，(好似係&lt;/p&gt;
+&lt;h1 id=&quot;想做的東西&quot;&gt;&lt;a href=&quot;#想做的東西&quot; class=&quot;headerlink&quot; title=&quot;想做的東西&quot;&gt;&lt;/a&gt;想做的東西&lt;/h1&gt;&lt;ul&gt;
+      
+    
+    </summary>
+    
+      <category term="Personal" scheme="http://Tsuki.github.io/categories/Personal/"/>
+    
+    
+      <category term="Personal" scheme="http://Tsuki.github.io/tags/Personal/"/>
+    
+      <category term="Tech" scheme="http://Tsuki.github.io/tags/Tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>網站更新</title>
+    <link href="http://Tsuki.github.io/2017/11/06/TODO/"/>
+    <id>http://Tsuki.github.io/2017/11/06/TODO/</id>
+    <published>2017-11-05T19:04:01.000Z</published>
+    <updated>2017-11-05T19:17:39.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>#TODO</p><ul><li style="list-style: none"><input type="checkbox"> 在 Archive 加入 tag 和 categories</li><li style="list-style: none"><input type="checkbox"> 寫 About</li><li style="list-style: none"><input type="checkbox"> 加友鏈</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#TODO&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 在 Archive 加入 tag 和 categories&lt;/li&gt;
+&lt;li style=&quot;list-style: none&quot;&gt;&lt;inpu
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://Tsuki.github.io/categories/Blog/"/>
+    
+    
+      <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
+    
+      <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
+    
+      <category term="TODO" scheme="http://Tsuki.github.io/tags/TODO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>網站 PJAX 優化</title>
     <link href="http://Tsuki.github.io/2017/11/06/Pjax-change/"/>
     <id>http://Tsuki.github.io/2017/11/06/Pjax-change/</id>
     <published>2017-11-05T18:21:03.000Z</published>
-    <updated>2017-11-05T18:53:33.322Z</updated>
+    <updated>2017-11-05T19:21:04.489Z</updated>
     
     <content type="html"><![CDATA[<h1 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h1><p>PJAX 是一項由HTML5 pushState 而產生的技術。</p><p>這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。</p>]]></content>
     
@@ -38,9 +99,9 @@
       <category term="Javascript" scheme="http://Tsuki.github.io/categories/Javascript/"/>
     
     
-      <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
-    
       <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
+    
+      <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
     
       <category term="Javascript" scheme="http://Tsuki.github.io/tags/Javascript/"/>
     
@@ -51,7 +112,7 @@
     <link href="http://Tsuki.github.io/2017/11/04/BNW/"/>
     <id>http://Tsuki.github.io/2017/11/04/BNW/</id>
     <published>2017-11-03T23:00:40.000Z</published>
-    <updated>2017-11-04T15:35:44.759Z</updated>
+    <updated>2017-11-05T19:17:59.569Z</updated>
     
     <content type="html"><![CDATA[<p>Reset, Create, Start</p>]]></content>
     
