@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Tsuki.github.io/"/>
-  <updated>2017-11-04T15:35:44.759Z</updated>
+  <updated>2017-11-05T18:34:44.821Z</updated>
   <id>http://Tsuki.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pjax 優化</title>
+    <link href="http://Tsuki.github.io/2017/11/06/Pjax-change/"/>
+    <id>http://Tsuki.github.io/2017/11/06/Pjax-change/</id>
+    <published>2017-11-05T18:21:03.000Z</published>
+    <updated>2017-11-05T18:34:44.821Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h1><p>PJAX 是一項由HTML5 pushState 而產生的技術。</p><p>這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;PJAX&quot;&gt;&lt;a href=&quot;#PJAX&quot; class=&quot;headerlink&quot; title=&quot;PJAX&quot;&gt;&lt;/a&gt;PJAX&lt;/h1&gt;&lt;p&gt;PJAX 是一項由HTML5 pushState 而產生的技術。&lt;/p&gt;
+&lt;p&gt;這項技術可以在不全頁刷新下更新部分DOM o
+      
+    
+    </summary>
+    
+      <category term="Javascript" scheme="http://Tsuki.github.io/categories/Javascript/"/>
+    
+    
+      <category term="Blog Web Javascript" scheme="http://Tsuki.github.io/tags/Blog-Web-Javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>Brave New World</title>
