@@ -105,7 +105,7 @@ $(document).ready(function () {
         .on('sidebar.isHiding', function () {
         });
     },
-    reload: function () {
+    reloadSidebar: function () {
       this.sidebarEl = $('.sidebar');
       this.isSidebarVisible ? this.showSidebar() : null;
     },
@@ -213,7 +213,7 @@ $(document).ready(function () {
       integrator.next();
     },
     reload: function (integrator) {
-      sidebarToggleMotion.reload();
+      sidebarToggleMotion.reloadSidebar();
       integrator.next();
     },
 
