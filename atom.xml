@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Tsuki.github.io/"/>
-  <updated>2017-11-05T19:20:34.070Z</updated>
+  <updated>2017-11-09T22:43:31.323Z</updated>
   <id>http://Tsuki.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac和Windows的MIME type 不同</title>
+    <link href="http://Tsuki.github.io/2017/11/10/mime-type-different/"/>
+    <id>http://Tsuki.github.io/2017/11/10/mime-type-different/</id>
+    <published>2017-11-09T22:28:35.000Z</published>
+    <updated>2017-11-09T22:43:31.323Z</updated>
+    
+    <content type="html"><![CDATA[<p>在MDN和Microsoft的文檔上可以找發現</p><p>不同平台和不同瀏覽器上傳文件都有分別</p><p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p><table><thead><tr><th>副檔名</th><th>Mac (MDN)</th><th>Windows (MSDN)</th></tr></thead><tbody><tr><td>.zip</td><td>application/zip</td><td>application/x-zip-compressed</td></tr><tr><td>.csv</td><td>text/csv</td><td>application/vnd.ms-exce</td></tr></tbody></table><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="external">ref: MDN MIME</a> </p><p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="external">ref: MSDN MIME 表</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在MDN和Microsoft的文檔上可以找發現&lt;/p&gt;
+&lt;p&gt;不同平台和不同瀏覽器上傳文件都有分別&lt;/p&gt;
+&lt;p&gt;如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試&lt;/p&gt;
+&lt;ta
+      
+    
+    </summary>
+    
+      <category term="Debug" scheme="http://Tsuki.github.io/categories/Debug/"/>
+    
+    
+      <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
+    
+      <category term="Javascript" scheme="http://Tsuki.github.io/tags/Javascript/"/>
+    
+      <category term="Browser" scheme="http://Tsuki.github.io/tags/Browser/"/>
+    
+      <category term="WAF" scheme="http://Tsuki.github.io/tags/WAF/"/>
+    
+  </entry>
   
   <entry>
     <title>2017年的目標清單</title>
@@ -69,9 +103,9 @@
       <category term="Blog" scheme="http://Tsuki.github.io/categories/Blog/"/>
     
     
-      <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
-    
       <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
+    
+      <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
     
       <category term="TODO" scheme="http://Tsuki.github.io/tags/TODO/"/>
     
@@ -82,7 +116,7 @@
     <link href="http://Tsuki.github.io/2017/11/06/Pjax-change/"/>
     <id>http://Tsuki.github.io/2017/11/06/Pjax-change/</id>
     <published>2017-11-05T18:21:03.000Z</published>
-    <updated>2017-11-05T19:21:04.489Z</updated>
+    <updated>2017-11-09T22:29:13.752Z</updated>
     
     <content type="html"><![CDATA[<h1 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h1><p>PJAX 是一項由HTML5 pushState 而產生的技術。</p><p>這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。</p>]]></content>
     
@@ -99,9 +133,9 @@
       <category term="Javascript" scheme="http://Tsuki.github.io/categories/Javascript/"/>
     
     
-      <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
-    
       <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
+    
+      <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
     
       <category term="Javascript" scheme="http://Tsuki.github.io/tags/Javascript/"/>
     

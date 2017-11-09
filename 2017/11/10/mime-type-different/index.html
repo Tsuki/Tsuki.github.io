@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Web,Javascript,Browser,WAF," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="Reset, Create, Start">
+<meta name="description" content="在MDN和Microsoft的文檔上可以找發現 不同平台和不同瀏覽器上傳文件都有分別 如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試    副檔名 Mac (MDN) Windows (MSDN)     .zip application/zip application/x-zip-compresse">
+<meta name="keywords" content="Web,Javascript,Browser,WAF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Brave New World">
-<meta property="og:url" content="http://Tsuki.github.io/2017/11/04/BNW/index.html">
+<meta property="og:title" content="Mac和Windows的MIME type 不同">
+<meta property="og:url" content="http://Tsuki.github.io/2017/11/10/mime-type-different/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
-<meta property="og:description" content="Reset, Create, Start">
+<meta property="og:description" content="在MDN和Microsoft的文檔上可以找發現 不同平台和不同瀏覽器上傳文件都有分別 如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試    副檔名 Mac (MDN) Windows (MSDN)     .zip application/zip application/x-zip-compresse">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-05T19:17:59.569Z">
+<meta property="og:updated_time" content="2017-11-09T22:43:31.323Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Brave New World">
-<meta name="twitter:description" content="Reset, Create, Start">
+<meta name="twitter:title" content="Mac和Windows的MIME type 不同">
+<meta name="twitter:description" content="在MDN和Microsoft的文檔上可以找發現 不同平台和不同瀏覽器上傳文件都有分別 如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試    副檔名 Mac (MDN) Windows (MSDN)     .zip application/zip application/x-zip-compresse">
 
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://Tsuki.github.io/2017/11/04/BNW/"/>
+  <link rel="canonical" href="http://Tsuki.github.io/2017/11/10/mime-type-different/"/>
 
 
 
 
 
-  <title>Brave New World | Tsuki Blog</title>
+  <title>Mac和Windows的MIME type 不同 | Tsuki Blog</title>
   
 
 
@@ -255,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Tsuki.github.io/2017/11/04/BNW/">
+    <link itemprop="mainEntityOfPage" href="http://Tsuki.github.io/2017/11/10/mime-type-different/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tsuki">
@@ -272,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Brave New World</h1>
+          <h1 class="post-title" itemprop="name headline">Mac和Windows的MIME type 不同</h1>
         
 
         <div class="post-meta">
@@ -284,8 +285,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T07:00:40+08:00">
-                2017-11-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T06:28:35+08:00">
+                2017-11-10
               </time>
             
 
@@ -294,6 +295,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Debug/" itemprop="url" rel="index">
+                    <span itemprop="name">Debug</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -322,7 +345,32 @@
       
 
       
-        <p>Reset, Create, Start</p>
+        <p>在MDN和Microsoft的文檔上可以找發現</p>
+<p>不同平台和不同瀏覽器上傳文件都有分別</p>
+<p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p>
+<table>
+<thead>
+<tr>
+<th>副檔名</th>
+<th>Mac (MDN)</th>
+<th>Windows (MSDN)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.zip</td>
+<td>application/zip</td>
+<td>application/x-zip-compressed</td>
+</tr>
+<tr>
+<td>.csv</td>
+<td>text/csv</td>
+<td>application/vnd.ms-exce</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="external">ref: MDN MIME</a> </p>
+<p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="external">ref: MSDN MIME 表</a></p>
 
       
     </div>
@@ -338,6 +386,18 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          
+            <a href="/tags/Browser/" rel="tag"># Browser</a>
+          
+            <a href="/tags/WAF/" rel="tag"># WAF</a>
+          
+        </div>
+      
 
       
       
@@ -347,15 +407,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/06/personal-todo/" rel="next" title="2017年的目標清單">
+                <i class="fa fa-chevron-left"></i> 2017年的目標清單
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/06/Pjax-change/" rel="prev" title="網站 PJAX 優化">
-                網站 PJAX 優化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
