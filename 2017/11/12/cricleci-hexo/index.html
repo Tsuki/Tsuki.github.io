@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Web,Continuous integration,Continuous delivery.,CircleCI,Hexo," />
 
 
 
@@ -81,17 +81,20 @@
 
 
 
-<meta name="description" content="Reset, Create, Start">
+<meta name="description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
+<meta name="keywords" content="Web,Continuous integration,Continuous delivery.,CircleCI,Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Brave New World">
-<meta property="og:url" content="http://Tsuki.github.io/2017/11/04/BNW/index.html">
+<meta property="og:title" content="使用CircleCI自動构建Hexo Github page">
+<meta property="og:url" content="http://Tsuki.github.io/2017/11/12/cricleci-hexo/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
-<meta property="og:description" content="Reset, Create, Start">
+<meta property="og:description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-11-11T23:50:07.278Z">
+<meta property="og:image" content="http://tsuki.github.io/2017/11/12/cricleci-hexo/CircleCI.png">
+<meta property="og:updated_time" content="2017-11-11T23:50:07.282Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Brave New World">
-<meta name="twitter:description" content="Reset, Create, Start">
+<meta name="twitter:title" content="使用CircleCI自動构建Hexo Github page">
+<meta name="twitter:description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
+<meta name="twitter:image" content="http://tsuki.github.io/2017/11/12/cricleci-hexo/CircleCI.png">
 
 
 
@@ -122,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://Tsuki.github.io/2017/11/04/BNW/"/>
+  <link rel="canonical" href="http://Tsuki.github.io/2017/11/12/cricleci-hexo/"/>
 
 
 
 
 
-  <title>Brave New World | Tsuki Blog</title>
+  <title>使用CircleCI自動构建Hexo Github page | Tsuki Blog</title>
   
 
 
@@ -255,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://Tsuki.github.io/2017/11/04/BNW/">
+    <link itemprop="mainEntityOfPage" href="http://Tsuki.github.io/2017/11/12/cricleci-hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tsuki">
@@ -272,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Brave New World</h1>
+          <h1 class="post-title" itemprop="name headline">使用CircleCI自動构建Hexo Github page</h1>
         
 
         <div class="post-meta">
@@ -284,8 +287,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T07:00:40+00:00">
-                2017-11-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T06:51:33+00:00">
+                2017-11-12
               </time>
             
 
@@ -294,6 +297,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevOps/" itemprop="url" rel="index">
+                    <span itemprop="name">DevOps</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -322,7 +347,35 @@
       
 
       
-        <p>Reset, Create, Start</p>
+        <h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p>
+<ul>
+<li>無限repos</li>
+<li>無限users</li>
+<li>每月1,500 build minutes</li>
+</ul>
+<p>不錯的 Resources (每次构建不到20秒)</p>
+<p>每個container 獨佔 2CPU/4096MB</p>
+<p>支持workflow</p>
+<p>簡單配置(使用yaml)</p>
+<p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p>
+<p>支持cache加速 避免重複下載node_module</p>
+<p>支持Mac构建環境(付費功能)</p>
+<h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="external">https://circleci.com/</a></p>
+<ul>
+<li><p>先在CircleCI建立帳</p>
+<p>推薦使用GitHub 帳號SSO連結</p>
+</li>
+<li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p>
+<p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="external">https://circleci.com/docs/2.0/demo-apps/</a></p>
+</li>
+<li><p>如果Theme是git submodule 需要在config加上</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></div><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在Porject設定裹加入Checkout keys </p>
+</li>
+<li><p>大功告成</p>
+ <img src="/2017/11/12/cricleci-hexo/CircleCI.png" title="[Perview]"></li>
+</ul>
 
       
     </div>
@@ -338,6 +391,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/Continuous-integration/" rel="tag"># Continuous integration</a>
+          
+            <a href="/tags/Continuous-delivery/" rel="tag"># Continuous delivery.</a>
+          
+            <a href="/tags/CircleCI/" rel="tag"># CircleCI</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
 
       
       
@@ -347,15 +414,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/10/mime-type-different/" rel="next" title="Mac和Windows的MIME type 不同">
+                <i class="fa fa-chevron-left"></i> Mac和Windows的MIME type 不同
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/06/Pjax-change/" rel="prev" title="網站 PJAX 優化">
-                網站 PJAX 優化 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -407,8 +474,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -477,6 +553,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用CircleCI原因"><span class="nav-number">1.</span> <span class="nav-text">使用CircleCI原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-自動构建發佈"><span class="nav-number">2.</span> <span class="nav-text">Hexo 自動构建發佈</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -252,6 +252,176 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Tsuki.github.io/2017/11/12/cricleci-hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tsuki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tsuki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/12/cricleci-hexo/" itemprop="url">使用CircleCI自動构建Hexo Github page</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T06:51:33+00:00">
+                2017-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DevOps/" itemprop="url" rel="index">
+                    <span itemprop="name">DevOps</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p>
+<ul>
+<li>無限repos</li>
+<li>無限users</li>
+<li>每月1,500 build minutes</li>
+</ul>
+<p>不錯的 Resources (每次构建不到20秒)</p>
+<p>每個container 獨佔 2CPU/4096MB</p>
+<p>支持workflow</p>
+<p>簡單配置(使用yaml)</p>
+<p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p>
+<p>支持cache加速 避免重複下載node_module</p>
+<p>支持Mac构建環境(付費功能)</p>
+<h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="external">https://circleci.com/</a></p>
+<ul>
+<li><p>先在CircleCI建立帳</p>
+<p>推薦使用GitHub 帳號SSO連結</p>
+</li>
+<li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p>
+<p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="external">https://circleci.com/docs/2.0/demo-apps/</a></p>
+</li>
+<li><p>如果Theme是git submodule 需要在config加上</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></div><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在Porject設定裹加入Checkout keys </p>
+</li>
+<li><p>大功告成</p>
+ <img src="/2017/11/12/cricleci-hexo/CircleCI.png" title="[Perview]"></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://Tsuki.github.io/2017/11/10/mime-type-different/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -283,7 +453,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T06:28:35+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T06:28:35+00:00">
                 2017-11-10
               </time>
             
@@ -450,7 +620,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T03:09:17+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T03:09:17+00:00">
                 2017-11-06
               </time>
             
@@ -607,7 +777,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T03:04:01+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T03:04:01+00:00">
                 2017-11-06
               </time>
             
@@ -674,6 +844,7 @@
 <li style="list-style: none"><input type="checkbox"> 在 Archive 加入 tag 和 categories</li>
 <li style="list-style: none"><input type="checkbox"> 寫 About</li>
 <li style="list-style: none"><input type="checkbox"> 加友鏈</li>
+<li style="list-style: none"><input type="checkbox" checked> CI/CD</li>
 </ul>
 
           
@@ -754,7 +925,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T02:21:03+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T02:21:03+00:00">
                 2017-11-06
               </time>
             
@@ -897,7 +1068,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T07:00:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T07:00:40+00:00">
                 2017-11-04
               </time>
             
@@ -1019,7 +1190,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1030,7 +1201,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1041,7 +1212,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

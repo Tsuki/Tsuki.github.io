@@ -2,51 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://Tsuki.github.io/2017/11/10/mime-type-different/</loc>
-    
-    <lastmod>2017-11-09T22:43:31.323Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Tsuki.github.io/2017/11/06/Pjax-change/</loc>
-    
-    <lastmod>2017-11-09T22:29:13.752Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Tsuki.github.io/2017/11/06/personal-todo/</loc>
-    
-    <lastmod>2017-11-05T19:20:34.070Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Tsuki.github.io/2017/11/04/BNW/</loc>
-    
-    <lastmod>2017-11-05T19:17:59.569Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://Tsuki.github.io/2017/11/06/TODO/</loc>
-    
-    <lastmod>2017-11-05T19:17:39.203Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://Tsuki.github.io/tags/index.html</loc>
     
-    <lastmod>2017-11-05T18:47:28.661Z</lastmod>
+    <lastmod>2017-11-11T23:50:07.286Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://Tsuki.github.io/categories/index.html</loc>
     
-    <lastmod>2017-11-05T18:44:44.704Z</lastmod>
+    <lastmod>2017-11-11T23:50:07.286Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Tsuki.github.io/2017/11/06/TODO/</loc>
+    
+    <lastmod>2017-11-11T23:50:07.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Tsuki.github.io/2017/11/10/mime-type-different/</loc>
+    
+    <lastmod>2017-11-11T23:50:07.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Tsuki.github.io/2017/11/06/personal-todo/</loc>
+    
+    <lastmod>2017-11-11T23:50:07.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Tsuki.github.io/2017/11/12/cricleci-hexo/</loc>
+    
+    <lastmod>2017-11-11T23:50:07.282Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Tsuki.github.io/2017/11/04/BNW/</loc>
+    
+    <lastmod>2017-11-11T23:50:07.278Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://Tsuki.github.io/2017/11/06/Pjax-change/</loc>
+    
+    <lastmod>2017-11-11T23:50:07.278Z</lastmod>
     
   </url>
   
