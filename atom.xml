@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Tsuki.github.io/"/>
-  <updated>2017-11-12T00:11:29.542Z</updated>
+  <updated>2018-06-01T04:48:43.505Z</updated>
   <id>http://Tsuki.github.io/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>遲到的2018第一篇</title>
+    <link href="http://Tsuki.github.io/2018/06/01/%E9%81%B2%E5%88%B0%E7%9A%842018%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>http://Tsuki.github.io/2018/06/01/遲到的2018第一篇/</id>
+    <published>2018-06-01T11:24:54.000Z</published>
+    <updated>2018-06-01T04:48:43.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>久違的日記又開始啦（其實是第一編吧，笑</p><p>呢半年發生左好多事啊 生活上 工作上等等等。。。</p><p>首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs</p><p>而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等</p><p>正式向（偽）頁面仔的方向前進啦。 </p><p>而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。</p><p>最後希望每星期都可以寫一編日記吧(眼神死。。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;久違的日記又開始啦（其實是第一編吧，笑&lt;/p&gt;
+&lt;p&gt;呢半年發生左好多事啊 生活上 工作上等等等。。。&lt;/p&gt;
+&lt;p&gt;首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs&lt;/p&gt;
+&lt;p&gt;而用既工具都完全大變身 由Spring為主變成 Angular, React
+      
+    
+    </summary>
+    
+      <category term="日記" scheme="http://Tsuki.github.io/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>使用CircleCI自動构建Hexo Github page</title>
     <link href="http://Tsuki.github.io/2017/11/12/cricleci-hexo/"/>
     <id>http://Tsuki.github.io/2017/11/12/cricleci-hexo/</id>
     <published>2017-11-12T06:51:33.000Z</published>
-    <updated>2017-11-12T00:11:29.542Z</updated>
+    <updated>2018-06-01T04:48:43.501Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p><ul><li>無限repos</li><li>無限users</li><li>每月1,500 build minutes</li></ul><p>不錯的 Resources (每次构建不到20秒)</p><p>每個container 獨佔 2CPU/4096MB</p><p>支持workflow</p><p>簡單配置(使用yaml)</p><p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p><p>支持cache加速 避免重複下載node_module</p><p>支持Mac构建環境(付費功能)</p><h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="external">https://circleci.com/</a></p><ul><li><p>先在CircleCI建立帳</p><p>推薦使用GitHub 帳號SSO連結</p></li><li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p><p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="external">https://circleci.com/docs/2.0/demo-apps/</a></p></li><li><p>如果Theme是git submodule 需要在config加上</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></div><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></div></pre></td></tr></table></figure></li><li><p>在Porject設定裹加入Checkout keys </p></li><li><p>大功告成</p> <img src="/2017/11/12/cricleci-hexo/CircleCI.png" title="[Perview]"></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p><ul><li>無限repos</li><li>無限users</li><li>每月1,500 build minutes</li></ul><p>不錯的 Resources (每次构建不到20秒)</p><p>每個container 獨佔 2CPU/4096MB</p><p>支持workflow</p><p>簡單配置(使用yaml)</p><p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p><p>支持cache加速 避免重複下載node_module</p><p>支持Mac构建環境(付費功能)</p><h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="noopener">https://circleci.com/</a></p><ul><li><p>先在CircleCI建立帳</p><p>推薦使用GitHub 帳號SSO連結</p></li><li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p><p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="noopener">https://circleci.com/docs/2.0/demo-apps/</a></p></li><li><p>如果Theme是git submodule 需要在config加上</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></span><br><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></span><br></pre></td></tr></table></figure></li><li><p>在Porject設定裹加入Checkout keys </p></li><li><p>大功告成</p> <img src="/2017/11/12/cricleci-hexo/CircleCI.png" title="[Perview]"></li></ul>]]></content>
     
     <summary type="html">
     
@@ -56,9 +82,9 @@
     <link href="http://Tsuki.github.io/2017/11/10/mime-type-different/"/>
     <id>http://Tsuki.github.io/2017/11/10/mime-type-different/</id>
     <published>2017-11-10T06:28:35.000Z</published>
-    <updated>2017-11-12T00:11:29.542Z</updated>
+    <updated>2018-06-01T04:48:43.501Z</updated>
     
-    <content type="html"><![CDATA[<p>在MDN和Microsoft的文檔上可以找發現</p><p>不同平台和不同瀏覽器上傳文件都有分別</p><p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p><table><thead><tr><th>副檔名</th><th>Mac (MDN)</th><th>Windows (MSDN)</th></tr></thead><tbody><tr><td>.zip</td><td>application/zip</td><td>application/x-zip-compressed</td></tr><tr><td>.csv</td><td>text/csv</td><td>application/vnd.ms-exce</td></tr></tbody></table><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="external">ref: MDN MIME</a> </p><p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="external">ref: MSDN MIME 表</a></p>]]></content>
+    <content type="html"><![CDATA[<p>在MDN和Microsoft的文檔上可以找發現</p><p>不同平台和不同瀏覽器上傳文件都有分別</p><p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p><table><thead><tr><th>副檔名</th><th>Mac (MDN)</th><th>Windows (MSDN)</th></tr></thead><tbody><tr><td>.zip</td><td>application/zip</td><td>application/x-zip-compressed</td></tr><tr><td>.csv</td><td>text/csv</td><td>application/vnd.ms-exce</td></tr></tbody></table><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="noopener">ref: MDN MIME</a> </p><p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="noopener">ref: MSDN MIME 表</a></p>]]></content>
     
     <summary type="html">
     
@@ -90,7 +116,7 @@
     <link href="http://Tsuki.github.io/2017/11/06/personal-todo/"/>
     <id>http://Tsuki.github.io/2017/11/06/personal-todo/</id>
     <published>2017-11-06T03:09:17.000Z</published>
-    <updated>2017-11-12T00:11:29.542Z</updated>
+    <updated>2018-06-01T04:48:43.501Z</updated>
     
     <content type="html"><![CDATA[<p>雖然己經2017年11月了，但2017年還沒有完的還有55天。</p><p>有心唔怕遲，(好似係</p><h1 id="想做的東西"><a href="#想做的東西" class="headerlink" title="想做的東西"></a>想做的東西</h1><ul><li style="list-style: none"><input type="checkbox" checked> 重新建立Blog</li><li style="list-style: none"><input type="checkbox"> 定立2018年的目標</li><li style="list-style: none"><input type="checkbox"> OCR bot (無限期延遲)</li><li style="list-style: none"><input type="checkbox"> 更新Tplayer bot</li><li style="list-style: none"><input type="checkbox"> 退壓制坑？</li></ul><h1 id="想學的東西"><a href="#想學的東西" class="headerlink" title="想學的東西"></a>想學的東西</h1><ul><li style="list-style: none"><input type="checkbox"> 學吉他</li><li style="list-style: none"><input type="checkbox"> 學日文</li></ul><h1 id="想買的東西"><a href="#想買的東西" class="headerlink" title="想買的東西"></a>想買的東西</h1><ul><li style="list-style: none"><input type="checkbox"> to be cont.</li></ul>]]></content>
     
@@ -119,7 +145,7 @@
     <link href="http://Tsuki.github.io/2017/11/06/TODO/"/>
     <id>http://Tsuki.github.io/2017/11/06/TODO/</id>
     <published>2017-11-06T03:04:01.000Z</published>
-    <updated>2017-11-12T00:11:29.542Z</updated>
+    <updated>2018-06-01T04:48:43.501Z</updated>
     
     <content type="html"><![CDATA[<p>#TODO</p><ul><li style="list-style: none"><input type="checkbox"> 在 Archive 加入 tag 和 categories</li><li style="list-style: none"><input type="checkbox"> 寫 About</li><li style="list-style: none"><input type="checkbox"> 加友鏈</li><li style="list-style: none"><input type="checkbox" checked> CI/CD</li></ul>]]></content>
     
@@ -151,7 +177,7 @@
     <link href="http://Tsuki.github.io/2017/11/06/Pjax-change/"/>
     <id>http://Tsuki.github.io/2017/11/06/Pjax-change/</id>
     <published>2017-11-06T02:21:03.000Z</published>
-    <updated>2017-11-12T00:11:29.542Z</updated>
+    <updated>2018-06-01T04:48:43.501Z</updated>
     
     <content type="html"><![CDATA[<h1 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h1><p>PJAX 是一項由HTML5 pushState 而產生的技術。</p><p>這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。</p>]]></content>
     
@@ -181,7 +207,7 @@
     <link href="http://Tsuki.github.io/2017/11/04/BNW/"/>
     <id>http://Tsuki.github.io/2017/11/04/BNW/</id>
     <published>2017-11-04T07:00:40.000Z</published>
-    <updated>2017-11-12T00:11:29.542Z</updated>
+    <updated>2018-06-01T04:48:43.501Z</updated>
     
     <content type="html"><![CDATA[<p>Reset, Create, Start</p>]]></content>
     

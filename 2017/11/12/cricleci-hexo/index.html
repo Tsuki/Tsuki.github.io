@@ -90,7 +90,7 @@
 <meta property="og:description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://tsuki.github.io/2017/11/12/cricleci-hexo/CircleCI.png">
-<meta property="og:updated_time" content="2017-11-12T00:11:29.542Z">
+<meta property="og:updated_time" content="2018-06-01T04:48:43.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用CircleCI自動构建Hexo Github page">
 <meta name="twitter:description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
@@ -360,16 +360,16 @@
 <p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p>
 <p>支持cache加速 避免重複下載node_module</p>
 <p>支持Mac构建環境(付費功能)</p>
-<h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="external">https://circleci.com/</a></p>
+<h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="noopener">https://circleci.com/</a></p>
 <ul>
 <li><p>先在CircleCI建立帳</p>
 <p>推薦使用GitHub 帳號SSO連結</p>
 </li>
 <li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p>
-<p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="external">https://circleci.com/docs/2.0/demo-apps/</a></p>
+<p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="noopener">https://circleci.com/docs/2.0/demo-apps/</a></p>
 </li>
 <li><p>如果Theme是git submodule 需要在config加上</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></div><div class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></div></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></span><br><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在Porject設定裹加入Checkout keys </p>
 </li>
@@ -423,6 +423,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/01/遲到的2018第一篇/" rel="prev" title="遲到的2018第一篇">
+                遲到的2018第一篇 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -499,7 +503,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -510,7 +514,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -583,7 +587,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
