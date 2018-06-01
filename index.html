@@ -2,6 +2,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
@@ -9,8 +18,11 @@
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -40,10 +52,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
 
 
 
@@ -52,38 +60,57 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
 
 
 
 
 
 
-<meta property="og:type" content="website">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Tsuki Blog">
 <meta property="og:url" content="http://Tsuki.github.io/index.html">
 <meta property="og:site_name" content="Tsuki Blog">
@@ -93,30 +120,8 @@
 
 
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
-    version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    pjax: true
-  };
-</script>
+  <link rel="alternate" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml" />
+
 
 
 
@@ -124,7 +129,11 @@
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Tsuki Blog</title>
   
@@ -132,18 +141,46 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120228469-1"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-120228469-1', 'auto');
-  ga('send', 'pageview');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120228469-1');
 </script>
 
 
 
 
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -164,19 +201,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Tsuki Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -184,55 +219,61 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+  </li>
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />Categories</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -240,12 +281,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -256,6 +305,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -282,11 +333,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/01/遲到的2018第一篇/" itemprop="url">遲到的2018第一篇</a></h1>
+                <a class="post-title-link" href="/2018/06/01/遲到的2018第一篇/" itemprop="url">
+                  遲到的2018第一篇
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -294,13 +355,18 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-01T11:24:54+00:00">
-                2018-06-01
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-06-01 11:24:54 / Modified: 08:49:16" itemprop="dateCreated datePublished" datetime="2018-06-01T11:24:54+00:00">2018-06-01</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -316,11 +382,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/日記/" itemprop="url" rel="index">
-                    <span itemprop="name">日記</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/日記/" itemprop="url" rel="index"><span itemprop="name">日記</span></a></span>
 
                 
                 
@@ -329,6 +391,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/06/01/遲到的2018第一篇/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/06/01/遲到的2018第一篇/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -356,18 +430,25 @@
       
         
           
-            <p>久違的日記又開始啦（其實是第一編吧，笑</p>
-<p>呢半年發生左好多事啊 生活上 工作上等等等。。。</p>
-<p>首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs</p>
-<p>而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等</p>
-<p>正式向（偽）頁面仔的方向前進啦。 </p>
-<p>而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。</p>
-<p>最後希望每星期都可以寫一編日記吧(眼神死。。</p>
-
-          
+          久違的日記又開始啦（其實是第一編吧，笑
+呢半年發生左好多事啊 生活上 工作上等等等。。。
+首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs
+而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等
+正式向（偽）頁面仔的方向前進啦。
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/01/遲到的2018第一篇/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -404,6 +485,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -430,11 +513,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/12/cricleci-hexo/" itemprop="url">使用CircleCI自動构建Hexo Github page</a></h1>
+                <a class="post-title-link" href="/2017/11/12/cricleci-hexo/" itemprop="url">
+                  使用CircleCI自動构建Hexo Github page
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -442,13 +535,30 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T06:51:33+00:00">
-                2017-11-12
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2017-11-12 06:51:33" itemprop="dateCreated datePublished" datetime="2017-11-12T06:51:33+00:00">2017-11-12</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-01 08:49:16" itemprop="dateModified" datetime="2018-06-01T08:49:16+00:00">2018-06-01</time>
+              
             
           </span>
 
@@ -464,11 +574,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/DevOps/" itemprop="url" rel="index">
-                    <span itemprop="name">DevOps</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DevOps/" itemprop="url" rel="index"><span itemprop="name">DevOps</span></a></span>
 
                 
                 
@@ -477,6 +583,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/12/cricleci-hexo/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/12/cricleci-hexo/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -504,40 +622,31 @@
       
         
           
-            <h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p>
-<ul>
-<li>無限repos</li>
-<li>無限users</li>
-<li>每月1,500 build minutes</li>
-</ul>
-<p>不錯的 Resources (每次构建不到20秒)</p>
-<p>每個container 獨佔 2CPU/4096MB</p>
-<p>支持workflow</p>
-<p>簡單配置(使用yaml)</p>
-<p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p>
-<p>支持cache加速 避免重複下載node_module</p>
-<p>支持Mac构建環境(付費功能)</p>
-<h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="noopener">https://circleci.com/</a></p>
-<ul>
-<li><p>先在CircleCI建立帳</p>
-<p>推薦使用GitHub 帳號SSO連結</p>
-</li>
-<li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p>
-<p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="noopener">https://circleci.com/docs/2.0/demo-apps/</a></p>
-</li>
-<li><p>如果Theme是git submodule 需要在config加上</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></span><br><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在Porject設定裹加入Checkout keys </p>
-</li>
-<li><p>大功告成</p>
- <img src="/2017/11/12/cricleci-hexo/CircleCI.png" title="[Perview]"></li>
-</ul>
+          使用CircleCI原因CricleCI有免費的限額
 
-          
+無限repos
+無限users
+每月1,500 build minutes
+
+不錯的 Resources (每次构建不到20秒)
+每個container 獨佔 2CPU/4096MB
+支持workflow
+簡單配置(使用yaml)
+支持Dock
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/12/cricleci-hexo/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -574,6 +683,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -600,11 +711,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/10/mime-type-different/" itemprop="url">Mac和Windows的MIME type 不同</a></h1>
+                <a class="post-title-link" href="/2017/11/10/mime-type-different/" itemprop="url">
+                  Mac和Windows的MIME type 不同
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -612,13 +733,30 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T06:28:35+00:00">
-                2017-11-10
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2017-11-10 06:28:35" itemprop="dateCreated datePublished" datetime="2017-11-10T06:28:35+00:00">2017-11-10</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-01 08:49:16" itemprop="dateModified" datetime="2018-06-01T08:49:16+00:00">2018-06-01</time>
+              
             
           </span>
 
@@ -634,11 +772,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Debug/" itemprop="url" rel="index">
-                    <span itemprop="name">Debug</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Debug/" itemprop="url" rel="index"><span itemprop="name">Debug</span></a></span>
 
                 
                 
@@ -647,6 +781,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/10/mime-type-different/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/10/mime-type-different/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -674,37 +820,32 @@
       
         
           
-            <p>在MDN和Microsoft的文檔上可以找發現</p>
-<p>不同平台和不同瀏覽器上傳文件都有分別</p>
-<p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p>
-<table>
-<thead>
-<tr>
-<th>副檔名</th>
-<th>Mac (MDN)</th>
-<th>Windows (MSDN)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.zip</td>
-<td>application/zip</td>
-<td>application/x-zip-compressed</td>
-</tr>
-<tr>
-<td>.csv</td>
-<td>text/csv</td>
-<td>application/vnd.ms-exce</td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="noopener">ref: MDN MIME</a> </p>
-<p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="noopener">ref: MSDN MIME 表</a></p>
+          在MDN和Microsoft的文檔上可以找發現
+不同平台和不同瀏覽器上傳文件都有分別
+如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試
 
-          
+
+
+副檔名
+Mac (MDN)
+Windows (MSDN)
+
+
+
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/10/mime-type-different/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -741,6 +882,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -767,11 +910,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/06/personal-todo/" itemprop="url">2017年的目標清單</a></h1>
+                <a class="post-title-link" href="/2017/11/06/personal-todo/" itemprop="url">
+                  2017年的目標清單
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -779,13 +932,30 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T03:09:17+00:00">
-                2017-11-06
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2017-11-06 03:09:17" itemprop="dateCreated datePublished" datetime="2017-11-06T03:09:17+00:00">2017-11-06</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-01 08:49:16" itemprop="dateModified" datetime="2018-06-01T08:49:16+00:00">2018-06-01</time>
+              
             
           </span>
 
@@ -801,11 +971,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Personal/" itemprop="url" rel="index">
-                    <span itemprop="name">Personal</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Personal/" itemprop="url" rel="index"><span itemprop="name">Personal</span></a></span>
 
                 
                 
@@ -814,6 +980,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/06/personal-todo/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/06/personal-todo/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -841,27 +1019,37 @@
       
         
           
-            <p>雖然己經2017年11月了，但2017年還沒有完的還有55天。</p>
-<p>有心唔怕遲，(好似係</p>
-<h1 id="想做的東西"><a href="#想做的東西" class="headerlink" title="想做的東西"></a>想做的東西</h1><ul>
-<li style="list-style: none"><input type="checkbox" checked> 重新建立Blog</li>
-<li style="list-style: none"><input type="checkbox"> 定立2018年的目標</li>
-<li style="list-style: none"><input type="checkbox"> OCR bot (無限期延遲)</li>
-<li style="list-style: none"><input type="checkbox"> 更新Tplayer bot</li>
-<li style="list-style: none"><input type="checkbox"> 退壓制坑？</li>
-</ul>
-<h1 id="想學的東西"><a href="#想學的東西" class="headerlink" title="想學的東西"></a>想學的東西</h1><ul>
-<li style="list-style: none"><input type="checkbox"> 學吉他</li>
-<li style="list-style: none"><input type="checkbox"> 學日文</li>
-</ul>
-<h1 id="想買的東西"><a href="#想買的東西" class="headerlink" title="想買的東西"></a>想買的東西</h1><ul>
-<li style="list-style: none"><input type="checkbox"> to be cont.</li>
-</ul>
+          雖然己經2017年11月了，但2017年還沒有完的還有55天。
+有心唔怕遲，(好似係
+想做的東西
+ 重新建立Blog
+ 定立2018年的目標
+ OCR bot (無限期延遲)
+ 更新Tplayer bot
+ 退壓制坑？
+
+想學的東西
+ 學吉他
+ 學日文
+
+想買的東西
+ to be cont.
+
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/06/personal-todo/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -898,6 +1086,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -924,11 +1114,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/06/TODO/" itemprop="url">網站更新</a></h1>
+                <a class="post-title-link" href="/2017/11/06/TODO/" itemprop="url">
+                  網站更新
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -936,13 +1136,30 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T03:04:01+00:00">
-                2017-11-06
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2017-11-06 03:04:01" itemprop="dateCreated datePublished" datetime="2017-11-06T03:04:01+00:00">2017-11-06</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-01 08:49:16" itemprop="dateModified" datetime="2018-06-01T08:49:16+00:00">2018-06-01</time>
+              
             
           </span>
 
@@ -958,11 +1175,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
 
                 
                 
@@ -971,6 +1184,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/06/TODO/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/06/TODO/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -998,18 +1223,28 @@
       
         
           
-            <p>#TODO</p>
-<ul>
-<li style="list-style: none"><input type="checkbox"> 在 Archive 加入 tag 和 categories</li>
-<li style="list-style: none"><input type="checkbox"> 寫 About</li>
-<li style="list-style: none"><input type="checkbox"> 加友鏈</li>
-<li style="list-style: none"><input type="checkbox" checked> CI/CD</li>
-</ul>
+          #TODO
+
+ 在 Archive 加入 tag 和 categories
+ 寫 About
+ 加友鏈
+ CI/CD
+
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/06/TODO/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -1046,6 +1281,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -1072,11 +1309,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/06/Pjax-change/" itemprop="url">網站 PJAX 優化</a></h1>
+                <a class="post-title-link" href="/2017/11/06/Pjax-change/" itemprop="url">
+                  網站 PJAX 優化
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1084,13 +1331,30 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-06T02:21:03+00:00">
-                2017-11-06
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2017-11-06 02:21:03" itemprop="dateCreated datePublished" datetime="2017-11-06T02:21:03+00:00">2017-11-06</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-01 08:49:16" itemprop="dateModified" datetime="2018-06-01T08:49:16+00:00">2018-06-01</time>
+              
             
           </span>
 
@@ -1106,11 +1370,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a></span>
 
                 
                 
@@ -1119,6 +1379,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/06/Pjax-change/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/06/Pjax-change/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1146,13 +1418,23 @@
       
         
           
-            <h1 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h1><p>PJAX 是一項由HTML5 pushState 而產生的技術。</p>
-<p>這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。</p>
+          PJAXPJAX 是一項由HTML5 pushState 而產生的技術。
+這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/06/Pjax-change/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -1191,6 +1473,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1215,11 +1499,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/04/BNW/" itemprop="url">Brave New World</a></h1>
+                <a class="post-title-link" href="/2017/11/04/BNW/" itemprop="url">
+                  Brave New World
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1227,19 +1521,48 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T07:00:40+00:00">
-                2017-11-04
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2017-11-04 07:00:40" itemprop="dateCreated datePublished" datetime="2017-11-04T07:00:40+00:00">2017-11-04</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-06-01 08:49:16" itemprop="dateModified" datetime="2018-06-01T08:49:16+00:00">2018-06-01</time>
+              
             
           </span>
 
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/04/BNW/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/04/BNW/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -1267,12 +1590,22 @@
       
         
           
-            <p>Reset, Create, Start</p>
+          Reset, Create, Start
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/04/BNW/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -1311,9 +1644,6 @@
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -1342,42 +1672,82 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">7</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
 
-            
               
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
               
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">categories</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-            
-
-          </nav>
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -1388,16 +1758,26 @@
             </div>
           
 
-          <div class="links-of-author motion-element">
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/tsuki" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
             
-          </div>
-
           
-          
-
-          
-          
-
           
 
         </div>
@@ -1418,16 +1798,20 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Tsuki</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.4.4</div>
 
 
 
@@ -1435,12 +1819,13 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.3.0</div>
 
 
 
 
         
+
 
 
 
@@ -1479,7 +1864,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1499,16 +1888,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1517,18 +1896,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
 
 
 
@@ -1536,25 +1910,19 @@
   
 
   
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
-
 
   
 
 
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
   
 
-
-
-
-
-
-
+  
+    <script id="dsq-count-scr" src="https://tsukiblog.disqus.com/count.js" async></script>
+  
 
   
 
@@ -1566,8 +1934,10 @@
 
 
 
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+
+
+
 
 
 
@@ -1576,6 +1946,8 @@
 
 
 
+
+  
 
   
 
@@ -1595,9 +1967,16 @@
   
 
   
+
+  
+
   
   
-  <script src="/lib/pjax/pjax.js"></script>
+  
+    
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/pjax@0.2.6/pjax.js"></script>
   
 
   <script src="/js/src/pjax.js"></script>

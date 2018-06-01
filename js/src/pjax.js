@@ -1,24 +1,22 @@
-document.addEventListener("pjax:send", function() {
-
+document.addEventListener("pjax:send", function () {
 });
 
-document.addEventListener("pjax:complete", function() {
-  NexT.motion.integrator.reset(2);
+document.addEventListener("pjax:complete", function () {
+  NexT.motion.integrator.reset(0);
   CONFIG.motion.enable && NexT.motion.integrator.bootstrap();
 });
 
-document.addEventListener("pjax:error", function() {
-
+document.addEventListener("pjax:error", function () {
 });
 
-document.addEventListener("pjax:success", function() {
-
+document.addEventListener("pjax:success", function () {
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  var pjax = new Pjax({
+document.addEventListener("DOMContentLoaded", function () {
+  new Pjax({
     elements: ["a[href]:not(.fancybox)"],
-    selectors: [".content",".sidebar"]
+    selectors: [".content", ".sidebar", ".menu"],
+    cacheBust: false
     // currentUrlFullReload: true,
   });
 });
