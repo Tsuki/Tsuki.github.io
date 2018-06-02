@@ -1,11 +1,13 @@
 /* global NexT: true */
 
 $(document).ready(function () {
-
   initScrollSpy();
   initToc();
 });
-
+document.addEventListener("pjax:complete", function () {
+  initScrollSpy();
+  initToc();
+});
 function initScrollSpy () {
   var tocSelector = '.post-toc';
   var $tocElement = $(tocSelector);

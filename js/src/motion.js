@@ -93,7 +93,9 @@ $(document).ready(function () {
       this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
       this.sidebarEl.on('touchstart', this.touchstartHandler.bind(this));
       this.sidebarEl.on('touchend', this.touchendHandler.bind(this));
-      this.sidebarEl.on('touchmove', function(e){e.preventDefault();});
+      this.sidebarEl.on('touchmove', function (e) {
+        e.preventDefault();
+      });
 
       $(document)
         .on('sidebar.isShowing', function () {
@@ -107,7 +109,7 @@ $(document).ready(function () {
     },
     reloadSidebar: function () {
       this.sidebarEl = $('.sidebar');
-      this.isSidebarVisible ? this.showSidebar() : null;
+      this.isSidebarVisible ? this.showSidebar(0) : null;
     },
     clickHandler: function () {
       this.isSidebarVisible ? this.hideSidebar() : this.showSidebar();
@@ -125,18 +127,18 @@ $(document).ready(function () {
       }
       sidebarToggleLines.init();
     },
-    touchstartHandler: function(e) {
+    touchstartHandler: function (e) {
       xPos = e.originalEvent.touches[0].clientX;
       yPos = e.originalEvent.touches[0].clientY;
     },
-    touchendHandler: function(e) {
+    touchendHandler: function (e) {
       var _xPos = e.originalEvent.changedTouches[0].clientX;
       var _yPos = e.originalEvent.changedTouches[0].clientY;
-      if (_xPos-xPos > 30 && Math.abs(_yPos-yPos) < 20) {
+      if (_xPos - xPos > 30 && Math.abs(_yPos - yPos) < 20) {
         this.clickHandler();
       }
     },
-    showSidebar: function () {
+    showSidebar: function (duration) {
       var self = this;
 
       sidebarToggleLines.close();
@@ -144,7 +146,7 @@ $(document).ready(function () {
           width: SIDEBAR_WIDTH
         }, {
           display: 'block',
-          duration: SIDEBAR_DISPLAY_DURATION,
+          duration: duration || SIDEBAR_DISPLAY_DURATION,
           begin: function () {
             $('.sidebar .motion-element').velocity(
               'transition.slideRightIn',
@@ -207,8 +209,8 @@ $(document).ready(function () {
     }
   };
 
-  NexT.motion.middleWares =  {
-    sidebarToggle: function (integrator) {
+  NexT.motion.middleWares = {
+    sidebarInit: function (integrator) {
       sidebarToggleMotion.init();
       integrator.next();
     },
@@ -240,7 +242,7 @@ $(document).ready(function () {
       hasElement($title) && sequence.push({
         e: $title,
         p: {opacity: 1, top: 0},
-        o: { duration: 200 }
+        o: {duration: 200}
       });
 
       hasElement($subtitle) && sequence.push({
@@ -263,7 +265,7 @@ $(document).ready(function () {
       }
 
 
-      function getMistLineSettings (element, translateX) {
+      function getMistLineSettings(element, translateX) {
         return {
           e: $(element),
           p: {translateX: translateX},
@@ -279,7 +281,7 @@ $(document).ready(function () {
        * @param {jQuery|Array} $elements
        * @returns {boolean}
        */
-      function hasElement ($elements) {
+      function hasElement($elements) {
         $elements = Array.isArray($elements) ? $elements : [$elements];
         return $elements.every(function ($element) {
           return $element.length > 0;
@@ -322,7 +324,7 @@ $(document).ready(function () {
         integrator.next();
       }
 
-      function postMotion () {
+      function postMotion() {
         var postMotionOptions = window.postMotionOptions || {
           stagger: 100,
           drag: true
@@ -330,7 +332,7 @@ $(document).ready(function () {
         postMotionOptions.complete = function () {
           // After motion complete need to remove transform from sidebar to let affix work on Pisces | Gemini.
           if (CONFIG.motion.transition.sidebar && (NexT.utils.isPisces() || NexT.utils.isGemini())) {
-            $sidebarAffix.css({ 'transform': 'initial' });
+            $sidebarAffix.css({'transform': 'initial'});
           }
           integrator.next();
         };
