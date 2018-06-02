@@ -15,7 +15,7 @@ document.addEventListener("pjax:success", function () {
 document.addEventListener("DOMContentLoaded", function () {
   new Pjax({
     elements: ["a[href]:not(.fancybox)"],
-    selectors: [".content", ".sidebar", ".menu", ".comments"],
+    selectors: [".content", ".sidebar", ".content-wrap"],
     cacheBust: false
     // currentUrlFullReload: true,
   });
