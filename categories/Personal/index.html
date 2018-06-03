@@ -370,9 +370,12 @@
 
 
 
-          </div>
-          
+            
+<div class="comments" id="comments">
+</div>
 
+
+          </div>
         </div>
         
           
@@ -408,7 +411,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -664,9 +667,21 @@
 
 
   
-
+  <script type="text/javascript">
+    function loadComments() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://tsukiblog.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+    
+    loadComments();
+    
+  </script>
   
     <script id="dsq-count-scr" src="https://tsukiblog.disqus.com/count.js" async></script>
+  
+
   
 
   
