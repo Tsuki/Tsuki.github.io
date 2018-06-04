@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://Tsuki.github.io/"/>
-  <updated>2018-06-04T06:02:16.302Z</updated>
+  <updated>2018-06-04T09:24:46.627Z</updated>
   <id>http://Tsuki.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://Tsuki.github.io/2018/06/03/%E9%9A%A8%E7%AD%86/"/>
     <id>http://Tsuki.github.io/2018/06/03/隨筆/</id>
     <published>2018-06-03T23:57:10.000Z</published>
-    <updated>2018-06-04T06:02:16.302Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<h3 id="閒聊"><a href="#閒聊" class="headerlink" title="閒聊"></a>閒聊</h3><p>從昨天開始練習跑步，先從跑1km到今天跑1.5km 以6kmph的速度。</p><p>目標在下星期能跑2~2.5km以上吧。</p><p>別外，又是補小說坑的時間。上一次看小說大約是魔劣動畫化的時候了，差不多有四年多了。</p><p>最近看完的小說是<a href="https://arifureta.com/" target="_blank" rel="noopener">平凡職業造就世界最強</a><em>ありふれた職業で世界最強</em>，期待明年動畫化(2019年4月番，跳票啦)。</p><img src="/2018/06/03/隨筆/1aa90a0ba56447fe98d17e3aa3f18a7a.jpg" title="[ユエ]"><p>別一本正在看的是<a href="https://ncode.syosetu.com/n8541cr/" target="_blank" rel="noopener">異世界薬局</a>，這本小說算是一本醫學科普書。文中有不少醫學智識和專業術語，辛苦翻譯大大了(wwww。</p><h3 id="開發"><a href="#開發" class="headerlink" title="開發"></a>開發</h3><p>Blog 修正一些因為PJAX 引起的bug， 主要是把一些script遷移動global header上，以及把theme bootstrap和reset 的順序修改一下。</p><p>別外用了dirty fix把留言版不更新和沒有顯示的問題，有空再重構一下。</p><p>其次開了一個新repo，在未來一段時間把ukagaka寫出來，數據庫從之前的 Google sheets 換成 Firebase 的 realtime database上。 預計寫一到兩個星期。</p>]]></content>
     
@@ -46,7 +46,7 @@
     <link href="http://Tsuki.github.io/2018/06/01/%E9%81%B2%E5%88%B0%E7%9A%842018%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>http://Tsuki.github.io/2018/06/01/遲到的2018第一篇/</id>
     <published>2018-06-01T11:24:54.000Z</published>
-    <updated>2018-06-04T06:02:16.302Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<p>久違的日記又開始啦（其實是第一編吧，笑</p><p>呢半年發生左好多事啊 生活上 工作上等等等。。。</p><p>首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs</p><p>而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等</p><p>正式向（偽）頁面仔的方向前進啦。 </p><p>而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。</p><p>最後希望每星期都可以寫一編日記吧(眼神死。。</p>]]></content>
     
@@ -72,7 +72,7 @@
     <link href="http://Tsuki.github.io/2017/11/12/cricleci-hexo/"/>
     <id>http://Tsuki.github.io/2017/11/12/cricleci-hexo/</id>
     <published>2017-11-12T06:51:33.000Z</published>
-    <updated>2018-06-04T06:02:16.298Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p><ul><li>無限repos</li><li>無限users</li><li>每月1,500 build minutes</li></ul><p>不錯的 Resources (每次构建不到20秒)</p><p>每個container 獨佔 2CPU/4096MB</p><p>支持workflow</p><p>簡單配置(使用yaml)</p><p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p><p>支持cache加速 避免重複下載node_module</p><p>支持Mac构建環境(付費功能)</p><h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="noopener">https://circleci.com/</a></p><ul><li><p>先在CircleCI建立帳</p><p>推薦使用GitHub 帳號SSO連結</p></li><li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p><p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="noopener">https://circleci.com/docs/2.0/demo-apps/</a></p></li><li><p>如果Theme是git submodule 需要在config加上</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></span><br><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></span><br></pre></td></tr></table></figure></li><li><p>在Porject設定裹加入Checkout keys </p></li><li><p>大功告成</p> <img src="/2017/11/12/cricleci-hexo/CircleCI.png" title="[Perview]"></li></ul>]]></content>
     
@@ -107,7 +107,7 @@
     <link href="http://Tsuki.github.io/2017/11/10/mime-type-different/"/>
     <id>http://Tsuki.github.io/2017/11/10/mime-type-different/</id>
     <published>2017-11-10T06:28:35.000Z</published>
-    <updated>2018-06-04T06:02:16.298Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<p>在MDN和Microsoft的文檔上可以找發現</p><p>不同平台和不同瀏覽器上傳文件都有分別</p><p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p><table><thead><tr><th>副檔名</th><th>Mac (MDN)</th><th>Windows (MSDN)</th></tr></thead><tbody><tr><td>.zip</td><td>application/zip</td><td>application/x-zip-compressed</td></tr><tr><td>.csv</td><td>text/csv</td><td>application/vnd.ms-exce</td></tr></tbody></table><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="noopener">ref: MDN MIME</a> </p><p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="noopener">ref: MSDN MIME 表</a></p>]]></content>
     
@@ -141,7 +141,7 @@
     <link href="http://Tsuki.github.io/2017/11/06/personal-todo/"/>
     <id>http://Tsuki.github.io/2017/11/06/personal-todo/</id>
     <published>2017-11-06T03:09:17.000Z</published>
-    <updated>2018-06-04T06:02:16.298Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<p>雖然己經2017年11月了，但2017年還沒有完的還有55天。</p><p>有心唔怕遲，(好似係</p><h1 id="想做的東西"><a href="#想做的東西" class="headerlink" title="想做的東西"></a>想做的東西</h1><ul><li style="list-style: none"><input type="checkbox" checked> 重新建立Blog</li><li style="list-style: none"><input type="checkbox"> 定立2018年的目標</li><li style="list-style: none"><input type="checkbox"> OCR bot (無限期延遲)</li><li style="list-style: none"><input type="checkbox"> 更新Tplayer bot</li><li style="list-style: none"><input type="checkbox"> 退壓制坑？</li></ul><h1 id="想學的東西"><a href="#想學的東西" class="headerlink" title="想學的東西"></a>想學的東西</h1><ul><li style="list-style: none"><input type="checkbox"> 學吉他</li><li style="list-style: none"><input type="checkbox"> 學日文</li></ul><h1 id="想買的東西"><a href="#想買的東西" class="headerlink" title="想買的東西"></a>想買的東西</h1><ul><li style="list-style: none"><input type="checkbox"> to be cont.</li></ul>]]></content>
     
@@ -170,7 +170,7 @@
     <link href="http://Tsuki.github.io/2017/11/06/TODO/"/>
     <id>http://Tsuki.github.io/2017/11/06/TODO/</id>
     <published>2017-11-06T03:04:01.000Z</published>
-    <updated>2018-06-04T06:02:16.298Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<p>#TODO</p><ul><li style="list-style: none"><input type="checkbox"> 在 Archive 加入 tag 和 categories</li><li style="list-style: none"><input type="checkbox"> 寫 About</li><li style="list-style: none"><input type="checkbox"> 加友鏈</li><li style="list-style: none"><input type="checkbox" checked> CI/CD</li></ul>]]></content>
     
@@ -189,9 +189,9 @@
       <category term="Blog" scheme="http://Tsuki.github.io/categories/Blog/"/>
     
     
-      <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
-    
       <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
+    
+      <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
     
       <category term="TODO" scheme="http://Tsuki.github.io/tags/TODO/"/>
     
@@ -202,7 +202,7 @@
     <link href="http://Tsuki.github.io/2017/11/06/Pjax-change/"/>
     <id>http://Tsuki.github.io/2017/11/06/Pjax-change/</id>
     <published>2017-11-06T02:21:03.000Z</published>
-    <updated>2018-06-04T06:02:16.298Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<h1 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h1><p>PJAX 是一項由HTML5 pushState 而產生的技術。</p><p>這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。</p>]]></content>
     
@@ -219,9 +219,9 @@
       <category term="Javascript" scheme="http://Tsuki.github.io/categories/Javascript/"/>
     
     
-      <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
-    
       <category term="Web" scheme="http://Tsuki.github.io/tags/Web/"/>
+    
+      <category term="Blog" scheme="http://Tsuki.github.io/tags/Blog/"/>
     
       <category term="Javascript" scheme="http://Tsuki.github.io/tags/Javascript/"/>
     
@@ -232,7 +232,7 @@
     <link href="http://Tsuki.github.io/2017/11/04/BNW/"/>
     <id>http://Tsuki.github.io/2017/11/04/BNW/</id>
     <published>2017-11-04T07:00:40.000Z</published>
-    <updated>2018-06-04T06:02:16.298Z</updated>
+    <updated>2018-06-04T09:24:46.627Z</updated>
     
     <content type="html"><![CDATA[<p>Reset, Create, Start</p>]]></content>
     
