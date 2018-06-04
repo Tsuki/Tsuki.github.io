@@ -215,6 +215,15 @@ $(document).ready(function () {
       integrator.next();
     },
     reload: function (integrator) {
+
+      /**
+       * Register JS handlers by condition option.
+       * Need to add config option in Front-End at 'layout/_partials/head.swig' file.
+       */
+      CONFIG.fancybox && NexT.utils.wrapImageWithFancyBox();
+      CONFIG.tabs && NexT.utils.registerTabsTag();
+      NexT.utils.embeddedVideoTransformer();
+
       sidebarToggleMotion.reloadSidebar();
       integrator.next();
     },
