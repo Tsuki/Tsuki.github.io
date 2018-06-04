@@ -2,7 +2,7 @@ document.addEventListener("pjax:send", function () {
 });
 
 document.addEventListener("pjax:complete", function () {
-  NexT.motion.integrator.reset(1);
+  NexT.motion.integrator.reset(2);
   CONFIG.motion.enable && NexT.motion.integrator.bootstrap();
   if (window.DISQUS) {
     DISQUS.reset({
