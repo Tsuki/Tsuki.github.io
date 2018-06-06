@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-06-06T11:26:51.156Z</updated>
+  <updated>2018-06-06T17:04:47.580Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>日記</title>
+    <link href="https://blog.sukitsuki.com/2018/06/06/%E6%97%A5%E8%A8%98/"/>
+    <id>https://blog.sukitsuki.com/2018/06/06/日記/</id>
+    <published>2018-06-06T14:54:21.000Z</published>
+    <updated>2018-06-06T17:04:47.580Z</updated>
+    
+    <content type="html"><![CDATA[<p>兩天把四本小說看完了，內容很輕鬆但又滿滿砂糖。</p><p>只要沒有擁有，就不會擔心失去。因為過於滿足現況而忽視身邊的問題，是我極力避免發生的情況。我會為很多事情作出最壞打算，雖然有居安思危的說法，但過度未雨綢繆、過分考慮令我不知不覺變成過分焦慮的性格，經常杞人憂天、自我折磨。</p><p>博客加了Player可以點左下角播放，或點右邊開啟自動播放。</p><p>下一本書還是翻舊小說看，不過是長編小說。要看完應該得花一個月左右，感覺現在的小說都沒以前的好看，也可能是我情懷發作，畢竞回憶中的事物都是美好和惡劣的才會留下深刻的記憶。</p><p>最後，今晚也去跑步了，今天達成2.5KM，一共用了用了20分鐘。</p><p>以下是Breaking NEWS</p><img src="/2018/06/06/日記/photo_2018-06-06_23-50-39.jpg" title="[魔法禁书目录Ⅲ]"><blockquote><p>TV动画「魔法禁书目录Ⅲ」确认在今年10月开始放送！</p><p>【STAFF】<br>監督：錦織博<br>シリーズ構成：吉野弘幸<br>キャラクターデザイン：田中雄一<br>制作：J.C.STAFF</p><p>【CAST】<br>上条当麻：阿部敦<br>インデックス：井口裕香<br>御坂美琴：佐藤利奈<br>アクセラレータ：岡本信彦<br>浜面仕上：日野聡 ​​​</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;兩天把四本小說看完了，內容很輕鬆但又滿滿砂糖。&lt;/p&gt;
+&lt;p&gt;只要沒有擁有，就不會擔心失去。因為過於滿足現況而忽視身邊的問題，是我極力避免發生的情況。我會為很多事情作出最壞打算，雖然有居安思危的說法，但過度未雨綢繆、過分考慮令我不知不覺變成過分焦慮的性格，經常杞人憂天、自我
+      
+    
+    </summary>
+    
+      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>流水帳與我</title>
     <link href="https://blog.sukitsuki.com/2018/06/05/%E6%B5%81%E6%B0%B4%E5%B8%B3%E8%88%87%E6%88%91/"/>
     <id>https://blog.sukitsuki.com/2018/06/05/流水帳與我/</id>
     <published>2018-06-05T13:01:49.000Z</published>
-    <updated>2018-06-06T11:26:51.156Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>昨天和人聊起近月第一代的感想，老實說不太喜歡一代的人設。遊星的人設實在太弱氣，雖然結局時被感動一把但最後還是被露娜上了（勸退三連。</p><p>今天就跑去去食狗糧小說(學姐與我)，這本小說其實在幾年前己經看過。</p><p>最近發現原來還有第5卷和第0卷，不過第4卷的結局也不錯。下次去日本找個機會去書局找找看，但畢業十多年前的書了，不打算給太大期望。</p><p>讀後感就等看完了再回來寫吧。</p><p>別外，今天跑步成功達成2KM，需時16分鐘，今天就喝一杯Gin tonic慶祝一下吧。</p><p>題外話坦奎瑞10號乾喝實在太難入口了，但是加了奎寧成了絕配，這又簡單又好喝的調酒我最喜歡了。</p><p>題外話2, GitHub和Microsoft之後的交流實錘了，不過這沒什麼好評論的，日子怎麼過還是怎麼過，畢業GitHub己經不是單純的代碼托管平台，而是交流平台。別外昨晚的WWDC，雖然沒有看直播不過在群裹還是看到滿多吐嘈。（還有人說這是抄Google I/Owww. 感覺上iOS己經沒什麼創新，可能對iOSer來說很創新吧www，因為很多功能在Android上己經實現了。</p>]]></content>
     
@@ -46,7 +70,7 @@
     <link href="https://blog.sukitsuki.com/2018/06/05/%E5%BE%9Edocker%E5%88%B0k8s/"/>
     <id>https://blog.sukitsuki.com/2018/06/05/從docker到k8s/</id>
     <published>2018-06-05T02:24:03.000Z</published>
-    <updated>2018-06-06T11:26:51.156Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>Docker, 是一個管理虛擬化的工具，原理上是利用Linux 上的LXC和cgroup提供OS Level的虛擬化。Docker 提供直觀的CMD管理方式,可分佈的Image打包方案，腳本式配置，令Docker 成為現今最簡單，最有效的開發工具之一。</p><p>Docker為開發提供快速建立開發環境，在沒有docker 之前，一般開發環境需要配置半天到一天不等。在建立docker compose 檔案後，可以一建配置開發所需要的環境，如mysql, mongode, redis, activemq 等等。</p><p>雖然Docker可以滿足單機上的開發和部署需求，但在分佈式和集群部署上的管理並不方便，Kubernetes(K8s)因此誕生。</p><p><img src="https://raw.githubusercontent.com/cncf/landscape/master/landscape/CloudNativeLandscape_latest.png" alt="img"></p><p>K8s是一系列的解決案，本是是Google 內部的部署安案(<a href="https://research.google.com/pubs/pub43438.html" target="_blank" rel="noopener">Borg</a>)開源等來。K8s 主力解決管理大量機器需要的人手，時間和配置，以減輕維護所需成本。</p><p>K8s 主要由Pod，Service，Deployment，Node等組成而成。</p><blockquote><p>Pod</p></blockquote><p>Pod 最K8s中最少的組件相等放Docker中的Image/Instance。</p><blockquote><p>Deployment</p></blockquote><p>Deployment是配置一組Pod的詳細內容，比如Pod的數目，CPU和memory的分配，Pod expose的port, persistent volume 的掛載等等。</p><blockquote><p>Service</p></blockquote><p>而Service 是管理 Deployment中expose的port mapping，分別有ClusterIp NodePort, LoadBalancer 三種配置。 </p><p>ClusterIp 是只分別 k8s 內部Ip，外部不能直接Access到Pod的Port，</p><p>NodePort是把每一個Node上指定的port 連接到Serivce 綁定的Pod配置的expose port上，但NodePort只可以用30000-32767段，適合用在內部網絡暴露port的需求。</p><p>最後LoadBalancer 一般用在AWS，GCP，Azure等Cloud service上，因為這個配置需要提供公開IP的地址，是用作整合Cloud provider的LoadBalancer功能。如果是自建K8s 可以用 Linux virtual ip 作Loadbalance NAT到NodePort上，從而達到相同功能。</p><blockquote><p>Node</p></blockquote><p>Node相常於K8s 群集上每一台機器的Instance，而Node有Master, Slaver之分。在K8s上Master Node只能配置單數數目，主要作用是調度K8s的任務和Pod分配等工能，Slaver Node主要是乘載Pod的容器。</p><blockquote><p>Namespces</p></blockquote><blockquote><p>Ingress</p></blockquote><blockquote><p>Config</p></blockquote><blockquote><p>Secrets</p></blockquote><blockquote><p>Persistent Volume Claims</p></blockquote><blockquote><p>Stateful Sets</p></blockquote><blockquote><p>Jobs</p></blockquote><blockquote><p>Cron Jobs</p></blockquote><blockquote><p>Daemon Sets</p></blockquote><blockquote><p>RBAC</p></blockquote><p>待續</p>]]></content>
     
@@ -70,7 +94,7 @@
     <link href="https://blog.sukitsuki.com/2018/06/04/%E6%97%A5%E8%A8%98/"/>
     <id>https://blog.sukitsuki.com/2018/06/04/日記/</id>
     <published>2018-06-04T11:16:42.000Z</published>
-    <updated>2018-06-06T11:26:51.156Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>今天就補了About 和記錄了一些正在看或之後會看的小說和動畫。</p><p>ukagaka 0進度。</p><blockquote><p>閒聊</p></blockquote><p>這兩天因為M$公佈說要收購Github搞得滿成風雨，我就靜靜看著ww。</p>]]></content>
     
@@ -99,7 +123,7 @@
     <link href="https://blog.sukitsuki.com/2018/06/03/%E9%9A%A8%E7%AD%86/"/>
     <id>https://blog.sukitsuki.com/2018/06/03/隨筆/</id>
     <published>2018-06-03T15:57:10.000Z</published>
-    <updated>2018-06-06T11:26:51.156Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<h3 id="閒聊"><a href="#閒聊" class="headerlink" title="閒聊"></a>閒聊</h3><p>從昨天開始練習跑步，先從跑1km到今天跑1.5km 以6kmph的速度。</p><p>目標在下星期能跑2~2.5km以上吧。</p><p>別外，又是補小說坑的時間。上一次看小說大約是魔劣動畫化的時候了，差不多有四年多了。</p><p>最近看完的小說是<a href="https://arifureta.com/" target="_blank" rel="noopener">平凡職業造就世界最強</a><em>ありふれた職業で世界最強</em>，期待明年動畫化(2019年4月番，跳票啦)。</p><img src="/2018/06/03/隨筆/1aa90a0ba56447fe98d17e3aa3f18a7a.jpg" title="[ユエ]"><p>別一本正在看的是<a href="https://ncode.syosetu.com/n8541cr/" target="_blank" rel="noopener">異世界薬局</a>，這本小說算是一本醫學科普書。文中有不少醫學智識和專業術語，辛苦翻譯大大了(wwww。</p><h3 id="開發"><a href="#開發" class="headerlink" title="開發"></a>開發</h3><p>Blog 修正一些因為PJAX 引起的bug， 主要是把一些script遷移動global header上，以及把theme bootstrap和reset 的順序修改一下。</p><p>別外用了dirty fix把留言版不更新和沒有顯示的問題，有空再重構一下。</p><p>其次開了一個新repo，在未來一段時間把ukagaka寫出來，數據庫從之前的 Google sheets 換成 Firebase 的 realtime database上。 預計寫一到兩個星期。</p>]]></content>
     
@@ -124,7 +148,7 @@
     <link href="https://blog.sukitsuki.com/2018/06/01/%E9%81%B2%E5%88%B0%E7%9A%842018%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>https://blog.sukitsuki.com/2018/06/01/遲到的2018第一篇/</id>
     <published>2018-06-01T03:24:54.000Z</published>
-    <updated>2018-06-06T11:26:51.156Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>久違的日記又開始啦（其實是第一編吧，笑</p><p>呢半年發生左好多事啊 生活上 工作上等等等。。。</p><p>首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs</p><p>而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等</p><p>正式向（偽）頁面仔的方向前進啦。 </p><p>而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。</p><p>最後希望每星期都可以寫一編日記吧(眼神死。。</p>]]></content>
     
@@ -150,7 +174,7 @@
     <link href="https://blog.sukitsuki.com/2017/11/11/cricleci-hexo/"/>
     <id>https://blog.sukitsuki.com/2017/11/11/cricleci-hexo/</id>
     <published>2017-11-11T22:51:33.000Z</published>
-    <updated>2018-06-06T11:26:51.152Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p><ul><li>無限repos</li><li>無限users</li><li>每月1,500 build minutes</li></ul><p>不錯的 Resources (每次构建不到20秒)</p><p>每個container 獨佔 2CPU/4096MB</p><p>支持workflow</p><p>簡單配置(使用yaml)</p><p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p><p>支持cache加速 避免重複下載node_module</p><p>支持Mac构建環境(付費功能)</p><h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="noopener">https://circleci.com/</a></p><ul><li><p>先在CircleCI建立帳</p><p>推薦使用GitHub 帳號SSO連結</p></li><li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p><p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="noopener">https://circleci.com/docs/2.0/demo-apps/</a></p></li><li><p>如果Theme是git submodule 需要在config加上</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></span><br><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></span><br></pre></td></tr></table></figure></li><li><p>在Porject設定裹加入Checkout keys </p></li><li><p>大功告成</p> <img src="/2017/11/11/cricleci-hexo/CircleCI.png" title="[Perview]"></li></ul>]]></content>
     
@@ -185,7 +209,7 @@
     <link href="https://blog.sukitsuki.com/2017/11/09/mime-type-different/"/>
     <id>https://blog.sukitsuki.com/2017/11/09/mime-type-different/</id>
     <published>2017-11-09T22:28:35.000Z</published>
-    <updated>2018-06-06T11:26:51.152Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>在MDN和Microsoft的文檔上可以找發現</p><p>不同平台和不同瀏覽器上傳文件都有分別</p><p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p><table><thead><tr><th>副檔名</th><th>Mac (MDN)</th><th>Windows (MSDN)</th></tr></thead><tbody><tr><td>.zip</td><td>application/zip</td><td>application/x-zip-compressed</td></tr><tr><td>.csv</td><td>text/csv</td><td>application/vnd.ms-exce</td></tr></tbody></table><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="noopener">ref: MDN MIME</a> </p><p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="noopener">ref: MSDN MIME 表</a></p>]]></content>
     
@@ -219,7 +243,7 @@
     <link href="https://blog.sukitsuki.com/2017/11/05/personal-todo/"/>
     <id>https://blog.sukitsuki.com/2017/11/05/personal-todo/</id>
     <published>2017-11-05T19:09:17.000Z</published>
-    <updated>2018-06-06T11:26:51.152Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>雖然己經2017年11月了，但2017年還沒有完的還有55天。</p><p>有心唔怕遲，(好似係</p><h1 id="想做的東西"><a href="#想做的東西" class="headerlink" title="想做的東西"></a>想做的東西</h1><ul><li style="list-style: none"><input type="checkbox" checked> 重新建立Blog</li><li style="list-style: none"><input type="checkbox"> 定立2018年的目標</li><li style="list-style: none"><input type="checkbox"> OCR bot (無限期延遲)</li><li style="list-style: none"><input type="checkbox"> 更新Tplayer bot</li><li style="list-style: none"><input type="checkbox"> 退壓制坑？</li></ul><h1 id="想學的東西"><a href="#想學的東西" class="headerlink" title="想學的東西"></a>想學的東西</h1><ul><li style="list-style: none"><input type="checkbox"> 學吉他</li><li style="list-style: none"><input type="checkbox"> 學日文</li></ul><h1 id="想買的東西"><a href="#想買的東西" class="headerlink" title="想買的東西"></a>想買的東西</h1><ul><li style="list-style: none"><input type="checkbox"> to be cont.</li></ul>]]></content>
     
@@ -248,7 +272,7 @@
     <link href="https://blog.sukitsuki.com/2017/11/05/TODO/"/>
     <id>https://blog.sukitsuki.com/2017/11/05/TODO/</id>
     <published>2017-11-05T19:04:01.000Z</published>
-    <updated>2018-06-06T11:26:51.152Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>#TODO</p><ul><li style="list-style: none"><input type="checkbox"> 在 Archive 加入 tag 和 categories</li><li style="list-style: none"><input type="checkbox"> 寫 About</li><li style="list-style: none"><input type="checkbox"> 加友鏈</li><li style="list-style: none"><input type="checkbox" checked> CI/CD</li></ul>]]></content>
     
@@ -267,9 +291,9 @@
       <category term="Blog" scheme="https://blog.sukitsuki.com/categories/Blog/"/>
     
     
-      <category term="Blog" scheme="https://blog.sukitsuki.com/tags/Blog/"/>
-    
       <category term="Web" scheme="https://blog.sukitsuki.com/tags/Web/"/>
+    
+      <category term="Blog" scheme="https://blog.sukitsuki.com/tags/Blog/"/>
     
       <category term="TODO" scheme="https://blog.sukitsuki.com/tags/TODO/"/>
     
@@ -280,7 +304,7 @@
     <link href="https://blog.sukitsuki.com/2017/11/05/Pjax-change/"/>
     <id>https://blog.sukitsuki.com/2017/11/05/Pjax-change/</id>
     <published>2017-11-05T18:21:03.000Z</published>
-    <updated>2018-06-06T11:26:51.152Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<h1 id="PJAX"><a href="#PJAX" class="headerlink" title="PJAX"></a>PJAX</h1><p>PJAX 是一項由HTML5 pushState 而產生的技術。</p><p>這項技術可以在不全頁刷新下更新部分DOM object，避免面頁因為跳轉而產生重新載入的不必要副效果。</p>]]></content>
     
@@ -297,9 +321,9 @@
       <category term="Javascript" scheme="https://blog.sukitsuki.com/categories/Javascript/"/>
     
     
-      <category term="Blog" scheme="https://blog.sukitsuki.com/tags/Blog/"/>
-    
       <category term="Web" scheme="https://blog.sukitsuki.com/tags/Web/"/>
+    
+      <category term="Blog" scheme="https://blog.sukitsuki.com/tags/Blog/"/>
     
       <category term="Javascript" scheme="https://blog.sukitsuki.com/tags/Javascript/"/>
     
@@ -310,7 +334,7 @@
     <link href="https://blog.sukitsuki.com/2017/11/03/BNW/"/>
     <id>https://blog.sukitsuki.com/2017/11/03/BNW/</id>
     <published>2017-11-03T23:00:40.000Z</published>
-    <updated>2018-06-06T11:26:51.152Z</updated>
+    <updated>2018-06-06T17:04:47.580Z</updated>
     
     <content type="html"><![CDATA[<p>Reset, Create, Start</p>]]></content>
     

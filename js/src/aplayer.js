@@ -17,9 +17,9 @@ $(document).ready(function () {
       {
         name: '潛別離',
         artist: '銀臨',
-        url: 'player/n-i770aRaTo.m4a',
-        cover: 'player/n-i770aRaTo.jpg',
-        lrc: 'player/n-i770aRaTo.lrc',
+        url: '/player/n-i770aRaTo.m4a',
+        cover: '/player/n-i770aRaTo.jpg',
+        lrc: '/player/n-i770aRaTo.lrc',
         theme: '#ebd0c2'
       }
     ]
