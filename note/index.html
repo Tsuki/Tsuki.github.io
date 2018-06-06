@@ -117,12 +117,12 @@
   <meta name="description" content="小說    蒼海的少女們  平凡職業造就世界最強  Only Sense Online (12卷)  菖蒲的少女  C3 -魔方少女- (偷看結局)  學姐與我 (1-4卷)  異世界薬局 (1-5卷)  騎士&amp;amp;魔法 (3卷)  Campione(待補)  LV999的村民   動畫    異世界食堂  爆肝工程師的異世界狂想曲  ReLIFE  NEW GAME!! (第二季)  騎">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Note">
-<meta property="og:url" content="http://Tsuki.github.io/note/index.html">
-<meta property="og:site_name" content="Tsuki Blog">
+<meta property="og:url" content="https://blog.sukitsuki.com/note/index.html">
+<meta property="og:site_name" content="TsukaTsuki">
 <meta property="og:description" content="小說    蒼海的少女們  平凡職業造就世界最強  Only Sense Online (12卷)  菖蒲的少女  C3 -魔方少女- (偷看結局)  學姐與我 (1-4卷)  異世界薬局 (1-5卷)  騎士&amp;amp;魔法 (3卷)  Campione(待補)  LV999的村民   動畫    異世界食堂  爆肝工程師的異世界狂想曲  ReLIFE  NEW GAME!! (第二季)  騎">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://as.bitinn.net/upload/cjhaot7w200yg6u5nd7q371lj.1200.jpg">
-<meta property="og:updated_time" content="2018-06-05T15:09:54.326Z">
+<meta property="og:updated_time" content="2018-06-06T11:26:51.156Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Note">
 <meta name="twitter:description" content="小說    蒼海的少女們  平凡職業造就世界最強  Only Sense Online (12卷)  菖蒲的少女  C3 -魔方少女- (偷看結局)  學姐與我 (1-4卷)  異世界薬局 (1-5卷)  騎士&amp;amp;魔法 (3卷)  Campione(待補)  LV999的村民   動畫    異世界食堂  爆肝工程師的異世界狂想曲  ReLIFE  NEW GAME!! (第二季)  騎">
@@ -130,12 +130,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Tsuki Blog" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="TsukaTsuki" type="application/atom+xml" />
 
 
 
 
-  <link rel="canonical" href="http://Tsuki.github.io/note/"/>
+  <link rel="canonical" href="https://blog.sukitsuki.com/note/"/>
 
 
 
@@ -145,7 +145,7 @@
   };
 </script>
 
-  <title>Note | Tsuki Blog</title>
+  <title>Note | TsukaTsuki</title>
   
 
 
@@ -212,7 +212,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Tsuki Blog</span>
+        <span class="site-title">TsukaTsuki</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -403,7 +403,7 @@
     <div class="comments" id="comments">
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://Tsuki.github.io/note/index.html';
+          this.page.url = 'https://blog.sukitsuki.com/note/index.html';
           this.page.identifier = 'note/index.html';
           this.page.title = 'Note';
           };
@@ -445,7 +445,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">Tsuki</p>
+              <p class="site-author-name" itemprop="name">TsukaTsuki</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -569,8 +569,33 @@
           
             
           
-          
+          <div class="feed-link motion-element alternate" onclick="play()">
+    <a href="#" rel="alternate">
+        <i class="fa fa-play"></i>
+        <span id="sidebar-player-text">Auto Play</span>
+    </a>
+</div>
+<script>
 
+    function play() {
+        if (localStorage.getItem('autoplay') === "true") {
+            localStorage.setItem('autoplay', "false");
+            document.getElementById("sidebar-player-text").textContent = "Enable Auto Play";
+        } else {
+            localStorage.setItem('autoplay', "true");
+            document.getElementById("sidebar-player-text").textContent = "Disable Auto Play";
+        }
+        aplayer.toggle();
+    }
+
+    (function () {
+        if (localStorage.getItem('autoplay') === "true") {
+            document.getElementById("sidebar-player-text").textContent = "Disable Auto Play";
+        } else {
+            document.getElementById("sidebar-player-text").textContent = "Enable Auto Play";
+        }
+    })();
+</script>
         </div>
       </section>
 
@@ -592,7 +617,7 @@
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Tsuki</span>
+  <span class="author" itemprop="copyrightHolder">TsukaTsuki</span>
 
   
 
@@ -796,6 +821,22 @@
   
 
   <script src="/js/src/pjax.js"></script>
+
+
+  
+
+  
+  
+  
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/gh/MoePlayer/APlayer@v1.10.1/dist/APlayer.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MoePlayer/APlayer@v1.10.1/dist/APlayer.min.css">
+  
+
+  <script src="/js/src/aplayer.js"></script>
+  <div id="aplayer"></div>
 
 
 </body>
