@@ -114,18 +114,20 @@
 
 
 
-  <meta name="description" content="在MDN和Microsoft的文檔上可以找發現 不同平台和不同瀏覽器上傳文件都有分別 如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試    副檔名 Mac (MDN) Windows (MSDN)     .zip application/zip application/x-zip-compresse">
-<meta name="keywords" content="Web,Javascript,Browser,WAF">
+  <meta name="description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
+<meta name="keywords" content="Web,Continuous integration,Continuous delivery.,CircleCI,Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac和Windows的MIME Type 不同">
-<meta property="og:url" content="https://blog.sukitsuki.com/2017/11/09/mime-type-different/index.html">
+<meta property="og:title" content="使用CircleCI自動构建Hexo Github Page">
+<meta property="og:url" content="https://blog.sukitsuki.com/2017/11/12/cricleci-hexo/index.html">
 <meta property="og:site_name" content="TsukaTsuki">
-<meta property="og:description" content="在MDN和Microsoft的文檔上可以找發現 不同平台和不同瀏覽器上傳文件都有分別 如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試    副檔名 Mac (MDN) Windows (MSDN)     .zip application/zip application/x-zip-compresse">
+<meta property="og:description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-08T14:55:19.733Z">
+<meta property="og:image" content="https://blog.sukitsuki.com/2017/11/12/cricleci-hexo/CircleCI.png">
+<meta property="og:updated_time" content="2018-06-01T04:44:51.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac和Windows的MIME Type 不同">
-<meta name="twitter:description" content="在MDN和Microsoft的文檔上可以找發現 不同平台和不同瀏覽器上傳文件都有分別 如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試    副檔名 Mac (MDN) Windows (MSDN)     .zip application/zip application/x-zip-compresse">
+<meta name="twitter:title" content="使用CircleCI自動构建Hexo Github Page">
+<meta name="twitter:description" content="使用CircleCI原因CricleCI有免費的限額  無限repos 無限users 每月1,500 build minutes  不錯的 Resources (每次构建不到20秒) 每個container 獨佔 2CPU/4096MB 支持workflow 簡單配置(使用yaml) 支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version) 支持ca">
+<meta name="twitter:image" content="https://blog.sukitsuki.com/2017/11/12/cricleci-hexo/CircleCI.png">
 
 
 
@@ -134,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.sukitsuki.com/2017/11/09/mime-type-different/"/>
+  <link rel="canonical" href="https://blog.sukitsuki.com/2017/11/12/cricleci-hexo/"/>
 
 
 
@@ -144,7 +146,7 @@
   };
 </script>
 
-  <title>Mac和Windows的MIME Type 不同 | TsukaTsuki</title>
+  <title>使用CircleCI自動构建Hexo Github Page | TsukaTsuki</title>
   
 
 
@@ -322,7 +324,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.sukitsuki.com/2017/11/09/mime-type-different/">
+    <link itemprop="mainEntityOfPage" href="https://blog.sukitsuki.com/2017/11/12/cricleci-hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TsukaTsuki">
@@ -339,7 +341,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac和Windows的MIME Type 不同
+          <h1 class="post-title" itemprop="name headline">使用CircleCI自動构建Hexo Github Page
               
             
           </h1>
@@ -364,7 +366,7 @@
                 
               
 
-              <time title="Created: 2017-11-10 06:28:35" itemprop="dateCreated datePublished" datetime="2017-11-10T06:28:35+08:00">2017-11-10</time>
+              <time title="Created: 2017-11-12 06:51:33" itemprop="dateCreated datePublished" datetime="2017-11-12T06:51:33+08:00">2017-11-12</time>
             
 
             
@@ -381,7 +383,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-06-08 22:55:19" itemprop="dateModified" datetime="2018-06-08T22:55:19+08:00">2018-06-08</time>
+                <time title="Modified: 2018-06-01 12:44:51" itemprop="dateModified" datetime="2018-06-01T12:44:51+08:00">2018-06-01</time>
               
             
           </span>
@@ -398,7 +400,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Debug/" itemprop="url" rel="index"><span itemprop="name">Debug</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/DevOps/" itemprop="url" rel="index"><span itemprop="name">DevOps</span></a></span>
 
                 
                 
@@ -413,10 +415,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/09/mime-type-different/#comments" itemprop="discussionUrl">
+                <a href="/2017/11/12/cricleci-hexo/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/11/09/mime-type-different/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/11/12/cricleci-hexo/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -444,32 +446,35 @@
       
 
       
-        <p>在MDN和Microsoft的文檔上可以找發現</p>
-<p>不同平台和不同瀏覽器上傳文件都有分別</p>
-<p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p>
-<table>
-<thead>
-<tr>
-<th>副檔名</th>
-<th>Mac (MDN)</th>
-<th>Windows (MSDN)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>.zip</td>
-<td>application/zip</td>
-<td>application/x-zip-compressed</td>
-</tr>
-<tr>
-<td>.csv</td>
-<td>text/csv</td>
-<td>application/vnd.ms-exce</td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="noopener">ref: MDN MIME</a> </p>
-<p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="noopener">ref: MSDN MIME 表</a></p>
+        <h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p>
+<ul>
+<li>無限repos</li>
+<li>無限users</li>
+<li>每月1,500 build minutes</li>
+</ul>
+<p>不錯的 Resources (每次构建不到20秒)</p>
+<p>每個container 獨佔 2CPU/4096MB</p>
+<p>支持workflow</p>
+<p>簡單配置(使用yaml)</p>
+<p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p>
+<p>支持cache加速 避免重複下載node_module</p>
+<p>支持Mac构建環境(付費功能)</p>
+<h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="noopener">https://circleci.com/</a></p>
+<ul>
+<li><p>先在CircleCI建立帳</p>
+<p>推薦使用GitHub 帳號SSO連結</p>
+</li>
+<li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p>
+<p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="noopener">https://circleci.com/docs/2.0/demo-apps/</a></p>
+</li>
+<li><p>如果Theme是git submodule 需要在config加上</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></span><br><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在Porject設定裹加入Checkout keys </p>
+</li>
+<li><p>大功告成</p>
+ <img src="/2017/11/12/cricleci-hexo/CircleCI.png" title="[Perview]"></li>
+</ul>
 
       
     </div>
@@ -492,11 +497,13 @@
           
             <a href="/tags/Web/" rel="tag"># Web</a>
           
-            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+            <a href="/tags/Continuous-integration/" rel="tag"># Continuous integration</a>
           
-            <a href="/tags/Browser/" rel="tag"># Browser</a>
+            <a href="/tags/Continuous-delivery/" rel="tag"># Continuous delivery.</a>
           
-            <a href="/tags/WAF/" rel="tag"># WAF</a>
+            <a href="/tags/CircleCI/" rel="tag"># CircleCI</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           
         </div>
       
@@ -509,8 +516,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/05/personal-todo/" rel="next" title="2017年的目標清單">
-                <i class="fa fa-chevron-left"></i> 2017年的目標清單
+              <a href="/2017/11/10/mime-type-different/" rel="next" title="Mac和Windows的MIME Type 不同">
+                <i class="fa fa-chevron-left"></i> Mac和Windows的MIME Type 不同
               </a>
             
           </div>
@@ -519,8 +526,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/11/cricleci-hexo/" rel="prev" title="使用CircleCI自動构建Hexo Github Page">
-                使用CircleCI自動构建Hexo Github Page <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/01/遲到的2018第一篇/" rel="prev" title="遲到的2018第一篇">
+                遲到的2018第一篇 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -550,9 +557,9 @@
     <div class="comments" id="comments">
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://blog.sukitsuki.com/2017/11/09/mime-type-different/';
-          this.page.identifier = '2017/11/09/mime-type-different/';
-          this.page.title = 'Mac和Windows的MIME Type 不同';
+          this.page.url = 'https://blog.sukitsuki.com/2017/11/12/cricleci-hexo/';
+          this.page.identifier = '2017/11/12/cricleci-hexo/';
+          this.page.title = '使用CircleCI自動构建Hexo Github Page';
           };
       </script>
       <div id="disqus_thread">
@@ -587,8 +594,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -746,6 +762,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用CircleCI原因"><span class="nav-number">1.</span> <span class="nav-text">使用CircleCI原因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-自動构建發佈"><span class="nav-number">2.</span> <span class="nav-text">Hexo 自動构建發佈</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
