@@ -21,6 +21,13 @@ $(document).ready(function () {
         cover: '/player/n-i770aRaTo.jpg',
         lrc: '/player/n-i770aRaTo.lrc',
         theme: '#ebd0c2'
+      }, {
+        name: '杏花弦外雨',
+        artist: '司夏',
+        url: '/player/io6iWBmE9hs.m4a',
+        cover: '/player/io6iWBmE9hs.jpg',
+        lrc: '/player/io6iWBmE9hs.lrc',
+        theme: '#b6eb86'
       }
     ]
   });
