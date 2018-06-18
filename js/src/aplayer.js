@@ -28,6 +28,12 @@ $(document).ready(function () {
         cover: '/player/io6iWBmE9hs.jpg',
         lrc: '/player/io6iWBmE9hs.lrc',
         theme: '#b6eb86'
+      }, {
+        name: '生きていたんだよな',
+        artist: 'あいみょん',
+        url: '/player/180xCt99Lec.m4a',
+        lrc: '/player/180xCt99Lec.lrc',
+        theme: '#384e65'
       }
     ]
   });
