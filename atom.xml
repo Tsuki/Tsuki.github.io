@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-06-25T04:29:07.252Z</updated>
+  <updated>2018-06-27T09:44:28.235Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日記</title>
+    <link href="https://blog.sukitsuki.com/2018/06/27/%E6%97%A5%E8%A8%98/"/>
+    <id>https://blog.sukitsuki.com/2018/06/27/日記/</id>
+    <published>2018-06-27T10:24:30.000Z</published>
+    <updated>2018-06-27T09:44:28.235Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>日記</title>
