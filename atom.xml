@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-06-27T12:59:07.979Z</updated>
+  <updated>2018-06-28T03:58:17.173Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日記</title>
+    <link href="https://blog.sukitsuki.com/2018/06/28/%E6%97%A5%E8%A8%98/"/>
+    <id>https://blog.sukitsuki.com/2018/06/28/日記/</id>
+    <published>2018-06-28T10:27:58.000Z</published>
+    <updated>2018-06-28T03:58:17.173Z</updated>
+    
+    <content type="html"><![CDATA[<p>Temp</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Temp&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Angular管理使用者登入狀態</title>
@@ -527,38 +551,6 @@
       <category term="Personal" scheme="https://blog.sukitsuki.com/tags/Personal/"/>
     
       <category term="Tech" scheme="https://blog.sukitsuki.com/tags/Tech/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>網站更新</title>
-    <link href="https://blog.sukitsuki.com/2017/11/05/TODO/"/>
-    <id>https://blog.sukitsuki.com/2017/11/05/TODO/</id>
-    <published>2017-11-05T19:04:01.000Z</published>
-    <updated>2018-06-08T15:13:18.007Z</updated>
-    
-    <content type="html"><![CDATA[<p>#TODO</p><ul><li style="list-style: none"><input type="checkbox"> 在 Archive 加入 tag 和 categories</li><li style="list-style: none"><input type="checkbox"> 寫 About</li><li style="list-style: none"><input type="checkbox"> 加友鏈</li><li style="list-style: none"><input type="checkbox" checked> CI/CD</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#TODO&lt;/p&gt;
-&lt;ul&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 在 Archive 加入 tag 和 categories&lt;/li&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;inpu
-      
-    
-    </summary>
-    
-      <category term="Blog" scheme="https://blog.sukitsuki.com/categories/Blog/"/>
-    
-    
-      <category term="Web" scheme="https://blog.sukitsuki.com/tags/Web/"/>
-    
-      <category term="Blog" scheme="https://blog.sukitsuki.com/tags/Blog/"/>
-    
-      <category term="TODO" scheme="https://blog.sukitsuki.com/tags/TODO/"/>
     
   </entry>
   
