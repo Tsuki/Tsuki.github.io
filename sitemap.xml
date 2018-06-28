@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.sukitsuki.com/note/index.html</loc>
+    
+    <lastmod>2018-06-28T12:34:36.977Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.sukitsuki.com/2018/06/28/%E6%97%A5%E8%A8%98/</loc>
     
-    <lastmod>2018-06-28T03:58:17.173Z</lastmod>
+    <lastmod>2018-06-28T12:34:36.965Z</lastmod>
     
   </url>
   
@@ -47,13 +54,6 @@
     <loc>https://blog.sukitsuki.com/2018/06/23/%E6%97%A5%E8%A8%98/</loc>
     
     <lastmod>2018-06-23T16:33:41.199Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.sukitsuki.com/note/index.html</loc>
-    
-    <lastmod>2018-06-22T06:28:23.483Z</lastmod>
     
   </url>
   
