@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-07-02T12:43:28.893Z</updated>
+  <updated>2018-07-03T12:48:49.789Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>手機崩潰</title>
+    <link href="https://blog.sukitsuki.com/2018/07/03/%E6%89%8B%E6%A9%9F%E5%B4%A9%E6%BD%B0/"/>
+    <id>https://blog.sukitsuki.com/2018/07/03/手機崩潰/</id>
+    <published>2018-07-03T15:40:59.000Z</published>
+    <updated>2018-07-03T12:48:49.789Z</updated>
+    
+    <content type="html"><![CDATA[<p>昨晚手機突然不能上網，而且連Wi-Fi也連不了，但別的手機還能用。</p><p>還以為手機壞了，手機重置後情況還是一樣，差點嚇死。</p><p>最後發現是話費用光了。</p><p>情況實在太巧合了，WI-FI功能被影響到。</p><p>今時今日，沒有手機或沒有上網簡直要命。</p><p>手機因為重置了，不少加了鎖的帳號還不能登回來，只能等人工恢覆。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;昨晚手機突然不能上網，而且連Wi-Fi也連不了，但別的手機還能用。&lt;/p&gt;
+&lt;p&gt;還以為手機壞了，手機重置後情況還是一樣，差點嚇死。&lt;/p&gt;
+&lt;p&gt;最後發現是話費用光了。&lt;/p&gt;
+&lt;p&gt;情況實在太巧合了，WI-FI功能被影響到。&lt;/p&gt;
+&lt;p&gt;今時今日，沒有手機或沒有上網簡
+      
+    
+    </summary>
+    
+      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>日記</title>
     <link href="https://blog.sukitsuki.com/2018/07/02/%E6%97%A5%E8%A8%98/"/>
     <id>https://blog.sukitsuki.com/2018/07/02/日記/</id>
     <published>2018-07-02T13:59:38.000Z</published>
-    <updated>2018-07-02T12:43:28.893Z</updated>
+    <updated>2018-07-03T12:48:49.789Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>東京Check point</p></blockquote><ul><li style="list-style: none"><input type="checkbox" checked> 築地市場</li><li style="list-style: none"><input type="checkbox" checked> 淺草雷門</li><li style="list-style: none"><input type="checkbox" checked> 阿美橫町</li><li style="list-style: none"><input type="checkbox" checked> 晴空塔</li><li style="list-style: none"><input type="checkbox" checked> 台場</li><li style="list-style: none"><input type="checkbox"> 上野恩賜公園</li><li style="list-style: none"><input type="checkbox"> 東京鐵塔</li><li style="list-style: none"><input type="checkbox"> 迪士尼海洋</li><li style="list-style: none"><input type="checkbox"> 吉祥寺</li><li style="list-style: none"><input type="checkbox"> 明治神宮</li><li style="list-style: none"><input type="checkbox"> 銀座</li><li style="list-style: none"><input type="checkbox"> 河口湖</li><li style="list-style: none"><input type="checkbox"> 銚子市</li><li style="list-style: none"><input type="checkbox" checked> 江之島 羊羹</li><li style="list-style: none"><input type="checkbox" checked> 月見 文字燒</li><li style="list-style: none"><input type="checkbox"> 大阪燒(?</li><li style="list-style: none"><input type="checkbox"> 水信玄餅</li></ul><blockquote><p>新郊</p></blockquote><ul><li style="list-style: none"><input type="checkbox" checked> 箱根</li><li style="list-style: none"><input type="checkbox" checked> 鐮倉</li><li style="list-style: none"><input type="checkbox" checked> 江之島</li><li style="list-style: none"><input type="checkbox"> 輕井澤</li><li style="list-style: none"><input type="checkbox"> 茨城櫻川</li><li style="list-style: none"><input type="checkbox"> 富士山</li><li style="list-style: none"><input type="checkbox"> 橫濱</li></ul><p><a href="https://www.japaholic.com/tw/article/263742/" target="_blank" rel="noopener">https://www.japaholic.com/tw/article/263742/</a></p><blockquote><p>京都 Check point</p></blockquote><ul><li style="list-style: none"><input type="checkbox" checked> 二條城</li><li style="list-style: none"><input type="checkbox" checked> 伏見稻荷</li><li style="list-style: none"><input type="checkbox"> 京都大學</li></ul><blockquote><p>大阪 Check point</p></blockquote><ul><li style="list-style: none"><input type="checkbox" checked> 日本橋</li><li style="list-style: none"><input type="checkbox"> 和歌山</li><li style="list-style: none"><input type="checkbox"> 奈良</li></ul><blockquote><p>其他 Check point</p></blockquote><p>etc..</p><blockquote><p>實驗</p></blockquote><p>Pytorch<br>ctpn (connectionist text proposal network)</p><blockquote><p>雜談</p></blockquote><p>昨天忽然被抓去陪加班到深夜3點。什麼鬼。</p><p>限間限定抽卡</p><p><img src="https://blog.sukitsuki.com/2018/07/02/日記/photo_2018-07-02_19-34-11.jpg" alt="刻詠の花嫁リンネ"></p>]]></content>
     
@@ -38,6 +65,8 @@
       
     
     </summary>
+    
+      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
     
     
   </entry>
@@ -512,40 +541,6 @@
       <category term="CircleCI" scheme="https://blog.sukitsuki.com/tags/CircleCI/"/>
     
       <category term="Hexo" scheme="https://blog.sukitsuki.com/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac和Windows的MIME Type 不同</title>
-    <link href="https://blog.sukitsuki.com/2017/11/09/mime-type-different/"/>
-    <id>https://blog.sukitsuki.com/2017/11/09/mime-type-different/</id>
-    <published>2017-11-09T22:28:35.000Z</published>
-    <updated>2018-06-08T15:13:18.007Z</updated>
-    
-    <content type="html"><![CDATA[<p>在MDN和Microsoft的文檔上可以找發現</p><p>不同平台和不同瀏覽器上傳文件都有分別</p><p>如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試</p><table><thead><tr><th>副檔名</th><th>Mac (MDN)</th><th>Windows (MSDN)</th></tr></thead><tbody><tr><td>.zip</td><td>application/zip</td><td>application/x-zip-compressed</td></tr><tr><td>.csv</td><td>text/csv</td><td>application/vnd.ms-exce</td></tr></tbody></table><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types" target="_blank" rel="noopener">ref: MDN MIME</a> </p><p><a href="https://technet.microsoft.com/en-us/library/cc995276.aspx" target="_blank" rel="noopener">ref: MSDN MIME 表</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在MDN和Microsoft的文檔上可以找發現&lt;/p&gt;
-&lt;p&gt;不同平台和不同瀏覽器上傳文件都有分別&lt;/p&gt;
-&lt;p&gt;如果後台需要驗查MIME type的系統 或部置了應用防火牆(web appilcatoin firewall)就需要在不同OS和瀏覽器上做測試&lt;/p&gt;
-&lt;ta
-      
-    
-    </summary>
-    
-      <category term="Debug" scheme="https://blog.sukitsuki.com/categories/Debug/"/>
-    
-    
-      <category term="Web" scheme="https://blog.sukitsuki.com/tags/Web/"/>
-    
-      <category term="Javascript" scheme="https://blog.sukitsuki.com/tags/Javascript/"/>
-    
-      <category term="Browser" scheme="https://blog.sukitsuki.com/tags/Browser/"/>
-    
-      <category term="WAF" scheme="https://blog.sukitsuki.com/tags/WAF/"/>
     
   </entry>
   
