@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-07-03T12:51:38.887Z</updated>
+  <updated>2018-07-04T04:53:48.108Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>調酒-Negroni</title>
+    <link href="https://blog.sukitsuki.com/2018/07/04/%E8%AA%BF%E9%85%92-Negroni/"/>
+    <id>https://blog.sukitsuki.com/2018/07/04/調酒-Negroni/</id>
+    <published>2018-07-04T11:16:04.000Z</published>
+    <updated>2018-07-04T04:53:48.108Z</updated>
+    
+    <content type="html"><![CDATA[<p>Negroni 內格羅尼 </p><blockquote><p>苦酒苦口但顧肝，琴酒愉悅卻傷身~內格羅尼，健康與快樂之間的平衡點</p><p>Negroni, The bitters are excellent for your liver, the gin is bad for you. They balance each other.</p></blockquote><p>喜歡琴酒的就不能錯過的酒，這酒是從美國佬酒譜加入琴酒而得來的調酒。</p><p>酒譜：</p><p>30ml 琴酒</p><p>30ml 肯巴利苦酒</p><p>30ml 甜香艾酒</p><p>在雪克杯中混合後，以橙皮捲作為裝飾。</p><p>這種一比一比一比例，是經典酒譜的組合，但也可以按個人喜好小量調整。</p><p>這杯酒可以做成短飲，也可以加入冰塊做成長飲，冰塊溶化後每一啖口感也會隨之改變。</p><p><img src="https://blog.sukitsuki.com/2018/07/04/調酒-Negroni/photo_2018-07-04_11-22-57.jpg" alt="Negroni"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Negroni 內格羅尼 &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;苦酒苦口但顧肝，琴酒愉悅卻傷身~內格羅尼，健康與快樂之間的平衡點&lt;/p&gt;
+&lt;p&gt;Negroni, The bitters are excellent for your liver, the gin is b
+      
+    
+    </summary>
+    
+      <category term="調酒" scheme="https://blog.sukitsuki.com/categories/%E8%AA%BF%E9%85%92/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>手機崩潰</title>
@@ -506,41 +532,6 @@
     
       <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>使用CircleCI自動构建Hexo Github Page</title>
-    <link href="https://blog.sukitsuki.com/2017/11/11/cricleci-hexo/"/>
-    <id>https://blog.sukitsuki.com/2017/11/11/cricleci-hexo/</id>
-    <published>2017-11-11T22:51:33.000Z</published>
-    <updated>2018-06-08T15:13:18.007Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="使用CircleCI原因"><a href="#使用CircleCI原因" class="headerlink" title="使用CircleCI原因"></a>使用CircleCI原因</h1><p>CricleCI有免費的限額</p><ul><li>無限repos</li><li>無限users</li><li>每月1,500 build minutes</li></ul><p>不錯的 Resources (每次构建不到20秒)</p><p>每個container 獨佔 2CPU/4096MB</p><p>支持workflow</p><p>簡單配置(使用yaml)</p><p>支持Docker 分離构建環境 (可以使用不同 NodeJs Ruby Python version)</p><p>支持cache加速 避免重複下載node_module</p><p>支持Mac构建環境(付費功能)</p><h1 id="Hexo-自動构建發佈"><a href="#Hexo-自動构建發佈" class="headerlink" title="Hexo 自動构建發佈"></a>Hexo 自動构建發佈</h1><p><a href="https://circleci.com/" target="_blank" rel="noopener">https://circleci.com/</a></p><ul><li><p>先在CircleCI建立帳</p><p>推薦使用GitHub 帳號SSO連結</p></li><li><p>建立<code>circle.yml</code> 或 <code>.circleci/config.yml.</code></p><p>Demo <a href="https://circleci.com/docs/2.0/demo-apps/" target="_blank" rel="noopener">https://circleci.com/docs/2.0/demo-apps/</a></p></li><li><p>如果Theme是git submodule 需要在config加上</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">sync</span> <span class="bullet">--recursive</span></span><br><span class="line"><span class="attr">- run:</span> <span class="string">git</span> <span class="string">submodule</span> <span class="string">update</span> <span class="bullet">--recursive</span> <span class="bullet">--init</span></span><br></pre></td></tr></table></figure></li><li><p>在Porject設定裹加入Checkout keys </p></li><li><p>大功告成</p> <img src="/2017/11/11/cricleci-hexo/CircleCI.png" title="[Perview]"></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;使用CircleCI原因&quot;&gt;&lt;a href=&quot;#使用CircleCI原因&quot; class=&quot;headerlink&quot; title=&quot;使用CircleCI原因&quot;&gt;&lt;/a&gt;使用CircleCI原因&lt;/h1&gt;&lt;p&gt;CricleCI有免費的限額&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;無限
-      
-    
-    </summary>
-    
-      <category term="DevOps" scheme="https://blog.sukitsuki.com/categories/DevOps/"/>
-    
-    
-      <category term="Web" scheme="https://blog.sukitsuki.com/tags/Web/"/>
-    
-      <category term="Continuous integration" scheme="https://blog.sukitsuki.com/tags/Continuous-integration/"/>
-    
-      <category term="Continuous delivery." scheme="https://blog.sukitsuki.com/tags/Continuous-delivery/"/>
-    
-      <category term="CircleCI" scheme="https://blog.sukitsuki.com/tags/CircleCI/"/>
-    
-      <category term="Hexo" scheme="https://blog.sukitsuki.com/tags/Hexo/"/>
     
   </entry>
   
