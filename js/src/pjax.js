@@ -5,12 +5,16 @@ document.addEventListener("pjax:complete", function () {
   NexT.motion.integrator.reset(2);
   CONFIG.motion.enable && NexT.motion.integrator.bootstrap();
   if (window.DISQUS) {
-    DISQUS.reset({
-      reload: true,
-      config: disqus_config
-    });
-  } else {
+    try {
+      DISQUS.reset({reload: true, config: disqus_config});
+    } catch {
+    }
+  }
+  else {
     loadComments();
+  }
+  if (window.DISQUSWIDGETS) {
+    DISQUSWIDGETS.getCount()
   }
 });
 
