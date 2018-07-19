@@ -34,6 +34,13 @@ $(document).ready(function () {
         url: '/player/180xCt99Lec.m4a',
         lrc: '/player/180xCt99Lec.lrc',
         theme: '#384e65'
+      }, {
+        name: '春待ちクローバー',
+        artist: 'M.A.O',
+        cover: '/player/7Oxy8FWONh8.jpg',
+        url: '/player/7Oxy8FWONh8.m4a',
+        lrc: '/player/7Oxy8FWONh8.lrc',
+        theme: '#384e65'
       }
     ]
   });
