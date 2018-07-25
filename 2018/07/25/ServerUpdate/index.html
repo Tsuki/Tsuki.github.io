@@ -114,17 +114,19 @@
 
 
 
-  <meta name="description" content="久違的日記又開始啦（其實是第一編吧，笑 呢半年發生左好多事啊 生活上 工作上等等等。。。 首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs 而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等 正式向（偽）頁面仔的方向前進啦。  而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。 最後希望每星">
+  <meta name="description" content="服務器更新今天把Debian滾到 9.5 內核升到 4.9, 因為Linux 4.9內核內建了tcp_bbr 算法。 這算法對高延遲，高掉包的網絡有較大的提升 不過香港的掉包和延遲不算嚴重，更新後提升不大 配置kernal 參數1234$ vim /etc/sysctl.conf# 增加以下兩條配置# net.core.default_qdisc=fq# net.ipv4.tcp_congesti">
 <meta property="og:type" content="article">
-<meta property="og:title" content="遲到的2018第一篇">
-<meta property="og:url" content="https://blog.sukitsuki.com/2018/06/01/遲到的2018第一篇/index.html">
+<meta property="og:title" content="ServerUpdate">
+<meta property="og:url" content="https://blog.sukitsuki.com/2018/07/25/ServerUpdate/index.html">
 <meta property="og:site_name" content="ツカツキ アリス">
-<meta property="og:description" content="久違的日記又開始啦（其實是第一編吧，笑 呢半年發生左好多事啊 生活上 工作上等等等。。。 首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs 而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等 正式向（偽）頁面仔的方向前進啦。  而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。 最後希望每星">
+<meta property="og:description" content="服務器更新今天把Debian滾到 9.5 內核升到 4.9, 因為Linux 4.9內核內建了tcp_bbr 算法。 這算法對高延遲，高掉包的網絡有較大的提升 不過香港的掉包和延遲不算嚴重，更新後提升不大 配置kernal 參數1234$ vim /etc/sysctl.conf# 增加以下兩條配置# net.core.default_qdisc=fq# net.ipv4.tcp_congesti">
 <meta property="og:locale" content="jp">
-<meta property="og:updated_time" content="2018-06-08T15:13:18.011Z">
+<meta property="og:image" content="https://blog.sukitsuki.com/2018/07/25/ServerUpdate/cjk0s2e3n00058i5n2cg1ayq9.jpg">
+<meta property="og:updated_time" content="2018-07-25T11:03:21.723Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="遲到的2018第一篇">
-<meta name="twitter:description" content="久違的日記又開始啦（其實是第一編吧，笑 呢半年發生左好多事啊 生活上 工作上等等等。。。 首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs 而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等 正式向（偽）頁面仔的方向前進啦。  而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。 最後希望每星">
+<meta name="twitter:title" content="ServerUpdate">
+<meta name="twitter:description" content="服務器更新今天把Debian滾到 9.5 內核升到 4.9, 因為Linux 4.9內核內建了tcp_bbr 算法。 這算法對高延遲，高掉包的網絡有較大的提升 不過香港的掉包和延遲不算嚴重，更新後提升不大 配置kernal 參數1234$ vim /etc/sysctl.conf# 增加以下兩條配置# net.core.default_qdisc=fq# net.ipv4.tcp_congesti">
+<meta name="twitter:image" content="https://blog.sukitsuki.com/2018/07/25/ServerUpdate/cjk0s2e3n00058i5n2cg1ayq9.jpg">
 
 
 
@@ -133,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.sukitsuki.com/2018/06/01/遲到的2018第一篇/"/>
+  <link rel="canonical" href="https://blog.sukitsuki.com/2018/07/25/ServerUpdate/"/>
 
 
 
@@ -143,7 +145,7 @@
   };
 </script>
 
-  <title>遲到的2018第一篇 | ツカツキ アリス</title>
+  <title>ServerUpdate | ツカツキ アリス</title>
   
 
 
@@ -313,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.sukitsuki.com/2018/06/01/遲到的2018第一篇/">
+    <link itemprop="mainEntityOfPage" href="https://blog.sukitsuki.com/2018/07/25/ServerUpdate/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="調月有栖">
@@ -330,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">遲到的2018第一篇
+          <h1 class="post-title" itemprop="name headline">ServerUpdate
               
             
           </h1>
@@ -355,24 +357,12 @@
                 
               
 
-              <time title="Created: 2018-06-01 03:24:54" itemprop="dateCreated datePublished" datetime="2018-06-01T03:24:54+00:00">2018-06-01</time>
+              <time title="Created: 2018-07-25 14:11:07 / Modified: 11:03:21" itemprop="dateCreated datePublished" datetime="2018-07-25T14:11:07+00:00">2018-07-25</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-06-08 15:13:18" itemprop="dateModified" datetime="2018-06-08T15:13:18+00:00">2018-06-08</time>
               
             
           </span>
@@ -389,7 +379,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/日記/" itemprop="url" rel="index"><span itemprop="name">日記</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Ops/" itemprop="url" rel="index"><span itemprop="name">Ops</span></a></span>
 
                 
                 
@@ -404,10 +394,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/01/遲到的2018第一篇/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/25/ServerUpdate/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/01/遲到的2018第一篇/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/25/ServerUpdate/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -433,15 +423,32 @@
 
       
       
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="https://blog.sukitsuki.com/2018/07/25/ServerUpdate/cjk0s2e3n00058i5n2cg1ayq9.jpg" rel="gallery_cjk10tqv60000rjqbywt8gx5k"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://blog.sukitsuki.com/2018/07/25/ServerUpdate/cjk0s2e3n00058i5n2cg1ayq9.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
 
       
-        <p>久違的日記又開始啦（其實是第一編吧，笑</p>
-<p>呢半年發生左好多事啊 生活上 工作上等等等。。。</p>
-<p>首先工作上既技術轉型 由以前既Java轉到時下流行既NodeJs</p>
-<p>而用既工具都完全大變身 由Spring為主變成 Angular, React, React Native 等等</p>
-<p>正式向（偽）頁面仔的方向前進啦。 </p>
-<p>而生活上因為因為私人原因所以離開香港一段時間，而寫呢編日記時己經是一個多月後既事。</p>
-<p>最後希望每星期都可以寫一編日記吧(眼神死。。</p>
+        <h1 id="服務器更新"><a href="#服務器更新" class="headerlink" title="服務器更新"></a>服務器更新</h1><p>今天把Debian滾到 9.5 內核升到 4.9, 因為Linux 4.9內核內建了tcp_bbr 算法。</p>
+<p>這算法對高延遲，高掉包的網絡有較大的提升</p>
+<p>不過香港的掉包和延遲不算嚴重，更新後提升不大</p>
+<h2 id="配置kernal-參數"><a href="#配置kernal-參數" class="headerlink" title="配置kernal 參數"></a>配置kernal 參數</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ vim /etc/sysctl.conf</span><br><span class="line"><span class="comment"># 增加以下兩條配置</span></span><br><span class="line"><span class="comment"># net.core.default_qdisc=fq</span></span><br><span class="line"><span class="comment"># net.ipv4.tcp_congestion_control=bbr</span></span><br></pre></td></tr></table></figure>
+<h2 id="刷新內核配置"><a href="#刷新內核配置" class="headerlink" title="刷新內核配置"></a>刷新內核配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sysctl -p</span><br></pre></td></tr></table></figure>
+<h2 id="重啟和測試配置"><a href="#重啟和測試配置" class="headerlink" title="重啟和測試配置"></a>重啟和測試配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ reboot</span><br><span class="line">$ sysctl net.ipv4.tcp_available_congestion_control</span><br><span class="line"><span class="comment"># 顯示結果中有bbr</span></span><br><span class="line"><span class="comment"># net.ipv4.tcp_available_congestion_control = bbr cubic reno</span></span><br></pre></td></tr></table></figure>
+<p>測試用指令 <code>wget -qO- bench.sh | bash</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">----------------------------------------------------------------------</span><br><span class="line">CPU model            : AMD Phenom(tm) II X6 1055T Processor</span><br><span class="line">Number of cores      : 6</span><br><span class="line">CPU frequency        : 2812.247 MHz</span><br><span class="line">Total size of Disk   : 95.0 GB (38.0 GB Used)</span><br><span class="line">Total amount of Mem  : 491 MB (84 MB Used)</span><br><span class="line">Total amount of Swap : 4090 MB (0 MB Used)</span><br><span class="line">System uptime        : 0 days, 0 hour 5 min</span><br><span class="line">Load average         : 0.06, 0.08, 0.04</span><br><span class="line">OS                   : Debian GNU/Linux 9</span><br><span class="line">Arch                 : x86_64 (64 Bit)</span><br><span class="line">Kernel               : 4.9.0-6-amd64</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">I/O speed(1st run)   : 93.1 MB/s</span><br><span class="line">I/O speed(2nd run)   : 93.5 MB/s</span><br><span class="line">I/O speed(3rd run)   : 97.0 MB/s</span><br><span class="line">Average I/O speed    : 94.5 MB/s</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">Node Name                       IPv4 address            Download Speed</span><br><span class="line">CacheFly                        204.93.150.152          5.14MB/s</span><br><span class="line">Linode, Tokyo, JP               106.187.96.148          1.12MB/s</span><br><span class="line">Linode, Singapore, SG           139.162.23.4            1.29MB/s</span><br><span class="line">Linode, London, UK              176.58.107.39           578KB/s</span><br><span class="line">Linode, Frankfurt, DE           139.162.130.8           546KB/s</span><br><span class="line">Linode, Fremont, CA             50.116.14.9             634KB/s</span><br><span class="line">Softlayer, Dallas, TX           173.192.68.18           1.70MB/s</span><br><span class="line">Softlayer, Seattle, WA          67.228.112.250          2.06MB/s</span><br><span class="line">Softlayer, Frankfurt, DE        159.122.69.4            237KB/s</span><br><span class="line">Softlayer, Singapore, SG        119.81.28.170           1.45MB/s</span><br><span class="line">Softlayer, HongKong, CN         119.81.130.170          8.97MB/s</span><br><span class="line">----------------------------------------------------------------------</span><br><span class="line">SpeedTest</span><br><span class="line">Hosted by STC (Hong Kong) : 5.976 ms</span><br><span class="line">Testing download </span><br><span class="line">Download: 289.92 Mbit/s</span><br><span class="line">Testing upload </span><br><span class="line">Upload: 52.48 Mbit/s</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -469,8 +476,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/11/cricleci-hexo/" rel="next" title="使用CircleCI自動构建Hexo Github Page">
-                <i class="fa fa-chevron-left"></i> 使用CircleCI自動构建Hexo Github Page
+              <a href="/2018/07/18/Python爬蟲/" rel="next" title="Python爬蟲">
+                <i class="fa fa-chevron-left"></i> Python爬蟲
               </a>
             
           </div>
@@ -478,10 +485,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/03/隨筆/" rel="prev" title="隨筆 2018-06-03">
-                隨筆 2018-06-03 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -510,9 +513,9 @@
     <div class="comments" id="comments">
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://blog.sukitsuki.com/2018/06/01/遲到的2018第一篇/';
-          this.page.identifier = '2018/06/01/遲到的2018第一篇/';
-          this.page.title = '遲到的2018第一篇';
+          this.page.url = 'https://blog.sukitsuki.com/2018/07/25/ServerUpdate/';
+          this.page.identifier = '2018/07/25/ServerUpdate/';
+          this.page.title = 'ServerUpdate';
           };
       </script>
       <div id="disqus_thread">
@@ -547,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -732,6 +744,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#服務器更新"><span class="nav-number">1.</span> <span class="nav-text">服務器更新</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置kernal-參數"><span class="nav-number">1.1.</span> <span class="nav-text">配置kernal 參數</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刷新內核配置"><span class="nav-number">1.2.</span> <span class="nav-text">刷新內核配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重啟和測試配置"><span class="nav-number">1.3.</span> <span class="nav-text">重啟和測試配置</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

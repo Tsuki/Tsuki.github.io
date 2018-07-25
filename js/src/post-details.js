@@ -99,8 +99,9 @@ function initToc() {
   }
   if (display) {
     CONFIG.motion.enable ?
-      (NexT.motion.middleWares.sidebar = function () {
+      (NexT.motion.middleWares.sidebar = function (integrator) {
           NexT.utils.displaySidebar();
+          integrator.next();
       }) : NexT.utils.displaySidebar();
   }
 }
