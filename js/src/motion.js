@@ -3,7 +3,7 @@
 $(document).ready(function () {
   NexT.motion = {};
 
-  var sidebarToggleLines = {
+  const sidebarToggleLines = {
     lines: [],
     push: function (line) {
       this.lines.push(line);
@@ -22,6 +22,33 @@ $(document).ready(function () {
       this.lines.forEach(function (line) {
         line.close();
       });
+    },
+    reload: function () {
+      this.lines = [];
+      const sidebarToggleLine1st = new SidebarToggleLine({
+        el: '.sidebar-toggle-line-first',
+        status: {
+          arrow: {width: '50%', rotateZ: '-45deg', top: '2px'},
+          close: {width: '100%', rotateZ: '-45deg', top: '5px'}
+        }
+      });
+      const sidebarToggleLine2nd = new SidebarToggleLine({
+        el: '.sidebar-toggle-line-middle',
+        status: {
+          arrow: {width: '90%'},
+          close: {opacity: 0}
+        }
+      });
+      const sidebarToggleLine3rd = new SidebarToggleLine({
+        el: '.sidebar-toggle-line-last',
+        status: {
+          arrow: {width: '50%', rotateZ: '45deg', top: '-2px'},
+          close: {width: '100%', rotateZ: '45deg', top: '-5px'}
+        }
+      });
+      this.push(sidebarToggleLine1st);
+      this.push(sidebarToggleLine2nd);
+      this.push(sidebarToggleLine3rd);
     }
   };
 
@@ -51,42 +78,21 @@ $(document).ready(function () {
     this.el.velocity('stop').velocity(this.status[status]);
   };
 
-  var sidebarToggleLine1st = new SidebarToggleLine({
-    el: '.sidebar-toggle-line-first',
-    status: {
-      arrow: {width: '50%', rotateZ: '-45deg', top: '2px'},
-      close: {width: '100%', rotateZ: '-45deg', top: '5px'}
-    }
-  });
-  var sidebarToggleLine2nd = new SidebarToggleLine({
-    el: '.sidebar-toggle-line-middle',
-    status: {
-      arrow: {width: '90%'},
-      close: {opacity: 0}
-    }
-  });
-  var sidebarToggleLine3rd = new SidebarToggleLine({
-    el: '.sidebar-toggle-line-last',
-    status: {
-      arrow: {width: '50%', rotateZ: '45deg', top: '-2px'},
-      close: {width: '100%', rotateZ: '45deg', top: '-5px'}
-    }
-  });
-
-  sidebarToggleLines.push(sidebarToggleLine1st);
-  sidebarToggleLines.push(sidebarToggleLine2nd);
-  sidebarToggleLines.push(sidebarToggleLine3rd);
 
   var SIDEBAR_WIDTH = '320px';
   var SIDEBAR_DISPLAY_DURATION = 200;
   var xPos, yPos;
 
   var sidebarToggleMotion = {
-    toggleEl: $('.sidebar-toggle'),
-    dimmerEl: $('#sidebar-dimmer'),
-    sidebarEl: $('.sidebar'),
+    toggleEl: null,
+    dimmerEl: null,
+    sidebarEl: null,
     isSidebarVisible: false,
     init: function () {
+      sidebarToggleLines.reload();
+      this.toggleEl = $('.sidebar-toggle');
+      this.dimmerEl = $('#sidebar-dimmer');
+      this.sidebarEl = $('.sidebar');
       this.toggleEl.on('click', this.clickHandler.bind(this));
       this.dimmerEl.on('click', this.clickHandler.bind(this));
       this.toggleEl.on('mouseenter', this.mouseEnterHandler.bind(this));
