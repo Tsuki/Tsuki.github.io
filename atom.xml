@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-08-01T06:23:48.555Z</updated>
+  <updated>2018-08-01T12:41:18.452Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Mac Hypervisor</title>
+    <title>Python腳本調整歌詞開始位</title>
+    <link href="https://blog.sukitsuki.com/2018/08/01/lrc-offset/"/>
+    <id>https://blog.sukitsuki.com/2018/08/01/lrc-offset/</id>
+    <published>2018-08-01T19:18:49.000Z</published>
+    <updated>2018-08-01T12:41:18.452Z</updated>
+    
+    <content type="html"><![CDATA[<p>#一個 Python 腳本，用作全局調整歌詞提前量/開始位置</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> date, datetime, time, timedelta</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(filename: str, offset: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">    thetime = re.compile(<span class="string">r"\[([0-9]&#123;2&#125;):([0-9]&#123;2&#125;)\.([0-9]&#123;2&#125;)?\](.+)"</span>)</span><br><span class="line">    <span class="keyword">with</span> open(filename, <span class="string">'r+'</span>) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> file.readlines():</span><br><span class="line">            min_sec_str = thetime.search(line)</span><br><span class="line">            <span class="keyword">if</span> min_sec_str:</span><br><span class="line">                m, s, ms, lrc = min_sec_str.group(<span class="number">1</span>), min_sec_str.group(<span class="number">2</span>), min_sec_str.group(<span class="number">3</span>), min_sec_str.group(<span class="number">4</span>)</span><br><span class="line">                t = datetime.combine(date.today(), time(<span class="number">0</span>, int(m), int(s), int(ms))) + timedelta(milliseconds=offset)</span><br><span class="line">                print(<span class="string">f'[<span class="subst">&#123;t.minute:<span class="number">02</span>&#125;</span>:<span class="subst">&#123;t.second:<span class="number">02</span>&#125;</span>.<span class="subst">&#123;t.microsecond:<span class="number">02</span>&#125;</span>]<span class="subst">&#123;lrc&#125;</span>'</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(line)</span><br><span class="line">    file.close</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">if</span> len(sys.argv) &lt; <span class="number">3</span>:</span><br><span class="line">        <span class="keyword">raise</span> SyntaxError(<span class="string">"Insufficient arguments."</span>)</span><br><span class="line">    main(sys.argv[<span class="number">1</span>], int(sys.argv[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure><p>先用正則找出歌詞位置，再提取出分，秒，微秒和歌詞，</p><p>然後轉換成 Python 的時間類並調整時間，最後打印出來。</p><h1 id="正則測試網站"><a href="#正則測試網站" class="headerlink" title="正則測試網站"></a>正則測試網站</h1><p><a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;#一個 Python 腳本，用作全局調整歌詞提前量/開始位置&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;sp
+      
+    
+    </summary>
+    
+      <category term="Python" scheme="https://blog.sukitsuki.com/categories/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 虛擬化</title>
     <link href="https://blog.sukitsuki.com/2018/08/01/Mac-Hypervisor/"/>
     <id>https://blog.sukitsuki.com/2018/08/01/Mac-Hypervisor/</id>
     <published>2018-08-01T11:53:59.000Z</published>
-    <updated>2018-08-01T06:23:48.555Z</updated>
+    <updated>2018-08-01T12:41:18.452Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Mac-虛擬化管理"><a href="#Mac-虛擬化管理" class="headerlink" title="Mac 虛擬化管理"></a>Mac 虛擬化管理</h1><h2 id="虛擬化"><a href="#虛擬化" class="headerlink" title="虛擬化"></a>虛擬化</h2><p>在 Linux 世界中，要實現進程/資源分離並不是一件非常困難的事情，從最早的 chroot, 到後來 Google 提出的 cgroups (Control groups), 到後來實用化的 LXC ，或者是系統級虛擬化 KVM,XEN 等。</p><p>相比起 Linux 的 cgroups (2006年), FreeBSD 在更早之前(2000年),就提出過相似的沙箱虛擬化技術 jail, 並且提供不少實用功能，比如打包轉移，虛擬網絡監控等功能。</p><h3 id="bhyve-xhyve"><a href="#bhyve-xhyve" class="headerlink" title="bhyve/xhyve"></a>bhyve/xhyve</h3><p>雖然 jail 能提供像 Docker 的功能，但 Docker 的社群相比 Unix/BSD 社群人數更多，支援也更成熟。為了在Unix上便用 Docker, 但Docker 是基於 Linux 內核開發，要提供內核就只能便用 Virtual Box 等方案，直到 bhyve 的出現（續命。 bhyve 的出現令 Unix 拥有低成本，高效和原生的虛擬化體驗，使用起來更流暢。</p><p>作為師出同門的 Mac 要使用這項技術，因此就出現從BSD bhyve 移植而來的 xhyve. (Mac 內核是從 BSD 原碼上分支而來)</p><h3 id="HyperKit"><a href="#HyperKit" class="headerlink" title="HyperKit"></a>HyperKit</h3><p>HyperKit 是Docker 公司基於 b/xhyve 開發的工具庫，用作提升擴屏性和兼容性的解決方案。現時新版本的 Docker for Mac 就內置了 HyperKit.</p>]]></content>
     
@@ -504,33 +528,6 @@
       
         &lt;p&gt;買了個鋁鍋，才發現不能用在電磁爐上，很氣。&lt;/p&gt;
 
-      
-    
-    </summary>
-    
-      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>懦弱</title>
-    <link href="https://blog.sukitsuki.com/2018/06/07/%E6%97%A5%E8%A8%98/"/>
-    <id>https://blog.sukitsuki.com/2018/06/07/日記/</id>
-    <published>2018-06-07T13:22:31.000Z</published>
-    <updated>2018-06-08T15:13:18.015Z</updated>
-    
-    <content type="html"><![CDATA[<p>第一次認識到，以前自己之所以能夠堅強，完全是因為自己身後有著無比堅固的後盾。</p><p>當精神上的源泉枯竭，才發現自己原來是一個懦弱的需要呵護的人。真正的堅強是什麼？並不清楚，毫不瞭解。</p><blockquote><p>今天跑了30分鐘 3.5KM</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;第一次認識到，以前自己之所以能夠堅強，完全是因為自己身後有著無比堅固的後盾。&lt;/p&gt;
-&lt;p&gt;當精神上的源泉枯竭，才發現自己原來是一個懦弱的需要呵護的人。真正的堅強是什麼？並不清楚，毫不瞭解。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;今天跑了30分鐘 3.5KM&lt;/p&gt;
-&lt;/
       
     
     </summary>
