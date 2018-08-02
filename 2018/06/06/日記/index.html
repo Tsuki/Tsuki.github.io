@@ -284,7 +284,42 @@
 
   
 
+<style>
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
+  }
 
+  .sticky + .main {
+    padding-top: 92px;
+  }
+</style>
+
+<script>
+  initSticky();
+
+  function initSticky() {
+    // Get the header
+    let header = document.getElementById("header");
+
+    // Get the offset position of the navbar
+    let sticky = header.offsetTop;
+
+    function stickyCheck() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+
+    window.onscroll = function () {
+      stickyCheck()
+    };
+  }
+</script>
 
 </div>
     </header>
@@ -520,10 +555,6 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -791,7 +822,7 @@
 
 
 
-  <div class="theme-info">テーマ &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.3.0</div>
+  <div class="theme-info">テーマ – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.3.0</div>
 
 
 
@@ -817,7 +848,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -918,10 +952,6 @@
   
 
   
-
-
-
-
 
 
 

@@ -1,4 +1,4 @@
-/* global NexT: true */
+/* global NexT, CONFIG */
 
 $(document).ready(function () {
   initScrollSpy();
@@ -13,9 +13,12 @@ function initScrollSpy () {
   var $tocElement = $(tocSelector);
   var activeCurrentSelector = '.active-current';
 
-  $tocElement
-    .on('activate.bs.scrollspy', function () {
-      var $currentActiveElement = $(tocSelector + ' .active').last();
+    function removeCurrentActiveClass() {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }$tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
 
       removeCurrentActiveClass();
       $currentActiveElement.addClass('active-current');
@@ -25,13 +28,10 @@ function initScrollSpy () {
     })
     .on('clear.bs.scrollspy', removeCurrentActiveClass);
 
-  $('body').scrollspy({ target: tocSelector });
+    $('body').scrollspy({ target: tocSelector });
 
-  function removeCurrentActiveClass () {
-    $(tocSelector + ' ' + activeCurrentSelector)
-      .removeClass(activeCurrentSelector.substring(1));
+
   }
-}
 
 
 function initToc() {
@@ -39,7 +39,7 @@ function initToc() {
   var TAB_ANIMATE_DURATION = 200;
   var hasVelocity = $.isFunction(html.velocity);
 
-  $('.sidebar-nav li').on('click', function () {
+  $('.sidebar-nav li').on('click', function() {
     var item = $(this);
     var activeTabClassName = 'sidebar-nav-active';
     var activePanelClassName = 'sidebar-panel-active';
@@ -50,19 +50,19 @@ function initToc() {
     var currentTarget = $('.' + activePanelClassName);
     var target = $('.' + item.data('target'));
 
-    hasVelocity ?
-      currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+    hasVelocity
+      ? currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function() {
         target
           .velocity('stop')
           .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
           .addClass(activePanelClassName);
-      }) :
-      currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+      })
+      : currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function() {
         currentTarget.hide();
         target
           .stop()
           .css({'opacity': 0, 'display': 'block'})
-          .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+          .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function() {
             currentTarget.removeClass(activePanelClassName);
             target.addClass(activePanelClassName);
           });
@@ -73,17 +73,17 @@ function initToc() {
   });
 
   // TOC item animation navigate & prevent #item selector in adress bar.
-  $('.post-toc a').on('click', function (e) {
+  $('.post-toc a').on('click', function(e) {
     e.preventDefault();
     var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
     var offset = $(targetSelector).offset().top;
 
-    hasVelocity ?
-      html.velocity('stop').velocity('scroll', {
-        offset: offset  + 'px',
+    hasVelocity
+      ? html.velocity('stop').velocity('scroll', {
+        offset  : offset + 'px',
         mobileHA: false
-      }) :
-      $('html, body').stop().animate({
+      })
+      : $('html, body').stop().animate({
         scrollTop: offset
       }, 500);
   });
@@ -98,10 +98,11 @@ function initToc() {
     display = isSidebarCouldDisplay && hasTOC;
   }
   if (display) {
-    CONFIG.motion.enable ?
-      (NexT.motion.middleWares.sidebar = function (integrator) {
-          NexT.utils.displaySidebar();
+    CONFIG.motion.enable
+      ? NexT.motion.middleWares.sidebar = function(integrator) {
+        NexT.utils.displaySidebar();
           integrator.next();
-      }) : NexT.utils.displaySidebar();
+      }
+      : NexT.utils.displaySidebar();
   }
 }

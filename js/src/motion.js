@@ -1,25 +1,25 @@
-/* global NexT: true */
+/* global NexT, CONFIG */
 
-$(document).ready(function () {
+$(document).ready(function() {
   NexT.motion = {};
 
   const sidebarToggleLines = {
     lines: [],
-    push: function (line) {
+    push : function(line) {
       this.lines.push(line);
     },
-    init: function () {
-      this.lines.forEach(function (line) {
+    init: function() {
+      this.lines.forEach(function(line) {
         line.init();
       });
     },
-    arrow: function () {
-      this.lines.forEach(function (line) {
+    arrow: function() {
+      this.lines.forEach(function(line) {
         line.arrow();
       });
     },
-    close: function () {
-      this.lines.forEach(function (line) {
+    close: function() {
+      this.lines.forEach(function(line) {
         line.close();
       });
     },
@@ -56,39 +56,39 @@ $(document).ready(function () {
     this.el = $(settings.el);
     this.status = $.extend({}, {
       init: {
-        width: '100%',
+        width  : '100%',
         opacity: 1,
-        left: 0,
+        left   : 0,
         rotateZ: 0,
-        top: 0
+        top    : 0
       }
     }, settings.status);
   }
 
-  SidebarToggleLine.prototype.init = function () {
+  SidebarToggleLine.prototype.init = function() {
     this.transform('init');
   };
-  SidebarToggleLine.prototype.arrow = function () {
+  SidebarToggleLine.prototype.arrow = function() {
     this.transform('arrow');
   };
-  SidebarToggleLine.prototype.close = function () {
+  SidebarToggleLine.prototype.close = function() {
     this.transform('close');
   };
-  SidebarToggleLine.prototype.transform = function (status) {
+  SidebarToggleLine.prototype.transform = function(status) {
     this.el.velocity('stop').velocity(this.status[status]);
   };
 
 
-  var SIDEBAR_WIDTH = '320px';
+  var SIDEBAR_WIDTH = CONFIG.sidebar.width ? CONFIG.sidebar.width : '320px';
   var SIDEBAR_DISPLAY_DURATION = 200;
   var xPos, yPos;
 
   var sidebarToggleMotion = {
-    toggleEl: null,
-    dimmerEl: null,
-    sidebarEl: null,
+    toggleEl        : null,
+    dimmerEl        : null,
+    sidebarEl       : null,
     isSidebarVisible: false,
-    init: function () {
+    init            : function() {
       sidebarToggleLines.reload();
       this.toggleEl = $('.sidebar-toggle');
       this.dimmerEl = $('#sidebar-dimmer');
@@ -99,35 +99,33 @@ $(document).ready(function () {
       this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
       this.sidebarEl.on('touchstart', this.touchstartHandler.bind(this));
       this.sidebarEl.on('touchend', this.touchendHandler.bind(this));
-      this.sidebarEl.on('touchmove', function (e) {
-        e.preventDefault();
-      });
+      this.sidebarEl.on('touchmove', function(e){e.preventDefault();});
 
       $(document)
-        .on('sidebar.isShowing', function () {
+        .on('sidebar.isShowing', function() {
           NexT.utils.isDesktop() && $('body').velocity('stop').velocity(
             {paddingRight: SIDEBAR_WIDTH},
             SIDEBAR_DISPLAY_DURATION
           );
         })
-        .on('sidebar.isHiding', function () {
+        .on('sidebar.isHiding', function() {
         });
     },
     reloadSidebar: function () {
       this.sidebarEl = $('.sidebar');
       this.isSidebarVisible ? this.showSidebar(0) : null;
     },
-    clickHandler: function () {
+    clickHandler: function() {
       this.isSidebarVisible ? this.hideSidebar() : this.showSidebar();
       this.isSidebarVisible = !this.isSidebarVisible;
     },
-    mouseEnterHandler: function () {
+    mouseEnterHandler: function() {
       if (this.isSidebarVisible) {
         return;
       }
       sidebarToggleLines.arrow();
     },
-    mouseLeaveHandler: function () {
+    mouseLeaveHandler: function() {
       if (this.isSidebarVisible) {
         return;
       }
@@ -144,37 +142,37 @@ $(document).ready(function () {
         this.clickHandler();
       }
     },
-    showSidebar: function (duration) {
+    showSidebar: function(duration) {
       var self = this;
 
       sidebarToggleLines.close();
       this.sidebarEl.velocity('stop').velocity({
-          width: SIDEBAR_WIDTH
-        }, {
-          display: 'block',
-          duration: duration || SIDEBAR_DISPLAY_DURATION,
-          begin: function () {
-            $('.sidebar .motion-element').velocity(
-              'transition.slideRightIn',
-              {
-                stagger: 50,
-                drag: true,
-                complete: function () {
-                  self.sidebarEl.trigger('sidebar.motion.complete');
-                }
+        width: SIDEBAR_WIDTH
+      }, {
+        display : 'block',
+        duration: duration || SIDEBAR_DISPLAY_DURATION,
+        begin   : function() {
+          $('.sidebar .motion-element').velocity(
+            'transition.slideRightIn',
+            {
+              stagger : 50,
+              drag    : true,
+              complete: function() {
+                self.sidebarEl.trigger('sidebar.motion.complete');
               }
-            );
-          },
-          complete: function () {
-            self.sidebarEl.addClass('sidebar-active');
-            self.sidebarEl.trigger('sidebar.didShow');
-          }
+            }
+          );
+        },
+        complete: function() {
+          self.sidebarEl.addClass('sidebar-active');
+          self.sidebarEl.trigger('sidebar.didShow');
         }
+      }
       );
 
       this.sidebarEl.trigger('sidebar.isShowing');
     },
-    hideSidebar: function () {
+    hideSidebar: function() {
       NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});
       this.sidebarEl.find('.motion-element').velocity('stop').css('display', 'none');
       this.sidebarEl.velocity('stop').velocity({width: 0}, {display: 'none'});
@@ -185,7 +183,7 @@ $(document).ready(function () {
       this.sidebarEl.trigger('sidebar.isHiding');
 
       // Prevent adding TOC to Overview if Overview was selected when close & open sidebar.
-      if (!!$('.post-toc-wrap')) {
+      if (!$('.post-toc-wrap')) {
         if ($('.site-overview-wrap').css('display') === 'block') {
           $('.post-toc-wrap').removeClass('motion-element');
         } else {
@@ -196,18 +194,18 @@ $(document).ready(function () {
   };
   // sidebarToggleMotion.init();
   NexT.motion.integrator = {
-    queue: [],
+    queue : [],
     cursor: -1,
-    add: function (fn) {
+    add   : function(fn) {
       this.queue.push(fn);
       return this;
     },
-    next: function () {
+    next: function() {
       this.cursor++;
       var fn = this.queue[this.cursor];
       $.isFunction(fn) && fn(NexT.motion.integrator);
     },
-    bootstrap: function () {
+    bootstrap: function() {
       this.next();
     },
     reset: function (value) {
@@ -234,7 +232,7 @@ $(document).ready(function () {
       integrator.next();
     },
 
-    logo: function (integrator) {
+    logo: function(integrator) {
       var sequence = [];
       var $brand = $('.brand');
       var $title = $('.site-title');
@@ -248,8 +246,31 @@ $(document).ready(function () {
         o: {duration: 200}
       });
 
-      NexT.utils.isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
-      sequence.push(
+      /**
+       * Check if $elements exist.
+       * @param {jQuery|Array} $elements
+       * @returns {boolean}
+       */
+      function hasElement($elements) {
+        $elements = Array.isArray($elements) ? $elements : [$elements];
+        return $elements.every(function($element) {
+          return $element.length > 0;
+        });
+      }
+
+      function getMistLineSettings(element, translateX) {
+        return {
+          e: $(element),
+          p: {translateX: translateX},
+          o: {
+            duration     : 500,
+            sequenceQueue: false
+          }
+        };
+      }
+
+      NexT.utils.isMist() && hasElement([$logoLineTop, $logoLineBottom])
+      && sequence.push(
         getMistLineSettings($logoLineTop, '100%'),
         getMistLineSettings($logoLineBottom, '-100%')
       );
@@ -271,55 +292,34 @@ $(document).ready(function () {
       }
 
       if (sequence.length > 0) {
-        sequence[sequence.length - 1].o.complete = function () {
+        sequence[sequence.length - 1].o.complete = function() {
           integrator.next();
         };
+        /* eslint-disable */
         $.Velocity.RunSequence(sequence);
+        /* eslint-enable */
       } else {
         integrator.next();
       }
-
-
-      function getMistLineSettings(element, translateX) {
-        return {
-          e: $(element),
-          p: {translateX: translateX},
-          o: {
-            duration: 500,
-            sequenceQueue: false
-          }
-        };
-      }
-
-      /**
-       * Check if $elements exist.
-       * @param {jQuery|Array} $elements
-       * @returns {boolean}
-       */
-      function hasElement($elements) {
-        $elements = Array.isArray($elements) ? $elements : [$elements];
-        return $elements.every(function ($element) {
-          return $element.length > 0;
-        });
-      }
     },
 
-    menu: function (integrator) {
+    menu: function(integrator) {
 
       if (CONFIG.motion.async) {
         integrator.next();
       }
 
       $('.menu-item').velocity('transition.slideDownIn', {
-        display: null,
+        display : null,
         duration: 200,
-        complete: function () {
+        complete: function() {
           integrator.next();
         }
       });
     },
 
-    postList: function (integrator) {
+    postList: function(integrator) {
+
       //var $post = $('.post');
       var $postBlock = $('.post-block, .pagination, .comments');
       var $postBlockTransition = CONFIG.motion.transition.post_block;
@@ -333,18 +333,12 @@ $(document).ready(function () {
       var $sidebarAffixTransition = CONFIG.motion.transition.sidebar;
       var hasPost = $postBlock.length > 0;
 
-      hasPost ? postMotion() : integrator.next();
-
-      if (CONFIG.motion.async) {
-        integrator.next();
-      }
-
       function postMotion() {
         var postMotionOptions = window.postMotionOptions || {
           stagger: 100,
-          drag: true
+          drag   : true
         };
-        postMotionOptions.complete = function () {
+        postMotionOptions.complete = function() {
           // After motion complete need to remove transform from sidebar to let affix work on Pisces | Gemini.
           if (CONFIG.motion.transition.sidebar && (NexT.utils.isPisces() || NexT.utils.isGemini())) {
             $sidebarAffix.css({'transform': 'initial'});
@@ -370,9 +364,15 @@ $(document).ready(function () {
           $sidebarAffix.velocity('transition.' + $sidebarAffixTransition, postMotionOptions);
         }
       }
+
+      hasPost ? postMotion() : integrator.next();
+
+      if (CONFIG.motion.async) {
+        integrator.next();
+      }
     },
 
-    sidebar: function (integrator) {
+    sidebar: function(integrator) {
       if (CONFIG.sidebar.display === 'always') {
         NexT.utils.displaySidebar();
       }

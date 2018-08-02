@@ -41,6 +41,13 @@ $(document).ready(function () {
         url: '/player/7Oxy8FWONh8.m4a',
         lrc: '/player/7Oxy8FWONh8.lrc',
         theme: '#384e65'
+      }, {
+        name: '塵劫',
+        artist: '倫桑Cover',
+        // cover: '/player/xT4UuaONjk.jpg',
+        url: '/player/xT4UuaONjk.m4a',
+        lrc: '/player/xT4UuaONjk.lrc',
+        theme: '#384e65'
       }
     ]
   });
