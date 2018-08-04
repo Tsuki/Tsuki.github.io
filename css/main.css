@@ -585,6 +585,9 @@ pre code {
 .highlight .line {
   height: 20px;
 }
+.highlight .line::after {
+  content: attr(data-line-number);
+}
 .gutter {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1849,7 +1852,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #33a6db;
+  background: #752a6f;
 }
 .links-of-blogroll {
   font-size: 13px;
