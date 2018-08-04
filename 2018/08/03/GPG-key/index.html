@@ -114,17 +114,17 @@
 
 
 
-  <meta name="description" content="# 開啟 GPG signgit config --global commit.gpgsign true# 指定 sign keygit config --global user.signingkey &amp;lt;key&amp;gt;# 顯示 公鈅列表gpg --list-keys --keyid-format LONG# 顯示 私鈅列表gpg --list-secret-keys --keyid-form">
+  <meta name="description" content="123456789101112131415161718192021222324# 開啟 GPG signgit config --global commit.gpgsign true# 指定 sign keygit config --global user.signingkey &amp;lt;key&amp;gt;# 顯示 公鈅列表gpg --list-keys --keyid-format LONG# 顯示">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GPG-Key">
 <meta property="og:url" content="https://blog.sukitsuki.com/2018/08/03/GPG-key/index.html">
 <meta property="og:site_name" content="ツカツキ アリス">
-<meta property="og:description" content="# 開啟 GPG signgit config --global commit.gpgsign true# 指定 sign keygit config --global user.signingkey &amp;lt;key&amp;gt;# 顯示 公鈅列表gpg --list-keys --keyid-format LONG# 顯示 私鈅列表gpg --list-secret-keys --keyid-form">
+<meta property="og:description" content="123456789101112131415161718192021222324# 開啟 GPG signgit config --global commit.gpgsign true# 指定 sign keygit config --global user.signingkey &amp;lt;key&amp;gt;# 顯示 公鈅列表gpg --list-keys --keyid-format LONG# 顯示">
 <meta property="og:locale" content="ja">
-<meta property="og:updated_time" content="2018-08-04T12:38:45.508Z">
+<meta property="og:updated_time" content="2018-08-04T10:03:24.706Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GPG-Key">
-<meta name="twitter:description" content="# 開啟 GPG signgit config --global commit.gpgsign true# 指定 sign keygit config --global user.signingkey &amp;lt;key&amp;gt;# 顯示 公鈅列表gpg --list-keys --keyid-format LONG# 顯示 私鈅列表gpg --list-secret-keys --keyid-form">
+<meta name="twitter:description" content="123456789101112131415161718192021222324# 開啟 GPG signgit config --global commit.gpgsign true# 指定 sign keygit config --global user.signingkey &amp;lt;key&amp;gt;# 顯示 公鈅列表gpg --list-keys --keyid-format LONG# 顯示">
 
 
 
@@ -413,7 +413,7 @@
                 
                   <span class="post-meta-item-text">に編集されました</span>
                 
-                <time title="Updated at：2018-08-04 12:38:45" itemprop="dateModified" datetime="2018-08-04T12:38:45+00:00">2018-08-04</time>
+                <time title="Updated at：2018-08-04 10:03:24" itemprop="dateModified" datetime="2018-08-04T10:03:24+00:00">2018-08-04</time>
               
             
           </span>
@@ -476,7 +476,7 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br><span class="line" data-line-number="11"></span><br><span class="line" data-line-number="12"></span><br><span class="line" data-line-number="13"></span><br><span class="line" data-line-number="14"></span><br><span class="line" data-line-number="15"></span><br><span class="line" data-line-number="16"></span><br><span class="line" data-line-number="17"></span><br><span class="line" data-line-number="18"></span><br><span class="line" data-line-number="19"></span><br><span class="line" data-line-number="20"></span><br><span class="line" data-line-number="21"></span><br><span class="line" data-line-number="22"></span><br><span class="line" data-line-number="23"></span><br><span class="line" data-line-number="24"></span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 開啟 GPG sign</span></span><br><span class="line">git config --global commit.gpgsign <span class="literal">true</span></span><br><span class="line"><span class="comment"># 指定 sign key</span></span><br><span class="line">git config --global user.signingkey &lt;key&gt;</span><br><span class="line"><span class="comment"># 顯示 公鈅列表</span></span><br><span class="line">gpg --list-keys --keyid-format LONG</span><br><span class="line"><span class="comment"># 顯示 私鈅列表</span></span><br><span class="line">gpg --list-secret-keys --keyid-format LONG</span><br><span class="line"><span class="comment"># 生成 Key</span></span><br><span class="line">gpg --full-generate-key</span><br><span class="line"><span class="comment"># 導出公鈅</span></span><br><span class="line">gpg --armor --<span class="built_in">export</span> &lt;key&gt;</span><br><span class="line"><span class="comment"># 導出密鈅</span></span><br><span class="line">gpg --armor --<span class="built_in">export</span>-secret-keys &lt;key&gt;</span><br><span class="line"><span class="comment"># 導出子密鈅</span></span><br><span class="line">gpg --armor --<span class="built_in">export</span>-secret-subkeys &lt;key&gt;</span><br><span class="line"><span class="comment"># 重啟 gpg agent</span></span><br><span class="line">gpg-connect-agent reloadagent /<span class="built_in">bye</span></span><br><span class="line"><span class="comment"># 殺掉 gpg agent</span></span><br><span class="line">gpgconf --<span class="built_in">kill</span> gpg-agent</span><br><span class="line"><span class="comment"># 修改 gpg agent 參數</span></span><br><span class="line">vim ~/.gnupg/gpg-agent.conf</span><br><span class="line">max-cache-ttl 60480000</span><br><span class="line">default-cache-ttl 60480000</span><br></pre></td></tr></table></figure>
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 開啟 GPG sign</span></span><br><span class="line">git config --global commit.gpgsign <span class="literal">true</span></span><br><span class="line"><span class="comment"># 指定 sign key</span></span><br><span class="line">git config --global user.signingkey &lt;key&gt;</span><br><span class="line"><span class="comment"># 顯示 公鈅列表</span></span><br><span class="line">gpg --list-keys --keyid-format LONG</span><br><span class="line"><span class="comment"># 顯示 私鈅列表</span></span><br><span class="line">gpg --list-secret-keys --keyid-format LONG</span><br><span class="line"><span class="comment"># 生成 Key</span></span><br><span class="line">gpg --full-generate-key</span><br><span class="line"><span class="comment"># 導出公鈅</span></span><br><span class="line">gpg --armor --<span class="built_in">export</span> &lt;key&gt;</span><br><span class="line"><span class="comment"># 導出密鈅</span></span><br><span class="line">gpg --armor --<span class="built_in">export</span>-secret-keys &lt;key&gt;</span><br><span class="line"><span class="comment"># 導出子密鈅</span></span><br><span class="line">gpg --armor --<span class="built_in">export</span>-secret-subkeys &lt;key&gt;</span><br><span class="line"><span class="comment"># 重啟 gpg agent</span></span><br><span class="line">gpg-connect-agent reloadagent /<span class="built_in">bye</span></span><br><span class="line"><span class="comment"># 殺掉 gpg agent</span></span><br><span class="line">gpgconf --<span class="built_in">kill</span> gpg-agent</span><br><span class="line"><span class="comment"># 修改 gpg agent 參數</span></span><br><span class="line">vim ~/.gnupg/gpg-agent.conf</span><br><span class="line">max-cache-ttl 60480000</span><br><span class="line">default-cache-ttl 60480000</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -606,6 +606,8 @@
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
                     
+                    
+                      
                     
                       
                     
