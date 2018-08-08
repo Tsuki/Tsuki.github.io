@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-08-06T05:42:15.583Z</updated>
+  <updated>2018-08-08T12:10:20.356Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DNS故障轉移測試</title>
+    <link href="https://blog.sukitsuki.com/2018/08/08/DNS-High-Availability/"/>
+    <id>https://blog.sukitsuki.com/2018/08/08/DNS-High-Availability/</id>
+    <published>2018-08-08T18:34:05.000Z</published>
+    <updated>2018-08-08T12:10:20.356Z</updated>
+    
+    <content type="html"><![CDATA[<p>建立 lookback 地址</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig lo0 <span class="built_in">alias</span> 127.0.0.2 up</span><br><span class="line">sudo ifconfig lo0 <span class="built_in">alias</span> 127.0.0.3 up</span><br></pre></td></tr></table></figure><p>在 hosts 加入本地 dns 記錄</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.0.2 localhost</span><br><span class="line">127.0.0.3 localhost</span><br></pre></td></tr></table></figure><p>在不同終端使用 netcat 建立本地監聽 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br></pre></td><td class="code"><pre><span class="line">nc -lk 127.0.0.1 8080</span><br><span class="line">nc -lk 127.0.0.2 8080</span><br><span class="line">nc -lk 127.0.0.3 8080</span><br></pre></td></tr></table></figure><p>測試傳送信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line">nc localhost 8080</span><br></pre></td></tr></table></figure><p>嘗試關閉不同終端 以測試能不能故障轉移</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;建立 lookback 地址&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;1&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Ops" scheme="https://blog.sukitsuki.com/categories/Ops/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>身為男高中生...讀後感</title>
@@ -503,32 +527,6 @@
 &lt;p&gt;別外，今晚跑步時忽然停電，嚇了一跳。最近在練長跑，3分鐘慢跑，2分鐘快跑，一小時跑6公里左右。&lt;/p&gt;
 &lt;p&gt;一小時下來大約消耗400千卡。&lt;/p&gt;
 &lt;p
-      
-    
-    </summary>
-    
-      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>春季整合</title>
-    <link href="https://blog.sukitsuki.com/2018/06/22/%E6%98%A5%E5%AD%A3%E6%95%B4%E5%90%88/"/>
-    <id>https://blog.sukitsuki.com/2018/06/22/春季整合/</id>
-    <published>2018-06-22T10:53:51.000Z</published>
-    <updated>2018-06-22T06:28:23.483Z</updated>
-    
-    <content type="html"><![CDATA[<p>2018春季快要完結了，是時候整理一下要補的番。</p><ul><li style="list-style: none"><input type="checkbox"> 極道超女</li><li style="list-style: none"><input type="checkbox"> P5</li><li style="list-style: none"><input type="checkbox"> Steins;Gate0</li><li style="list-style: none"><input type="checkbox"> 驚爆危機</li></ul><p>2017冬沒有補的和己經補了的</p><ul><li style="list-style: none"><input type="checkbox"> 齊木楠雄的災難</li><li style="list-style: none"><input type="checkbox"> 搖曳露營</li><li style="list-style: none"><input type="checkbox" checked> 龍王的工作</li><li style="list-style: none"><input type="checkbox" checked> 爆肝工程師的異世界狂想曲</li><li style="list-style: none"><input type="checkbox" checked> 博多豚骨拉麵團</li><li style="list-style: none"><input type="checkbox"> citrus</li><li style="list-style: none"><input type="checkbox"> 擅長捉弄人的高木同學</li></ul><p>最近應該會買一台switch，以前一直想玩Bayonetta，但一直沒有買任天堂的主機。</p><p>上一次也是第一次買的任天堂遊戲機是GBA SP，但是不到半年就不見了。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;2018春季快要完結了，是時候整理一下要補的番。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot;&gt; 極道超女&lt;/li&gt;
-&lt;li style=&quot;list-style: none&quot;&gt;&lt;input type
       
     
     </summary>
