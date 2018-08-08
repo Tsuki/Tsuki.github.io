@@ -48,6 +48,13 @@ $(document).ready(function () {
         url: '/player/xT4UuaONjk.m4a',
         lrc: '/player/xT4UuaONjk.lrc',
         theme: '#384e65'
+      }, {
+        name: 'Nevereverland',
+        artist: 'ナノ',
+        cover: '/player/2eGazzxcp3I.jpg',
+        url: '/player/2eGazzxcp3I.m4a',
+        lrc: '/player/2eGazzxcp3I.lrc',
+        theme: '#1a3e67'
       }
     ]
   });
