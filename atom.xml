@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-08-27T16:39:02.018Z</updated>
+  <updated>2018-08-29T04:47:57.489Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gorm兼容net.IP類</title>
+    <link href="https://blog.sukitsuki.com/2018/08/29/gorm%E5%85%BC%E5%AE%B9net-IP%E9%A1%9E/"/>
+    <id>https://blog.sukitsuki.com/2018/08/29/gorm兼容net-IP類/</id>
+    <published>2018-08-29T12:04:38.000Z</published>
+    <updated>2018-08-29T04:47:57.489Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先 alias net.IP類到本地包，為之後實作方法。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> IP net.IP</span><br></pre></td></tr></table></figure><p>因為pg不能直接使用<code>[]byte</code>作為輸入，所以需要實作<code>Value()</code>令Gorm 能轉換成字串作為輸入。</p><p>先從自定義的 <code>IP</code> 類轉換回 <code>net.IP</code> 類，再用 <code>String()</code> 轉成字串。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a IP)</span> <span class="title">Value</span><span class="params">()</span> <span class="params">(driver.Value, error)</span></span> &#123;</span><br><span class="line"><span class="keyword">return</span> net.IP(a).String(), <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p> 別外，由於從pg 內讀取出來的是 <code>[]unit8</code> 類，內部數據是 ASIIC 碼，所以先轉換成 byte合併成 Array 再轉成 string.</p><p> 最後用 net 庫內的 ParseIP 方法 轉成 IP 類，之後再 cast 成自定義的 IP 類 返回。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br><span class="line" data-line-number="11"></span><br><span class="line" data-line-number="12"></span><br><span class="line" data-line-number="13"></span><br><span class="line" data-line-number="14"></span><br><span class="line" data-line-number="15"></span><br><span class="line" data-line-number="16"></span><br><span class="line" data-line-number="17"></span><br><span class="line" data-line-number="18"></span><br><span class="line" data-line-number="19"></span><br><span class="line" data-line-number="20"></span><br><span class="line" data-line-number="21"></span><br><span class="line" data-line-number="22"></span><br><span class="line" data-line-number="23"></span><br><span class="line" data-line-number="24"></span><br><span class="line" data-line-number="25"></span><br><span class="line" data-line-number="26"></span><br><span class="line" data-line-number="27"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> IP net.IP</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *IP)</span> <span class="title">Scan</span><span class="params">(src <span class="keyword">interface</span>&#123;&#125;)</span> <span class="title">error</span></span> &#123;</span><br><span class="line"><span class="keyword">switch</span> x := src.(<span class="keyword">type</span>) &#123;</span><br><span class="line"><span class="keyword">case</span> []<span class="keyword">uint8</span>:</span><br><span class="line">*a = IP(net.ParseIP(B2S(x)))</span><br><span class="line"><span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line"><span class="keyword">case</span> <span class="literal">nil</span>:</span><br><span class="line">*a = <span class="literal">nil</span></span><br><span class="line"><span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> fmt.Errorf(<span class="string">"pq: cannot convert %T to net.IP"</span>, src)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">B2S</span><span class="params">(bs []<span class="keyword">uint8</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> ba []<span class="keyword">byte</span></span><br><span class="line"><span class="keyword">for</span> _, b := <span class="keyword">range</span> bs &#123;</span><br><span class="line">ba = <span class="built_in">append</span>(ba, <span class="keyword">byte</span>(b))</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">string</span>(ba)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a IP)</span> <span class="title">Value</span><span class="params">()</span> <span class="params">(driver.Value, error)</span></span> &#123;</span><br><span class="line"><span class="keyword">return</span> net.IP(a).String(), <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;首先 alias net.IP類到本地包，為之後實作方法。&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;1&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Diablo2打寶</title>
@@ -485,34 +507,6 @@
 &lt;ul&gt;
 &lt;li style=&quot;list-style: none&quot;&gt;&lt;input type=&quot;checkbox&quot; checked&gt; 築地市場&lt;/li&gt;
 &lt;li style=&quot;list-
-      
-    
-    </summary>
-    
-      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>魚蛋論</title>
-    <link href="https://blog.sukitsuki.com/2018/06/29/%E9%AD%9A%E8%9B%8B%E8%AB%96/"/>
-    <id>https://blog.sukitsuki.com/2018/06/29/魚蛋論/</id>
-    <published>2018-06-29T10:15:17.000Z</published>
-    <updated>2018-06-29T17:45:12.092Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>魚蛋論</p></blockquote><p>我們買串魚蛋都是這樣：為什麼呀？為什麼大家用同樣價錢買串魚蛋，他那串魚蛋比我的多了兩粒？</p><p>我不要你給回我兩粒魚蛋，我要你拿走他那兩粒！大家少兩粒，這樣就公平呀！ </p><p>為什麼他有甜醬我沒有呀？ 我不要你給我甜醬，我要你舔走他那些甜醬！大家都不甜，這樣就公平呀！</p><p>為什麼他沒有了甜醬，又少了兩粒，佢仍然吃得這樣開心呀？不公平！</p><p>怎樣才公平呀？大家都不開心！大家都吃得很下賤啊！—— 黃華子《冇炭用》2003</p><p>怎樣才算公平，自己得不到，他人也別想得到，這是不是就是公平？</p><p>樂觀主意者看到半杯水，會想到還有半杯水。</p><p>而悲觀主者看到半杯水，會覺得只有半杯水。</p><p>突發事情，十分之討厭，為什麼生活上有這麼多不如意的事情發生呢。</p><p>如果累了就停下來休息，但又有多少人能做到。</p><p>如果沒有追求，沒有期望，就沒有失望。</p><p><code>Advertising has us chasing cars and clothes, working jobs we hate so we can buy shit we don’t need. We’re the middle children of history, man. No purpose or place. We have no Great War. No Great Depression. Our Great War’s a spiritual war… our Great Depression is our lives.</code></p><p>但也許只有失去了，在明白存在過的價值。</p><blockquote><p>遊戲</p></blockquote><p>原來PSO2六周年活動己經開始了，不過網絡實在太差，連在lobby也各種卡頓，呆了一會就下線了。</p><p>Bayonetta 把難改成Easy，完全變成別一款遊戲了，感覺差距很大，先用Easy打通再說。</p><p>今天打到第7關。</p><blockquote><p>動畫</p></blockquote><p>Citrus己經看完12集了，有空去看看漫畫啦。整體上故事有點刻意的感覺，也許是我的錯覺，但人總是對自己很不誠實呢。</p><blockquote><p>小說</p></blockquote><p>今天看完第一本《剃須，然後撿到女高中生》，感想是很平凡，很簡單，很感動。</p><p><code>對我來說，這個家僅僅是個吃飯洗澡的空間。</code> </p><p><code>因為工作有趣，越是努力工作就越能掙錢，我不討厭三點一線的生活方式。</code></p><p>如果生活能簡簡單單，平凡的活著，可能是一種無知的辛褔。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;魚蛋論&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我們買串魚蛋都是這樣：為什麼呀？為什麼大家用同樣價錢買串魚蛋，他那串魚蛋比我的多了兩粒？&lt;/p&gt;
-&lt;p&gt;我不要你給回我兩粒魚蛋，我要你拿走他那兩粒！大家少兩粒，這樣就公平呀！ &lt;/p&gt;
-&lt;p&gt;為什麼
       
     
     </summary>
