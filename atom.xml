@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-09-21T10:25:31.993Z</updated>
+  <updated>2018-09-24T09:46:11.072Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>刪了Xcode後不能使用make等指令</title>
+    <link href="https://blog.sukitsuki.com/2018/09/24/%E5%88%AA%E4%BA%86xcode%E5%BE%8C%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8make%E7%AD%89%E6%8C%87%E4%BB%A4/"/>
+    <id>https://blog.sukitsuki.com/2018/09/24/刪了xcode後不能使用make等指令/</id>
+    <published>2018-09-24T17:43:26.000Z</published>
+    <updated>2018-09-24T09:46:11.072Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果出現以下內容</p><blockquote><p>xcrun: error: active developer path (“/Applications/Xcode.app/Contents/Developer”) does not exist</p></blockquote><p>輸入 <code>sudo xcode-select -s /Library/Developer/CommandLineTools</code> 改回使用 CommandLineTools 的路徑</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;如果出現以下內容&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;xcrun: error: active developer path (“/Applications/Xcode.app/Contents/Developer”) does not exist&lt;/p&gt;
+&lt;/bloc
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>前端好用的模糊搜索工具</title>
@@ -490,34 +514,6 @@
       <category term="Yukiguni" scheme="https://blog.sukitsuki.com/tags/Yukiguni/"/>
     
       <category term="Cointreau" scheme="https://blog.sukitsuki.com/tags/Cointreau/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>調酒-Negroni</title>
-    <link href="https://blog.sukitsuki.com/2018/07/04/%E8%AA%BF%E9%85%92-Negroni/"/>
-    <id>https://blog.sukitsuki.com/2018/07/04/調酒-Negroni/</id>
-    <published>2018-07-04T11:16:04.000Z</published>
-    <updated>2018-07-06T08:03:36.476Z</updated>
-    
-    <content type="html"><![CDATA[<p>Negroni 內格羅尼 </p><blockquote><p>苦酒苦口但顧肝，琴酒愉悅卻傷身~內格羅尼，健康與快樂之間的平衡點</p><p>Negroni, The bitters are excellent for your liver, the gin is bad for you. They balance each other.</p></blockquote><p>喜歡琴酒的就不能錯過的酒，這酒是從美國佬酒譜加入琴酒而得來的調酒。</p><p>酒譜：</p><p>30ml 琴酒</p><p>30ml 肯巴利苦酒</p><p>30ml 甜香艾酒</p><p>在雪克杯中混合後，以橙皮捲作為裝飾。</p><p>這種一比一比一比例，是經典酒譜的組合，但也可以按個人喜好小量調整。</p><p>這杯酒可以做成短飲，也可以加入冰塊做成長飲，冰塊溶化後每一啖口感也會隨之改變。</p><p><img src="https://blog.sukitsuki.com/2018/07/04/調酒-Negroni/photo_2018-07-04_11-22-57.jpg" alt="Negroni"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Negroni 內格羅尼 &lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;苦酒苦口但顧肝，琴酒愉悅卻傷身~內格羅尼，健康與快樂之間的平衡點&lt;/p&gt;
-&lt;p&gt;Negroni, The bitters are excellent for your liver, the gin is b
-      
-    
-    </summary>
-    
-      <category term="調酒" scheme="https://blog.sukitsuki.com/categories/%E8%AA%BF%E9%85%92/"/>
-    
-    
-      <category term="Negroni" scheme="https://blog.sukitsuki.com/tags/Negroni/"/>
     
   </entry>
   
