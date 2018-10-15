@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-10-01T10:07:37.100Z</updated>
+  <updated>2018-10-15T16:31:00.862Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在PostgresSQL啟用不區分大小寫欄位</title>
+    <link href="https://blog.sukitsuki.com/2018/10/15/%E5%9C%A8PostgresSQL%E5%95%9F%E7%94%A8%E4%B8%8D%E5%8D%80%E5%88%86%E5%A4%A7%E5%B0%8F%E5%AF%AB%E6%AC%84%E4%BD%8D/"/>
+    <id>https://blog.sukitsuki.com/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/</id>
+    <published>2018-10-15T17:53:24.000Z</published>
+    <updated>2018-10-15T16:31:00.862Z</updated>
+    
+    <content type="html"><![CDATA[<p>在PostgreSQL 上建立欄位約束，是很簡單的事情，</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> (  </span><br><span class="line">  <span class="keyword">id</span>     <span class="keyword">uuid</span> PRIMARY <span class="keyword">KEY</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> uuid_generate_v4(),</span><br><span class="line">  email  <span class="built_in">text</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure><p>我們只需要在表的欄位上加入唯一約束就可以，如下：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> email_unique <span class="keyword">UNIQUE</span> (email);</span><br></pre></td></tr></table></figure><p>但在特殊情況下，我們需要不區分大少寫的欄位，比如用戶表等。。。剛剛那種約速方法就不再有效，因為PostgreSQL 預設是大小寫區分的。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'test@example.com'</span>);  </span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'TEST@example.com'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> <span class="keyword">users</span>;</span><br><span class="line"></span><br><span class="line">                  id                  |      email       </span><br><span class="line"><span class="comment">--------------------------------------+------------------</span></span><br><span class="line"> ccfcddd2-bdc5-4cf4-9475-4171960e6262 | test@example.com</span><br><span class="line"> 431308b4-8df8-44c9-bed4-7c44cf4e1ec1 | TEST@example.com</span><br><span class="line">(2 rows)</span><br></pre></td></tr></table></figure><p>一般情況下，我們會使用 <code>Lower</code> 和 <code>ToLower</code>  建立唯一索引和尋找數據。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> emailunique_idx <span class="keyword">on</span> <span class="keyword">users</span> (<span class="keyword">LOWER</span>(email)); </span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">WHERE</span> <span class="keyword">LOWER</span>(email) = <span class="keyword">LOWER</span>(?);</span><br></pre></td></tr></table></figure><p>但這種做法，忘了加 <code>LOWER</code> 就會令程序產生 Bug.</p><p>其實 PostgreSQL 供提不少額外的模塊，只是沒有預設啟用。這裹說的 <code>CITEXT</code> 就是其中一個。<code>CITEXT</code> 顧名思義就是 <code>case insensitive text</code>。</p><p>首先在 PostgreSQL 啟用額外的<code>CITEXT</code>模組。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> EXTENSION <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> citext;</span><br></pre></td></tr></table></figure><p>之後清空之前加入的數據，並修改 <code>email</code> 欄位屬情為 <code>citext</code>.</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> RESTART <span class="keyword">IDENTITY</span> RESTRICT;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> email <span class="keyword">TYPE</span> citext;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> emailunique_idx <span class="keyword">on</span> <span class="keyword">users</span> (email);</span><br></pre></td></tr></table></figure><p>之後再一次插入用戶數據，就可以看到樣同 <code>email</code> 並不能成功加入，並抛出錯誤。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'test@example.com'</span>);  </span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'TEST@example.com'</span>);</span><br><span class="line"></span><br><span class="line">ERROR:  duplicate key value violates unique constraint "email_unique"  </span><br><span class="line">DETAIL:  Key (email)=(TEST@example.com) already exists.</span><br></pre></td></tr></table></figure><p>這種做法的好處是，欄位中己配置好檢查，不需要在代碼中每一次手動加上檢查，在數據庫的欄位上作出最後一道防線。別一方面，其他開發人員看到表的 <code>DDL</code> 時就明白這個欄位是不區分大少寫。</p><p>最後這個模組是從 <code>PostgreSQL 9.3</code> 開始提供。</p><p>Ref: <a href="http://shuber.io/case-insensitive-unique-constraints-in-postgres/" target="_blank" rel="noopener">http://shuber.io/case-insensitive-unique-constraints-in-postgres/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在PostgreSQL 上建立欄位約束，是很簡單的事情，&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;1&quot;
+      
+    
+    </summary>
+    
+      <category term="SQL" scheme="https://blog.sukitsuki.com/categories/SQL/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>升級到macOS Mojave</title>
@@ -484,31 +508,6 @@
     </summary>
     
       <category term="Python" scheme="https://blog.sukitsuki.com/categories/Python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Food</title>
-    <link href="https://blog.sukitsuki.com/2018/07/18/Food/"/>
-    <id>https://blog.sukitsuki.com/2018/07/18/Food/</id>
-    <published>2018-07-18T10:03:05.000Z</published>
-    <updated>2018-07-18T03:27:43.205Z</updated>
-    
-    <content type="html"><![CDATA[<p>低澱粉、高蛋白飲食</p><p>一般來說，飲食中的醣類約占每日總熱量的50~60%，以提供人體主要的能量。醣類進入身體，經消化後產生「葡萄糖」。「葡萄糖」是神經系統、肌肉細胞、紅血球等主要仰賴的能量。</p><p>「高蛋白飲食」通常伴隨嚴格的限制澱粉，背後牽涉複雜的生化代謝的改變。多數研究顯示，短期「高蛋白飲食」確實有助於減重。</p><p>不是不是所有人都適合低醣的「高蛋白飲食」。美國心臟協會在2009年提出警告：長期的高蛋白飲食，包括可能增加心血管疾病及骨質疏鬆症的患病風險，且易使尿酸值提高，惡化痛風症狀。</p><p>減少精緻澱粉類的分量，並適度增加植物性蛋白質及非紅肉內臟的動物蛋白質，而非採取激進方式如嚴格限制澱粉，卻對蛋白質攝取不設上限。</p><p>GI值又稱升糖指數，指的是食物吃進體內後，造成血糖上升速度的快慢。</p><p><img src="https://blog.sukitsuki.com/2018/07/18/Food/givstime.jpg" alt="GI對血糖的影響"></p><ul><li>不易累積體脂肪。</li><li>不易感到疲倦、昏昏欲睡。</li><li>飽足感時間延長，比較不容易餓。</li><li>降低三酸甘油酯、總膽固醇及壞膽固醇。</li><li>容易控管血糖值，降低心血管疾病及糖尿病併發症風險。</li></ul><p>大部分蔬菜、含糖量低的水果都屬於低GI食物，除了能增加飽足感，也能避免吃下過多的澱粉類食物。</p><p>避免烹調時間過長、食物過於軟爛，就能延緩食物消化的速度，血糖也不至於上升太快，如白米飯會比白粥的GI值低。</p><p>別外，低 GI 不等於低熱量，像是花生、炸豆腐、腰果、培根、火腿、香蕉、芒果、奶油、奶油起士等也都屬於低 GI 食物，但熱量都不低。</p><table><thead><tr><th></th><th><strong>食物的升糖指數 (GI)</strong></th><th></th><th></th></tr></thead><tbody><tr><td><strong>食物種類</strong></td><td><strong>低GI (55或以)</strong></td><td><strong>中GI (GI 56-69)</strong></td><td><strong>高GI (70或以上)</strong></td></tr><tr><td>米飯</td><td>糙米、黑米</td><td>紅米飯、糙米飯</td><td>糯米飯、白飯</td></tr><tr><td>粉麵</td><td>粉絲、意粉、通心粉、全蛋麵</td><td>烏冬</td><td>普通小麥麵條</td></tr><tr><td>麵包</td><td>裸麥粒麵包</td><td>牛角包</td><td>白麵包、饅頭</td></tr><tr><td>早餐穀物</td><td>燕麥糠</td><td></td><td>粟米片</td></tr><tr><td>根莖類</td><td>粟米、魔芋</td><td>蕃薯、連皮焗薯</td><td>薯蓉、南瓜</td></tr><tr><td>糖類</td><td>果糖、乳糖</td><td>蔗糖、蜂蜜</td><td>葡萄糖、砂糖、麥芽糖</td></tr><tr><td>奶類</td><td>脫脂/低脂奶</td><td></td><td></td></tr><tr><td>生果類</td><td>橙、蘋果、雪梨、提子、奇異果、沙田柚、士多啤梨</td><td>蜜瓜、香蕉、木瓜、芒果</td><td>西瓜、茘枝、龍眼</td></tr><tr><td>豆類</td><td>黃豆、綠豆、眉豆、紅腰豆、扁豆類</td><td>焗豆</td></tr></tbody></table>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;低澱粉、高蛋白飲食&lt;/p&gt;
-&lt;p&gt;一般來說，飲食中的醣類約占每日總熱量的50~60%，以提供人體主要的能量。醣類進入身體，經消化後產生「葡萄糖」。「葡萄糖」是神經系統、肌肉細胞、紅血球等主要仰賴的能量。&lt;/p&gt;
-&lt;p&gt;「高蛋白飲食」通常伴隨嚴格的限制澱粉，背後牽涉複雜的生化
-      
-    
-    </summary>
-    
-      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
     
     
   </entry>

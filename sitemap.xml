@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.sukitsuki.com/2018/10/15/%E5%9C%A8PostgresSQL%E5%95%9F%E7%94%A8%E4%B8%8D%E5%8D%80%E5%88%86%E5%A4%A7%E5%B0%8F%E5%AF%AB%E6%AC%84%E4%BD%8D/</loc>
+    
+    <lastmod>2018-10-15T16:31:00.862Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.sukitsuki.com/2018/10/01/%E5%8D%87%E7%B4%9A%E5%88%B0macOS-Mojave/</loc>
     
     <lastmod>2018-10-01T10:07:37.100Z</lastmod>
@@ -72,14 +79,7 @@
   </url>
   
   <url>
-    <loc>https://blog.sukitsuki.com/2018/08/06/%E8%BA%AB%E7%82%BA%E7%94%B7%E9%AB%98%E4%B8%AD%E7%94%9F-%E8%AE%80%E5%BE%8C%E6%84%9F/</loc>
-    
-    <lastmod>2018-08-18T13:01:30.765Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.sukitsuki.com/2018/08/03/From-gogs-to-gitea/</loc>
+    <loc>https://blog.sukitsuki.com/2018/08/01/Mac-Hypervisor/</loc>
     
     <lastmod>2018-08-18T13:01:30.765Z</lastmod>
     
@@ -93,7 +93,14 @@
   </url>
   
   <url>
-    <loc>https://blog.sukitsuki.com/2018/08/01/Mac-Hypervisor/</loc>
+    <loc>https://blog.sukitsuki.com/2018/08/03/From-gogs-to-gitea/</loc>
+    
+    <lastmod>2018-08-18T13:01:30.765Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.sukitsuki.com/2018/08/06/%E8%BA%AB%E7%82%BA%E7%94%B7%E9%AB%98%E4%B8%AD%E7%94%9F-%E8%AE%80%E5%BE%8C%E6%84%9F/</loc>
     
     <lastmod>2018-08-18T13:01:30.765Z</lastmod>
     
@@ -121,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://blog.sukitsuki.com/categories/index.html</loc>
+    <loc>https://blog.sukitsuki.com/about/index.html</loc>
     
     <lastmod>2018-08-01T13:05:08.335Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.sukitsuki.com/about/index.html</loc>
+    <loc>https://blog.sukitsuki.com/categories/index.html</loc>
     
     <lastmod>2018-08-01T13:05:08.335Z</lastmod>
     

@@ -114,13 +114,19 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="ツカツキ アリス">
-<meta property="og:url" content="https://blog.sukitsuki.com/tags/Personal/index.html">
+  <meta name="description" content="在PostgreSQL 上建立欄位約束，是很簡單的事情， CREATE TABLE users (    id     uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),  email  text); 我們只需要在表的欄位上加入唯一約束就可以，如下： ALTER TABLE users ADD CONSTRAINT email_unique">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在PostgresSQL啟用不區分大小寫欄位">
+<meta property="og:url" content="https://blog.sukitsuki.com/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/index.html">
 <meta property="og:site_name" content="ツカツキ アリス">
+<meta property="og:description" content="在PostgreSQL 上建立欄位約束，是很簡單的事情， CREATE TABLE users (    id     uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),  email  text); 我們只需要在表的欄位上加入唯一約束就可以，如下： ALTER TABLE users ADD CONSTRAINT email_unique">
 <meta property="og:locale" content="ja">
+<meta property="og:image" content="https://blog.sukitsuki.com/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/photo_2018-10-05_23-48-11.jpg">
+<meta property="og:updated_time" content="2018-10-15T16:31:00.862Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ツカツキ アリス">
+<meta name="twitter:title" content="在PostgresSQL啟用不區分大小寫欄位">
+<meta name="twitter:description" content="在PostgreSQL 上建立欄位約束，是很簡單的事情， CREATE TABLE users (    id     uuid PRIMARY KEY NOT NULL DEFAULT uuid_generate_v4(),  email  text); 我們只需要在表的欄位上加入唯一約束就可以，如下： ALTER TABLE users ADD CONSTRAINT email_unique">
+<meta name="twitter:image" content="https://blog.sukitsuki.com/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/photo_2018-10-05_23-48-11.jpg">
 
 
 
@@ -129,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.sukitsuki.com/tags/Personal/"/>
+  <link rel="canonical" href="https://blog.sukitsuki.com/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/"/>
 
 
 
@@ -139,7 +145,7 @@
   };
 </script>
 
-  <title>タグ: Personal | ツカツキ アリス</title>
+  <title>在PostgresSQL啟用不區分大小寫欄位 | ツカツキ アリス</title>
   
 
 
@@ -195,7 +201,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,25 +275,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -353,59 +340,242 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Personal<small>タグ</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.sukitsuki.com/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="調月有栖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ツカツキ アリス">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/11/05/personal-todo/" itemprop="url">
-              
-                <span itemprop="name">2017年的目標清單</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">在PostgresSQL啟用不區分大小寫欄位
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-05T19:09:17+00:00"
-              content="2017-11-05" >
-          11-05
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">投稿日</span>
+              
+
+              
+                
+              
+
+              <time title="作成された時間：2018-10-15 17:53:24 / Updated at：16:31:00" itemprop="dateCreated datePublished" datetime="2018-10-15T17:53:24+00:00">2018-10-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/SQL/" itemprop="url" rel="index"><span itemprop="name">SQL</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/10/15/在PostgresSQL啟用不區分大小寫欄位/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/photo_2018-10-05_23-48-11.jpg" rel="gallery_cjnain3wr0000u4pl9backu10"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/photo_2018-10-05_23-48-11.jpg" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <p>在PostgreSQL 上建立欄位約束，是很簡單的事情，</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> (  </span><br><span class="line">  <span class="keyword">id</span>     <span class="keyword">uuid</span> PRIMARY <span class="keyword">KEY</span> <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="keyword">DEFAULT</span> uuid_generate_v4(),</span><br><span class="line">  email  <span class="built_in">text</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>我們只需要在表的欄位上加入唯一約束就可以，如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> <span class="keyword">ADD</span> <span class="keyword">CONSTRAINT</span> email_unique <span class="keyword">UNIQUE</span> (email);</span><br></pre></td></tr></table></figure>
+<p>但在特殊情況下，我們需要不區分大少寫的欄位，比如用戶表等。。。剛剛那種約速方法就不再有效，因為PostgreSQL 預設是大小寫區分的。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'test@example.com'</span>);  </span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'TEST@example.com'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">from</span> <span class="keyword">users</span>;</span><br><span class="line"></span><br><span class="line">                  id                  |      email       </span><br><span class="line"><span class="comment">--------------------------------------+------------------</span></span><br><span class="line"> ccfcddd2-bdc5-4cf4-9475-4171960e6262 | test@example.com</span><br><span class="line"> 431308b4-8df8-44c9-bed4-7c44cf4e1ec1 | TEST@example.com</span><br><span class="line">(2 rows)</span><br></pre></td></tr></table></figure>
+<p>一般情況下，我們會使用 <code>Lower</code> 和 <code>ToLower</code>  建立唯一索引和尋找數據。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> emailunique_idx <span class="keyword">on</span> <span class="keyword">users</span> (<span class="keyword">LOWER</span>(email)); </span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">users</span> <span class="keyword">WHERE</span> <span class="keyword">LOWER</span>(email) = <span class="keyword">LOWER</span>(?);</span><br></pre></td></tr></table></figure>
+<p>但這種做法，忘了加 <code>LOWER</code> 就會令程序產生 Bug.</p>
+<p>其實 PostgreSQL 供提不少額外的模塊，只是沒有預設啟用。這裹說的 <code>CITEXT</code> 就是其中一個。<code>CITEXT</code> 顧名思義就是 <code>case insensitive text</code>。</p>
+<p>首先在 PostgreSQL 啟用額外的<code>CITEXT</code>模組。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> EXTENSION <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> citext;</span><br></pre></td></tr></table></figure>
+<p>之後清空之前加入的數據，並修改 <code>email</code> 欄位屬情為 <code>citext</code>.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> RESTART <span class="keyword">IDENTITY</span> RESTRICT;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="keyword">users</span> <span class="keyword">ALTER</span> <span class="keyword">COLUMN</span> email <span class="keyword">TYPE</span> citext;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> emailunique_idx <span class="keyword">on</span> <span class="keyword">users</span> (email);</span><br></pre></td></tr></table></figure>
+<p>之後再一次插入用戶數據，就可以看到樣同 <code>email</code> 並不能成功加入，並抛出錯誤。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'test@example.com'</span>);  </span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">users</span> (email) <span class="keyword">VALUES</span> (<span class="string">'TEST@example.com'</span>);</span><br><span class="line"></span><br><span class="line">ERROR:  duplicate key value violates unique constraint "email_unique"  </span><br><span class="line">DETAIL:  Key (email)=(TEST@example.com) already exists.</span><br></pre></td></tr></table></figure>
+<p>這種做法的好處是，欄位中己配置好檢查，不需要在代碼中每一次手動加上檢查，在數據庫的欄位上作出最後一道防線。別一方面，其他開發人員看到表的 <code>DDL</code> 時就明白這個欄位是不區分大少寫。</p>
+<p>最後這個模組是從 <code>PostgreSQL 9.3</code> 開始提供。</p>
+<p>Ref: <a href="http://shuber.io/case-insensitive-unique-constraints-in-postgres/" target="_blank" rel="noopener">http://shuber.io/case-insensitive-unique-constraints-in-postgres/</a></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/01/升級到macOS-Mojave/" rel="next" title="升級到macOS Mojave">
+                <i class="fa fa-chevron-left"></i> 升級到macOS Mojave
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
             
-<div class="comments" id="comments">
-</div>
+
+  
+    <div class="comments" id="comments">
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://blog.sukitsuki.com/2018/10/15/在PostgresSQL啟用不區分大小寫欄位/';
+          this.page.identifier = '2018/10/15/在PostgresSQL啟用不區分大小寫欄位/';
+          this.page.title = '在PostgresSQL啟用不區分大小寫欄位';
+          };
+      </script>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
 
 
           </div>
