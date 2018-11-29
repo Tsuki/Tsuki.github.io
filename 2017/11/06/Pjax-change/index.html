@@ -284,47 +284,13 @@
   
 
 <style>
-  .sticky {
-    position: fixed;
+  .header {
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 5000;
   }
-
-  .sticky + .main {
-    padding-top: 92px;
-  }
-
-  @media (max-width: 767px) {
-    .header-inner {
-      margin-bottom: 0;
-    }
-  }
 </style>
-
-<script>
-  initSticky();
-
-  function initSticky() {
-    // Get the header
-    let header = document.getElementById("header");
-
-    // Get the offset position of the navbar
-    let sticky = header.offsetTop;
-
-    function stickyCheck() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-
-    window.onscroll = function () {
-      stickyCheck()
-    };
-  }
-</script>
 
 </div>
     </header>
