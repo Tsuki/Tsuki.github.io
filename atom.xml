@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-11-29T08:23:17.100Z</updated>
+  <updated>2018-12-10T11:08:42.303Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>主題遷移到 Angular 進度</title>
+    <link href="https://blog.sukitsuki.com/2018/12/10/%E4%B8%BB%E9%A1%8C%E9%81%B7%E7%A7%BB%E5%88%B0-Angular-%E9%80%B2%E5%BA%A6/"/>
+    <id>https://blog.sukitsuki.com/2018/12/10/主題遷移到-Angular-進度/</id>
+    <published>2018-12-10T16:27:32.000Z</published>
+    <updated>2018-12-10T11:08:42.303Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="安格拉絲-Angular"><a href="#安格拉絲-Angular" class="headerlink" title="安格拉絲 / Angular"></a>安格拉絲 / Angular</h1><blockquote><p>大紮好，我系 <a href="https://github.com/Tsuki/" target="_blank" rel="noopener">Tsuki</a>，安格拉絲，介四里沒有挽過的船新版本，擠需體驗三番鍾，里造會幹我一樣，愛象節款框架。</p></blockquote><p>進度</p><ul><li style="list-style: none"><input type="checkbox" checked> Header (完成)</li><li style="list-style: none"><input type="checkbox" checked> Pages (完成)</li><li style="list-style: none"><input type="checkbox" checked> Article (完成)</li><li style="list-style: none"><input type="checkbox" checked> Header 動畫</li><li style="list-style: none"><input type="checkbox"> Pages 動畫</li><li style="list-style: none"><input type="checkbox"> Footer</li><li style="list-style: none"><input type="checkbox"> Side menu</li><li style="list-style: none"><input type="checkbox"> Article 前後頁</li><li style="list-style: none"><input type="checkbox"> Markdown Tasklist</li><li style="list-style: none"><input type="checkbox"> Player</li><li style="list-style: none"><input type="checkbox"> 優化 moment.js</li><li style="list-style: none"><input type="checkbox"> 動態注入配置</li><li style="list-style: none"><input type="checkbox"> 評論數</li><li style="list-style: none"><input type="checkbox"> FancyBox 效果</li><li style="list-style: none"><input type="checkbox"> Article 置頂跑馬燈</li><li style="list-style: none"><input type="checkbox"> Badge count</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;安格拉絲-Angular&quot;&gt;&lt;a href=&quot;#安格拉絲-Angular&quot; class=&quot;headerlink&quot; title=&quot;安格拉絲 / Angular&quot;&gt;&lt;/a&gt;安格拉絲 / Angular&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;大紮好，我系 &lt;a hre
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>如何把頁眉(Header)置頂</title>
@@ -350,9 +372,9 @@
     <link href="https://blog.sukitsuki.com/2018/08/09/Golang-Embedding-trap/"/>
     <id>https://blog.sukitsuki.com/2018/08/09/Golang-Embedding-trap/</id>
     <published>2018-08-09T11:59:09.000Z</published>
-    <updated>2018-08-09T12:31:50.554Z</updated>
+    <updated>2018-12-10T11:08:42.291Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Golang-偽鑽石問題"><a href="#Golang-偽鑽石問題" class="headerlink" title="Golang 偽鑽石問題"></a>Golang 偽鑽石問題</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br><span class="line" data-line-number="11"></span><br><span class="line" data-line-number="12"></span><br><span class="line" data-line-number="13"></span><br><span class="line" data-line-number="14"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Reader <span class="keyword">struct</span>&#123; buffer <span class="keyword">int</span> &#125;</span><br><span class="line"><span class="keyword">type</span> Writer <span class="keyword">struct</span>&#123; buffer <span class="keyword">int</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ReadWriter <span class="keyword">struct</span> &#123;</span><br><span class="line">Reader</span><br><span class="line">Writer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> rw ReadWriter</span><br><span class="line">    <span class="comment">// &#123;Writer:&#123;buffer:0&#125; Reader:&#123;buffer:0&#125;&#125;</span></span><br><span class="line">fmt.Printf(<span class="string">"%+v"</span>, rw.buffer)</span><br><span class="line">    <span class="comment">// ambiguous selector rw.buffer</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在 go 之中沒有實現真正的繼承，<code>rw.buffer</code> 只是一個語法糖，如果內嵌結构是匿名字段會自動提升。</p><p>要取得 buffer 就需要指定 <code>rw.Reader.buffer</code> 或 <code>rw.Writer.buffer</code>.</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br><span class="line" data-line-number="11"></span><br><span class="line" data-line-number="12"></span><br><span class="line" data-line-number="13"></span><br><span class="line" data-line-number="14"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Buffer <span class="keyword">struct</span>&#123; Buffer <span class="keyword">int</span> &#125;</span><br><span class="line"><span class="keyword">type</span> Reader <span class="keyword">struct</span>&#123; Buffer &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ReadWriter <span class="keyword">struct</span> &#123;</span><br><span class="line">Buffer</span><br><span class="line">Reader</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> rw ReadWriter</span><br><span class="line">    <span class="comment">// &#123;Buffer:&#123;Buffer:0&#125; Reader:&#123;Buffer:&#123;Buffer:0&#125;&#125;&#125;</span></span><br><span class="line">fmt.Printf(<span class="string">"%+v"</span>, rw.Buffer)</span><br><span class="line">    <span class="comment">// &#123;int:0&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>這種寫法就沒有鑽石問題，因為淺層己經有 <code>rw.Buffer</code>，所以 <code></code>rw.Reader.buffer` 不會自動提升。</p><p>不過這種寫法非常不直觀，很容易引起混亂，查看代碼時會忘了拿的是那 <code>Buffer</code>。 所以這種情況下，還是盡量避免使用。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Golang-偽鑽石問題"><a href="#Golang-偽鑽石問題" class="headerlink" title="Golang 偽鑽石問題"></a>Golang 偽鑽石問題</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Reader <span class="keyword">struct</span>&#123; buffer <span class="keyword">int</span> &#125;</span><br><span class="line"><span class="keyword">type</span> Writer <span class="keyword">struct</span>&#123; buffer <span class="keyword">int</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ReadWriter <span class="keyword">struct</span> &#123;</span><br><span class="line">Reader</span><br><span class="line">Writer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> rw ReadWriter</span><br><span class="line">    <span class="comment">// &#123;Writer:&#123;buffer:0&#125; Reader:&#123;buffer:0&#125;&#125;</span></span><br><span class="line">fmt.Printf(<span class="string">"%+v"</span>, rw.buffer)</span><br><span class="line">    <span class="comment">// ambiguous selector rw.buffer</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在 go 之中沒有實現真正的繼承，<code>rw.buffer</code> 只是一個語法糖，如果內嵌結构是匿名字段會自動提升。</p><p>要取得 buffer 就需要指定 <code>rw.Reader.buffer</code> 或 <code>rw.Writer.buffer</code>.</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Buffer <span class="keyword">struct</span>&#123; Buffer <span class="keyword">int</span> &#125;</span><br><span class="line"><span class="keyword">type</span> Reader <span class="keyword">struct</span>&#123; Buffer &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ReadWriter <span class="keyword">struct</span> &#123;</span><br><span class="line">Buffer</span><br><span class="line">Reader</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> rw ReadWriter</span><br><span class="line">    <span class="comment">// &#123;Buffer:&#123;Buffer:0&#125; Reader:&#123;Buffer:&#123;Buffer:0&#125;&#125;&#125;</span></span><br><span class="line">fmt.Printf(<span class="string">"%+v"</span>, rw.Buffer)</span><br><span class="line">    <span class="comment">// &#123;int:0&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>這種寫法就沒有鑽石問題，因為淺層己經有 <code>rw.Buffer</code>，所以 <code></code>rw.Reader.buffer` 不會自動提升。</p><p>不過這種寫法非常不直觀，很容易引起混亂，查看代碼時會忘了拿的是那 <code>Buffer</code>。 所以這種情況下，還是盡量避免使用。</p>]]></content>
     
     <summary type="html">
     
@@ -373,16 +395,16 @@
     <link href="https://blog.sukitsuki.com/2018/08/08/DNS-High-Availability/"/>
     <id>https://blog.sukitsuki.com/2018/08/08/DNS-High-Availability/</id>
     <published>2018-08-08T18:34:05.000Z</published>
-    <updated>2018-08-08T12:10:20.356Z</updated>
+    <updated>2018-12-10T11:08:42.291Z</updated>
     
-    <content type="html"><![CDATA[<p>建立 lookback 地址</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig lo0 <span class="built_in">alias</span> 127.0.0.2 up</span><br><span class="line">sudo ifconfig lo0 <span class="built_in">alias</span> 127.0.0.3 up</span><br></pre></td></tr></table></figure><p>在 hosts 加入本地 dns 記錄</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.0.2 localhost</span><br><span class="line">127.0.0.3 localhost</span><br></pre></td></tr></table></figure><p>在不同終端使用 netcat 建立本地監聽 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br></pre></td><td class="code"><pre><span class="line">nc -lk 127.0.0.1 8080</span><br><span class="line">nc -lk 127.0.0.2 8080</span><br><span class="line">nc -lk 127.0.0.3 8080</span><br></pre></td></tr></table></figure><p>測試傳送信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line">nc localhost 8080</span><br></pre></td></tr></table></figure><p>嘗試關閉不同終端 以測試能不能故障轉移</p>]]></content>
+    <content type="html"><![CDATA[<p>建立 lookback 地址</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ifconfig lo0 <span class="built_in">alias</span> 127.0.0.2 up</span><br><span class="line">sudo ifconfig lo0 <span class="built_in">alias</span> 127.0.0.3 up</span><br></pre></td></tr></table></figure><p>在 hosts 加入本地 dns 記錄</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/hosts</span><br><span class="line">127.0.0.1 localhost</span><br><span class="line">127.0.0.2 localhost</span><br><span class="line">127.0.0.3 localhost</span><br></pre></td></tr></table></figure><p>在不同終端使用 netcat 建立本地監聽 </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nc -lk 127.0.0.1 8080</span><br><span class="line">nc -lk 127.0.0.2 8080</span><br><span class="line">nc -lk 127.0.0.3 8080</span><br></pre></td></tr></table></figure><p>測試傳送信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc localhost 8080</span><br></pre></td></tr></table></figure><p>嘗試關閉不同終端 以測試能不能故障轉移</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;建立 lookback 地址&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;1&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;
       
     
     </summary>
@@ -484,29 +506,6 @@
     </summary>
     
       <category term="Python" scheme="https://blog.sukitsuki.com/categories/Python/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 虛擬化</title>
-    <link href="https://blog.sukitsuki.com/2018/08/01/Mac-Hypervisor/"/>
-    <id>https://blog.sukitsuki.com/2018/08/01/Mac-Hypervisor/</id>
-    <published>2018-08-01T11:53:59.000Z</published>
-    <updated>2018-08-18T13:01:30.765Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Mac-虛擬化管理"><a href="#Mac-虛擬化管理" class="headerlink" title="Mac 虛擬化管理"></a>Mac 虛擬化管理</h1><h2 id="虛擬化"><a href="#虛擬化" class="headerlink" title="虛擬化"></a>虛擬化</h2><p>在 Linux 世界中，要實現進程/資源分離並不是一件非常困難的事情，從最早的 chroot, 到後來 Google 提出的 cgroups (Control groups), 到後來實用化的 LXC ，或者是系統級虛擬化 KVM,XEN 等。</p><p>相比起 Linux 的 cgroups (2006年), FreeBSD 在更早之前(2000年),就提出過相似的沙箱虛擬化技術 jail, 並且提供不少實用功能，比如打包轉移，虛擬網絡監控等功能。</p><h3 id="bhyve-xhyve"><a href="#bhyve-xhyve" class="headerlink" title="bhyve/xhyve"></a>bhyve/xhyve</h3><p>雖然 jail 能提供像 Docker 的功能，但 Docker 的社群相比 Unix/BSD 社群人數更多，支援也更成熟。為了在Unix上便用 Docker, 但Docker 是基於 Linux 內核開發，要提供內核就只能便用 Virtual Box 等方案，直到 bhyve 的出現（續命。 bhyve 的出現令 Unix 拥有低成本，高效和原生的虛擬化體驗，使用起來更流暢。</p><p>作為師出同門的 Mac 要使用這項技術，因此就出現從BSD bhyve 移植而來的 xhyve. (Mac 內核是從 BSD 原碼上分支而來)</p><h3 id="HyperKit"><a href="#HyperKit" class="headerlink" title="HyperKit"></a>HyperKit</h3><p>HyperKit 是Docker 公司基於 b/xhyve 開發的工具庫，用作提升擴屏性和兼容性的解決方案。現時新版本的 Docker for Mac 就內置了 HyperKit.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Mac-虛擬化管理&quot;&gt;&lt;a href=&quot;#Mac-虛擬化管理&quot; class=&quot;headerlink&quot; title=&quot;Mac 虛擬化管理&quot;&gt;&lt;/a&gt;Mac 虛擬化管理&lt;/h1&gt;&lt;h2 id=&quot;虛擬化&quot;&gt;&lt;a href=&quot;#虛擬化&quot; class=&quot;headerlink
-      
-    
-    </summary>
-    
-      <category term="Ops" scheme="https://blog.sukitsuki.com/categories/Ops/"/>
     
     
   </entry>
