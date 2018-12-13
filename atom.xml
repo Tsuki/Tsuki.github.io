@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-12-10T11:08:42.303Z</updated>
+  <updated>2018-12-13T12:35:13.465Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.sukitsuki.com/2018/12/10/%E4%B8%BB%E9%A1%8C%E9%81%B7%E7%A7%BB%E5%88%B0-Angular-%E9%80%B2%E5%BA%A6/"/>
     <id>https://blog.sukitsuki.com/2018/12/10/主題遷移到-Angular-進度/</id>
     <published>2018-12-10T16:27:32.000Z</published>
-    <updated>2018-12-10T11:08:42.303Z</updated>
+    <updated>2018-12-13T12:35:13.465Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安格拉絲-Angular"><a href="#安格拉絲-Angular" class="headerlink" title="安格拉絲 / Angular"></a>安格拉絲 / Angular</h1><blockquote><p>大紮好，我系 <a href="https://github.com/Tsuki/" target="_blank" rel="noopener">Tsuki</a>，安格拉絲，介四里沒有挽過的船新版本，擠需體驗三番鍾，里造會幹我一樣，愛象節款框架。</p></blockquote><p>進度</p><ul><li style="list-style: none"><input type="checkbox" checked> Header (完成)</li><li style="list-style: none"><input type="checkbox" checked> Pages (完成)</li><li style="list-style: none"><input type="checkbox" checked> Article (完成)</li><li style="list-style: none"><input type="checkbox" checked> Header 動畫</li><li style="list-style: none"><input type="checkbox"> Pages 動畫</li><li style="list-style: none"><input type="checkbox"> Footer</li><li style="list-style: none"><input type="checkbox"> Side menu</li><li style="list-style: none"><input type="checkbox"> Article 前後頁</li><li style="list-style: none"><input type="checkbox"> Markdown Tasklist</li><li style="list-style: none"><input type="checkbox"> Player</li><li style="list-style: none"><input type="checkbox"> 優化 moment.js</li><li style="list-style: none"><input type="checkbox"> 動態注入配置</li><li style="list-style: none"><input type="checkbox"> 評論數</li><li style="list-style: none"><input type="checkbox"> FancyBox 效果</li><li style="list-style: none"><input type="checkbox"> Article 置頂跑馬燈</li><li style="list-style: none"><input type="checkbox"> Badge count</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="安格拉絲-Angular"><a href="#安格拉絲-Angular" class="headerlink" title="安格拉絲 / Angular"></a>安格拉絲 / Angular</h1><blockquote><p>大紮好，我系 <a href="https://github.com/Tsuki/" target="_blank" rel="noopener">Tsuki</a>，安格拉絲，介四里沒有挽過的船新版本，擠需體驗三番鍾，里造會幹我一樣，愛象節款框架。</p></blockquote><p>進度</p><ul><li style="list-style: none"><input type="checkbox" checked> Header (完成)</li><li style="list-style: none"><input type="checkbox" checked> Pages (完成)</li><li style="list-style: none"><input type="checkbox" checked> Article (完成)</li><li style="list-style: none"><input type="checkbox" checked> Header 動畫  (完成)</li><li style="list-style: none"><input type="checkbox" checked> Pages 動畫  (完成)</li><li style="list-style: none"><input type="checkbox" checked> Footer  (完成)</li><li style="list-style: none"><input type="checkbox"> Post page</li><li style="list-style: none"><input type="checkbox"> Side menu</li><li style="list-style: none"><input type="checkbox"> Article 前後頁</li><li style="list-style: none"><input type="checkbox"> Markdown Tasklist</li><li style="list-style: none"><input type="checkbox"> APlayer</li><li style="list-style: none"><input type="checkbox"> 優化 moment.js</li><li style="list-style: none"><input type="checkbox"> 動態注入配置</li><li style="list-style: none"><input type="checkbox"> 評論數</li><li style="list-style: none"><input type="checkbox"> FancyBox 效果</li><li style="list-style: none"><input type="checkbox"> Article 置頂跑馬燈</li><li style="list-style: none"><input type="checkbox"> Badge count</li></ul>]]></content>
     
     <summary type="html">
     
