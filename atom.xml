@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-12-14T09:56:11.422Z</updated>
+  <updated>2018-12-15T09:47:09.529Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Angular-起動時加入Async和defer</title>
+    <link href="https://blog.sukitsuki.com/2018/12/15/Angular-%E8%B5%B7%E5%8B%95%E6%99%82%E5%8A%A0%E5%85%A5async%E5%92%8Cdefer/"/>
+    <id>https://blog.sukitsuki.com/2018/12/15/Angular-起動時加入async和defer/</id>
+    <published>2018-12-15T13:40:11.000Z</published>
+    <updated>2018-12-15T09:47:09.529Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先，在 Angular 不 Eject 的情況下，使用其他的 Webpack plugin，這樣需要引入 ngx-build-plus。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install ngx-build-plus</span><br></pre></td></tr></table></figure><p>之後在 angular.json 替換 angular-cli 本來的引導指令</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">  <span class="string">"architect"</span>: &#123;</span><br><span class="line">    <span class="string">"build"</span>: &#123;</span><br><span class="line">      <span class="string">"builder"</span>: <span class="string">"ngx-build-plus:build"</span>,</span><br><span class="line">      ...</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="string">"serve"</span>: &#123;</span><br><span class="line">       <span class="string">"builder"</span>: <span class="string">"ngx-build-plus:dev-server"</span>,</span><br><span class="line">       ...</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>別外，在目錄下加入額外的 Webpack 配置文件 <code>webpack.extra.js</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line"><span class="keyword">const</span> ScriptExtHtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'script-ext-html-webpack-plugin'</span>);</span><br><span class="line"><span class="keyword">const</span> METADATA = &#123;</span><br><span class="line">  baseUrl: <span class="string">'/'</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">      template: <span class="string">'src/index.html'</span>,</span><br><span class="line">      chunksSortMode: <span class="string">'dependency'</span>,</span><br><span class="line">      metadata: METADATA,</span><br><span class="line">      inject: <span class="string">'head'</span></span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="keyword">new</span> ScriptExtHtmlWebpackPlugin(&#123;</span><br><span class="line">      <span class="keyword">async</span>: <span class="string">'polyfills'</span>,</span><br><span class="line">      defaultAttribute: <span class="string">'defer'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>由於 Angular 的 <code>zone.js</code> 需要比其他的 js 先載入，所以 polyfills 使用 <code>async</code>，而其他使用 <code>defer</code></p><p>這樣配置就可以把 <code>polyfills.js</code> 以外的 script 都加上 <code>defer</code> 屬性。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"ng build --prod --extraWebpackConfig webpack.extra.js"</span>,</span><br><span class="line">...</span><br><span class="line">&#125;,</span><br><span class="line">...</span><br></pre></td></tr></table></figure><p>最後修改 <code>package.json</code> 的 <code>build</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;首先，在 Angular 不 Eject 的情況下，使用其他的 Webpack plugin，這樣需要引入 ngx-build-plus。&lt;/p&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>主題遷移到 Angular 進度</title>
@@ -482,30 +503,6 @@
     </summary>
     
       <category term="Ops" scheme="https://blog.sukitsuki.com/categories/Ops/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Python腳本調整歌詞開始位</title>
-    <link href="https://blog.sukitsuki.com/2018/08/01/lrc-offset/"/>
-    <id>https://blog.sukitsuki.com/2018/08/01/lrc-offset/</id>
-    <published>2018-08-01T19:18:49.000Z</published>
-    <updated>2018-08-18T13:01:30.765Z</updated>
-    
-    <content type="html"><![CDATA[<p>#一個 Python 腳本，用作全局調整歌詞提前量/開始位置</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br><span class="line" data-line-number="11"></span><br><span class="line" data-line-number="12"></span><br><span class="line" data-line-number="13"></span><br><span class="line" data-line-number="14"></span><br><span class="line" data-line-number="15"></span><br><span class="line" data-line-number="16"></span><br><span class="line" data-line-number="17"></span><br><span class="line" data-line-number="18"></span><br><span class="line" data-line-number="19"></span><br><span class="line" data-line-number="20"></span><br><span class="line" data-line-number="21"></span><br><span class="line" data-line-number="22"></span><br><span class="line" data-line-number="23"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> date, datetime, time, timedelta</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(filename: str, offset: int)</span> -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">    thetime = re.compile(<span class="string">r"\[([0-9]&#123;2&#125;):([0-9]&#123;2&#125;)\.([0-9]&#123;2&#125;)?\](.+)"</span>)</span><br><span class="line">    <span class="keyword">with</span> open(filename, <span class="string">'r+'</span>) <span class="keyword">as</span> file:</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> file.readlines():</span><br><span class="line">            min_sec_str = thetime.search(line)</span><br><span class="line">            <span class="keyword">if</span> min_sec_str:</span><br><span class="line">                m, s, ms, lrc = min_sec_str.group(<span class="number">1</span>), min_sec_str.group(<span class="number">2</span>), min_sec_str.group(<span class="number">3</span>), min_sec_str.group(<span class="number">4</span>)</span><br><span class="line">                t = datetime.combine(date.today(), time(<span class="number">0</span>, int(m), int(s), int(ms))) + timedelta(milliseconds=offset)</span><br><span class="line">                print(<span class="string">f'[<span class="subst">&#123;t.minute:<span class="number">02</span>&#125;</span>:<span class="subst">&#123;t.second:<span class="number">02</span>&#125;</span>.<span class="subst">&#123;t.microsecond:<span class="number">02</span>&#125;</span>]<span class="subst">&#123;lrc&#125;</span>'</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(line)</span><br><span class="line">    file.close</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="keyword">if</span> len(sys.argv) &lt; <span class="number">3</span>:</span><br><span class="line">        <span class="keyword">raise</span> SyntaxError(<span class="string">"Insufficient arguments."</span>)</span><br><span class="line">    main(sys.argv[<span class="number">1</span>], int(sys.argv[<span class="number">2</span>]))</span><br></pre></td></tr></table></figure><p>先用正則找出歌詞位置，再提取出分，秒，微秒和歌詞，</p><p>然後轉換成 Python 的時間類並調整時間，最後打印出來。</p><h1 id="正則測試網站"><a href="#正則測試網站" class="headerlink" title="正則測試網站"></a>正則測試網站</h1><p><a href="https://regex101.com/" target="_blank" rel="noopener">https://regex101.com/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;#一個 Python 腳本，用作全局調整歌詞提前量/開始位置&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot; data-line-numbe
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="https://blog.sukitsuki.com/categories/Python/"/>
     
     
   </entry>
