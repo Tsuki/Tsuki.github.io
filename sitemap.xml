@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.sukitsuki.com/2018/12/15/Angular-%E8%B5%B7%E5%8B%95%E6%99%82%E5%8A%A0%E5%85%A5async%E5%92%8Cdefer/</loc>
+    
+    <lastmod>2018-12-18T07:34:52.135Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.sukitsuki.com/2018/12/17/%E5%9C%A8Angular%E5%8B%95%E6%85%8B%E5%8A%A0%E8%BC%89html/</loc>
+    
+    <lastmod>2018-12-18T07:34:52.135Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.sukitsuki.com/note/index.html</loc>
     
     <lastmod>2018-12-17T13:10:52.641Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>https://blog.sukitsuki.com/2018/12/17/PSV%E8%AE%8A%E9%9D%A9/</loc>
     
     <lastmod>2018-12-17T05:31:42.346Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.sukitsuki.com/2018/12/15/Angular-%E8%B5%B7%E5%8B%95%E6%99%82%E5%8A%A0%E5%85%A5async%E5%92%8Cdefer/</loc>
-    
-    <lastmod>2018-12-15T09:47:09.529Z</lastmod>
     
   </url>
   
