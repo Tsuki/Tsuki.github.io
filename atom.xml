@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2018-12-18T07:34:52.135Z</updated>
+  <updated>2018-12-19T13:16:13.455Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Angular/Element(Web Components)</title>
+    <link href="https://blog.sukitsuki.com/2018/12/19/Angular-Element-Web-Components/"/>
+    <id>https://blog.sukitsuki.com/2018/12/19/Angular-Element-Web-Components/</id>
+    <published>2018-12-19T17:39:31.000Z</published>
+    <updated>2018-12-19T13:16:13.455Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Web-Components"><a href="#Web-Components" class="headerlink" title="Web Components"></a>Web Components</h2><p>Web Components 是最新的 HTML 技術，這項技術可以令瀏覽器支持原生的自定組件，這種做法就可以減輕對前端的依賴/需求。</p><p>別外，使用 web components 可以代替組件在網頁上 JIT 編譯，減小瀏覽器的壓力。</p><h2 id="在Angular-上使用-Web-Component"><a href="#在Angular-上使用-Web-Component" class="headerlink" title="在Angular 上使用 Web Component"></a>在Angular 上使用 Web Component</h2><h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><p>首先在項目目錄下安裝 <code>@angular/elements</code></p><p>之後把 <code>document-register-element</code> 更新</p><p>別外，為了支持舊版本的瀏覽器，需要加入兼容器 (polyfill) <code>@webcomponents/webcomponentsjs</code></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ng add @angular/elements</span><br><span class="line">yarn add document-register-element</span><br><span class="line">yarn add @webcomponents/webcomponentsjs</span><br></pre></td></tr></table></figure><p>之後在 <code>polyfills.ts</code> 載入</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * APPLICATION IMPORTS</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';</span><br></pre></td></tr></table></figure><p>如果有使用 <code>ngx-build-plus</code> 和 <code>html-webpack-plugin</code> , 需要把 html-webpack-plugin 更新到 <code>4.0.0</code>，因為</p><p><a href="https://github.com/angular/angular-cli/issues/13223" target="_blank" rel="noopener">https://github.com/angular/angular-cli/issues/13223</a></p><p>使用 <code>custom-elements-es5-adapter</code> 是因為 Angular/Elements 不能在 <code>tsconfig.json</code> 降級到 ES5 來支持 IE/Edge，必須使用 ES2015 不然 Chrome 會報錯，所以使用這個庫來達成兼容。</p><p>使用 <code>webcomponents-bundle.js</code> 是為了兼容不支持 web components 的瀏覽器，別外一個是使用 <code>webcomponents-loader.js</code> 進行懶加庫所需要的庫。</p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>由於 <a href="https://github.com/webcomponents/webcomponentsjs/issues/909" target="_blank" rel="noopener">https://github.com/webcomponents/webcomponentsjs/issues/909</a> 不能在 polyfill.ts 裹加入</p><p><code>import webcomponents-bundle.js</code>，所以需要在 <code>angular.json</code> 的 script 載入。</p><p>如果要使用 <code>webcomponents-loader.js</code> 需要在 <code>angular.json</code> 的 asset 下加入 webcomponentsjs 的bundle 到 asset。</p><p>因為 load 是使用 <code>document.querySelector(&#39;script[src*=&quot;webcomponents-loader.js&quot;]&#39;)</code> 再進行 replace。</p><p>使用時， <code>angular.json</code> 需要在把 script 顯式加入</p><p><code>&quot;bundleName&quot;: &quot;webcomponents-loader&quot;,&quot;lazy&quot;: true</code></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">"assets": [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"glob"</span>: <span class="string">"**/*"</span>,</span><br><span class="line">    <span class="attr">"input"</span>: <span class="string">"node_modules/@webcomponents/webcomponentsjs/bundles"</span>,</span><br><span class="line">    <span class="attr">"output"</span>: <span class="string">"./bundles"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  "src/favicon.ico",</span><br><span class="line">  <span class="string">"src/assets"</span></span><br><span class="line">],</span><br><span class="line">....</span><br><span class="line">"scripts": [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"input"</span>: <span class="string">"node_modules/document-register-element/build/document-register-element.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">  <span class="attr">"input"</span>: <span class="string">"node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"</span>,      </span><br><span class="line">  &#125;</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">"input"</span>: <span class="string">"node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"</span>,</span><br><span class="line">    <span class="attr">"bundleName"</span>: <span class="string">"webcomponents-loader"</span>,</span><br><span class="line">    <span class="attr">"lazy"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure><h2 id="組件"><a href="#組件" class="headerlink" title="組件"></a>組件</h2><h3 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h3><p>在需要 web components 的組件下加入或修改 <code>encapsulation: ViewEncapsulation.ShadowDom</code>。</p><p>Ps: <code>ViewEncapsulation.Native</code> 在 Angular 6.1.0 己經被標記為棄用，</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'app-picture'</span>,</span><br><span class="line">  templateUrl: <span class="string">'./picture.component.html'</span>,</span><br><span class="line">  styleUrls: [<span class="string">'./picture.component.styl'</span>],</span><br><span class="line">  encapsulation: ViewEncapsulation.ShadowDom</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> PictureComponent</span><br></pre></td></tr></table></figure><h3 id="載入"><a href="#載入" class="headerlink" title="載入"></a>載入</h3><p>要使模板上使用 web components，需要在 <code>AppModule.ts</code> 的載入組件和組件的元素名。</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppModule <span class="keyword">implements</span> DoBootstrap &#123;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params"><span class="keyword">private</span> faIconService: FaIconService, <span class="keyword">private</span> injector: Injector</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> customButton = createCustomElement(PictureComponent, &#123;injector: <span class="keyword">this</span>.injector&#125;);</span><br><span class="line">    customElements.define(<span class="string">'nat-picture'</span>, &lt;<span class="built_in">Function</span>&gt;customButton);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ngDoBootstrap(appRef: ApplicationRef): <span class="built_in">void</span> &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Web-Components&quot;&gt;&lt;a href=&quot;#Web-Components&quot; class=&quot;headerlink&quot; title=&quot;Web Components&quot;&gt;&lt;/a&gt;Web Components&lt;/h2&gt;&lt;p&gt;Web Components 是最新的 HT
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>在Angular動態加載html</title>
@@ -80,13 +101,13 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>主題遷移到 Angular 進度</title>
     <link href="https://blog.sukitsuki.com/2018/12/10/%E4%B8%BB%E9%A1%8C%E9%81%B7%E7%A7%BB%E5%88%B0-Angular-%E9%80%B2%E5%BA%A6/"/>
     <id>https://blog.sukitsuki.com/2018/12/10/主題遷移到-Angular-進度/</id>
     <published>2018-12-10T16:27:32.000Z</published>
-    <updated>2018-12-17T13:10:52.633Z</updated>
+    <updated>2018-12-19T13:16:13.455Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="安格拉絲-Angular"><a href="#安格拉絲-Angular" class="headerlink" title="安格拉絲 / Angular"></a>安格拉絲 / Angular</h1><blockquote><p>大紮好，我系 <a href="https://github.com/Tsuki/" target="_blank" rel="noopener">Tsuki</a>，安格拉絲，介四里沒有挽過的船新版本，擠需體驗三番鍾，里造會幹我一樣，愛象節款框架。</p></blockquote><p>進度</p><ul><li style="list-style:none"><input type="checkbox" checked> Header (完成)</li><li style="list-style:none"><input type="checkbox" checked> Pages (完成)</li><li style="list-style:none"><input type="checkbox" checked> Article (完成)</li><li style="list-style:none"><input type="checkbox" checked> Header 動畫 (完成)</li><li style="list-style:none"><input type="checkbox" checked> Pages 動畫 (完成)</li><li style="list-style:none"><input type="checkbox" checked> Footer (完成)</li><li style="list-style:none"><input type="checkbox" checked> Article 前後頁</li><li style="list-style:none"><input type="checkbox" checked> Markdown Todo-list</li><li style="list-style:none"><input type="checkbox" checked> Post page</li><li style="list-style:none"><input type="checkbox"> mobile</li><li style="list-style:none"><input type="checkbox"> Cate/Tag/Archive</li><li style="list-style:none"><input type="checkbox"> Side menu</li><li style="list-style:none"><input type="checkbox"> APlayer</li><li style="list-style:none"><input type="checkbox"> 優化 moment.js</li><li style="list-style:none"><input type="checkbox"> 動態注入配置</li><li style="list-style:none"><input type="checkbox"> 評論數</li><li style="list-style:none"><input type="checkbox"> FancyBox 效果</li><li style="list-style:none"><input type="checkbox"> Article 置頂跑馬燈</li><li style="list-style:none"><input type="checkbox"> Badge count</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="安格拉絲-Angular"><a href="#安格拉絲-Angular" class="headerlink" title="安格拉絲 / Angular"></a>安格拉絲 / Angular</h1><blockquote><p>大紮好，我系 <a href="https://github.com/Tsuki/" target="_blank" rel="noopener">Tsuki</a>，安格拉絲，介四里沒有挽過的船新版本，擠需體驗三番鍾，里造會幹我一樣，愛象節款框架。</p></blockquote><p>進度</p><ul><li style="list-style:none"><input type="checkbox" checked> Header (完成)</li><li style="list-style:none"><input type="checkbox" checked> Pages (完成)</li><li style="list-style:none"><input type="checkbox" checked> Article (完成)</li><li style="list-style:none"><input type="checkbox" checked> Header 動畫 (完成)</li><li style="list-style:none"><input type="checkbox" checked> Pages 動畫 (完成)</li><li style="list-style:none"><input type="checkbox" checked> Footer (完成)</li><li style="list-style:none"><input type="checkbox" checked> Article 前後頁</li><li style="list-style:none"><input type="checkbox" checked> Markdown Todo-list</li><li style="list-style:none"><input type="checkbox" checked> Post page</li><li style="list-style:none"><input type="checkbox"> mobile</li><li style="list-style:none"><input type="checkbox"> Cate/Tag/Arcivee</li><li style="list-style:none"><input type="checkbox"> Side menu</li><li style="list-style:none"><input type="checkbox"> APlayer</li><li style="list-style:none"><input type="checkbox"> 優化 moment.js</li><li style="list-style:none"><input type="checkbox"> 動態注入配置</li><li style="list-style:none"><input type="checkbox"> 評論數</li><li style="list-style:none"><input type="checkbox"> FancyBox 效果</li><li style="list-style:none"><input type="checkbox"> Article 置頂跑馬燈</li><li style="list-style:none"><input type="checkbox"> Badge count</li></ul>]]></content>
     
     <summary type="html">
     
@@ -472,30 +493,6 @@
     </summary>
     
       <category term="Ops" scheme="https://blog.sukitsuki.com/categories/Ops/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>身為男高中生...讀後感</title>
-    <link href="https://blog.sukitsuki.com/2018/08/06/%E8%BA%AB%E7%82%BA%E7%94%B7%E9%AB%98%E4%B8%AD%E7%94%9F-%E8%AE%80%E5%BE%8C%E6%84%9F/"/>
-    <id>https://blog.sukitsuki.com/2018/08/06/身為男高中生-讀後感/</id>
-    <published>2018-08-06T12:09:35.000Z</published>
-    <updated>2018-08-18T13:01:30.765Z</updated>
-    
-    <content type="html"><![CDATA[<p>本書全名是《身為男高中生兼當紅輕小說作家的我，正被年紀比我小且從事聲優工作的女同學掐住脖子》(男子高校生で売れっ子ライトノベル作家をしているけれど、年下のクラスメイトで声優の女の子に首を絞められている。) 2014年時最長的小說作品名，一共51字呢。</p><p>從書名看起來很像一本校園戀愛故事的輕小說，但現實上並，不，是。這是一本科普文，這本書一共有三集（十集，偽）。</p><p>為什麼說這本書是科普文呢，因為這本說主要說的是輕小說作家出書的經歷和教學。</p><p>引子是主角的小說（作中作）在休學一年期間動漫化，在复學後被身為聲優的同學發現，之後每星期在前往東京的火車上被聊的故事。本中女主角為了引起男主角的注意，因此不斷向男主角提出話題，而話題就是男主角身為作家的工作內容。</p><p>第一，二集主要是在火車上互動，對話中提及大部分作家工作的內容，最後因為女主角被劇透了而掐住脖子www。看到這裹，書本己經提及大部分作家的工作內容，而且脖子也掐，應該完結吧。</p><p><img src="https://blog.sukitsuki.com/2018/08/06/身為男高中生-讀後感/photo_2018-08-06_12-05-57.jpg" alt=""></p><p>但三個月後又出了第三集，這集從本來的主角第一人稱，改為每章分拆成兩/四小章，男女主角梅花間竹的自白的敍事方式。這集一開始看上去像要回到校園生活故事，但其實還是作家的工作內容，其次是回收伏筆。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;本書全名是《身為男高中生兼當紅輕小說作家的我，正被年紀比我小且從事聲優工作的女同學掐住脖子》(男子高校生で売れっ子ライトノベル作家をしているけれど、年下のクラスメイトで声優の女の子に首を絞められている。) 2014年時最長的小說作品名，一共51字呢。&lt;/p&gt;
-&lt;p&gt;從書名看
-      
-    
-    </summary>
-    
-      <category term="小說" scheme="https://blog.sukitsuki.com/categories/%E5%B0%8F%E8%AA%AA/"/>
     
     
   </entry>
