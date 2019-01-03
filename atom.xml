@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2019-01-01T09:39:25.911Z</updated>
+  <updated>2019-01-03T08:24:29.711Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>選擇SFP的ONU端口</title>
+    <link href="https://blog.sukitsuki.com/2019/01/03/%E9%81%B8%E6%93%87SFP%E7%9A%84ONU%E7%AB%AF%E5%8F%A3/"/>
+    <id>https://blog.sukitsuki.com/2019/01/03/選擇SFP的ONU端口/</id>
+    <published>2019-01-03T13:36:40.000Z</published>
+    <updated>2019-01-03T08:24:29.711Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SFP接口"><a href="#SFP接口" class="headerlink" title="SFP接口"></a>SFP接口</h2><p>現時的路由器/交換器在需要接入光纖的時候，一般需要使用上 SFP 接口。</p><p>SFP 的接口比上一代的 GBIC 接口要小一點，這樣前端面版就可以接入更多的光纖。</p><p>SFP 接口分別有兩種制式，接 1G 或以下的 SFP 接口和接 1G 到 10G 的 SFP+ 接口。</p><p>雖然兩種制式的接口都一樣，但並一定不通用，部分交換機 SFP 接口同時支持兼容 SFP+。</p><h2 id="接口種類"><a href="#接口種類" class="headerlink" title="接口種類"></a>接口種類</h2><p>SFP 接口的種類可以從速率，光波長，傳送距離，光端接口，單模/雙模，單纖雙向(BiDi)/雙纖，端面。</p><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><p>按照速率分類：有155M/622M/1.25G/2.125G/4.25G/8G/10G，常見的有155M/1.25G/2.125G/10G。</p><h3 id="波長"><a href="#波長" class="headerlink" title="波長"></a>波長</h3><p>按照波長分類：有850nm/1310nm/1550nm/1490nm/1530nm/1610nm，多模常見的有850nm，單模的有1310nm/1550nm/1490nm。</p><h3 id="傳送距離"><a href="#傳送距離" class="headerlink" title="傳送距離"></a>傳送距離</h3><p>按照傳送距離分類：有5KM/20KM/40KM/80KM/120KM等，</p><h3 id="光端接口"><a href="#光端接口" class="headerlink" title="光端接口"></a>光端接口</h3><p>按照光端接口分類：常見的有SC/LC/FC/ST，</p><ul><li>FC (Ferrule Connector)，金屬接頭對光纖芯提供良好的保護，但它是用旋轉的方式，對光纖芯容易造成刮傷。</li><li>SC (Subscriber Connector / Standard Connector)，接頭主要應用一般固網環境中，提供良好的包裝強度。</li><li>LC (Lucent Connector / Local Connector)，接頭主要應用企業網絡環境中，用來取代SC接頭的，它的尺寸比較小，適合大量佈置。</li><li>ST (Straight Tip)，接頭有防呆卡榫避免接頭損毀，將線插入插座，然後旋轉外面的卡榫將之鎖住。</li></ul><h3 id="單模-雙模"><a href="#單模-雙模" class="headerlink" title="單模/雙模"></a>單模/雙模</h3><ul><li><p>多模光纖(MMF，Multi Mode Fiber)，纖芯較粗，可傳多種模式的光。但其模間色散較大，且隨傳輸距離的增加模間色散情況會逐漸加重。</p></li><li><p>單模光纖(SMF，Single Mode Fiber)，纖芯較細，只能傳一種模式的光。因此，其模間色散很小，適用於遠程通訊。</p></li></ul><h3 id="單纖雙向-BiDi-雙纖雙向"><a href="#單纖雙向-BiDi-雙纖雙向" class="headerlink" title="單纖雙向(BiDi)/雙纖雙向"></a>單纖雙向(BiDi)/雙纖雙向</h3><ul><li><p>單纖雙向，採用了WDM技術，通過一根光纖實現雙向傳輸信號，應用於高性能集成的雙工數據鏈路中，但是需要保證發射和接收的為不同波長的信號。常用光模塊的波長方案為單模1310nm/1550nm、1310nm/1490nm。</p></li><li><p>雙纖雙向，常規的光模塊都是雙纖的，有兩個光纖插孔，而單纖雙向光模塊只有一個插孔，一般的光模塊都需要兩個端口，一個用來發射數據，一個用來接收數據。</p></li></ul><p>單纖BIDI光模塊比較貴，但節省光纖資源，只需要1根光纖，適合家居式網絡 FTTx 等方案。</p><p>雙纖光模塊不需要配對使用，任意兩個光模塊都可以連接，適合企業內聯網方案，方便替換接口，但是需要多用一跟光纖。</p><h3 id="端面"><a href="#端面" class="headerlink" title="端面"></a>端面</h3><ul><li><p>PC (Physical Contact，及物理接觸) 是光纖跳線上光纖連接器最常見的研磨方式，被廣泛應用於電信運營商設備上。雖然光纖連接器端面看似平面，但實際上其端面經過輕微彎曲拋光，且彎曲最高點是纖芯中心，這樣可有效減少光纖組件之間的空氣隙，一般情況下，採用PC研磨方式的光纖跳線的回波損耗為-40dB。</p></li><li><p>UPC (Ultra Physical Contact，即超物理接觸) 是由PC演進而來，它對端面拋光進行了優化，從而獲得了更好的表面光潔度。UPC與PC一樣，其彎曲最高點在光纖芯中心，但UPC回波損耗相對於PC來說更高，一般是在-50dB（甚至更高）。它通常被用於以太網網絡設備上（如ODF光纖配線架、媒體轉換器和光纖交換機等），同時也用於電話系統。</p></li><li><p>APC (Angled Physical Contact，即角度物理接觸) 是光纖端面研磨的最新技術，其端面採用了8度夾角研磨方式，使其端面研磨更加精準，可有效減少反射，回波損耗大約在-60dB。APC一般用於CATV等高波長範圍的光學射頻應用。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;SFP接口&quot;&gt;&lt;a href=&quot;#SFP接口&quot; class=&quot;headerlink&quot; title=&quot;SFP接口&quot;&gt;&lt;/a&gt;SFP接口&lt;/h2&gt;&lt;p&gt;現時的路由器/交換器在需要接入光纖的時候，一般需要使用上 SFP 接口。&lt;/p&gt;&lt;p&gt;SFP 的接口比上一代的 GBIC 接口要小一點，這樣前端面版就可以接入更多的光纖。&lt;/p&gt;&lt;p&gt;SFP 接口分別有兩種制式，接 1G 或以下的 SFP 接口和接 1G 到 10G 的 SFP+ 接口。&lt;/p&gt;&lt;p&gt;雖然兩種制式的接口都一樣，但並一定不通用，部分交換機 SFP 接口同時支持兼容 SFP+。&lt;/p&gt;&lt;h2 id=&quot;接口種類&quot;&gt;&lt;a href=&quot;#接口種類&quot; class=&quot;headerlink&quot; title=&quot;接口種類&quot;&gt;&lt;/a&gt;接口種類&lt;/h2&gt;&lt;p&gt;SFP 接口的種類可以從速率，光波長，傳送距離，光端接口，單模/雙模，單纖雙向(BiDi)/雙纖，端面。&lt;/p&gt;&lt;h3 id=&quot;速率&quot;&gt;&lt;a href=&quot;#速率&quot; class=&quot;headerlink&quot; title=&quot;速率&quot;&gt;&lt;/a&gt;速率&lt;/h3&gt;&lt;p&gt;按照速率分類：有155M/622M/1.25G/2.125G/4.25G/8G/10G，常見的有155M/1.25G/2.125G/10G。&lt;/p&gt;&lt;h3 id=&quot;波長&quot;&gt;&lt;a href=&quot;#波長&quot; class=&quot;headerlink&quot; title=&quot;波長&quot;&gt;&lt;/a&gt;波長&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="Network" scheme="https://blog.sukitsuki.com/categories/Network/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>當年今日</title>
@@ -476,29 +496,6 @@
     </summary>
     
       <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Golang 偽鑽石問題</title>
-    <link href="https://blog.sukitsuki.com/2018/08/09/Golang-Embedding-trap/"/>
-    <id>https://blog.sukitsuki.com/2018/08/09/Golang-Embedding-trap/</id>
-    <published>2018-08-09T11:59:09.000Z</published>
-    <updated>2018-12-10T11:08:42.291Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Golang-偽鑽石問題"><a href="#Golang-偽鑽石問題" class="headerlink" title="Golang 偽鑽石問題"></a>Golang 偽鑽石問題</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Reader <span class="keyword">struct</span>&#123; buffer <span class="keyword">int</span> &#125;</span><br><span class="line"><span class="keyword">type</span> Writer <span class="keyword">struct</span>&#123; buffer <span class="keyword">int</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ReadWriter <span class="keyword">struct</span> &#123;</span><br><span class="line">Reader</span><br><span class="line">Writer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> rw ReadWriter</span><br><span class="line">    <span class="comment">// &#123;Writer:&#123;buffer:0&#125; Reader:&#123;buffer:0&#125;&#125;</span></span><br><span class="line">fmt.Printf(<span class="string">"%+v"</span>, rw.buffer)</span><br><span class="line">    <span class="comment">// ambiguous selector rw.buffer</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在 go 之中沒有實現真正的繼承，<code>rw.buffer</code> 只是一個語法糖，如果內嵌結构是匿名字段會自動提升。</p><p>要取得 buffer 就需要指定 <code>rw.Reader.buffer</code> 或 <code>rw.Writer.buffer</code>.</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Buffer <span class="keyword">struct</span>&#123; Buffer <span class="keyword">int</span> &#125;</span><br><span class="line"><span class="keyword">type</span> Reader <span class="keyword">struct</span>&#123; Buffer &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ReadWriter <span class="keyword">struct</span> &#123;</span><br><span class="line">Buffer</span><br><span class="line">Reader</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> rw ReadWriter</span><br><span class="line">    <span class="comment">// &#123;Buffer:&#123;Buffer:0&#125; Reader:&#123;Buffer:&#123;Buffer:0&#125;&#125;&#125;</span></span><br><span class="line">fmt.Printf(<span class="string">"%+v"</span>, rw.Buffer)</span><br><span class="line">    <span class="comment">// &#123;int:0&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>這種寫法就沒有鑽石問題，因為淺層己經有 <code>rw.Buffer</code>，所以 <code></code>rw.Reader.buffer` 不會自動提升。</p><p>不過這種寫法非常不直觀，很容易引起混亂，查看代碼時會忘了拿的是那 <code>Buffer</code>。 所以這種情況下，還是盡量避免使用。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Golang-偽鑽石問題&quot;&gt;&lt;a href=&quot;#Golang-偽鑽石問題&quot; class=&quot;headerlink&quot; title=&quot;Golang 偽鑽石問題&quot;&gt;&lt;/a&gt;Golang 偽鑽石問題&lt;/h1&gt;&lt;figure class=&quot;highlight go&quot;&gt;&lt;tab
-      
-    
-    </summary>
-    
-      <category term="Golang" scheme="https://blog.sukitsuki.com/categories/Golang/"/>
     
     
   </entry>
