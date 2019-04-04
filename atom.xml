@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2019-01-03T08:24:29.711Z</updated>
+  <updated>2019-04-04T12:59:22.508Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,129 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>把OPENSSL 私鑰轉換成 RSA 私鈅</title>
+    <link href="https://blog.sukitsuki.com/2019/04/04/%E6%8A%8AOPENSSL-%E7%A7%81%E9%91%B0%E8%BD%89%E6%8F%9B%E6%88%90-RSA-%E7%A7%81%E9%88%85/"/>
+    <id>https://blog.sukitsuki.com/2019/04/04/把OPENSSL-私鑰轉換成-RSA-私鈅/</id>
+    <published>2019-04-04T19:43:03.000Z</published>
+    <updated>2019-04-04T12:59:22.508Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="事原"><a href="#事原" class="headerlink" title="事原"></a>事原</h2><p>由於 OpenSSH version 7.9p1 修改了 預設的私鑰輸出格式，</p><p>從 <code>-----BEGIN RSA PRIVATE KEY-----</code> 改成 <code>-----BEGIN OPENSSH PRIVATE KEY-----</code></p><p>所以 Jetbrain 的全家桶都不能讀取正確的私鑰。</p><h3 id="指令-把原有的私鑰-重新導出"><a href="#指令-把原有的私鑰-重新導出" class="headerlink" title="指令 - 把原有的私鑰 重新導出"></a>指令 - 把原有的私鑰 重新導出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.ssh/id_rsa ~/.ssh/id_rsa.bak</span><br><span class="line">ssh-keygen -p -m PEM -f ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure><h3 id="指令-重新生成新的-PEM-格式私鑰"><a href="#指令-重新生成新的-PEM-格式私鑰" class="headerlink" title="指令 - 重新生成新的 PEM 格式私鑰"></a>指令 - 重新生成新的 PEM 格式私鑰</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cp ~/.ssh/id_rsa ~/.ssh/id_rsa.bak</span><br><span class="line"></span><br><span class="line">ssh-keygen -m PEM -C &quot;email&quot;</span><br><span class="line">或</span><br><span class="line">ssh-keygen -t rsa -b 4096 -m pem -C &quot;email&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;事原&quot;&gt;&lt;a href=&quot;#事原&quot; class=&quot;headerlink&quot; title=&quot;事原&quot;&gt;&lt;/a&gt;事原&lt;/h2&gt;&lt;p&gt;由於 OpenSSH version 7.9p1 修改了 預設的私鑰輸出格式，&lt;/p&gt;&lt;p&gt;從 &lt;code&gt;-----BEGIN RSA P
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SS PAC模式白名單</title>
+    <link href="https://blog.sukitsuki.com/2019/03/05/Shadowsocks-%E7%99%BD%E5%90%8D%E5%96%AE/"/>
+    <id>https://blog.sukitsuki.com/2019/03/05/Shadowsocks-白名單/</id>
+    <published>2019-03-05T20:36:46.000Z</published>
+    <updated>2019-04-04T12:59:22.508Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用 SS 但又不想使用全局，避免大量跑光流量，需要定制白名單給 google / youtube。</p><h1 id="白名單制作"><a href="#白名單制作" class="headerlink" title="白名單制作"></a>白名單制作</h1><p>由於 SS 沒有自帶白名單模式，而且自帶的 gfwlist.txt 內有避開國內的域名，所以需要先制作一分全局的 gfwlist.txt</p><p><code>||*</code> 是全局的規則，我們需要先做base64處理，下面是處理好的 <code>gfwlist.txt</code> 和 gist 地址。</p><p>之後需要放到 Github 或其他地方寄存。</p><script src="https://gist.github.com/Tsuki/67e448466baf453a9a9eca4a6d55592a.js"></script><p><a href="https://gist.githubusercontent.com/Tsuki/67e448466baf453a9a9eca4a6d55592a/raw/4e262236bf1cb21348612274fbd5b5cf3da1afe7/sswl.txt" target="_blank" rel="noopener">https://gist.githubusercontent.com/Tsuki/67e448466baf453a9a9eca4a6d55592a/raw/4e262236bf1cb21348612274fbd5b5cf3da1afe7/sswl.txt</a></p><p>之後在 User-rule 下加入想要白名單的域名。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@@googlevideo.com</span><br><span class="line">@@youtube.com</span><br><span class="line">@@google.com</span><br><span class="line">@@ytimg.com</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;使用 SS 但又不想使用全局，避免大量跑光流量，需要定制白名單給 google / youtube。&lt;/p&gt;&lt;h1 id=&quot;白名單制作&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Async/Await Golang式寫法</title>
+    <link href="https://blog.sukitsuki.com/2019/02/09/Async-Await-golang%E5%BC%8F%E5%AF%AB%E6%B3%95/"/>
+    <id>https://blog.sukitsuki.com/2019/02/09/Async-Await-golang式寫法/</id>
+    <published>2019-02-09T11:28:10.000Z</published>
+    <updated>2019-04-04T12:59:22.508Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用 promise 和 result pair 避免 try-catch style.</p><p>Javascript 例子</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// to.ts</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">to</span>(<span class="params">promise: <span class="built_in">Promise</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> promise</span><br><span class="line">        .then(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> [<span class="literal">null</span>, data];</span><br><span class="line">        &#125;)</span><br><span class="line">        .catch(<span class="function"><span class="params">err</span> =&gt;</span> [err]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> to <span class="keyword">from</span> <span class="string">'to'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AccountComponent <span class="keyword">implements</span> OnInit, OnChanges&#123;</span><br><span class="line">    <span class="keyword">async</span> ngOnChanges(changes: SimpleChanges) &#123;</span><br><span class="line">        <span class="comment">// TODO check change</span></span><br><span class="line">        <span class="keyword">let</span> err, result;</span><br><span class="line">        [err, result] = <span class="keyword">await</span> to(<span class="keyword">this</span>.httpService.listAccount(<span class="keyword">this</span>.data).toPromise());</span><br><span class="line">        <span class="keyword">if</span> (err != <span class="literal">null</span> &amp;&amp; err <span class="keyword">instanceof</span> HttpErrorResponse) &#123;</span><br><span class="line">          <span class="comment">// err in</span></span><br><span class="line">          <span class="keyword">this</span>.notice.create(<span class="string">'error'</span>, err.error.msg);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>以下是 Golang 的寫法</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> err, result := httpService.listAccount(data); err != <span class="literal">nil</span>&#123;</span><br><span class="line">    <span class="comment">// process...</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// error handling...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><a href="https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/" target="_blank" rel="noopener">How to write async await without try-catch blocks in Javascript - dima</a></p><p><a href="https://segmentfault.com/a/1190000011802045" target="_blank" rel="noopener">从不用 try-catch 实现的 async/await 语法说错误处理</a></p><p>題外話 – try-catch 的惡魔</p><p><a href="http://teddy-chen-tw.blogspot.com/2011/05/checked-or-unchecked-exceptions-1.html" target="_blank" rel="noopener">Checked or unchecked exceptions (1)</a></p><p><a href="http://www.importnew.com/21117.html" target="_blank" rel="noopener">Java中的Checked Exception——美丽世界中潜藏的恶魔</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用 promise 和 result pair 避免 try-catch style.&lt;/p&gt;&lt;p&gt;Javascript 例子&lt;/p&gt;&lt;figure class=&quot;highlight typescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// to.ts&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;to&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;promise: &lt;span class=&quot;built_in&quot;&gt;Promise&lt;/span&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; promise&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .then(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;data&lt;/span&gt; =&amp;gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [&lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;, data];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        .catch(&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;params&quot;&gt;err&lt;/span&gt; =&amp;gt;&lt;/span&gt; [err]);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight typescript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; to &lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;to&#39;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; AccountComponent &lt;span class=&quot;keyword&quot;&gt;implements&lt;/span&gt; OnInit, OnChanges&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;async&lt;/span&gt; ngOnChanges(changes: SimpleChanges) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// TODO check change&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; err, result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        [err, result] = &lt;span class=&quot;keyword&quot;&gt;await&lt;/span&gt; to(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.httpService.listAccount(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.data).toPromise());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (err != &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt; &amp;amp;&amp;amp; err &lt;span class=&quot;keyword&quot;&gt;instanceof&lt;/span&gt; HttpErrorResponse) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;comment&quot;&gt;// err in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;          &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.notice.create(&lt;span class=&quot;string&quot;&gt;&#39;error&#39;&lt;/span&gt;, err.error.msg);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;以下是 Golang 的寫法&lt;/p&gt;&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; err, result := httpService.listAccount(data); err != &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// process...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125; &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// error handling...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;a href=&quot;https://blog.grossman.io/how-to-write-async-await-without-try-catch-blocks-in-javascript/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;How to write async await without try-catch blocks in Javascript - dima&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000011802045&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;从不用 try-catch 实现的 async/await 语法说错误处理&lt;/a&gt;&lt;/p&gt;&lt;p&gt;題外話 – try-catch 的惡魔&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://teddy-chen-tw.blogspot.com/2011/05/checked-or-unchecked-exceptions-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Checked or unchecked exceptions (1)&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android 中文在地化機制</title>
+    <link href="https://blog.sukitsuki.com/2019/02/02/Android-%E4%B8%AD%E6%96%87%E5%9C%A8%E5%9C%B0%E5%8C%96%E6%A9%9F%E5%88%B6/"/>
+    <id>https://blog.sukitsuki.com/2019/02/02/Android-中文在地化機制/</id>
+    <published>2019-02-02T12:03:44.000Z</published>
+    <updated>2019-04-04T12:59:22.508Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="在-Andorid-7-之前，"><a href="#在-Andorid-7-之前，" class="headerlink" title="在 Andorid 7 之前，"></a>在 Andorid 7 之前，</h3><ul><li><code>zh-CN</code> (簡體)</li><li><code>zh-TW</code> (繁體)</li><li>特殊子集:<ul><li><code>zh-SG</code> (簡體)</li><li><code>zh-HK</code> (繁體)</li><li><code>zh-MO</code> (繁體)</li></ul></li></ul><h3 id="在-Android-7-及之後，-喵喵喵？"><a href="#在-Android-7-及之後，-喵喵喵？" class="headerlink" title="在 Android 7 及之後，(喵喵喵？)"></a>在 Android 7 及之後，(喵喵喵？)</h3><ul><li><code>zh-Hans-CN</code> (簡體)</li><li><code>zh-Hans-MO</code> (簡體)</li><li><code>zh-Hans-HK</code> (簡體)</li><li><code>zh-Hans-SG</code> (簡體)</li><li><code>zh-Hant-TW</code> (繁體)</li><li><code>zh-Hant-HK</code> (繁體)</li><li><code>zh-Hant-MO</code> (繁體)</li></ul><p>###Android 7 Fallback 機制</p><p><code>zh-Hans-*</code> 退回到 <code>zh</code></p><p><code>zh-Hant-*</code> 退回到 <code>zh-Hant (zh-rTW)</code></p><p>而 <code>zh-Hans-MO</code> 和 <code>zh-Hans-HK</code> 需要指定 <code>values-b+zh+Hans+HK/MO</code> 再退回 <code>zh-Hans-*</code> 處理</p><p><a href="https://gist.github.com/amake/0ac7724681ac1c178c6f95a5b09f03ce#new-locales-vs-old-locales-chinese" target="_blank" rel="noopener">Correct localization on Android 7</a></p><p><a href="https://developer.android.com/guide/topics/resources/multilingual-support" target="_blank" rel="noopener">Language and locale resolution overview</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;在-Andorid-7-之前，&quot;&gt;&lt;a href=&quot;#在-Andorid-7-之前，&quot; class=&quot;headerlink&quot; title=&quot;在 Andorid 7 之前，&quot;&gt;&lt;/a&gt;在 Andorid 7 之前，&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;zh-CN&lt;/
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android 文件保存和索引</title>
+    <link href="https://blog.sukitsuki.com/2019/02/02/Android-%E6%96%87%E4%BB%B6%E4%BF%9D%E5%AD%98%E5%92%8C%E7%B4%A2%E5%BC%95/"/>
+    <id>https://blog.sukitsuki.com/2019/02/02/Android-文件保存和索引/</id>
+    <published>2019-02-02T12:02:58.000Z</published>
+    <updated>2019-04-04T12:59:22.508Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>Android 在保存文件後，如果不在索引目錄下是不會自動建立索引，需要調用 <code>MediaScanner</code> 發出一個廣播和指定目錄或文件的指令才會實行。</p><p>實作 <code>MediaScannerConnectionClient</code> 類，發出掃描指令並在完成後斷開連接。</p><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SingleMediaScanner</span></span>(<span class="keyword">val</span> context: Context, <span class="keyword">val</span> file: File) :</span><br><span class="line">  MediaScannerConnection.MediaScannerConnectionClient &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">val</span> mediaScannerConnection</span><br><span class="line">    <span class="keyword">by</span> lazy &#123; MediaScannerConnection(context, <span class="keyword">this</span>) &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onMediaScannerConnected</span><span class="params">()</span></span> =</span><br><span class="line">    mediaScannerConnection.scanFile(file.absolutePath, <span class="literal">null</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">override</span> <span class="function"><span class="keyword">fun</span> <span class="title">onScanCompleted</span><span class="params">(path: <span class="type">String</span>?, uri: <span class="type">Uri</span>?)</span></span> =</span><br><span class="line">    mediaScannerConnection.disconnect()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fun</span> Context.<span class="title">takeScreenshot</span><span class="params">(bitmap: <span class="type">Bitmap</span>)</span></span>: String? &#123;</span><br><span class="line">  <span class="keyword">val</span> mediaStorageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES)</span><br><span class="line">  <span class="keyword">val</span> timestamp = SimpleDateFormat(<span class="string">"yyyyMMdd_HHmmss"</span>).format(Date())</span><br><span class="line">  <span class="keyword">val</span> mediaFile = File(<span class="string">"<span class="subst">$&#123;mediaStorageDir.path&#125;</span><span class="subst">$&#123;File.separator&#125;</span><span class="variable">$timestamp</span>.jpg"</span>)</span><br><span class="line">  <span class="keyword">var</span> compress = <span class="literal">false</span></span><br><span class="line">  doAsync &#123;</span><br><span class="line">    <span class="keyword">if</span> (!mediaStorageDir.exists() &amp;&amp; !mediaStorageDir.mkdirs()) &#123;</span><br><span class="line">      <span class="keyword">return</span><span class="symbol">@doAsync</span></span><br><span class="line">    &#125;</span><br><span class="line">    Timber.d(<span class="string">"screenshot: file <span class="subst">$&#123;mediaStorageDir.path&#125;</span><span class="subst">$&#123;File.separator&#125;</span><span class="variable">$timestamp</span>.jpg"</span>)</span><br><span class="line">    <span class="keyword">val</span> fos = FileOutputStream(mediaFile)</span><br><span class="line">    compress = bitmap.compress(Bitmap.CompressFormat.JPEG, <span class="number">90</span>, fos)</span><br><span class="line">    fos.close()</span><br><span class="line">    SingleMediaScanner(<span class="keyword">this</span><span class="symbol">@takeScreenshot</span>, mediaStorageDir)</span><br><span class="line">  &#125;.<span class="keyword">get</span>()</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">if</span> (compress) mediaFile.toString() <span class="keyword">else</span> <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;索引&quot;&gt;&lt;a href=&quot;#索引&quot; class=&quot;headerlink&quot; title=&quot;索引&quot;&gt;&lt;/a&gt;索引&lt;/h3&gt;&lt;p&gt;Android 在保存文件後，如果不在索引目錄下是不會自動建立索引，需要調用 &lt;code&gt;MediaScanner&lt;/code&gt; 發出一個廣
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android requestedOrientation 坑</title>
+    <link href="https://blog.sukitsuki.com/2019/01/30/Android-requestedOrientation-%E5%9D%91/"/>
+    <id>https://blog.sukitsuki.com/2019/01/30/Android-requestedOrientation-坑/</id>
+    <published>2019-01-30T14:42:39.000Z</published>
+    <updated>2019-04-04T12:59:22.508Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果在 Activity on Create 時 配置 <code>requestedOrientation</code> 等動作時會觸發 view 重新渲染，會令 view有機率發生奇怪的 dead thread 等情況。<code>Handler sending message to a Handler on a dead thread</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT</span><br></pre></td></tr></table></figure><p>正確的做法是在 <code>AndroidManifest.xml</code> 上加入 <code>android:screenOrientation=&quot;portrait&quot;</code> 。</p><p><a href="https://developer.android.com/guide/topics/resources/runtime-changes" target="_blank" rel="noopener">Documentation: Handle configuration changes</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;如果在 Activity on Create 時 配置 &lt;code&gt;requestedOrientation&lt;/code&gt; 等動作時會觸發 view 重新渲染，會令 view有機率發生奇怪的 dead thread 等情況。&lt;code&gt;Handler sending mes
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>選擇SFP的ONU端口</title>
@@ -331,171 +454,6 @@
       <category term="Front-end" scheme="https://blog.sukitsuki.com/categories/Front-end/"/>
     
       <category term="JavaScript" scheme="https://blog.sukitsuki.com/categories/Front-end/JavaScript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SQL語法中的過濾方法</title>
-    <link href="https://blog.sukitsuki.com/2018/09/20/SQL%E8%AA%9E%E6%B3%95%E4%B8%AD%E7%9A%84%E9%81%8E%E6%BF%BE%E6%96%B9%E6%B3%95/"/>
-    <id>https://blog.sukitsuki.com/2018/09/20/SQL語法中的過濾方法/</id>
-    <published>2018-09-20T20:17:49.000Z</published>
-    <updated>2018-09-20T12:58:44.135Z</updated>
-    
-    <content type="html"><![CDATA[<p>在統計系統中，很常用到不同維度的分類和過澽，</p><p>比如按類加總/平均等等</p><table><thead><tr><th>Id</th><th>Gender</th><th>Salary</th><th>Country</th><th>Position</th><th>Status</th></tr></thead><tbody><tr><td>1</td><td>M</td><td>1000</td><td>China</td><td>Software</td><td>working</td></tr><tr><td>2</td><td>F</td><td>2000</td><td>USA</td><td>Software</td><td>holiday</td></tr><tr><td>3</td><td>M</td><td>5000</td><td>UK</td><td>Hardware</td><td>holiday</td></tr><tr><td>4</td><td>F</td><td>4000</td><td>Germany</td><td>Hardware</td><td>working</td></tr><tr><td>5</td><td>M</td><td>5000</td><td>USA</td><td>Admin</td><td>holiday</td></tr><tr><td>6</td><td>F</td><td>4000</td><td>Germany</td><td>Admin</td><td>holiday</td></tr></tbody></table><p>如果在上要一次過找出Admin和非Admin人員的平均Salary可以在 SQL中用 filter 或 case</p><p>PostgreSQL</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">avg</span>(salary) filter (<span class="keyword">where</span> <span class="keyword">position</span> = <span class="string">'admin'</span>)  <span class="keyword">as</span> admin_avg_salary,</span><br><span class="line">       <span class="keyword">avg</span>(salary) filter (<span class="keyword">where</span> <span class="keyword">position</span> &lt;&gt; <span class="string">'admin'</span>) <span class="keyword">as</span> non_admin_avg_salary</span><br><span class="line"><span class="keyword">from</span> raw_data</span><br></pre></td></tr></table></figure><p>MySQL</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">avg</span>(salary <span class="keyword">CASE</span></span><br><span class="line">                    <span class="keyword">WHEN</span> <span class="keyword">position</span> = <span class="string">'admin'</span> <span class="keyword">THEN</span> salary</span><br><span class="line">                    <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) <span class="keyword">as</span> admin_avg_salary,</span><br><span class="line">       <span class="keyword">avg</span>(salary <span class="keyword">CASE</span></span><br><span class="line">                    <span class="keyword">WHEN</span> <span class="keyword">position</span> &lt;&gt; <span class="string">'admin'</span> <span class="keyword">THEN</span> salary</span><br><span class="line">                    <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) <span class="keyword">as</span> non_admin_avg_salary</span><br><span class="line"><span class="keyword">from</span> raw_data</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;在統計系統中，很常用到不同維度的分類和過澽，&lt;/p&gt;
-&lt;p&gt;比如按類加總/平均等等&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Id&lt;/th&gt;
-&lt;th&gt;Gender&lt;/th&gt;
-&lt;th&gt;Salary&lt;/th&gt;
-&lt;th&gt;Country&lt;/th&gt;
-&lt;th&gt;Posit
-      
-    
-    </summary>
-    
-      <category term="SQL" scheme="https://blog.sukitsuki.com/categories/SQL/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>gorm兼容net.IP類</title>
-    <link href="https://blog.sukitsuki.com/2018/08/29/gorm%E5%85%BC%E5%AE%B9net-IP%E9%A1%9E/"/>
-    <id>https://blog.sukitsuki.com/2018/08/29/gorm兼容net-IP類/</id>
-    <published>2018-08-29T12:04:38.000Z</published>
-    <updated>2018-08-29T06:37:22.933Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先 alias net.IP類到本地包，為之後實作方法。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> IP net.IP</span><br></pre></td></tr></table></figure><p>因為pg不能直接使用<code>[]byte</code>作為輸入，所以需要實作<code>Value()</code>令Gorm 能轉換成字串作為輸入。</p><p>先從自定義的 <code>IP</code> 類轉換回 <code>net.IP</code> 類，再用 <code>String()</code> 轉成字串。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a IP)</span> <span class="title">Value</span><span class="params">()</span> <span class="params">(driver.Value, error)</span></span> &#123;</span><br><span class="line"><span class="keyword">return</span> net.IP(a).String(), <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p> 別外，由於從pg 內讀取出來的是 <code>[]unit8</code> 類，內部數據是 ASIIC 碼，所以先轉換成 byte合併成 Array 再轉成 string.</p><p> 最後用 net 庫內的 ParseIP 方法 轉成 IP 類，之後再 cast 成自定義的 IP 類 返回。</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br><span class="line" data-line-number="11"></span><br><span class="line" data-line-number="12"></span><br><span class="line" data-line-number="13"></span><br><span class="line" data-line-number="14"></span><br><span class="line" data-line-number="15"></span><br><span class="line" data-line-number="16"></span><br><span class="line" data-line-number="17"></span><br><span class="line" data-line-number="18"></span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> IP net.IP</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a *IP)</span> <span class="title">Scan</span><span class="params">(src <span class="keyword">interface</span>&#123;&#125;)</span> <span class="title">error</span></span> &#123;</span><br><span class="line"><span class="keyword">switch</span> x := src.(<span class="keyword">type</span>) &#123;</span><br><span class="line"><span class="keyword">case</span> []<span class="keyword">uint8</span>:</span><br><span class="line">*a = IP(net.ParseIP(<span class="keyword">string</span>(x)))</span><br><span class="line"><span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line"><span class="keyword">case</span> <span class="literal">nil</span>:</span><br><span class="line">*a = <span class="literal">nil</span></span><br><span class="line"><span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> fmt.Errorf(<span class="string">"pq: cannot convert %T to net.IP"</span>, src)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(a IP)</span> <span class="title">Value</span><span class="params">()</span> <span class="params">(driver.Value, error)</span></span> &#123;</span><br><span class="line"><span class="keyword">return</span> net.IP(a).String(), <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;首先 alias net.IP類到本地包，為之後實作方法。&lt;/p&gt;
-&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;1&quot;
-      
-    
-    </summary>
-    
-      <category term="Golang" scheme="https://blog.sukitsuki.com/categories/Golang/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Diablo2打寶</title>
-    <link href="https://blog.sukitsuki.com/2018/08/28/Diablo2%E6%89%93%E5%AF%B6/"/>
-    <id>https://blog.sukitsuki.com/2018/08/28/Diablo2打寶/</id>
-    <published>2018-08-28T00:11:54.000Z</published>
-    <updated>2018-08-27T16:39:02.018Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="刷刷刷"><a href="#刷刷刷" class="headerlink" title="刷刷刷"></a>刷刷刷</h3><p>在飛了三天槌子後，今天（27號），終於打了喬丹之石，而且還是連出兩粒。第二粒在最後一把出的，別外還刷到接近頂值的馬拉的萬花筒（19抗性），實在太令人高興了。</p><p>這兩天把裝備提升，先刷到撒卡蘭姆使者，再刷到橡樹之心符文，在崔凡特己經可以穩定刷下去，但秘密母牛關還是有點壓力，而且刷起來不太效率。</p><p>在刷了好喬丹後，之後的喬丹之石就可以拿來開地表暗黑破壞神，玩了這麼多年還沒打過這隻呢。</p><p>之後去刷無限符文好還是謎團符文好呢？</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;刷刷刷&quot;&gt;&lt;a href=&quot;#刷刷刷&quot; class=&quot;headerlink&quot; title=&quot;刷刷刷&quot;&gt;&lt;/a&gt;刷刷刷&lt;/h3&gt;&lt;p&gt;在飛了三天槌子後，今天（27號），終於打了喬丹之石，而且還是連出兩粒。第二粒在最後一把出的，別外還刷到接近頂值的馬拉的萬花筒（19抗
-      
-    
-    </summary>
-    
-      <category term="遊戲" scheme="https://blog.sukitsuki.com/categories/%E9%81%8A%E6%88%B2/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>暗黑破壞神</title>
-    <link href="https://blog.sukitsuki.com/2018/08/24/Diablo2/"/>
-    <id>https://blog.sukitsuki.com/2018/08/24/Diablo2/</id>
-    <published>2018-08-24T20:18:10.000Z</published>
-    <updated>2018-08-24T12:51:55.780Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="暗黑破壞神-2"><a href="#暗黑破壞神-2" class="headerlink" title="暗黑破壞神 2"></a>暗黑破壞神 2</h4><p>這個快二十多年的遊戲，想到不今時今日還有不少人在玩，在YouTube 上還有不少人上傳/直播打寶。現在官服還在維護，今天六月時天梯還有重置，而且還有不少玩家在線。</p><h4 id="私服"><a href="#私服" class="headerlink" title="私服"></a>私服</h4><p>現在D2除了正服外，還有不少私服，這些私服各有特色，有些是和正服一樣，有些是PVP服，還有倍率服。對於沒有時間或想重投D2的懷舊玩家來說，是不錯的選擇。</p><h4 id="角色"><a href="#角色" class="headerlink" title="角色"></a>角色</h4><p>當年第一個玩的角色，沒記錯應該是死靈法師，那時覺得帶著一大隊小弟，在單人模式上會輕鬆。現實上死靈法師在地獄難度之前，難易度是滿低的。</p><p>其次玩的是法師吧，法師的傳送是D2打寶的關建，除非有迷團甲。但迷團是相當高級的符文組，當年我連眼光都沒合成過，更別說迷團，那時拿的只是双精神，而且得用塔盾的精神。</p><p>現在重玩一下私服，就先練了個祝槌聖騎。雖然不算最好用的角式，但是是最易上手和最安全的角色。</p><h4 id="最後"><a href="#最後" class="headerlink" title="最後"></a>最後</h4><p>不小心把黑吉德賣了啊！！！！好想要SOJ啊！！！我還沒打過地表和三王啊！！！！！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;暗黑破壞神-2&quot;&gt;&lt;a href=&quot;#暗黑破壞神-2&quot; class=&quot;headerlink&quot; title=&quot;暗黑破壞神 2&quot;&gt;&lt;/a&gt;暗黑破壞神 2&lt;/h4&gt;&lt;p&gt;這個快二十多年的遊戲，想到不今時今日還有不少人在玩，在YouTube 上還有不少人上傳/直播打寶。現在官服還在維護，今天六月時天梯還有重置，而且還有不少玩家在線。&lt;/p&gt;
-&lt;h4 id=&quot;私服&quot;&gt;&lt;a href=&quot;#私服&quot; class=&quot;headerlink&quot; title=&quot;私服&quot;&gt;&lt;/a&gt;私服&lt;/h4&gt;&lt;p&gt;現在D2除了正服外，還有不少私服，這些私服各有特色，有些是和正服一樣，有些是PVP服，還有倍率服。對於沒有時間或想重投D2的懷舊玩家來說，是不錯的選擇。&lt;/p&gt;
-&lt;h4 id=&quot;角色&quot;&gt;&lt;a href=&quot;#角色&quot; class=&quot;headerlink&quot; title=&quot;角色&quot;&gt;&lt;/a&gt;角色&lt;/h4&gt;&lt;p&gt;當年第一個玩的角色，沒記錯應該是死靈法師，那時覺得帶著一大隊小弟，在單人模式上會輕鬆。現實上死靈法師在地獄難度之前，難易度是滿低的。&lt;/p&gt;
-&lt;p&gt;其次玩的是法師吧，法師的傳送是D2打寶的關建，除非有迷團甲。但迷團是相當高級的符文組，當年我連眼光都沒合成過，更別說迷團，那時拿的只是双精神，而且得用塔盾的精神。&lt;/p&gt;
-&lt;p&gt;現在重玩一下私服，就先練了個祝槌聖騎。雖然不算最好用的角式，但是是最易上手和最安全的角色。&lt;/p&gt;
-&lt;h4 id=&quot;最後&quot;&gt;&lt;a href=&quot;#最後&quot; class=&quot;headerlink&quot; title=&quot;最後&quot;&gt;&lt;/a&gt;最後&lt;/h4&gt;&lt;p&gt;不小心把黑吉德賣了啊！！！！好想要SOJ啊！！！我還沒打過地表和三王啊！！！！！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="遊戲" scheme="https://blog.sukitsuki.com/categories/%E9%81%8A%E6%88%B2/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Docker清理</title>
-    <link href="https://blog.sukitsuki.com/2018/08/20/Docker%E6%B8%85%E7%90%86/"/>
-    <id>https://blog.sukitsuki.com/2018/08/20/Docker清理/</id>
-    <published>2018-08-20T20:01:56.000Z</published>
-    <updated>2018-08-20T12:25:09.461Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="查看已使用空間"><a href="#查看已使用空間" class="headerlink" title="查看已使用空間"></a>查看已使用空間</h3><blockquote><p>docker system df</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br></pre></td><td class="code"><pre><span class="line">TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE</span><br><span class="line">Images              17                  15                  5.531GB             1.822GB (32%)</span><br><span class="line">Containers          20                  1                   251.6MB             212.2MB (84%)</span><br><span class="line">Local Volumes       42                  17                  1.09GB              174.5MB (16%)</span><br><span class="line">Build Cache         0                   0                   0B                  0B</span><br></pre></td></tr></table></figure><h3 id="清理空間"><a href="#清理空間" class="headerlink" title="清理空間"></a>清理空間</h3><p>Remove local volumes not used by at least one container - 沒有在使用的空間</p><blockquote><p>docker volume prune</p></blockquote><h3 id="清理容器"><a href="#清理容器" class="headerlink" title="清理容器"></a>清理容器</h3><p>Remove all stopped containers - 己停用的容器</p><blockquote><p>docker container prune</p></blockquote><h3 id="清理影像"><a href="#清理影像" class="headerlink" title="清理影像"></a>清理影像</h3><p>Remove dangling images - 沒有被tag的影像層</p><blockquote><p>docker image prune</p></blockquote><p>Remove images without at least one container associated - 沒有在使用的影像</p><blockquote><p>docker image prune -a</p></blockquote><h3 id="全面清理"><a href="#全面清理" class="headerlink" title="全面清理"></a>全面清理</h3><ul><li>Remove stopped containers - 己停用的容器</li><li>Remove networks not used by at least one container - 沒有容器連接的網絡</li><li>Remove dangling images - 沒有被tag</li><li>Remove build cache - 構建快取</li></ul><blockquote><p>docker system prune</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;查看已使用空間&quot;&gt;&lt;a href=&quot;#查看已使用空間&quot; class=&quot;headerlink&quot; title=&quot;查看已使用空間&quot;&gt;&lt;/a&gt;查看已使用空間&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;docker system df&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;1&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;2&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;3&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;4&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot; data-line-number=&quot;5&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Images              17                  15                  5.531GB             1.822GB (32%)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Containers          20                  1                   251.6MB             212.2MB (84%)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Local Volumes       42                  17                  1.09GB              174.5MB (16%)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Build Cache         0                   0                   0B                  0B&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h3 id=&quot;清理空間&quot;&gt;&lt;a href=&quot;#清理空間&quot; class=&quot;headerlink&quot; title=&quot;清理空間&quot;&gt;&lt;/a&gt;清理空間&lt;/h3&gt;&lt;p&gt;Remove local volumes not used by at least one container - 沒有在使用的空間&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;docker volume prune&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;清理容器&quot;&gt;&lt;a href=&quot;#清理容器&quot; class=&quot;headerlink&quot; title=&quot;清理容器&quot;&gt;&lt;/a&gt;清理容器&lt;/h3&gt;&lt;p&gt;Remove all stopped containers - 己停用的容器&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;docker container prune&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&quot;清理影像&quot;&gt;&lt;a href=&quot;#清理影像&quot; class=&quot;headerlink&quot; title=&quot;清理影像&quot;&gt;&lt;/a&gt;清理影像&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="Ops" scheme="https://blog.sukitsuki.com/categories/Ops/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>不如意事十常八九</title>
-    <link href="https://blog.sukitsuki.com/2018/08/18/%E4%B8%8D%E5%A6%82%E6%84%8F%E4%BA%8B%E5%8D%81%E5%B8%B8%E5%85%AB%E4%B9%9D/"/>
-    <id>https://blog.sukitsuki.com/2018/08/18/不如意事十常八九/</id>
-    <published>2018-08-18T11:29:01.000Z</published>
-    <updated>2018-08-18T13:01:30.769Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="一個人"><a href="#一個人" class="headerlink" title="一個人"></a>一個人</h4><p>算下來己經一個人生活了四個月了，感覺習慣嗎？並沒有。</p><p>只有在其實地方生活過，才會知道以前的好。感覺生活上一直在開倒車，當經歷過低潮才懂得之前的美好。從來沒有想過以前的生活是多麽的幸褔，在新的地方，新的環境下生活並不是一件簡單的事情。</p><p>這裹的治安水平並不算太高，搶手機的事情聽到不少。在這邊生活的地方基本上就是公司，宿舍兩點一線。而生活水平還算過得去，公司的伙食雖然不怎麼樣，但周邊還是有點能吃的餐館，基本上中、日、泰、韓的也有，價錢上比香港低一點但低不了不多。</p><p>周邊能去的地方，基本上就周日到超市逛逛，補充一下生活用品。房間沒有電腦，以前在房間玩電腦的習慣己經成為過去。雖然買了一台任天堂 Switch，不過大多是單人遊戲為主，但玩太多的也會生厭。</p><h4 id="醉"><a href="#醉" class="headerlink" title="醉"></a>醉</h4><p><img src="/2018/08/18/不如意事十常八九/photo_2018-08-18_20-15-26.jpg" alt=""></p><p>如果醉可以忘記，可以解決，可以逃避問題，那是多麼好的事情。</p><blockquote><p>期盼抹去的哀愁  卻更加的愁  。</p></blockquote><p>可是醉了之後，只有宿醉，頭痛，胃痛等問題等著。</p><blockquote><p>即使昏醉  大概不想安睡 </p><p>回去不回去  同樣掃不走空虛</p><p>長島內苦澀太多  然後強裝甜蜜快樂</p></blockquote><p>以前喝的時候，都是和身邊的人互相吐嘈、互相吐苦水、互相談生活，現在喝酒更多是為了消磨時間，為醉而喝。畢竟同事不是朋友，很多說話還是不可能拿出來說。</p><blockquote><p>和摯友抱擁交頭  說理想追求</p><p>靜靜地醉臥在門口 陪他作戰的朋友  各有各溜走</p></blockquote><h4 id="夢"><a href="#夢" class="headerlink" title="夢"></a>夢</h4><p><img src="/2018/08/18/不如意事十常八九/photo_2018-08-18_20-39-12.jpg" alt=""></p><blockquote><p>或者當日也曾有火種 </p><p>但擔心去路其實不通 </p><p>然後大計跌入四維國度失蹤</p><p>就此捲入既定軌跡中 </p><p>天天照例運行在虛空 </p><p>像循序漸進等夠鐘 </p><p>是否甘心永遠被動</p></blockquote><p>待續。。。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;一個人&quot;&gt;&lt;a href=&quot;#一個人&quot; class=&quot;headerlink&quot; title=&quot;一個人&quot;&gt;&lt;/a&gt;一個人&lt;/h4&gt;&lt;p&gt;算下來己經一個人生活了四個月了，感覺習慣嗎？並沒有。&lt;/p&gt;
-&lt;p&gt;只有在其實地方生活過，才會知道以前的好。感覺生活上一直在開倒車，當經歷過低潮才懂得之前的美好。從來沒有想過以前的生活是多麽的幸褔，在新的地方，新的環境下生活並不是一件簡單的事情。&lt;/p&gt;
-&lt;p&gt;這裹的治安水平並不算太高，搶手機的事情聽到不少。在這邊生活的地方基本上就是公司，宿舍兩點一線。而生活水平還算過得去，公司的伙食雖然不怎麼樣，但周邊還是有點能吃的餐館，基本上中、日、泰、韓的也有，價錢上比香港低一點但低不了不多。&lt;/p&gt;
-&lt;p&gt;周邊能去的地方，基本上就周日到超市逛逛，補充一下生活用品。房間沒有電腦，以前在房間玩電腦的習慣己經成為過去。雖然買了一台任天堂 Switch，不過大多是單人遊戲為主，但玩太多的也會生厭。&lt;/p&gt;
-&lt;h4 id=&quot;醉&quot;&gt;&lt;a href=&quot;#醉&quot; class=&quot;headerlink&quot; title=&quot;醉&quot;&gt;&lt;/a&gt;醉&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;/2018/08/18/不如意事十常八九/photo_2018-08-18_20-15-26.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如果醉可以忘記，可以解決，可以逃避問題，那是多麼好的事情。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;期盼抹去的哀愁  卻更加的愁  。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可是醉了之後，只有宿醉，頭痛，胃痛等問題等著。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
     
     
   </entry>
