@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2019-04-04T12:59:22.508Z</updated>
+  <updated>2019-04-14T13:06:14.198Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>記一次使用 Makefile 和 Docker 的坑</title>
+    <link href="https://blog.sukitsuki.com/2019/04/13/%E8%A8%98%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8-makefile-%E5%92%8C-docker-%E7%9A%84%E5%9D%91/"/>
+    <id>https://blog.sukitsuki.com/2019/04/13/記一次使用-makefile-和-docker-的坑/</id>
+    <published>2019-04-13T20:00:07.000Z</published>
+    <updated>2019-04-14T13:06:14.198Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在使用 make 和 Docker 構建發佈影像時，重構了一下 Makefile 而引起不算是 Bug 的 bug.</p><h3 id="事原"><a href="#事原" class="headerlink" title="事原"></a>事原</h3><p>Makefile 指令如果在用同的文件夾突特時 會出現 <code>make: 指令 is up to date.</code> 這樣奇怪的信訊？（？</p><p>別外加上在 Docker build 的時候 make 指令的 step 出現 up to date 以為是被 cached。</p><p>最後在 <code>COPY --from=build-dev</code> 時找不到文件 出現 <code>/var/lib/docker/overlay2/</code> 找不到文件 而不是在 docker 對應路徑。</p><h3 id="解決"><a href="#解決" class="headerlink" title="解決"></a>解決</h3><p>在 Makefile 裹給指令 加上 <code>.PHONY</code> 注解。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A phony target is one that is not really the name of a file; rather it is just a name for a recipe to be executed when you make an explicit request. There are two reasons to use a phony target: to avoid a conflict with a file of the same name, and to improve performance.</span><br><span class="line"></span><br><span class="line">If you write a rule whose recipe will not create the target file, the recipe will be executed every time the target comes up for remaking.</span><br></pre></td></tr></table></figure><p>GNU默认makefile target是一个文件，因此他会先检测同级目录下是否已存在这个文件，如果存在，则会abort掉make 进程，但目标不是文件的话，则会出现up to date的情况，这种情况需要.PHONY来避免问题的出现，phony的意思是“赝品”，在这里可以形象的理解成“不是文件”。</p><p><a href="https://blog.csdn.net/LinuxTiger/article/details/7955060" target="_blank" rel="noopener">https://blog.csdn.net/LinuxTiger/article/details/7955060</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;在使用 make 和 Docker 構建發佈影像時，重構了一下 Makefile 而引起不算是 Bug 的 bug.&lt;/p&gt;&lt;h3 id=&quot;事原&quot;&gt;&lt;a href=&quot;#事原&quot; class=&quot;headerlink&quot; title=&quot;事原&quot;&gt;&lt;/a&gt;事原&lt;/h3&gt;&lt;p&gt;Makefile 指令如果在用同的文件夾突特時 會出現 &lt;code&gt;make: 指令 is up to date.&lt;/code&gt; 這樣奇怪的信訊？（？&lt;/p&gt;&lt;p&gt;別外加上在 Docker build 的時候 make 指令的 step 出現 up to date 以為是被 cached。&lt;/p&gt;&lt;p&gt;最後在 &lt;code&gt;COPY --from=build-dev&lt;/code&gt; 時找不到文件 出現 &lt;code&gt;/var/lib/docker/overlay2/&lt;/code&gt; 找不到文件 而不是在 docker 對應路徑。&lt;/p&gt;&lt;h3 id=&quot;解決&quot;&gt;&lt;a href=&quot;#解決&quot; class=&quot;headerlink&quot; title=&quot;解決&quot;&gt;&lt;/a&gt;解決&lt;/h3&gt;&lt;p&gt;在 Makefile 裹給指令 加上 &lt;code&gt;.PHONY&lt;/code&gt; 注解。&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;A phony target is one that is not really the name of a file; rather it is just a name for a recipe to be executed when you make an explicit request. There are two reasons to use a phony target: to avoid a conflict with a file of the same name, and to improve performance.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;If you write a rule whose recipe will not create the target file, the recipe will be executed every time the target comes up for remaking.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;GNU默认makefile target是一个文件，因此他会先检测同级目录下是否已存在这个文件，如果存在，则会abort掉make 进程，但目标不是文件的话，则会出现up to date的情况，这种情况需要.PHONY来避免问题的出现，phony的意思是“赝品”，在这里可以形象的理解成“不是文件”。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Docker" scheme="https://blog.sukitsuki.com/categories/Docker/"/>
+    
+      <category term="Linux" scheme="https://blog.sukitsuki.com/categories/Docker/Linux/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>把OPENSSL 私鑰轉換成 RSA 私鈅</title>
@@ -428,32 +450,6 @@
     </summary>
     
       <category term="ops" scheme="https://blog.sukitsuki.com/categories/ops/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>前端好用的模糊搜索工具</title>
-    <link href="https://blog.sukitsuki.com/2018/09/21/%E5%89%8D%E7%AB%AF%E5%A5%BD%E7%94%A8%E7%9A%84%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7/"/>
-    <id>https://blog.sukitsuki.com/2018/09/21/前端好用的模糊搜索工具/</id>
-    <published>2018-09-21T17:55:43.000Z</published>
-    <updated>2018-09-21T10:25:31.993Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/krisk/fuse" target="_blank" rel="noopener">https://github.com/krisk/fuse</a></p><p><a href="http://fusejs.io/" target="_blank" rel="noopener">http://fusejs.io/</a></p><p>在處理表單的全文搜索，很常都要對不同欄位過濾，用了Fuse.js就可以少寫很多代碼。</p><p>Fuse.js 除了支持指定欄位/嵌套 Json，還支持比重搜索和 Bitap 算法提供一定近似匹配的功能。</p><p><a href="http://fusejs.io/#examples" target="_blank" rel="noopener">http://fusejs.io/#examples</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://github.com/krisk/fuse&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/krisk/fuse&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://fusejs.io
-      
-    
-    </summary>
-    
-      <category term="Front-end" scheme="https://blog.sukitsuki.com/categories/Front-end/"/>
-    
-      <category term="JavaScript" scheme="https://blog.sukitsuki.com/categories/Front-end/JavaScript/"/>
     
     
   </entry>
