@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.sukitsuki.com/"/>
-  <updated>2019-04-14T13:06:14.198Z</updated>
+  <updated>2019-06-26T14:13:07.012Z</updated>
   <id>https://blog.sukitsuki.com/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>處理圖像的TypedArray和一般的UInt8Array區別</title>
+    <link href="https://blog.sukitsuki.com/2019/06/26/%E8%99%95%E7%90%86%E5%9C%96%E5%83%8F%E7%9A%84TypedArray%E5%92%8C%E4%B8%80%E8%88%AC%E7%9A%84UInt8Array%E5%8D%80%E5%88%A5/"/>
+    <id>https://blog.sukitsuki.com/2019/06/26/處理圖像的TypedArray和一般的UInt8Array區別/</id>
+    <published>2019-06-26T21:05:49.000Z</published>
+    <updated>2019-06-26T14:13:07.012Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 ES2015上加入了 TypedArray 的處理，以處理 buffer 帶來的問題，而其中 Uint8 有兩種類型和處理方法，分別是Uint8Array，Uint8ClampedArray。</p><p>前者是無條件捨去小數（ToUint8），後者是使用奇進偶捨（ToUint8Clamp ）的進位方法。</p><p>其次前者不會對二補位的負數作溢出處理，後者會對小於０和大於２５５的數字作出歸０或２５５。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Int8Array();</span><br><span class="line">Uint8Array();</span><br><span class="line">Uint8ClampedArray();</span><br><span class="line">Int16Array();</span><br><span class="line">Uint16Array();</span><br><span class="line">Int32Array();</span><br><span class="line">Uint32Array();</span><br><span class="line">Float32Array();</span><br><span class="line">Float64Array();</span><br><span class="line">BigInt64Array();</span><br><span class="line">BigUint64Array();</span><br></pre></td></tr></table></figure><p>別外在<a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData" target="_blank" rel="noopener"><code>ImageData()</code></a>的 <code>array</code> 是注明 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray" target="_blank" rel="noopener"><code>Uint8ClampedArray</code></a> 。</p><h3 id="ToUint8-argument"><a href="#ToUint8-argument" class="headerlink" title="ToUint8 ( argument )"></a>ToUint8 ( argument )</h3><p>The abstract operation ToUint8 converts argument to one of 28 integer values in the range 0 through 255, inclusive. This abstract operation functions as follows:</p><ol><li>Let <em>number</em> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-tonumber" target="_blank" rel="noopener">ToNumber</a>(<em>argument</em>).</li><li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt" target="_blank" rel="noopener">ReturnIfAbrupt</a>(<em>number</em>).</li><li>If <em>number</em> is <strong>NaN</strong>, <strong>+0</strong>, <strong>−0</strong>, <strong>+∞</strong>, or <strong>−∞</strong>, return <strong>+0</strong>.</li><li>Let <em>int</em> be the mathematical value that is the same sign as <em>number</em> and whose magnitude is <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-algorithm-conventions" target="_blank" rel="noopener">floor</a>(<a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-algorithm-conventions" target="_blank" rel="noopener">abs</a>(<em>number</em>)).</li><li>Let <em>int8bit</em> be <em>int</em> <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-algorithm-conventions" target="_blank" rel="noopener">modulo</a> 28.</li><li>Return <em>int8bit</em>.</li></ol><h3 id="ToUint8Clamp-argument"><a href="#ToUint8Clamp-argument" class="headerlink" title="ToUint8Clamp ( argument )"></a>ToUint8Clamp ( argument )</h3><p>The abstract operation ToUint8Clamp converts argument to one of 28 integer values in the range 0 through 255, inclusive. This abstract operation functions as follows:</p><ol><li>Let <em>number</em> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-tonumber" target="_blank" rel="noopener">ToNumber</a>(<em>argument</em>).</li><li><a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt" target="_blank" rel="noopener">ReturnIfAbrupt</a>(<em>number</em>).</li><li>If <em>number</em> is <strong>NaN</strong>, return <strong>+0</strong>.</li><li>If <em>number</em> ≤ 0, return <strong>+0</strong>.</li><li>If <em>number</em> ≥ 255, return 255.</li><li>Let <em>f</em> be <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-algorithm-conventions" target="_blank" rel="noopener">floor</a>(<em>number</em>).</li><li>If <em>f +</em> 0.5 &lt; <em>number</em>, return <em>f</em> + 1.</li><li>If <em>number</em> &lt; <em>f +</em> 0.5, return <em>f</em>.</li><li>If <em>f</em> is odd, return <em>f</em> + 1.</li><li>Return <em>f</em>.</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在 ES2015上加入了 TypedArray 的處理，以處理 buffer 帶來的問題，而其中 Uint8 有兩種類型和處理方法，分別是Uint8Array，Uint8ClampedArray。&lt;/p&gt;&lt;p&gt;前者是無條件捨去小數（ToUint8），後者是使用奇進偶捨（ToUint8Clamp ）的進位方法。&lt;/p&gt;&lt;p&gt;其次前者不會對二補位的負數作溢出處理，後者會對小於０和大於２５５的數字作出歸０或２５５。&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Int8Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Uint8Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Uint8ClampedArray();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int16Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Uint16Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Int32Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Uint32Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Float32Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Float64Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;BigInt64Array();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;BigUint64Array();&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;別外在&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;code&gt;ImageData()&lt;/code&gt;&lt;/a&gt;的 &lt;code&gt;array&lt;/code&gt; 是注明 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;&lt;code&gt;Uint8ClampedArray&lt;/code&gt;&lt;/a&gt; 。&lt;/p&gt;&lt;h3 id=&quot;ToUint8-argument&quot;&gt;&lt;a href=&quot;#ToUint8-argument&quot; class=&quot;headerlink&quot; title=&quot;ToUint8 ( argument )&quot;&gt;&lt;/a&gt;ToUint8 ( argument )&lt;/h3&gt;&lt;p&gt;The abstract operation ToUint8 converts argument to one of 28 integer values in the range 0 through 255, inclusive. This abstract operation functions as follows:&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Let &lt;em&gt;number&lt;/em&gt; be &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/index.html#sec-tonumber&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ToNumber&lt;/a&gt;(&lt;em&gt;argument&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/index.html#sec-returnifabrupt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ReturnIfAbrupt&lt;/a&gt;(&lt;em&gt;number&lt;/em&gt;).&lt;/li&gt;&lt;li&gt;If &lt;em&gt;number&lt;/em&gt; is &lt;strong&gt;NaN&lt;/strong&gt;, &lt;strong&gt;+0&lt;/strong&gt;, &lt;strong&gt;−0&lt;/strong&gt;, &lt;strong&gt;+∞&lt;/strong&gt;, or &lt;strong&gt;−∞&lt;/strong&gt;, return &lt;strong&gt;+0&lt;/strong&gt;.&lt;/li&gt;&lt;li&gt;Let &lt;em&gt;int&lt;/em&gt; be the mathematical value that is the same sign as &lt;em&gt;number&lt;/em&gt; and whose magnitude is &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/index.html#sec-algorithm-conventions&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;floor&lt;/a&gt;(&lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/index.html#sec-algorithm-conventions&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;abs&lt;/a&gt;(&lt;em&gt;number&lt;/em&gt;)).&lt;/li&gt;&lt;li&gt;Let &lt;em&gt;int8bit&lt;/em&gt; be &lt;em&gt;int&lt;/em&gt; &lt;a href=&quot;http://www.ecma-international.org/ecma-262/6.0/index.html#sec-algorithm-conventions&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;modulo&lt;/a&gt; 28.&lt;/li&gt;&lt;li&gt;Return &lt;em&gt;int8bit&lt;/em&gt;.&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;ToUint8Clamp-argument&quot;&gt;&lt;a href=&quot;#ToUint8Clamp-argument&quot; class=&quot;headerlink&quot; title=&quot;ToUint8Clamp ( argument )&quot;&gt;&lt;/a&gt;ToUint8Clamp ( argument )&lt;/h3&gt;&lt;p&gt;The abstract operation ToUint8Clamp converts argument to one of 28 integer values in the range 0 through 255, inclusive. This abstract operation functions as follows:&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://blog.sukitsuki.com/categories/JavaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Tensorflow尋找Tensor節點</title>
+    <link href="https://blog.sukitsuki.com/2019/06/26/Tensorflow%E5%B0%8B%E6%89%BETensor%E7%AF%80%E9%BB%9E/"/>
+    <id>https://blog.sukitsuki.com/2019/06/26/Tensorflow尋找Tensor節點/</id>
+    <published>2019-06-26T20:12:18.000Z</published>
+    <updated>2019-06-26T14:13:07.012Z</updated>
+    
+    <content type="html"><![CDATA[<p>在一個 Tensorflow model 上截取入口點和出口點 可以在載入 graph 後提取出所有節點的名字。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tf.import_graph_def(graph_def, name=<span class="string">""</span>)</span><br><span class="line">pp([tensor.name <span class="keyword">for</span> tensor <span class="keyword">in</span> tf.compat.v1.get_default_graph().as_graph_def().node])</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在一個 Tensorflow model 上截取入口點和出口點 可以在載入 graph 後提取出所有節點的名字。&lt;/p&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span cla
+      
+    
+    </summary>
+    
+      <category term="Tensorflow" scheme="https://blog.sukitsuki.com/categories/Tensorflow/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>記一次使用 Makefile 和 Docker 的坑</title>
@@ -397,59 +440,6 @@
     </summary>
     
       <category term="日記" scheme="https://blog.sukitsuki.com/categories/%E6%97%A5%E8%A8%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Casbin-訪問權限控制工具</title>
-    <link href="https://blog.sukitsuki.com/2018/09/26/casbin-%E8%A8%AA%E5%95%8F%E6%AC%8A%E9%99%90%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/"/>
-    <id>https://blog.sukitsuki.com/2018/09/26/casbin-訪問權限控制工具/</id>
-    <published>2018-09-26T20:51:25.000Z</published>
-    <updated>2018-09-27T13:08:43.994Z</updated>
-    
-    <content type="html"><![CDATA[<p>Casbin 本質是一個配對的權限的工具庫，主要是由 model 模型和 policy 政策組成，</p><p>model example</p><p>r 是接受傳入的參數並定義欄位，例子中接受三項參數</p><p>p 是解析 Prolicy 內容並定義欄位</p><p>m 是配對 Policy 方式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br><span class="line" data-line-number="5"></span><br><span class="line" data-line-number="6"></span><br><span class="line" data-line-number="7"></span><br><span class="line" data-line-number="8"></span><br><span class="line" data-line-number="9"></span><br><span class="line" data-line-number="10"></span><br><span class="line" data-line-number="11"></span><br></pre></td><td class="code"><pre><span class="line">[request_definition]</span><br><span class="line">r = sub, obj, act</span><br><span class="line"></span><br><span class="line">[policy_definition]</span><br><span class="line">p = sub, obj, act</span><br><span class="line"></span><br><span class="line">[policy_effect]</span><br><span class="line">e = some(where (p.eft == allow))</span><br><span class="line"></span><br><span class="line">[matchers]</span><br><span class="line">m = (p.sub in r.sub || p.sub == &quot;*&quot;) &amp;&amp; keyMatch(r.obj, p.obj) &amp;&amp; (r.act == p.act || p.act == &quot;*&quot;)</span><br></pre></td></tr></table></figure><p>policy example </p><p>ps:雖然是csv格式 但需要在逗號後留空白，別外內容的空白是會保留，不要因為對齊而加padding</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line" data-line-number="1"></span><br><span class="line" data-line-number="2"></span><br><span class="line" data-line-number="3"></span><br><span class="line" data-line-number="4"></span><br></pre></td><td class="code"><pre><span class="line">p, *, /info, GET</span><br><span class="line">p, user, /users, GET</span><br><span class="line">p, user, /users, POST</span><br><span class="line">p, setting, /settings, *</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Casbin 本質是一個配對的權限的工具庫，主要是由 model 模型和 policy 政策組成，&lt;/p&gt;
-&lt;p&gt;model example&lt;/p&gt;
-&lt;p&gt;r 是接受傳入的參數並定義欄位，例子中接受三項參數&lt;/p&gt;
-&lt;p&gt;p 是解析 Prolicy 內容並定義欄位&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-      <category term="Golang" scheme="https://blog.sukitsuki.com/categories/Golang/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>刪了Xcode後不能使用make等指令</title>
-    <link href="https://blog.sukitsuki.com/2018/09/24/%E5%88%AA%E4%BA%86xcode%E5%BE%8C%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8make%E7%AD%89%E6%8C%87%E4%BB%A4/"/>
-    <id>https://blog.sukitsuki.com/2018/09/24/刪了xcode後不能使用make等指令/</id>
-    <published>2018-09-24T17:43:26.000Z</published>
-    <updated>2018-09-27T13:08:43.994Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果出現以下內容</p><blockquote><p>xcrun: error: active developer path (“/Applications/Xcode.app/Contents/Developer”) does not exist</p></blockquote><p>輸入 <code>sudo xcode-select -s /Library/Developer/CommandLineTools</code> 改回使用 CommandLineTools 的路徑</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;如果出現以下內容&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;xcrun: error: active developer path (“/Applications/Xcode.app/Contents/Developer”) does not exist&lt;/p&gt;
-&lt;/bloc
-      
-    
-    </summary>
-    
-      <category term="ops" scheme="https://blog.sukitsuki.com/categories/ops/"/>
     
     
   </entry>
