@@ -2,7 +2,7 @@
 </code></pre><p>使用 Yarn:</p><pre><code>yarn add aplayer
 </code></pre><h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><div class="aplayer-wrap"><br><div id="aplayer2"><button class="docute-button load">点击加载播放器</button></div><br></div><pre><code class="html"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"APlayer.min.css"</span>&gt;</span>
 <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     audio: [{
@@ -102,7 +102,7 @@
         <span class="comment">&lt;!-- ... --&gt;</span>
     <span class="tag">&lt;/<span class="name">pre</span>&gt;</span>
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     lrcType: <span class="number">2</span>,
@@ -167,8 +167,8 @@
 });
 </code></pre><h2 id="MSE-支持"><a href="#MSE-支持" class="headerlink" title="MSE 支持"></a>MSE 支持</h2><h3 id="HLS"><a href="#HLS" class="headerlink" title="HLS"></a>HLS</h3><p>需要在 <code>APlayer.min.js</code> 前面加载 <a href="https://github.com/video-dev/hls.js">hls.js</a>。</p><div class="aplayer-wrap"><br><div id="aplayer7"><button class="docute-button load">点击加载播放器</button></div><br></div><pre><code class="html"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"APlayer.min.css"</span>&gt;</span>
 <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"hls.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"hls.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     audio: [{
@@ -207,8 +207,8 @@
 });
 </code></pre><h2 id="根据封面自适应主题色"><a href="#根据封面自适应主题色" class="headerlink" title="根据封面自适应主题色"></a>根据封面自适应主题色</h2><p>需要额外加载 <a href="https://github.com/lokesh/color-thief/blob/master/src/color-thief.js">color-thief.js</a></p><div class="aplayer-wrap"><br><div id="aplayer8"><button class="docute-button load">点击加载播放器</button></div><br></div><pre><code class="html"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"APlayer.min.css"</span>&gt;</span>
 <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"color-thief.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"color-thief.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     theme: <span class="string">'#e9e9e9'</span>,

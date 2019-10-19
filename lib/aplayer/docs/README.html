@@ -2,7 +2,7 @@
 </code></pre><p>Using Yarn:</p><pre><code>yarn add aplayer
 </code></pre><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><div class="aplayer-wrap"><br><div id="aplayer2"><button class="docute-button load">Click to load player</button></div><br></div><pre><code class="html"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"APlayer.min.css"</span>&gt;</span>
 <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     audio: [{
@@ -102,7 +102,7 @@
         <span class="comment">&lt;!-- ... --&gt;</span>
     <span class="tag">&lt;/<span class="name">pre</span>&gt;</span>
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     lrcType: <span class="number">2</span>,
@@ -167,8 +167,8 @@
 });
 </code></pre><h2 id="MSE-support"><a href="#MSE-support" class="headerlink" title="MSE support"></a>MSE support</h2><h3 id="HLS"><a href="#HLS" class="headerlink" title="HLS"></a>HLS</h3><p>It requires the library <a href="https://github.com/video-dev/hls.js">hls.js</a> and it should be loaded before <code>APlayer.min.js</code>.</p><div class="aplayer-wrap"><br><div id="aplayer7"><button class="docute-button load">Click to load player</button></div><br></div><pre><code class="html"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"APlayer.min.css"</span>&gt;</span>
 <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"hls.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"hls.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     audio: [{
@@ -207,8 +207,8 @@
 });
 </code></pre><h2 id="Self-adapting-theme-according-to-cover"><a href="#Self-adapting-theme-according-to-cover" class="headerlink" title="Self-adapting theme according to cover"></a>Self-adapting theme according to cover</h2><p>It requires the library <a href="https://github.com/lokesh/color-thief/blob/master/src/color-thief.js">color-thief</a>.</p><div class="aplayer-wrap"><br><div id="aplayer8"><button class="docute-button load">Click to load player</button></div><br></div><pre><code class="html"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"APlayer.min.css"</span>&gt;</span>
 <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
-<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"color-thief.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"color-thief.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre><pre><code class="js"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer({
     container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),
     theme: <span class="string">'#e9e9e9'</span>,
